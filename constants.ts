@@ -1890,6 +1890,256 @@ export const INITIAL_EVENTS: TimelineEvent[] = [
     description: 'The mid-18th century sees the height of intellectual movements promoting reason, individualism, and skepticism, laying the ideological groundwork for the American and French Revolutions.',
     imageUrl: 'https://picsum.photos/seed/enlightenment/600/400',
     phase: 'Phase 8'
+  },
+  // Phase 9 Marker
+  {
+    id: 'phase-9-marker',
+    year: '1765 CE',
+    title: 'The Age of Revolutions',
+    description: '',
+    imageUrl: 'https://picsum.photos/seed/revolutions_hero/1600/900',
+    phase: 'Phase 9',
+    type: 'phase_marker'
+  },
+  {
+    id: '227',
+    year: '1765 CE',
+    title: 'James Watt\'s Improved Steam Engine',
+    description: 'Watt perfects the steam engine, turning a simple machine into an efficient power source that drives the First Industrial Revolution, particularly in factories and mines.',
+    imageUrl: 'https://picsum.photos/seed/steam_engine/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '228',
+    year: '1776 CE',
+    title: 'American Declaration of Independence',
+    description: 'The American colonies declare their separation from Great Britain, proclaiming ideals of popular sovereignty, liberty, and unalienable rights.',
+    imageUrl: 'https://picsum.photos/seed/independence/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '229',
+    year: '1783 CE',
+    title: 'Treaty of Paris (American Revolution Ends)',
+    description: 'Great Britain formally recognizes the independence of the United States, cementing the success of the first major democratic revolution.',
+    imageUrl: 'https://picsum.photos/seed/treaty_paris/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '230',
+    year: '1789 CE',
+    title: 'French Revolution Begins (Storming of the Bastille)',
+    description: 'A period of radical social and political upheaval begins in France, overthrowing the Bourbon monarchy and challenging the idea of absolute rule across Europe.',
+    imageUrl: 'https://picsum.photos/seed/bastille/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '231',
+    year: '1789 CE',
+    title: 'Declaration of the Rights of Man and of the Citizen',
+    description: 'The French National Assembly issues this document, establishing universal rights for all men and defining citizenship, heavily influencing future democracies.',
+    imageUrl: 'https://picsum.photos/seed/rights_of_man/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '232',
+    year: '1793 CE',
+    title: 'Eli Whitney Invents the Cotton Gin',
+    description: 'This machine rapidly separates cotton fiber from seed, making cotton production vastly more profitable and tragically accelerating the expansion of chattel slavery in the U.S. South.',
+    imageUrl: 'https://picsum.photos/seed/cotton_gin/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '233',
+    year: '1796 CE',
+    title: 'Edward Jenner Develops Smallpox Vaccine',
+    description: 'Jenner pioneers the concept of vaccination, a major breakthrough in medicine that eventually leads to the global eradication of the deadly disease.',
+    imageUrl: 'https://picsum.photos/seed/vaccine/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '234',
+    year: '1799 CE',
+    title: 'Coup of 18 Brumaire (France)',
+    description: 'Napoleon Bonaparte overthrows the Directory and establishes the Consulate, signaling the end of the revolutionary phase and the beginning of his authoritarian rule.',
+    imageUrl: 'https://picsum.photos/seed/napoleon/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '235',
+    year: '1803 CE',
+    title: 'Louisiana Purchase',
+    description: 'The United States acquires vast territory from France, instantly doubling the size of the nation and accelerating its westward expansion.',
+    imageUrl: 'https://picsum.photos/seed/louisiana_purchase/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '236',
+    year: '1804 CE',
+    title: 'Haitian Independence',
+    description: 'Haiti defeats French forces, becoming the world\'s first free black republic and the only nation established by a successful slave revolt.',
+    imageUrl: 'https://picsum.photos/seed/haiti/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '237',
+    year: '1804 CE',
+    title: 'Napoleon Crowns Himself Emperor',
+    description: 'Napoleon abolishes the French Republic and declares himself Emperor, ending France\'s revolutionary experiment and leading to further European wars.',
+    imageUrl: 'https://picsum.photos/seed/napoleon_crown/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '238',
+    year: '1807 CE',
+    title: 'Britain Abolishes the Slave Trade',
+    description: 'The British Parliament outlaws the transportation of enslaved people across the Atlantic (though slavery itself would continue in the colonies until 1833).',
+    imageUrl: 'https://picsum.photos/seed/abolition/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '239',
+    year: '1810 CE',
+    title: 'Latin American Wars of Independence Begin',
+    description: 'Revolts begin across Spanish colonies, led by figures like Simón Bolívar, fighting for self-governance and an end to Spanish imperial rule.',
+    imageUrl: 'https://picsum.photos/seed/bolivar/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '240',
+    year: '1815 CE',
+    title: 'Battle of Waterloo',
+    description: 'Napoleon is decisively defeated by a coalition force, marking the final end of his rule and the conclusion of the Napoleonic Wars.',
+    imageUrl: 'https://picsum.photos/seed/waterloo/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '241',
+    year: '1815 CE',
+    title: 'Congress of Vienna Convenes',
+    description: 'European powers meet to redraw the continental map, restore monarchies, and establish a Balance of Power system to prevent future revolutions and wars.',
+    imageUrl: 'https://picsum.photos/seed/congress_vienna/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '242',
+    year: '1825 CE',
+    title: 'First Public Steam Railway',
+    description: 'The Stockton and Darlington Railway opens in England, marking the true beginning of the Railway Age and revolutionizing mass transport of goods and people.',
+    imageUrl: 'https://picsum.photos/seed/steam_train/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '243',
+    year: '1833 CE',
+    title: 'Slavery Abolished in the British Empire',
+    description: 'The British Parliament passes the Slavery Abolition Act, freeing approximately 800,000 enslaved people throughout the empire.',
+    imageUrl: 'https://picsum.photos/seed/slavery_abolition/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '244',
+    year: '1837 CE',
+    title: 'Samuel Morse Invents the Telegraph',
+    description: 'The invention of the electric telegraph and Morse code creates the first instantaneous global communication system, dramatically shrinking the world.',
+    imageUrl: 'https://picsum.photos/seed/telegraph/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '245',
+    year: '1839 CE',
+    title: 'First Opium War Begins',
+    description: 'Great Britain wages war against Qing China over trade disputes, leading to China\'s defeat and the start of its "Century of Humiliation" under foreign influence.',
+    imageUrl: 'https://picsum.photos/seed/opium_war/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '246',
+    year: '1848 CE',
+    title: '"Spring of Nations" Revolutions',
+    description: 'Waves of political revolt sweep across Europe (France, Germany, Italy, Austrian Empire) advocating for liberal reforms, nationalism, and democracy.',
+    imageUrl: 'https://picsum.photos/seed/spring_nations/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '247',
+    year: '1848 CE',
+    title: 'Marx and Engels Publish The Communist Manifesto',
+    description: 'This pamphlet outlines the principles of communism, arguing for a classless society and profoundly influencing future socialist movements globally.',
+    imageUrl: 'https://picsum.photos/seed/manifesto/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '248',
+    year: '1853 CE',
+    title: 'Commodore Perry Opens Japan',
+    description: 'U.S. Commodore Matthew Perry forces Japan to open its ports to trade, ending over 200 years of self-imposed isolation (sakoku).',
+    imageUrl: 'https://picsum.photos/seed/perry_japan/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '249',
+    year: '1859 CE',
+    title: 'Darwin Publishes On the Origin of Species',
+    description: 'Charles Darwin introduces the theory of evolution by natural selection, fundamentally challenging traditional scientific and religious views of life\'s creation.',
+    imageUrl: 'https://picsum.photos/seed/darwin/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '250',
+    year: '1861 CE',
+    title: 'Abolition of Serfdom in Russia',
+    description: 'Czar Alexander II frees Russia\'s serfs, marking a major social reform and a step toward modernization, though conditions for peasants remained poor.',
+    imageUrl: 'https://picsum.photos/seed/serfdom/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '251',
+    year: '1861 CE',
+    title: 'American Civil War Begins',
+    description: 'Conflict erupts between the Union (North) and the Confederacy (South) over the issues of slavery, states\' rights, and national unity.',
+    imageUrl: 'https://picsum.photos/seed/civil_war/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '252',
+    year: '1868 CE',
+    title: 'Meiji Restoration (Japan)',
+    description: 'The Emperor is restored to power, leading to a rapid, state-sponsored program of industrialization and Westernization that transforms Japan into a world power.',
+    imageUrl: 'https://picsum.photos/seed/meiji/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '253',
+    year: '1869 CE',
+    title: 'Suez Canal Opens',
+    description: 'The man-made canal connecting the Mediterranean Sea to the Red Sea opens, drastically reducing the travel time for trade between Europe and Asia.',
+    imageUrl: 'https://picsum.photos/seed/suez_canal/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '254',
+    year: '1871 CE',
+    title: 'Unification of Germany',
+    description: 'Otto von Bismarck\'s successful wars lead to the creation of a powerful, unified German Empire, fundamentally altering the balance of power in Europe.',
+    imageUrl: 'https://picsum.photos/seed/germany_unification/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '255',
+    year: '1884 CE',
+    title: 'Berlin Conference (Scramble for Africa)',
+    description: 'European powers meet in Berlin to formally partition the continent of Africa among themselves, initiating a rapid period of colonization.',
+    imageUrl: 'https://picsum.photos/seed/berlin_conference/600/400',
+    phase: 'Phase 9'
+  },
+  {
+    id: '256',
+    year: '1914 CE',
+    title: 'Assassination of Archduke Franz Ferdinand',
+    description: 'The assassination in Sarajevo triggers a complex chain of alliances and declarations of war, plunging Europe into World War I.',
+    imageUrl: 'https://picsum.photos/seed/franz_ferdinand/600/400',
+    phase: 'Phase 9'
   }
 ];
 
