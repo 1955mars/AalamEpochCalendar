@@ -1374,6 +1374,522 @@ export const INITIAL_EVENTS: TimelineEvent[] = [
     description: 'Octavian is granted the title Augustus, effectively ending the Roman Republic and establishing the autocratic rule of the Roman Empire.',
     imageUrl: 'https://picsum.photos/seed/augustus/600/400',
     phase: 'Phase 6'
+  },
+  // Phase 7 Marker
+  {
+    id: 'phase-7-marker',
+    year: '6 CE',
+    title: 'The Post-Classical World',
+    description: '',
+    imageUrl: 'https://picsum.photos/seed/post_classical_hero/1600/900',
+    phase: 'Phase 7',
+    type: 'phase_marker'
+  },
+  {
+    id: '165',
+    year: '6 CE',
+    title: 'Roman Annexation of Judea',
+    description: 'Rome formalizes its direct rule over Judea, increasing political tensions that fueled revolts and shaped early Jewish and Christian history.',
+    imageUrl: 'https://picsum.photos/seed/judea_annexation/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '166',
+    year: '29 CE',
+    title: 'Crucifixion of Jesus Christ',
+    description: 'The foundational event of Christianity, which, despite early persecution, would eventually become the official religion of the Roman Empire.',
+    imageUrl: 'https://picsum.photos/seed/crucifixion/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '167',
+    year: '70 CE',
+    title: 'Destruction of the Second Temple',
+    description: 'Roman forces crush a major revolt, destroying the Temple in Jerusalem and accelerating the Jewish diaspora across the globe.',
+    imageUrl: 'https://picsum.photos/seed/temple_destruction_2/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '168',
+    year: '100 CE',
+    title: 'Height of the Silk Roads',
+    description: 'Long-distance trade routes across Eurasia are heavily utilized, connecting the Roman, Parthian, Indian, and Han Empires, exchanging goods and ideas.',
+    imageUrl: 'https://picsum.photos/seed/silk_road/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '169',
+    year: '117 CE',
+    title: 'Roman Empire Reaches Greatest Extent',
+    description: 'The empire reaches its maximum territorial size under Emperor Trajan, encompassing all Mediterranean shores and parts of Britain, North Africa, and the Near East.',
+    imageUrl: 'https://picsum.photos/seed/roman_empire_map/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '170',
+    year: '220 CE',
+    title: 'Fall of the Han Dynasty',
+    description: 'Ends four centuries of unified imperial rule in China, beginning the tumultuous Three Kingdoms Period and centuries of fragmentation.',
+    imageUrl: 'https://picsum.photos/seed/han_dynasty/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '171',
+    year: '313 CE',
+    title: 'Edict of Milan',
+    description: 'Emperor Constantine legalizes Christianity throughout the Roman Empire, dramatically shifting the religion\'s status from persecuted sect to dominant force.',
+    imageUrl: 'https://picsum.photos/seed/edict_milan/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '172',
+    year: '330 CE',
+    title: 'Founding of Constantinople',
+    description: 'Constantine dedicates a new imperial capital on the site of Byzantium, shifting the political center of gravity eastward.',
+    imageUrl: 'https://picsum.photos/seed/constantinople/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '173',
+    year: '395 CE',
+    title: 'Division of the Roman Empire',
+    description: 'The empire formally splits into Western (Latin-speaking) and Eastern (Greek-speaking) halves following the death of Emperor Theodosius I.',
+    imageUrl: 'https://picsum.photos/seed/empire_split/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '174',
+    year: '476 CE',
+    title: 'Fall of the Western Roman Empire',
+    description: 'The last Western Roman Emperor, Romulus Augustulus, is deposed, marking the traditional end of Antiquity in Western Europe.',
+    imageUrl: 'https://picsum.photos/seed/rome_fall/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '175',
+    year: '529 CE',
+    title: 'Justinian\'s Code (Corpus Juris Civilis)',
+    description: 'The Byzantine Emperor Justinian codifies Roman Law, preserving and standardizing the legal system for future Western civilization.',
+    imageUrl: 'https://picsum.photos/seed/justinian_code/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '176',
+    year: '570 CE',
+    title: 'Birth of the Prophet Muhammad',
+    description: 'Traditional date for the birth of the founder of Islam in Mecca, Arabia.',
+    imageUrl: 'https://picsum.photos/seed/mecca/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '177',
+    year: '618 CE',
+    title: 'Founding of the Tang Dynasty',
+    description: 'The Tang Dynasty begins a new Golden Age in China, marked by vast territorial expansion, political stability, and high cultural output.',
+    imageUrl: 'https://picsum.photos/seed/tang_dynasty/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '178',
+    year: '622 CE',
+    title: 'The Hijra',
+    description: 'Muhammad and his followers migrate from Mecca to Medina, marking the beginning of the Islamic calendar and the first true Muslim community.',
+    imageUrl: 'https://picsum.photos/seed/hijra/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '179',
+    year: '661 CE',
+    title: 'Umayyad Caliphate Established',
+    description: 'The first major Islamic empire forms, rapidly expanding its territory into North Africa and the Iberian Peninsula.',
+    imageUrl: 'https://picsum.photos/seed/umayyad/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '180',
+    year: '711 CE',
+    title: 'Muslim Conquest of Iberia',
+    description: 'Arab and Berber forces cross the Strait of Gibraltar and rapidly conquer most of the Iberian Peninsula (Spain and Portugal).',
+    imageUrl: 'https://picsum.photos/seed/iberia_conquest/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '181',
+    year: '750 CE',
+    title: 'Abbasid Caliphate Rises',
+    description: 'The Abbasids overthrow the Umayyads, shifting the capital to Baghdad and ushering in the Islamic Golden Age of scholarship and science.',
+    imageUrl: 'https://picsum.photos/seed/abbasid/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '182',
+    year: '793 CE',
+    title: 'Viking Raid on Lindisfarne',
+    description: 'The first recorded Viking attack on a monastery in England, marking the beginning of the Viking Age in Europe.',
+    imageUrl: 'https://picsum.photos/seed/viking_raid/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '183',
+    year: '800 CE',
+    title: 'Charlemagne Crowned Emperor',
+    description: 'Frankish King Charlemagne is crowned "Emperor of the Romans" by the Pope, reviving the imperial title in the West.',
+    imageUrl: 'https://picsum.photos/seed/charlemagne/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '184',
+    year: '800 CE',
+    title: 'Invention of Gunpowder',
+    description: 'Alchemists in Tang China are credited with accidentally creating the earliest form of gunpowder.',
+    imageUrl: 'https://picsum.photos/seed/gunpowder/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '185',
+    year: '960 CE',
+    title: 'Founding of the Song Dynasty (China)',
+    description: 'Marks a period of immense technological (printing, compass, iron production) and commercial growth in China.',
+    imageUrl: 'https://picsum.photos/seed/song_dynasty/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '186',
+    year: '1054 CE',
+    title: 'The Great Schism',
+    description: 'The formal split between the Eastern Orthodox Church (Constantinople) and the Roman Catholic Church (Rome).',
+    imageUrl: 'https://picsum.photos/seed/great_schism/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '187',
+    year: '1066 CE',
+    title: 'Norman Conquest of England',
+    description: 'William the Conqueror defeats the English at the Battle of Hastings, fundamentally changing English language, aristocracy, and political structure.',
+    imageUrl: 'https://picsum.photos/seed/norman_conquest/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '188',
+    year: '1095 CE',
+    title: 'First Crusade Called',
+    description: 'Pope Urban II calls for Christian knights to reclaim the Holy Land from Muslim control, initiating centuries of religious wars.',
+    imageUrl: 'https://picsum.photos/seed/crusades/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '189',
+    year: '1192 CE',
+    title: 'Establishment of the Kamakura Shogunate (Japan)',
+    description: 'Marks the beginning of the feudal era in Japan, where military governors (Shoguns) hold the real political power.',
+    imageUrl: 'https://picsum.photos/seed/shogunate/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '190',
+    year: '1206 CE',
+    title: 'Genghis Khan Unites the Mongols',
+    description: 'Temüjin is proclaimed Genghis Khan, beginning the unprecedented expansion of the Mongol Empire across Eurasia.',
+    imageUrl: 'https://picsum.photos/seed/genghis_khan/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '191',
+    year: '1215 CE',
+    title: 'King John Seals the Magna Carta',
+    description: 'The English barons force the king to sign the "Great Charter," a foundational document for constitutional law and human rights.',
+    imageUrl: 'https://picsum.photos/seed/magna_carta/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '192',
+    year: '1271 CE',
+    title: 'Marco Polo Begins his Journey',
+    description: 'The Venetian merchant begins his legendary travels to Asia, highlighting the extensive trade and cultural links established under the Pax Mongolica.',
+    imageUrl: 'https://picsum.photos/seed/marco_polo/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '193',
+    year: '1299 CE',
+    title: 'Osman I Establishes the Ottoman Empire',
+    description: 'The foundation of one of the world\'s longest-lasting empires, which would eventually replace the Byzantine Empire.',
+    imageUrl: 'https://picsum.photos/seed/ottoman_empire/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '194',
+    year: '1324 CE',
+    title: 'Mansa Musa\'s Hajj (Mali)',
+    description: 'The Emperor of the Mali Empire makes a pilgrimage to Mecca, showcasing the immense wealth of West African gold and expanding Islamic influence across the Sahara.',
+    imageUrl: 'https://picsum.photos/seed/mansa_musa/600/400',
+    phase: 'Phase 7'
+  },
+  {
+    id: '195',
+    year: '1347 CE',
+    title: 'The Black Death Arrives in Europe',
+    description: 'The devastating bubonic plague, carried along global trade routes, reaches Europe and begins its catastrophic sweep across Eurasia.',
+    imageUrl: 'https://picsum.photos/seed/black_death/600/400',
+    phase: 'Phase 7'
+  },
+  // Phase 8 Marker
+  {
+    id: 'phase-8-marker',
+    year: '1405 CE',
+    title: 'The Age of Exploration',
+    description: '',
+    imageUrl: 'https://picsum.photos/seed/exploration_hero/1600/900',
+    phase: 'Phase 8',
+    type: 'phase_marker'
+  },
+  {
+    id: '196',
+    year: '1405 CE',
+    title: 'Yongle Emperor Launches Treasure Voyages',
+    description: 'China\'s Ming Dynasty begins the massive naval expeditions led by Zheng He, briefly establishing the largest maritime presence in the world.',
+    imageUrl: 'https://picsum.photos/seed/zheng_he/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '197',
+    year: '1415 CE',
+    title: 'Capture of Ceuta (Portugal)',
+    description: 'Portugal captures the North African port, marking the beginning of the Age of Exploration and the establishment of European overseas empires.',
+    imageUrl: 'https://picsum.photos/seed/ceuta/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '198',
+    year: '1440 CE',
+    title: 'Discovery of the Forgery of the "Donation of Constantine"',
+    description: 'Scholar Lorenzo Valla disproves a document central to papal claims of temporal power, marking a triumph of Renaissance textual criticism.',
+    imageUrl: 'https://picsum.photos/seed/valla/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '199',
+    year: '1450 CE',
+    title: 'Gutenberg Invents the Printing Press',
+    description: 'The development of movable type printing revolutionizes communication, dramatically accelerating the spread of Renaissance, Reformation, and scientific ideas.',
+    imageUrl: 'https://picsum.photos/seed/printing_press/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '200',
+    year: '1453 CE',
+    title: 'Fall of Constantinople',
+    description: 'The Ottoman Turks conquer the Byzantine capital, ending the Roman Empire\'s last vestige and prompting Greek scholars to flee west, boosting the Renaissance.',
+    imageUrl: 'https://picsum.photos/seed/constantinople_fall/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '201',
+    year: '1478 CE',
+    title: 'Establishment of the Spanish Inquisition',
+    description: 'Ferdinand II and Isabella I institute the Inquisition to enforce Catholic orthodoxy, leading to the persecution and expulsion of non-Christians.',
+    imageUrl: 'https://picsum.photos/seed/inquisition/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '202',
+    year: '1488 CE',
+    title: 'Dias Rounds the Cape of Good Hope',
+    description: 'Portuguese explorer Bartolomeu Dias finds a sea route from the Atlantic to the Indian Ocean, opening up direct trade with Asia.',
+    imageUrl: 'https://picsum.photos/seed/dias/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '203',
+    year: '1492 CE',
+    title: 'Columbus Reaches the Americas',
+    description: 'Christopher Columbus\'s voyage initiates the Columbian Exchange, permanently connecting the Eastern and Western hemispheres, leading to mass colonization.',
+    imageUrl: 'https://picsum.photos/seed/columbus/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '204',
+    year: '1494 CE',
+    title: 'Treaty of Tordesillas',
+    description: 'Spain and Portugal, brokered by the Pope, divide the non-European world between them for exploration and conquest.',
+    imageUrl: 'https://picsum.photos/seed/tordesillas/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '205',
+    year: '1498 CE',
+    title: 'Vasco da Gama Reaches Calicut, India',
+    description: 'Portugal secures a direct sea route to Asia, bypassing traditional land-based Silk Roads and challenging existing Muslim/Venetian trade monopolies.',
+    imageUrl: 'https://picsum.photos/seed/vasco_da_gama/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '206',
+    year: '1503 CE',
+    title: 'Da Vinci Completes Mona Lisa',
+    description: 'The peak of the High Renaissance is defined by masterpieces that integrate mathematics, humanism, and artistic genius.',
+    imageUrl: 'https://picsum.photos/seed/mona_lisa/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '207',
+    year: '1509 CE',
+    title: 'Henry VIII Becomes King of England',
+    description: 'His reign would be dominated by religious, political, and personal conflicts that permanently alter England\'s relationship with the Catholic Church.',
+    imageUrl: 'https://picsum.photos/seed/henry_viii/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '208',
+    year: '1517 CE',
+    title: 'Martin Luther Posts the 95 Theses',
+    description: 'Widely considered the start of the Protestant Reformation, challenging the authority of the Pope and the Catholic Church.',
+    imageUrl: 'https://picsum.photos/seed/luther/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '209',
+    year: '1519 CE',
+    title: 'Magellan\'s Expedition Begins Circumnavigation',
+    description: 'Ferdinand Magellan sets off on the first successful (though he died en route) voyage to sail around the world, proving the Earth\'s spherical nature.',
+    imageUrl: 'https://picsum.photos/seed/magellan/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '210',
+    year: '1521 CE',
+    title: 'Cortés Conquers the Aztec Empire',
+    description: 'Spanish conquistadors defeat the powerful Aztec Empire (Tenochtitlan), securing Mexico for Spain and accelerating the colonial transfer of wealth and disease.',
+    imageUrl: 'https://picsum.photos/seed/cortes/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '211',
+    year: '1526 CE',
+    title: 'Establishment of the Mughal Empire',
+    description: 'Babur defeats the Delhi Sultanate, founding a powerful Islamic empire that dominates the Indian subcontinent for over two centuries.',
+    imageUrl: 'https://picsum.photos/seed/mughal/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '212',
+    year: '1533 CE',
+    title: 'Pizarro Conquers the Inca Empire',
+    description: 'Spanish forces capture and execute Inca Emperor Atahualpa, bringing the vast South American empire under Spanish control.',
+    imageUrl: 'https://picsum.photos/seed/pizarro/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '213',
+    year: '1534 CE',
+    title: 'Henry VIII Creates the Church of England',
+    description: 'The English Parliament passes the Act of Supremacy, declaring the King, not the Pope, as the supreme head of the church in England.',
+    imageUrl: 'https://picsum.photos/seed/church_of_england/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '214',
+    year: '1540 CE',
+    title: 'Founding of the Society of Jesus (Jesuits)',
+    description: 'Established by Ignatius of Loyola, the Jesuit order becomes the intellectual and missionary arm of the Catholic Counter-Reformation.',
+    imageUrl: 'https://picsum.photos/seed/jesuits/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '215',
+    year: '1543 CE',
+    title: 'Copernicus Publishes On the Revolutions of the Heavenly Spheres',
+    description: 'Proposes a heliocentric model of the solar system, marking a critical turning point in the Scientific Revolution.',
+    imageUrl: 'https://picsum.photos/seed/copernicus/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '216',
+    year: '1545 CE',
+    title: 'The Council of Trent Begins',
+    description: 'This council initiates the Catholic Counter-Reformation, addressing Protestant challenges and defining Catholic doctrine for the next four centuries.',
+    imageUrl: 'https://picsum.photos/seed/council_trent/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '217',
+    year: '1558 CE',
+    title: 'Elizabeth I Begins Reign in England',
+    description: 'Her 44-year reign establishes Anglicanism, solidifies English power, and begins a period of cultural flourishing (the Elizabethan Era).',
+    imageUrl: 'https://picsum.photos/seed/elizabeth_i/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '218',
+    year: '1588 CE',
+    title: 'Defeat of the Spanish Armada',
+    description: 'English naval victory over the Spanish fleet marks a major geopolitical shift, signaling the decline of Spanish dominance and the rise of England as a naval power.',
+    imageUrl: 'https://picsum.photos/seed/armada/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '219',
+    year: '1600 CE',
+    title: 'The British East India Company is Chartered',
+    description: 'The granting of a monopoly to this joint-stock company lays the foundation for British economic and eventual political control in India.',
+    imageUrl: 'https://picsum.photos/seed/east_india_company/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '220',
+    year: '1603 CE',
+    title: 'Tokugawa Ieyasu Establishes the Shogunate in Japan',
+    description: 'Begins the Edo period, a time of prolonged peace and stability, and eventually implements the sakoku (closed country) policy.',
+    imageUrl: 'https://picsum.photos/seed/tokugawa/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '221',
+    year: '1610 CE',
+    title: 'Galileo Publishes Sidereus Nuncius',
+    description: 'Using his improved telescope, Galileo publishes groundbreaking astronomical observations, supporting the Copernican model and furthering the Scientific Revolution.',
+    imageUrl: 'https://picsum.photos/seed/galileo/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '222',
+    year: '1618 CE',
+    title: 'Start of the Thirty Years\' War',
+    description: 'A series of devastating conflicts in Central Europe, primarily over religion and dynastic power, reshaping the political map of the continent.',
+    imageUrl: 'https://picsum.photos/seed/thirty_years_war/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '223',
+    year: '1644 CE',
+    title: 'The Manchu People Establish the Qing Dynasty in China',
+    description: 'Following the collapse of the Ming Dynasty, the Qing Dynasty begins a long period of rule, becoming the last imperial dynasty of China.',
+    imageUrl: 'https://picsum.photos/seed/qing/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '224',
+    year: '1648 CE',
+    title: 'Peace of Westphalia',
+    description: 'The series of treaties ends the Thirty Years\' War, establishing the principle of state sovereignty and creating the modern system of nation-states.',
+    imageUrl: 'https://picsum.photos/seed/westphalia/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '225',
+    year: '1687 CE',
+    title: 'Newton Publishes Philosophiæ Naturalis Principia Mathematica',
+    description: 'Isaac Newton lays out the laws of motion and universal gravitation, establishing the foundation for classical mechanics and defining the Scientific Revolution.',
+    imageUrl: 'https://picsum.photos/seed/newton/600/400',
+    phase: 'Phase 8'
+  },
+  {
+    id: '226',
+    year: '1750 CE',
+    title: 'Peak of the Enlightenment Era',
+    description: 'The mid-18th century sees the height of intellectual movements promoting reason, individualism, and skepticism, laying the ideological groundwork for the American and French Revolutions.',
+    imageUrl: 'https://picsum.photos/seed/enlightenment/600/400',
+    phase: 'Phase 8'
   }
 ];
 

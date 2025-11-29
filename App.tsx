@@ -13,6 +13,8 @@ const PHASES = [
   { id: 'Phase 4', title: 'The Neolithic Revolution', bg: 'bg-amber-100' },
   { id: 'Phase 5', title: 'The Bronze Age', bg: 'bg-yellow-100' },
   { id: 'Phase 6', title: 'The Iron Age & Classical Age', bg: 'bg-rose-100' },
+  { id: 'Phase 7', title: 'The Post-Classical World', bg: 'bg-purple-100' },
+  { id: 'Phase 8', title: 'The Age of Exploration', bg: 'bg-blue-100' },
 ];
 
 const App: React.FC = () => {
