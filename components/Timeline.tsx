@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useMemo, useImperativeHandle, forwardRef, useState } from 'react';
 import { TimelineEvent, TimelineHandle } from '../types';
 import TimelineEventCardComponent from './TimelineEventCard';
+import TimelineProgress from './TimelineProgress';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface TimelineProps {
@@ -13,6 +14,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
   
   // Track which phases are expanded.
   const [expandedPhases, setExpandedPhases] = useState<Set<string>>(new Set());
+  const [currentIndex, setCurrentIndex] = useState(0);
   
   // Refs to access latest state inside callbacks without closure staleness
   const visibleEventsRef = useRef<TimelineEvent[]>([]);
@@ -38,6 +40,15 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
     if (isAgo) val = -val;
 
     return val;
+  };
+
+  const formatYearShort = (yearStr: string): string => {
+    if (!yearStr) return '';
+    return yearStr
+      .replace(/Billion Years Ago/gi, 'BYA')
+      .replace(/Million Years Ago/gi, 'MYA')
+      .replace(/Thousand Years Ago/gi, 'KYA')
+      .replace(/Years Ago/gi, 'YA');
   };
 
   const sortedEvents = useMemo(() => {
@@ -116,8 +127,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
 
     const container = scrollContainerRef.current;
     
-    // --- Phase Detection Logic (Immediate for Header Update) ---
-    // We use basic offset calculations for center detection as it's purely relative within container
+    // --- Center Detection Logic ---
     const center = container.scrollLeft + container.clientWidth / 2;
     const cardElements = Array.from(container.children).slice(0, visibleEvents.length);
     let closestIndex = -1;
@@ -134,13 +144,23 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
       }
     });
 
-    if (closestIndex !== -1 && visibleEvents[closestIndex]) {
-      const phase = visibleEvents[closestIndex].phase;
-      if (phase && onPhaseChange) {
-        onPhaseChange(phase);
+    if (closestIndex !== -1) {
+      setCurrentIndex(closestIndex);
+      
+      if (visibleEvents[closestIndex]) {
+        const phase = visibleEvents[closestIndex].phase;
+        if (phase && onPhaseChange) {
+          onPhaseChange(phase);
+        }
       }
     }
   };
+
+  // Calculate global index relative to the full sorted history, not just visible events
+  const currentEvent = visibleEvents[currentIndex];
+  const globalCurrentIndex = currentEvent 
+    ? sortedEvents.findIndex(e => e.id === currentEvent.id) 
+    : 0;
 
   return (
     <div className="relative w-full h-full flex flex-col justify-center items-center">
@@ -163,7 +183,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
       <div 
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="timeline-scroll flex overflow-x-auto gap-0 px-[10vw] py-4 snap-x snap-mandatory relative z-10 w-full items-stretch h-[600px] md:h-[700px]"
+        className="timeline-scroll no-scrollbar flex overflow-x-auto gap-0 px-[10vw] py-4 snap-x snap-mandatory relative z-10 w-full items-stretch h-[600px] md:h-[700px]"
       >
         {visibleEvents.length === 0 ? (
           <div className="w-full flex justify-center items-center text-slate-500">
@@ -182,6 +202,13 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
         )}
         <div className="w-[10vw] flex-shrink-0"></div>
       </div>
+
+      <TimelineProgress 
+        current={globalCurrentIndex}
+        total={sortedEvents.length}
+        startLabel={sortedEvents.length > 0 ? formatYearShort(sortedEvents[0].year) : ''}
+        endLabel={sortedEvents.length > 0 ? formatYearShort(sortedEvents[sortedEvents.length - 1].year) : ''}
+      />
     </div>
   );
 });
