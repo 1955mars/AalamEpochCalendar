@@ -1124,6 +1124,256 @@ export const INITIAL_EVENTS: TimelineEvent[] = [
     description: 'The simultaneous destruction of major cities across the Mediterranean, caused by climate change, internal revolts, and mysterious "Sea Peoples," ushers in a dark age.',
     imageUrl: 'https://picsum.photos/seed/bronze_collapse/600/400',
     phase: 'Phase 5'
+  },
+  // Phase 6 Marker
+  {
+    id: 'phase-6-marker',
+    year: '1200 BCE',
+    title: 'The Iron Age & Classical Age',
+    description: '',
+    imageUrl: 'https://picsum.photos/seed/iron_age_hero/1600/900',
+    phase: 'Phase 6',
+    type: 'phase_marker'
+  },
+  {
+    id: '135',
+    year: '1200 BCE',
+    title: 'Iron Technology Spreads',
+    description: 'Iron production becomes widespread across the Mediterranean and Near East, replacing bronze as the primary metal for tools and weapons.',
+    imageUrl: 'https://picsum.photos/seed/iron_smelting/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '136',
+    year: '1150 BCE',
+    title: 'Greek Dark Ages Begin',
+    description: 'Following the collapse of the Mycenaean civilization, Greece enters a period of decline and depopulation where writing (Linear B) is lost.',
+    imageUrl: 'https://picsum.photos/seed/greek_dark_ages/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '137',
+    year: '1046 BCE',
+    title: 'Zhou Dynasty Established (China)',
+    description: 'The Zhou overthrew the Shang, establishing a long-lasting dynasty that introduced the influential concept of the "Mandate of Heaven."',
+    imageUrl: 'https://picsum.photos/seed/zhou_dynasty/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '138',
+    year: '1000 BCE',
+    title: 'Phoenician Alphabet Creation',
+    description: 'Phoenician traders develop and spread an alphabetic script, which the Greeks later adopted and adapted to create the basis of all modern Western alphabets.',
+    imageUrl: 'https://picsum.photos/seed/phoenician_alphabet/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '139',
+    year: '957 BCE',
+    title: 'Solomon Builds the First Temple',
+    description: 'King Solomon completes the Holy Temple in Jerusalem, centralizing the worship of Yahweh in the Kingdom of Israel and Judah.',
+    imageUrl: 'https://picsum.photos/seed/solomons_temple/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '140',
+    year: '911 BCE',
+    title: 'Rise of the Neo-Assyrian Empire',
+    description: 'Assyria begins a period of relentless military expansion and terror, establishing the first empire to systematically rule and administer conquered territories.',
+    imageUrl: 'https://picsum.photos/seed/assyrian_empire/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '141',
+    year: '800 BCE',
+    title: 'Greek Polis Emerges',
+    description: 'The independent city-state (polis), such as Athens and Sparta, develops as the fundamental social and political unit of Greek civilization.',
+    imageUrl: 'https://picsum.photos/seed/greek_polis/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '142',
+    year: '776 BCE',
+    title: 'First Olympic Games',
+    description: 'The first recorded Ancient Olympic Games are held in Olympia, Greece, marking the start of a powerful pan-Hellenic identity.',
+    imageUrl: 'https://picsum.photos/seed/olympics/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '143',
+    year: '753 BCE',
+    title: 'Traditional Founding of Rome',
+    description: 'The legendary date for the founding of Rome by the twins Romulus and Remus, beginning the period of the Roman Kingdom.',
+    imageUrl: 'https://picsum.photos/seed/rome_founding/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '144',
+    year: '722 BCE',
+    title: 'Fall of the Kingdom of Israel',
+    description: 'The Neo-Assyrian Empire conquers the Northern Kingdom of Israel, leading to the mass deportation of its inhabitants (the "Ten Lost Tribes").',
+    imageUrl: 'https://picsum.photos/seed/israel_fall/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '145',
+    year: '700 BCE',
+    title: 'Homer Composes the Epics',
+    description: 'The great oral poems, the Iliad and the Odyssey, are solidified, becoming the foundation of Greek literature and education.',
+    imageUrl: 'https://picsum.photos/seed/homer/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '146',
+    year: '612 BCE',
+    title: 'Fall of Nineveh',
+    description: 'An alliance of Babylonians and Medes sacks the Assyrian capital, Nineveh, effectively ending the powerful Neo-Assyrian Empire.',
+    imageUrl: 'https://picsum.photos/seed/nineveh/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '147',
+    year: '600 BCE',
+    title: 'Rise of the Mahajanapadas (India)',
+    description: 'Sixteen major kingdoms (Great Realms) emerge in North India, setting the political stage for the rise of powerful states like Magadha.',
+    imageUrl: 'https://picsum.photos/seed/mahajanapadas/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '148',
+    year: '594 BCE',
+    title: 'Solon\'s Reforms in Athens',
+    description: 'Athenian statesman Solon introduces legal and economic reforms that dismantle aristocratic power and lay the groundwork for later democracy.',
+    imageUrl: 'https://picsum.photos/seed/solon/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '149',
+    year: '586 BCE',
+    title: 'Destruction of the First Temple',
+    description: 'Nebuchadnezzar II of Babylon destroys the First Temple and exiles the Jewish elite, a pivotal event in Jewish religious history.',
+    imageUrl: 'https://picsum.photos/seed/temple_destruction/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '150',
+    year: '563 BCE',
+    title: 'Birth of Siddhartha Gautama',
+    description: 'Traditional birth date of the founder of Buddhism, who would become known as the Buddha.',
+    imageUrl: 'https://picsum.photos/seed/buddha/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '151',
+    year: '551 BCE',
+    title: 'Birth of Confucius',
+    description: 'The Chinese philosopher Kong Fuzi is born; his teachings on social harmony, ritual, and governance form the basis of Confucianism.',
+    imageUrl: 'https://picsum.photos/seed/confucius/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '152',
+    year: '550 BCE',
+    title: 'Achaemenid Empire Founded (Persia)',
+    description: 'Cyrus the Great unifies the Iranian tribes, establishing the Achaemenid Empire, the largest and most influential empire of the ancient world.',
+    imageUrl: 'https://picsum.photos/seed/persian_empire/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '153',
+    year: '539 BCE',
+    title: 'Cyrus Frees the Jews',
+    description: 'Cyrus the Great conquers Babylon and allows the Jewish exiles to return to Jerusalem to rebuild their temple.',
+    imageUrl: 'https://picsum.photos/seed/cyrus/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '154',
+    year: '509 BCE',
+    title: 'Founding of the Roman Republic',
+    description: 'The last king is expelled, and Rome establishes a new government based on elected officials (Consuls) and a powerful Senate.',
+    imageUrl: 'https://picsum.photos/seed/roman_republic/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '155',
+    year: '508 BCE',
+    title: 'Athenian Democracy Instituted',
+    description: 'Cleisthenes institutes democratic reforms in Athens, granting power to the citizen assembly and cementing Athens\' status as the world\'s first democracy.',
+    imageUrl: 'https://picsum.photos/seed/democracy/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '156',
+    year: '490 BCE',
+    title: 'Battle of Marathon',
+    description: 'Athenian and allied Greek forces decisively defeat the first Persian invasion under King Darius I, preserving Greek independence.',
+    imageUrl: 'https://picsum.photos/seed/marathon/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '157',
+    year: '480 BCE',
+    title: 'Battles of Thermopylae/Salamis',
+    description: 'The pivotal battles of the Second Persian War; Greek naval victory at Salamis ensures the survival of the Hellenic world.',
+    imageUrl: 'https://picsum.photos/seed/salamis/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '158',
+    year: '475 BCE',
+    title: 'Warring States Period (China)',
+    description: 'Centuries of warfare begin as the Zhou dynasty fragments, with seven major states vying for total control of China.',
+    imageUrl: 'https://picsum.photos/seed/warring_states/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '159',
+    year: '447 BCE',
+    title: 'Parthenon Construction Begins',
+    description: 'Work starts on the Parthenon in Athens, a monumental Doric temple considered the high point of Classical Greek art and architecture.',
+    imageUrl: 'https://picsum.photos/seed/parthenon/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '160',
+    year: '431 BCE',
+    title: 'Peloponnesian War Begins',
+    description: 'The devastating conflict between the Athenian Empire and the Spartan-led Peloponnesian League begins, eventually ending the "Golden Age" of Athens.',
+    imageUrl: 'https://picsum.photos/seed/peloponnesian/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '161',
+    year: '399 BCE',
+    title: 'Death of Socrates',
+    description: 'The philosopher Socrates is executed in Athens for impiety and corrupting the youth, profoundly influencing his students Plato and Xenophon.',
+    imageUrl: 'https://picsum.photos/seed/socrates/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '162',
+    year: '336 BCE',
+    title: 'Alexander the Great Rises',
+    description: 'Alexander III of Macedon succeeds his father, Philip II, beginning his campaign to conquer the Persian Empire and spread Hellenistic culture.',
+    imageUrl: 'https://picsum.photos/seed/alexander/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '163',
+    year: '221 BCE',
+    title: 'Unification of China (Qin Dynasty)',
+    description: 'Qin Shi Huang defeats the last rival states, unifies China, and proclaims himself the First Emperor, beginning the Imperial era.',
+    imageUrl: 'https://picsum.photos/seed/qin/600/400',
+    phase: 'Phase 6'
+  },
+  {
+    id: '164',
+    year: '27 BCE',
+    title: 'End of the Roman Republic',
+    description: 'Octavian is granted the title Augustus, effectively ending the Roman Republic and establishing the autocratic rule of the Roman Empire.',
+    imageUrl: 'https://picsum.photos/seed/augustus/600/400',
+    phase: 'Phase 6'
   }
 ];
 
