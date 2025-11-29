@@ -1,6 +1,7 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { GeneratedEventData } from '../types';
-import { AI_MODEL_NAME } from '../constants';
+
+const AI_MODEL_NAME = 'gemini-2.5-flash';
 
 export const generateTimelineEvents = async (topic: string): Promise<GeneratedEventData[]> => {
   const apiKey = process.env.API_KEY;
