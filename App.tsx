@@ -1,5 +1,3 @@
-
-
 import React, { useState, useRef } from 'react';
 import Timeline from './components/Timeline';
 import { TimelineEvent, TimelineHandle } from './types';
@@ -16,6 +14,9 @@ const PHASES = [
   { id: 'Phase 7', title: 'The Post-Classical World', bg: 'bg-purple-100' },
   { id: 'Phase 8', title: 'The Age of Exploration', bg: 'bg-blue-100' },
   { id: 'Phase 9', title: 'The Age of Revolutions', bg: 'bg-indigo-100' },
+  { id: 'Phase 10', title: 'The Early 20th Century', bg: 'bg-teal-100' },
+  { id: 'Phase 11', title: 'The Cold War Era', bg: 'bg-cyan-100' },
+  { id: 'Phase 12', title: 'The Modern Digital Age', bg: 'bg-fuchsia-100' },
 ];
 
 const App: React.FC = () => {

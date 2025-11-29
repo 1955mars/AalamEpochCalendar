@@ -1,5 +1,3 @@
-
-
 import { TimelineEvent } from './types';
 
 export const INITIAL_EVENTS: TimelineEvent[] = [
@@ -2140,6 +2138,772 @@ export const INITIAL_EVENTS: TimelineEvent[] = [
     description: 'The assassination in Sarajevo triggers a complex chain of alliances and declarations of war, plunging Europe into World War I.',
     imageUrl: 'https://picsum.photos/seed/franz_ferdinand/600/400',
     phase: 'Phase 9'
+  },
+  // Phase 10 Marker
+  {
+    id: 'phase-10-marker',
+    year: '1914 CE',
+    title: 'The Early 20th Century',
+    description: '',
+    imageUrl: 'https://picsum.photos/seed/early_20th_hero/1600/900',
+    phase: 'Phase 10',
+    type: 'phase_marker'
+  },
+  {
+    id: '257',
+    year: '1914 CE',
+    title: 'World War I Begins',
+    description: 'Following the assassination, declarations of war trigger the massive conflict between the Central and Allied Powers.',
+    imageUrl: 'https://picsum.photos/seed/wwi/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '258',
+    year: '1915 CE',
+    title: 'The Armenian Genocide Begins',
+    description: 'The systematic extermination of the Armenian people by the Ottoman Empire begins, marking the first major genocide of the 20th century.',
+    imageUrl: 'https://picsum.photos/seed/armenian_genocide/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '259',
+    year: '1916 CE',
+    title: 'Battle of the Somme',
+    description: 'One of the bloodiest battles in human history, highlighting the grim reality of trench warfare and the industrial scale of casualties.',
+    imageUrl: 'https://picsum.photos/seed/somme/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '260',
+    year: '1917 CE',
+    title: 'The United States Enters WWI',
+    description: 'The U.S. declares war on Germany, shifting the balance of power and providing a massive influx of fresh troops and resources to the Allied cause.',
+    imageUrl: 'https://picsum.photos/seed/us_enters_wwi/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '261',
+    year: '1917 CE',
+    title: 'Russian October Revolution',
+    description: 'The Bolsheviks, led by Vladimir Lenin, seize power in Petrograd, establishing the world\'s first communist state, the Soviet Union.',
+    imageUrl: 'https://picsum.photos/seed/russian_revolution/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '262',
+    year: '1918 CE',
+    title: 'WWI Armistice',
+    description: 'Germany signs an armistice, ending the fighting, which resulted in the collapse of the Ottoman, Austro-Hungarian, German, and Russian Empires.',
+    imageUrl: 'https://picsum.photos/seed/armistice/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '263',
+    year: '1919 CE',
+    title: 'Treaty of Versailles Signed',
+    description: 'The formal peace treaty for WWI imposes heavy reparations and territorial losses on Germany, creating deep resentment.',
+    imageUrl: 'https://picsum.photos/seed/versailles/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '264',
+    year: '1920 CE',
+    title: 'League of Nations Formed',
+    description: 'An international organization is established to promote world peace and cooperation; it ultimately fails due to a lack of enforcement power.',
+    imageUrl: 'https://picsum.photos/seed/league_of_nations/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '265',
+    year: '1922 CE',
+    title: 'Mussolini\'s March on Rome',
+    description: 'Benito Mussolini and his Fascist party seize power in Italy, establishing Europe\'s first modern totalitarian regime.',
+    imageUrl: 'https://picsum.photos/seed/mussolini/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '266',
+    year: '1927 CE',
+    title: 'First Successful Television Broadcast',
+    description: 'Philo Farnsworth transmits the first image electronically, laying the groundwork for a medium that would fundamentally change communication.',
+    imageUrl: 'https://picsum.photos/seed/television/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '267',
+    year: '1928 CE',
+    title: 'Discovery of Penicillin',
+    description: 'Alexander Fleming discovers the first true antibiotic, dramatically improving the treatment of bacterial infections and ushering in the age of modern medicine.',
+    imageUrl: 'https://picsum.photos/seed/penicillin/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '268',
+    year: '1929 CE',
+    title: 'Black Tuesday (Stock Market Crash)',
+    description: 'The U.S. stock market collapses, triggering the Great Depression, a global economic slump that lasted through the 1930s.',
+    imageUrl: 'https://picsum.photos/seed/stock_crash/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '269',
+    year: '1931 CE',
+    title: 'Japan Invades Manchuria',
+    description: 'Japan\'s military launches an invasion of the Chinese region of Manchuria, signaling the start of Japanese imperial aggression in Asia.',
+    imageUrl: 'https://picsum.photos/seed/manchuria/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '270',
+    year: '1933 CE',
+    title: 'Hitler Becomes Chancellor of Germany',
+    description: 'Adolf Hitler and the Nazi Party take power, beginning a campaign of rearmament, territorial expansion, and systematic persecution.',
+    imageUrl: 'https://picsum.photos/seed/hitler/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '271',
+    year: '1935 CE',
+    title: 'Italy Invades Ethiopia',
+    description: 'Mussolini\'s Italy invades the independent African nation of Ethiopia, demonstrating the failure of the League of Nations to stop aggression.',
+    imageUrl: 'https://picsum.photos/seed/ethiopia/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '272',
+    year: '1936 CE',
+    title: 'Spanish Civil War Begins',
+    description: 'A brutal conflict erupts between Republicans and Nationalists (led by Francisco Franco), serving as a testing ground for German and Italian military tactics.',
+    imageUrl: 'https://picsum.photos/seed/spanish_civil_war/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '273',
+    year: '1937 CE',
+    title: 'Second Sino-Japanese War Begins',
+    description: 'The conflict in Asia escalates as Japan launches a full-scale invasion of China, leading to immense civilian casualties.',
+    imageUrl: 'https://picsum.photos/seed/sino_japanese/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '274',
+    year: '1938 CE',
+    title: 'Anschluss (Austria Annexed)',
+    description: 'Nazi Germany formally annexes Austria, violating the Treaty of Versailles and increasing tensions in Europe.',
+    imageUrl: 'https://picsum.photos/seed/anschluss/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '275',
+    year: '1938 CE',
+    title: 'Munich Agreement',
+    description: 'Britain and France adopt the policy of appeasement, allowing Hitler to annex the Sudetenland region of Czechoslovakia.',
+    imageUrl: 'https://picsum.photos/seed/munich/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '276',
+    year: '1939 CE',
+    title: 'World War II Begins (Invasion of Poland)',
+    description: 'Germany invades Poland, prompting Britain and France to declare war, starting the deadliest conflict in human history.',
+    imageUrl: 'https://picsum.photos/seed/wwii_begins/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '277',
+    year: '1940 CE',
+    title: 'Battle of Britain',
+    description: 'The Royal Air Force successfully defends the UK against large-scale attacks by the German Luftwaffe, preventing a planned German invasion.',
+    imageUrl: 'https://picsum.photos/seed/battle_britain/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '278',
+    year: '1941 CE',
+    title: 'Lend-Lease Act (U.S.)',
+    description: 'The U.S. begins supplying Allied nations (Britain, USSR, China) with war materials, positioning itself as the "Arsenal of Democracy."',
+    imageUrl: 'https://picsum.photos/seed/lend_lease/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '279',
+    year: '1941 CE',
+    title: 'Pearl Harbor Attack',
+    description: 'Japan launches a surprise attack on the U.S. naval base in Hawaii, leading to the United States\' entry into WWII.',
+    imageUrl: 'https://picsum.photos/seed/pearl_harbor/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '280',
+    year: '1942 CE',
+    title: 'Wannsee Conference / The Holocaust',
+    description: 'Nazi leaders formalize the plans for the "Final Solution," systematizing the genocide of European Jews and other targeted groups.',
+    imageUrl: 'https://picsum.photos/seed/holocaust/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '281',
+    year: '1942 CE',
+    title: 'Battle of Midway',
+    description: 'The U.S. Navy decisively defeats the Imperial Japanese Navy, marking the turning point of the war in the Pacific.',
+    imageUrl: 'https://picsum.photos/seed/midway/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '282',
+    year: '1943 CE',
+    title: 'Battle of Stalingrad Ends',
+    description: 'The Soviet Union defeats Germany, marking a major turning point on the Eastern Front.',
+    imageUrl: 'https://picsum.photos/seed/stalingrad/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '283',
+    year: '1944 CE',
+    title: 'D-Day Invasion',
+    description: 'Allied forces land in Normandy, France, opening a crucial second front against Germany.',
+    imageUrl: 'https://picsum.photos/seed/d_day/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '284',
+    year: '1945 CE',
+    title: 'Yalta Conference',
+    description: 'The "Big Three" (Roosevelt, Churchill, Stalin) meet to discuss the post-war reorganization of Germany and Europe.',
+    imageUrl: 'https://picsum.photos/seed/yalta/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '285',
+    year: '1945 CE',
+    title: 'Mussolini Executed',
+    description: 'The Italian dictator is captured and executed by Italian partisans as Allied forces close in.',
+    imageUrl: 'https://picsum.photos/seed/mussolini_death/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '286',
+    year: '1945 CE',
+    title: 'Hitler Commits Suicide',
+    description: 'Adolf Hitler commits suicide in his Berlin bunker as Soviet forces close in on the city.',
+    imageUrl: 'https://picsum.photos/seed/hitler_death/600/400',
+    phase: 'Phase 10'
+  },
+  {
+    id: '287',
+    year: '1945 CE',
+    title: 'Atomic Bombings of Hiroshima and Nagasaki',
+    description: 'The use of atomic bombs concludes WWII and ushers in the Atomic Age, redefining global power dynamics.',
+    imageUrl: 'https://picsum.photos/seed/atomic_bomb/600/400',
+    phase: 'Phase 10'
+  },
+  // Phase 11 Marker
+  {
+    id: 'phase-11-marker',
+    year: '1945 CE',
+    title: 'The Cold War Era',
+    description: '',
+    imageUrl: 'https://picsum.photos/seed/cold_war_hero/1600/900',
+    phase: 'Phase 11',
+    type: 'phase_marker'
+  },
+  {
+    id: '288',
+    year: '1945 CE',
+    title: 'Founding of the United Nations (UN)',
+    description: 'The new global body replaces the failed League of Nations, aiming to maintain international peace and security and foster cooperation.',
+    imageUrl: 'https://picsum.photos/seed/un_founding/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '289',
+    year: '1946 CE',
+    title: 'Nuremberg Trials Conclude',
+    description: 'Key Nazi leaders are prosecuted for war crimes and crimes against humanity, establishing precedents for international law and accountability.',
+    imageUrl: 'https://picsum.photos/seed/nuremberg/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '290',
+    year: '1947 CE',
+    title: 'The Truman Doctrine',
+    description: 'U.S. policy is announced to contain the spread of communism, committing America to intervene globally against Soviet influence.',
+    imageUrl: 'https://picsum.photos/seed/truman/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '291',
+    year: '1947 CE',
+    title: 'Partition of India',
+    description: 'British India is divided into India and Pakistan, resulting in massive displacement, violence, and the creation of two new sovereign states.',
+    imageUrl: 'https://picsum.photos/seed/partition_india/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '292',
+    year: '1948 CE',
+    title: 'Establishment of Israel',
+    description: 'The Jewish state is proclaimed, followed immediately by the first Arab-Israeli War, creating a long-running conflict in the Middle East.',
+    imageUrl: 'https://picsum.photos/seed/israel/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '293',
+    year: '1948 CE',
+    title: 'Berlin Blockade Begins',
+    description: 'The Soviet Union blocks Allied rail and road access to sectors of Berlin, leading to the massive, year-long Western Berlin Airlift.',
+    imageUrl: 'https://picsum.photos/seed/berlin_airlift/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '294',
+    year: '1949 CE',
+    title: 'NATO (North Atlantic Treaty Organization) Formed',
+    description: 'A military alliance is established between Western European and North American countries for collective security against the Soviet Union.',
+    imageUrl: 'https://picsum.photos/seed/nato/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '295',
+    year: '1949 CE',
+    title: 'Chinese Communist Revolution',
+    description: 'Mao Zedong\'s forces win the civil war, establishing the People\'s Republic of China (PRC) and shifting the global balance of power.',
+    imageUrl: 'https://picsum.photos/seed/chinese_revolution/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '296',
+    year: '1950 CE',
+    title: 'Korean War Begins',
+    description: 'The first major armed conflict of the Cold War starts, pitting the U.S.-supported South against the Soviet- and Chinese-backed North.',
+    imageUrl: 'https://picsum.photos/seed/korean_war/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '297',
+    year: '1951 CE',
+    title: 'Colonial Rule Ends in Libya',
+    description: 'Libya gains independence from France and Britain, marking an early success in the wave of African decolonization.',
+    imageUrl: 'https://picsum.photos/seed/libya/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '298',
+    year: '1953 CE',
+    title: 'Stalin\'s Death',
+    description: 'The long-time Soviet leader dies, leading to a period of De-Stalinization and a slight, temporary thaw in the Cold War.',
+    imageUrl: 'https://picsum.photos/seed/stalin_death/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '299',
+    year: '1955 CE',
+    title: 'The Warsaw Pact Formed',
+    description: 'The Soviet Union creates a counter-military alliance to NATO, formally dividing Europe into two armed blocs.',
+    imageUrl: 'https://picsum.photos/seed/warsaw_pact/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '300',
+    year: '1956 CE',
+    title: 'Suez Crisis',
+    description: 'An international crisis over control of the Suez Canal demonstrates the decline of old European imperial power due to pressure from the U.S. and USSR.',
+    imageUrl: 'https://picsum.photos/seed/suez/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '301',
+    year: '1957 CE',
+    title: 'Sputnik Launch',
+    description: 'The Soviet Union launches the world\'s first artificial satellite, sparking the Space Race and intensifying technological competition with the U.S.',
+    imageUrl: 'https://picsum.photos/seed/sputnik/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '302',
+    year: '1959 CE',
+    title: 'Cuban Revolution',
+    description: 'Fidel Castro overthrows the U.S.-backed government in Cuba, establishing a communist state just 90 miles from the U.S. mainland.',
+    imageUrl: 'https://picsum.photos/seed/cuba/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '303',
+    year: '1960 CE',
+    title: '"Year of Africa"',
+    description: 'Seventeen African nations gain independence from European colonial powers, marking the peak of the decolonization movement.',
+    imageUrl: 'https://picsum.photos/seed/africa_independence/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '304',
+    year: '1961 CE',
+    title: 'Berlin Wall Construction Begins',
+    description: 'East Germany builds a fortified barrier separating East and West Berlin, becoming the ultimate symbol of the Iron Curtain and Cold War division.',
+    imageUrl: 'https://picsum.photos/seed/berlin_wall/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '305',
+    year: '1962 CE',
+    title: 'Cuban Missile Crisis',
+    description: 'The U.S. and USSR enter a tense 13-day standoff over Soviet nuclear missiles in Cuba, bringing the world closer to nuclear war than ever before.',
+    imageUrl: 'https://picsum.photos/seed/missile_crisis/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '306',
+    year: '1963 CE',
+    title: 'Assassination of JFK',
+    description: 'U.S. President John F. Kennedy is assassinated, marking a pivotal moment in American history and leadership during the Cold War.',
+    imageUrl: 'https://picsum.photos/seed/jfk/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '307',
+    year: '1964 CE',
+    title: 'Gulf of Tonkin Resolution',
+    description: 'The U.S. Congress passes the resolution, leading to a massive escalation of American military involvement in the Vietnam War.',
+    imageUrl: 'https://picsum.photos/seed/tonkin/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '308',
+    year: '1966 CE',
+    title: 'Cultural Revolution Begins (China)',
+    description: 'Mao Zedong launches a radical and violent sociopolitical movement to enforce communist ideology and purge rival elements from Chinese society.',
+    imageUrl: 'https://picsum.photos/seed/cultural_revolution/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '309',
+    year: '1967 CE',
+    title: 'Six-Day War',
+    description: 'Israel preemptively attacks its Arab neighbors, resulting in a decisive victory and the occupation of key territories (Sinai, West Bank, Gaza, Golan Heights).',
+    imageUrl: 'https://picsum.photos/seed/six_day_war/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '310',
+    year: '1968 CE',
+    title: 'Prague Spring Crushed',
+    description: 'Soviet-led Warsaw Pact troops invade Czechoslovakia to halt liberal reforms, reaffirming the USSR\'s tight control over Eastern Bloc nations.',
+    imageUrl: 'https://picsum.photos/seed/prague_spring/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '311',
+    year: '1969 CE',
+    title: 'Apollo 11 Lands on the Moon',
+    description: 'The U.S. achieves the goal of the Space Race when Neil Armstrong becomes the first human to walk on the Moon.',
+    imageUrl: 'https://picsum.photos/seed/moon_landing/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '312',
+    year: '1972 CE',
+    title: 'SALT I Treaty Signed',
+    description: 'The U.S. and USSR sign the first Strategic Arms Limitation Treaty, marking a period of Détente (a relaxation of tensions) between the superpowers.',
+    imageUrl: 'https://picsum.photos/seed/salt_treaty/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '313',
+    year: '1979 CE',
+    title: 'Iranian Revolution',
+    description: 'The U.S.-backed Shah is overthrown, and an Islamic republic is established under Ayatollah Khomeini, fundamentally altering geopolitics in the Middle East.',
+    imageUrl: 'https://picsum.photos/seed/iranian_revolution/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '314',
+    year: '1979 CE',
+    title: 'Soviet Invasion of Afghanistan',
+    description: 'The USSR invades Afghanistan to support a struggling communist government, leading to a long, costly occupation and renewed Cold War tension.',
+    imageUrl: 'https://picsum.photos/seed/afghanistan_invasion/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '315',
+    year: '1986 CE',
+    title: 'Chernobyl Disaster',
+    description: 'A catastrophic nuclear accident in the Soviet Ukraine demonstrates the technological and systemic flaws of the Soviet system.',
+    imageUrl: 'https://picsum.photos/seed/chernobyl/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '316',
+    year: '1989 CE',
+    title: 'Fall of the Berlin Wall',
+    description: 'East German guards open the gates of the Berlin Wall, symbolizing the imminent collapse of communist rule in Eastern Europe and the Cold War\'s end.',
+    imageUrl: 'https://picsum.photos/seed/berlin_wall_fall/600/400',
+    phase: 'Phase 11'
+  },
+  {
+    id: '317',
+    year: '1991 CE',
+    title: 'Dissolution of the USSR',
+    description: 'The Soviet Union officially collapses, breaking into 15 independent republics, formally concluding the Cold War era.',
+    imageUrl: 'https://picsum.photos/seed/ussr_dissolution/600/400',
+    phase: 'Phase 11'
+  },
+  // Phase 12 Marker
+  {
+    id: 'phase-12-marker',
+    year: '1991 CE',
+    title: 'The Modern Digital Age',
+    description: '',
+    imageUrl: 'https://picsum.photos/seed/digital_age_hero/1600/900',
+    phase: 'Phase 12',
+    type: 'phase_marker'
+  },
+  {
+    id: '318',
+    year: '1991 CE',
+    title: 'Māori Language Act (New Zealand)',
+    description: 'Marks an early success in indigenous language revitalization and official recognition in the post-colonial era.',
+    imageUrl: 'https://picsum.photos/seed/maori_act/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '319',
+    year: '1991 CE',
+    title: 'First World Wide Web Protocol Released',
+    description: 'Tim Berners-Lee introduces the standards (HTTP, HTML) for the World Wide Web at CERN, launching the public internet era.',
+    imageUrl: 'https://picsum.photos/seed/www/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '320',
+    year: '1992 CE',
+    title: 'Creation of the European Union (Maastricht Treaty)',
+    description: 'Forms an economic and political partnership between 12 European countries, leading to the creation of the euro currency and a unified political bloc.',
+    imageUrl: 'https://picsum.photos/seed/eu_creation/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '321',
+    year: '1994 CE',
+    title: 'South African Election and Apartheid Ends',
+    description: 'Nelson Mandela is elected President in the first fully democratic, multiracial election, formally ending the system of Apartheid.',
+    imageUrl: 'https://picsum.photos/seed/mandela/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '322',
+    year: '1995 CE',
+    title: 'World Trade Organization (WTO) Established',
+    description: 'Replaces GATT, becoming the global body responsible for regulating and liberalizing international trade, driving globalization.',
+    imageUrl: 'https://picsum.photos/seed/wto/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '323',
+    year: '1997 CE',
+    title: 'Kyoto Protocol Adopted',
+    description: 'Marks the first major international treaty committing industrialized nations to limit and reduce greenhouse gas emissions.',
+    imageUrl: 'https://picsum.photos/seed/kyoto/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '324',
+    year: '1998 CE',
+    title: 'Google is Founded',
+    description: 'Larry Page and Sergey Brin found the search engine company, which rapidly becomes the dominant gateway to global information.',
+    imageUrl: 'https://picsum.photos/seed/google/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '325',
+    year: '2000 CE',
+    title: 'The International Space Station (ISS) Activated',
+    description: 'The first crew boards the ISS, establishing a permanent, international human presence in space and demonstrating post-Cold War cooperation.',
+    imageUrl: 'https://picsum.photos/seed/iss/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '326',
+    year: '2001 CE',
+    title: 'September 11 Attacks (9/11)',
+    description: 'Al-Qaeda terrorists attack the United States, initiating the Global War on Terror and redefining international security and foreign policy.',
+    imageUrl: 'https://picsum.photos/seed/911/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '327',
+    year: '2001 CE',
+    title: 'China Joins the WTO',
+    description: 'China\'s entry into the WTO accelerates its economic boom and integrates it fully into the global manufacturing supply chain.',
+    imageUrl: 'https://picsum.photos/seed/china_wto/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '328',
+    year: '2003 CE',
+    title: 'Human Genome Project Completed',
+    description: 'Scientists finalize the mapping and sequencing of all human DNA, opening vast new possibilities for genetic medicine and research.',
+    imageUrl: 'https://picsum.photos/seed/human_genome/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '329',
+    year: '2004 CE',
+    title: 'Founding of Facebook (Meta)',
+    description: 'Mark Zuckerberg launches the social networking platform, which rapidly becomes a dominant force in global communication and media.',
+    imageUrl: 'https://picsum.photos/seed/facebook/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '330',
+    year: '2007 CE',
+    title: 'First iPhone Released',
+    description: 'Apple releases the iPhone, ushering in the era of the smartphone and mobile computing, fundamentally changing global access to the internet.',
+    imageUrl: 'https://picsum.photos/seed/iphone/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '331',
+    year: '2008 CE',
+    title: 'Global Financial Crisis (The Great Recession)',
+    description: 'A worldwide economic recession is triggered by the collapse of the US housing market, exposing deep vulnerabilities in the global financial system.',
+    imageUrl: 'https://picsum.photos/seed/financial_crisis/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '332',
+    year: '2009 CE',
+    title: 'Launch of Bitcoin',
+    description: 'The first decentralized cryptocurrency is released, laying the groundwork for blockchain technology and challenging traditional financial institutions.',
+    imageUrl: 'https://picsum.photos/seed/bitcoin/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '333',
+    year: '2010 CE',
+    title: 'The Arab Spring Uprisings Begin',
+    description: 'A wave of pro-democracy protests, often fueled by social media, spreads across the Middle East and North Africa.',
+    imageUrl: 'https://picsum.photos/seed/arab_spring/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '334',
+    year: '2011 CE',
+    title: 'World Population Hits 7 Billion',
+    description: 'The total number of people on Earth reaches 7 billion, highlighting global pressures on resources and climate.',
+    imageUrl: 'https://picsum.photos/seed/7_billion/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '335',
+    year: '2012 CE',
+    title: 'CERN Confirms Higgs Boson Discovery',
+    description: 'Scientists at the Large Hadron Collider confirm the existence of the Higgs boson particle, a final key piece of the Standard Model of particle physics.',
+    imageUrl: 'https://picsum.photos/seed/higgs_boson/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '336',
+    year: '2013 CE',
+    title: 'Edward Snowden Leaks',
+    description: 'Leaks from the former NSA contractor reveal massive global surveillance programs, sparking a fierce debate on digital privacy.',
+    imageUrl: 'https://picsum.photos/seed/snowden/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '337',
+    year: '2014 CE',
+    title: 'Russia Annexes Crimea',
+    description: 'Russia seizes the Crimean Peninsula from Ukraine, initiating a prolonged conflict and marking the first major forced annexation of territory in Europe since WWII.',
+    imageUrl: 'https://picsum.photos/seed/crimea/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '338',
+    year: '2015 CE',
+    title: 'Paris Agreement on Climate Change',
+    description: 'Nations worldwide sign a landmark agreement to limit global warming, marking the strongest international commitment to combating climate change.',
+    imageUrl: 'https://picsum.photos/seed/paris_agreement/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '339',
+    year: '2016 CE',
+    title: 'CRISPR Gene Editing Rises to Prominence',
+    description: 'The revolutionary technology for precise and cheap gene editing becomes widely adopted, creating major ethical and scientific debates.',
+    imageUrl: 'https://picsum.photos/seed/crispr/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '340',
+    year: '2016 CE',
+    title: 'Brexit Vote (UK)',
+    description: 'The United Kingdom votes to leave the European Union, a major geopolitical event demonstrating a rise in populism and nationalism in the West.',
+    imageUrl: 'https://picsum.photos/seed/brexit/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '341',
+    year: '2017 CE',
+    title: '#MeToo Movement Gains Momentum',
+    description: 'The global social movement against sexual abuse and harassment spreads rapidly, leading to widespread shifts in cultural and professional accountability.',
+    imageUrl: 'https://picsum.photos/seed/metoo/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '342',
+    year: '2019 CE',
+    title: 'First Image of a Black Hole Captured',
+    description: 'The Event Horizon Telescope collaboration releases the first-ever direct visual evidence of a supermassive black hole and its shadow.',
+    imageUrl: 'https://picsum.photos/seed/black_hole_image/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '343',
+    year: '2020 CE',
+    title: 'Global COVID-19 Pandemic Begins',
+    description: 'The SARS-CoV-2 virus spreads worldwide, leading to global lockdowns, economic disruption, and the rapid development of mRNA vaccines.',
+    imageUrl: 'https://picsum.photos/seed/covid19/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '344',
+    year: '2022 CE',
+    title: 'Russia Invades Ukraine',
+    description: 'Russia launches a full-scale invasion of Ukraine, triggering the largest military conflict in Europe since World War II.',
+    imageUrl: 'https://picsum.photos/seed/ukraine_invasion/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '345',
+    year: '2022 CE',
+    title: 'World Population Hits 8 Billion',
+    description: 'The global population reaches 8 billion, continuing the trend of human growth.',
+    imageUrl: 'https://picsum.photos/seed/8_billion/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '346',
+    year: '2022 CE',
+    title: 'Launch of ChatGPT',
+    description: 'OpenAI releases the public version of its Generative AI model, bringing Large Language Models (LLMs) to the mainstream and initiating a technological revolution.',
+    imageUrl: 'https://picsum.photos/seed/chatgpt/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '347',
+    year: '2023 CE',
+    title: 'AI Regulation Efforts',
+    description: 'Global governments and bodies (EU, US) begin aggressively drafting regulations for AI technology, recognizing its power and inherent risks.',
+    imageUrl: 'https://picsum.photos/seed/ai_regulation/600/400',
+    phase: 'Phase 12'
+  },
+  {
+    id: '348',
+    year: '2025 CE',
+    title: 'The Present Day / The End of Known History',
+    description: 'This final day represents the ever-moving present—the culmination of all events in the timeline—and the moment where future history begins.',
+    imageUrl: 'https://picsum.photos/seed/present_day/600/400',
+    phase: 'Phase 12'
   }
 ];
 
