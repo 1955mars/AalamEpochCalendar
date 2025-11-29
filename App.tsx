@@ -1,3 +1,4 @@
+
 import React, { useState, useRef } from 'react';
 import Timeline from './components/Timeline';
 import { TimelineEvent, TimelineHandle } from './types';
@@ -113,7 +114,7 @@ const App: React.FC = () => {
       </main>
 
       {/* Footer */}
-      <footer className="flex-none h-12 border-t border-black/5 flex items-center justify-center text-slate-400 text-sm bg-white/40 relative z-30">
+      <footer className="flex-none h-20 border-t border-black/5 flex items-center justify-center text-slate-400 text-sm bg-white/40 relative z-30">
         <p>© {new Date().getFullYear()} Aalam.</p>
       </footer>
     </div>

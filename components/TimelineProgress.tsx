@@ -1,3 +1,4 @@
+
 import React from 'react';
 
 interface TimelineProgressProps {
@@ -12,8 +13,8 @@ const TimelineProgress: React.FC<TimelineProgressProps> = ({ current, total, sta
   const percentage = total > 1 ? Math.min(100, Math.max(0, (current / (total - 1)) * 100)) : 0;
 
   return (
-    <div className="absolute bottom-6 left-0 right-0 px-8 md:px-12 z-30 pointer-events-none">
-      <div className="max-w-4xl mx-auto flex flex-col gap-2">
+    <div className="w-full max-w-4xl mx-auto px-8 md:px-12 mt-4 mb-2 z-30 pointer-events-none">
+      <div className="flex flex-col gap-2">
         {/* Progress Track */}
         <div className="relative w-full h-2 bg-slate-300/50 rounded-full overflow-hidden backdrop-blur-sm border border-slate-300/30 shadow-sm">
           {/* Fill Bar */}

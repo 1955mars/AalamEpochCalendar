@@ -1,3 +1,4 @@
+
 import React, { useRef, useEffect, useMemo, useImperativeHandle, forwardRef, useState } from 'react';
 import { TimelineEvent, TimelineHandle } from '../types';
 import TimelineEventCardComponent from './TimelineEventCard';
@@ -16,9 +17,6 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
   const [expandedPhases, setExpandedPhases] = useState<Set<string>>(new Set());
   const [currentIndex, setCurrentIndex] = useState(0);
   
-  // Refs to access latest state inside callbacks without closure staleness
-  const visibleEventsRef = useRef<TimelineEvent[]>([]);
-
   // Helper function to parse diverse year formats including deep time for sorting
   const parseYear = (yearStr: string): number => {
     const lower = yearStr.toLowerCase().trim().replace(/,/g, '');
@@ -72,7 +70,6 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
       if (event.phase) return expandedPhases.has(event.phase);
       return true;
     });
-    visibleEventsRef.current = filtered;
     return filtered;
   }, [sortedEvents, expandedPhases]);
 
@@ -163,46 +160,52 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
     : 0;
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-center items-center">
-      <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-300 z-0"></div>
+    <div className="w-full h-full flex flex-col justify-center items-center">
+      
+      {/* Timeline Wrapper: Contains the scroll area, center line, and nav buttons */}
+      <div className="relative w-full">
+        {/* The center line must be contained here so it centers relative to the cards, not the whole page */}
+        <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-300 z-0"></div>
 
-      <button 
-        onClick={() => scroll('left')}
-        className="absolute left-4 z-20 p-3 bg-white text-slate-700 rounded-full shadow-lg hover:bg-slate-100 transition-colors hidden md:flex border border-slate-200 cursor-pointer"
-      >
-        <ChevronLeft size={24} />
-      </button>
+        <button 
+          onClick={() => scroll('left')}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white text-slate-700 rounded-full shadow-lg hover:bg-slate-100 transition-colors hidden md:flex border border-slate-200 cursor-pointer"
+        >
+          <ChevronLeft size={24} />
+        </button>
 
-      <button 
-        onClick={() => scroll('right')}
-        className="absolute right-4 z-20 p-3 bg-white text-slate-700 rounded-full shadow-lg hover:bg-slate-100 transition-colors hidden md:flex border border-slate-200 cursor-pointer"
-      >
-        <ChevronRight size={24} />
-      </button>
+        <button 
+          onClick={() => scroll('right')}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white text-slate-700 rounded-full shadow-lg hover:bg-slate-100 transition-colors hidden md:flex border border-slate-200 cursor-pointer"
+        >
+          <ChevronRight size={24} />
+        </button>
 
-      <div 
-        ref={scrollContainerRef}
-        onScroll={handleScroll}
-        className="timeline-scroll no-scrollbar flex overflow-x-auto gap-0 px-[10vw] py-4 snap-x snap-mandatory relative z-10 w-full items-stretch h-[600px] md:h-[700px]"
-      >
-        {visibleEvents.length === 0 ? (
-          <div className="w-full flex justify-center items-center text-slate-500">
-            <p className="text-lg">No events data available.</p>
-          </div>
-        ) : (
-          visibleEvents.map((event, index) => (
-            <TimelineEventCardComponent 
-              key={event.id} 
-              event={event} 
-              position={index % 2 === 0 ? 'top' : 'bottom'}
-              onClick={() => event.type === 'phase_marker' && event.phase ? togglePhase(event.phase) : undefined}
-              isExpanded={event.phase ? expandedPhases.has(event.phase) : false}
-            />
-          ))
-        )}
-        <div className="w-[10vw] flex-shrink-0"></div>
+        <div 
+          ref={scrollContainerRef}
+          onScroll={handleScroll}
+          className="timeline-scroll no-scrollbar flex overflow-x-auto gap-0 px-[10vw] py-4 snap-x snap-mandatory relative z-10 w-full items-stretch h-[600px] md:h-[700px]"
+        >
+          {visibleEvents.length === 0 ? (
+            <div className="w-full flex justify-center items-center text-slate-500">
+              <p className="text-lg">No events data available.</p>
+            </div>
+          ) : (
+            visibleEvents.map((event, index) => (
+              <TimelineEventCardComponent 
+                key={event.id} 
+                event={event} 
+                position={index % 2 === 0 ? 'top' : 'bottom'}
+                onClick={() => event.type === 'phase_marker' && event.phase ? togglePhase(event.phase) : undefined}
+                isExpanded={event.phase ? expandedPhases.has(event.phase) : false}
+              />
+            ))
+          )}
+          <div className="w-[10vw] flex-shrink-0"></div>
+        </div>
       </div>
 
+      {/* Progress Bar placed below the timeline wrapper */}
       <TimelineProgress 
         current={globalCurrentIndex}
         total={sortedEvents.length}
