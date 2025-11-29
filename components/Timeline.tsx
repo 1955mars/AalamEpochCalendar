@@ -8,16 +8,16 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 interface TimelineProps {
   events: TimelineEvent[];
   onPhaseChange?: (phase: string) => void;
+  maxIndex?: number; // Added for simulation
 }
 
-const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseChange }, ref) => {
+const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseChange, maxIndex }, ref) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   
   // Track which phases are expanded.
   const [expandedPhases, setExpandedPhases] = useState<Set<string>>(new Set());
   const [currentIndex, setCurrentIndex] = useState(0);
   
-  // Helper function to parse diverse year formats including deep time for sorting
   const parseYear = (yearStr: string): number => {
     const lower = yearStr.toLowerCase().trim().replace(/,/g, '');
     let multiplier = 1;
@@ -49,29 +49,36 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
       .replace(/Years Ago/gi, 'YA');
   };
 
-  const sortedEvents = useMemo(() => {
+  // 1. Calculate the FULL sorted list of events (The entire history)
+  const allSortedEvents = useMemo(() => {
     return [...events].sort((a, b) => {
       const valA = parseYear(a.year);
       const valB = parseYear(b.year);
       
       if (valA !== valB) return valA - valB;
-
-      // If years are equal, prioritize markers
       if (a.type === 'phase_marker' && b.type !== 'phase_marker') return -1;
       if (a.type !== 'phase_marker' && b.type === 'phase_marker') return 1;
-
       return a.year.localeCompare(b.year);
     });
   }, [events]);
 
+  // 2. Determine which events are technically available to render (e.g. during simulation)
+  const renderEvents = useMemo(() => {
+    if (typeof maxIndex === 'number') {
+      return allSortedEvents.slice(0, maxIndex);
+    }
+    return allSortedEvents;
+  }, [allSortedEvents, maxIndex]);
+
+  // 3. Filter renderable events based on user interaction (collapsed phases)
   const visibleEvents = useMemo(() => {
-    const filtered = sortedEvents.filter(event => {
+    const filtered = renderEvents.filter(event => {
       if (event.type === 'phase_marker') return true;
       if (event.phase) return expandedPhases.has(event.phase);
       return true;
     });
     return filtered;
-  }, [sortedEvents, expandedPhases]);
+  }, [renderEvents, expandedPhases]);
 
   const togglePhase = (phaseId: string) => {
     setExpandedPhases(prev => {
@@ -85,9 +92,50 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
     });
   };
 
+  // Auto-Scroll and Auto-Expand when new events arrive (Simulation)
+  useEffect(() => {
+    if (typeof maxIndex === 'number' && maxIndex > 0 && scrollContainerRef.current) {
+      // 1. Auto Expand current phase
+      const latestEvent = renderEvents[renderEvents.length - 1];
+      if (latestEvent && latestEvent.phase && !expandedPhases.has(latestEvent.phase)) {
+        setExpandedPhases(prev => {
+           const next = new Set(prev);
+           next.add(latestEvent.phase!);
+           return next;
+        });
+      }
+
+      // 2. Auto Scroll to end
+      const container = scrollContainerRef.current;
+      requestAnimationFrame(() => {
+         container.scrollTo({
+           left: container.scrollWidth,
+           behavior: 'smooth' 
+         });
+      });
+    }
+  }, [maxIndex, renderEvents]);
+
   useImperativeHandle(ref, () => ({
     scrollToPhase: (phaseId: string) => {
       if (!scrollContainerRef.current) return;
+      
+      // Expand phase if collapsed
+      if (!expandedPhases.has(phaseId)) {
+         setExpandedPhases(prev => new Set(prev).add(phaseId));
+         setTimeout(() => {
+            const index = visibleEvents.findIndex(e => e.phase === phaseId);
+            if (index !== -1 && scrollContainerRef.current) {
+                const el = scrollContainerRef.current.children[index] as HTMLElement;
+                if (el) {
+                   const offset = el.offsetLeft - (scrollContainerRef.current.clientWidth / 2) + (el.offsetWidth / 2);
+                   scrollContainerRef.current.scrollTo({ left: offset, behavior: 'smooth' });
+                }
+            }
+         }, 100);
+         return;
+      }
+
       const index = visibleEvents.findIndex(e => e.phase === phaseId);
       if (index === -1) return;
 
@@ -111,7 +159,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = window.innerWidth * 0.6; // Scroll 60% of viewport
+      const scrollAmount = window.innerWidth * 0.6;
       scrollContainerRef.current.scrollBy({
         left: direction === 'left' ? -scrollAmount : scrollAmount,
         behavior: 'smooth'
@@ -153,18 +201,16 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
     }
   };
 
-  // Calculate global index relative to the full sorted history, not just visible events
-  const currentEvent = visibleEvents[currentIndex];
-  const globalCurrentIndex = currentEvent 
-    ? sortedEvents.findIndex(e => e.id === currentEvent.id) 
+  // Calculate global index relative to the FULL history
+  const currentVisibleEvent = visibleEvents[currentIndex];
+  const globalCurrentIndex = currentVisibleEvent 
+    ? allSortedEvents.findIndex(e => e.id === currentVisibleEvent.id) 
     : 0;
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
       
-      {/* Timeline Wrapper: Contains the scroll area, center line, and nav buttons */}
       <div className="relative w-full">
-        {/* The center line must be contained here so it centers relative to the cards, not the whole page */}
         <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-300 z-0"></div>
 
         <button 
@@ -205,12 +251,11 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
         </div>
       </div>
 
-      {/* Progress Bar placed below the timeline wrapper */}
       <TimelineProgress 
         current={globalCurrentIndex}
-        total={sortedEvents.length}
-        startLabel={sortedEvents.length > 0 ? formatYearShort(sortedEvents[0].year) : ''}
-        endLabel={sortedEvents.length > 0 ? formatYearShort(sortedEvents[sortedEvents.length - 1].year) : ''}
+        total={allSortedEvents.length}
+        startLabel={allSortedEvents.length > 0 ? formatYearShort(allSortedEvents[0].year) : ''}
+        endLabel={allSortedEvents.length > 0 ? formatYearShort(allSortedEvents[allSortedEvents.length - 1].year) : ''}
       />
     </div>
   );
