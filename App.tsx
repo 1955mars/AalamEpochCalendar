@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Timeline from './components/Timeline';
 import { TimelineEvent, TimelineHandle } from './types';
 import { INITIAL_EVENTS } from './constants';
-import { Globe, ChevronLeft, ChevronRight, Play, Pause, RotateCcw, Clock, XCircle } from 'lucide-react';
+import { Orbit, ChevronLeft, ChevronRight, Play, Pause, RotateCcw, Clock, XCircle } from 'lucide-react';
 
 const PHASES = [
   { id: 'Phase 1', title: 'Cosmic & Primordial Earth', bg: 'bg-slate-200' },
@@ -24,6 +24,7 @@ const DURATION_OPTIONS = [
   { label: '1 Min', value: 60 * 1000 },
   { label: '5 Mins', value: 5 * 60 * 1000 },
   { label: '30 Mins', value: 30 * 60 * 1000 },
+  { label: '1 Hr', value: 60 * 60 * 1000 },
   { label: '366 Days', value: 366 * 24 * 60 * 60 * 1000 },
 ];
 
@@ -144,7 +145,7 @@ const App: React.FC = () => {
         <div className="flex items-center gap-4 flex-1">
           <div className="flex items-center gap-2 md:gap-3 flex-shrink-0">
             <div className="p-2 bg-slate-900 rounded-lg shadow-md hidden sm:block">
-              <Globe className="text-white" size={24} />
+              <Orbit className="text-white" size={24} />
             </div>
             <h1 className="text-xl md:text-2xl font-bold text-slate-900 tracking-tight hidden lg:block">
               Aalam
