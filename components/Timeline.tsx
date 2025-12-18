@@ -15,7 +15,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   // Track which phases are expanded.
-  const [expandedPhases, setExpandedPhases] = useState<Set<string>>(new Set());
+  const [expandedPhases, setExpandedPhases] = useState<Set<string>>(new Set(['Phase 1']));
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const parseYear = (yearStr: string): number => {
@@ -92,9 +92,13 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
     });
   };
 
-  // Auto-Scroll and Auto-Expand when new events arrive (Simulation)
+  // Auto-Scroll and Auto-Expand when new events arrive (Simulation Only)
   useEffect(() => {
     if (typeof maxIndex === 'number' && maxIndex > 0 && scrollContainerRef.current) {
+      // Don't auto-scroll if we are showing the full timeline (initial load or exit changes)
+      // We want auto-scroll only during the progressive reveal of the simulation.
+      if (maxIndex === allSortedEvents.length) return;
+
       // 1. Auto Expand current phase
       const latestEvent = renderEvents[renderEvents.length - 1];
       if (latestEvent && latestEvent.phase && !expandedPhases.has(latestEvent.phase)) {
@@ -114,7 +118,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
         });
       });
     }
-  }, [maxIndex, renderEvents]);
+  }, [maxIndex, renderEvents, allSortedEvents.length]);
 
   useImperativeHandle(ref, () => ({
     scrollToPhase: (phaseId: string) => {
