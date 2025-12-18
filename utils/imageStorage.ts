@@ -35,7 +35,13 @@ export const getImageFromDB = async (url: string): Promise<Blob | null> => {
       const request = store.get(url);
 
       request.onsuccess = () => {
-        resolve(request.result as Blob || null);
+        const result = request.result as Blob;
+        // Validate that what we got is actually an image
+        if (result && (!result.type || !result.type.startsWith('image/'))) {
+          resolve(null);
+          return;
+        }
+        resolve(result || null);
       };
 
       request.onerror = () => {
@@ -50,6 +56,10 @@ export const getImageFromDB = async (url: string): Promise<Blob | null> => {
 
 // Save an image blob to the database
 export const saveImageToDB = async (url: string, blob: Blob): Promise<void> => {
+  // Prevent caching of non-image types (e.g. text/html errors)
+  if (blob.type && !blob.type.startsWith('image/')) {
+    return;
+  }
   try {
     const db = await openDB();
     return new Promise((resolve, reject) => {

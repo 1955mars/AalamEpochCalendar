@@ -13,11 +13,11 @@ interface TimelineProps {
 
 const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseChange, maxIndex }, ref) => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
-  
+
   // Track which phases are expanded.
   const [expandedPhases, setExpandedPhases] = useState<Set<string>>(new Set());
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const parseYear = (yearStr: string): number => {
     const lower = yearStr.toLowerCase().trim().replace(/,/g, '');
     let multiplier = 1;
@@ -54,7 +54,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
     return [...events].sort((a, b) => {
       const valA = parseYear(a.year);
       const valB = parseYear(b.year);
-      
+
       if (valA !== valB) return valA - valB;
       if (a.type === 'phase_marker' && b.type !== 'phase_marker') return -1;
       if (a.type !== 'phase_marker' && b.type === 'phase_marker') return 1;
@@ -99,19 +99,19 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
       const latestEvent = renderEvents[renderEvents.length - 1];
       if (latestEvent && latestEvent.phase && !expandedPhases.has(latestEvent.phase)) {
         setExpandedPhases(prev => {
-           const next = new Set(prev);
-           next.add(latestEvent.phase!);
-           return next;
+          const next = new Set(prev);
+          next.add(latestEvent.phase!);
+          return next;
         });
       }
 
       // 2. Auto Scroll to end
       const container = scrollContainerRef.current;
       requestAnimationFrame(() => {
-         container.scrollTo({
-           left: container.scrollWidth,
-           behavior: 'smooth' 
-         });
+        container.scrollTo({
+          left: container.scrollWidth,
+          behavior: 'smooth'
+        });
       });
     }
   }, [maxIndex, renderEvents]);
@@ -119,21 +119,21 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
   useImperativeHandle(ref, () => ({
     scrollToPhase: (phaseId: string) => {
       if (!scrollContainerRef.current) return;
-      
+
       // Expand phase if collapsed
       if (!expandedPhases.has(phaseId)) {
-         setExpandedPhases(prev => new Set(prev).add(phaseId));
-         setTimeout(() => {
-            const index = visibleEvents.findIndex(e => e.phase === phaseId);
-            if (index !== -1 && scrollContainerRef.current) {
-                const el = scrollContainerRef.current.children[index] as HTMLElement;
-                if (el) {
-                   const offset = el.offsetLeft - (scrollContainerRef.current.clientWidth / 2) + (el.offsetWidth / 2);
-                   scrollContainerRef.current.scrollTo({ left: offset, behavior: 'smooth' });
-                }
+        setExpandedPhases(prev => new Set(prev).add(phaseId));
+        setTimeout(() => {
+          const index = visibleEvents.findIndex(e => e.phase === phaseId);
+          if (index !== -1 && scrollContainerRef.current) {
+            const el = scrollContainerRef.current.children[index] as HTMLElement;
+            if (el) {
+              const offset = el.offsetLeft - (scrollContainerRef.current.clientWidth / 2) + (el.offsetWidth / 2);
+              scrollContainerRef.current.scrollTo({ left: offset, behavior: 'smooth' });
             }
-         }, 100);
-         return;
+          }
+        }, 100);
+        return;
       }
 
       const index = visibleEvents.findIndex(e => e.phase === phaseId);
@@ -141,7 +141,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
 
       const container = scrollContainerRef.current;
       const cardElements = container.children;
-      
+
       if (cardElements[index]) {
         const targetElement = cardElements[index] as HTMLElement;
         const containerWidth = container.clientWidth;
@@ -171,7 +171,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
     if (!scrollContainerRef.current) return;
 
     const container = scrollContainerRef.current;
-    
+
     // --- Center Detection Logic ---
     const center = container.scrollLeft + container.clientWidth / 2;
     const cardElements = Array.from(container.children).slice(0, visibleEvents.length);
@@ -191,7 +191,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
 
     if (closestIndex !== -1) {
       setCurrentIndex(closestIndex);
-      
+
       if (visibleEvents[closestIndex]) {
         const phase = visibleEvents[closestIndex].phase;
         if (phase && onPhaseChange) {
@@ -203,44 +203,45 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
 
   // Calculate global index relative to the FULL history
   const currentVisibleEvent = visibleEvents[currentIndex];
-  const globalCurrentIndex = currentVisibleEvent 
-    ? allSortedEvents.findIndex(e => e.id === currentVisibleEvent.id) 
+  const globalCurrentIndex = currentVisibleEvent
+    ? allSortedEvents.findIndex(e => e.id === currentVisibleEvent.id)
     : 0;
 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center">
-      
+
       <div className="relative w-full">
         <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-300 z-0"></div>
 
-        <button 
+        <button
           onClick={() => scroll('left')}
           className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white text-slate-700 rounded-full shadow-lg hover:bg-slate-100 transition-colors hidden md:flex border border-slate-200 cursor-pointer"
         >
           <ChevronLeft size={24} />
         </button>
 
-        <button 
+        <button
           onClick={() => scroll('right')}
           className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 bg-white text-slate-700 rounded-full shadow-lg hover:bg-slate-100 transition-colors hidden md:flex border border-slate-200 cursor-pointer"
         >
           <ChevronRight size={24} />
         </button>
 
-        <div 
+        <div
           ref={scrollContainerRef}
           onScroll={handleScroll}
           className="timeline-scroll no-scrollbar flex overflow-x-auto gap-0 px-[10vw] py-4 snap-x snap-mandatory relative z-10 w-full items-stretch h-[600px] md:h-[700px]"
         >
           {visibleEvents.length === 0 ? (
-            <div className="w-full flex justify-center items-center text-slate-500">
-              <p className="text-lg">No events data available.</p>
+            <div className="w-full flex flex-col justify-center items-center text-slate-400 gap-2 animate-pulse">
+              <p className="text-xl font-light tracking-widest uppercase">History Awaits</p>
+              <p className="text-xs text-slate-500">Initializing Timeline...</p>
             </div>
           ) : (
             visibleEvents.map((event, index) => (
-              <TimelineEventCardComponent 
-                key={event.id} 
-                event={event} 
+              <TimelineEventCardComponent
+                key={event.id}
+                event={event}
                 position={index % 2 === 0 ? 'top' : 'bottom'}
                 onClick={() => event.type === 'phase_marker' && event.phase ? togglePhase(event.phase) : undefined}
                 isExpanded={event.phase ? expandedPhases.has(event.phase) : false}
@@ -251,7 +252,7 @@ const Timeline = forwardRef<TimelineHandle, TimelineProps>(({ events, onPhaseCha
         </div>
       </div>
 
-      <TimelineProgress 
+      <TimelineProgress
         current={globalCurrentIndex}
         total={allSortedEvents.length}
         startLabel={allSortedEvents.length > 0 ? formatYearShort(allSortedEvents[0].year) : ''}
