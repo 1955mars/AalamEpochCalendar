@@ -3,6 +3,22 @@ import { TimelineEvent } from './types';
 
 // getImg helper removed (images are now static)
 
+
+export const PHASES = [
+  { id: 'Phase 1', title: 'Cosmic & Primordial Earth', bg: 'bg-slate-200' },
+  { id: 'Phase 2', title: 'The Age of Ancient Life', bg: 'bg-orange-100' },
+  { id: 'Phase 3', title: 'Hominid Evolution', bg: 'bg-emerald-100' },
+  { id: 'Phase 4', title: 'The Neolithic Revolution', bg: 'bg-amber-100' },
+  { id: 'Phase 5', title: 'The Bronze Age', bg: 'bg-yellow-100' },
+  { id: 'Phase 6', title: 'The Iron Age & Classical Age', bg: 'bg-rose-100' },
+  { id: 'Phase 7', title: 'The Post-Classical World', bg: 'bg-purple-100' },
+  { id: 'Phase 8', title: 'The Age of Exploration', bg: 'bg-blue-100' },
+  { id: 'Phase 9', title: 'The Age of Revolutions', bg: 'bg-indigo-100' },
+  { id: 'Phase 10', title: 'The Early 20th Century', bg: 'bg-teal-100' },
+  { id: 'Phase 11', title: 'The Cold War Era', bg: 'bg-cyan-100' },
+  { id: 'Phase 12', title: 'The Modern Digital Age', bg: 'bg-fuchsia-100' },
+];
+
 export const INITIAL_EVENTS: TimelineEvent[] = [
   // --- PHASE 1: Cosmic & Primordial Earth ---
   {

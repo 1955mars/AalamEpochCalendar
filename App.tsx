@@ -4,24 +4,12 @@ import Timeline from './components/Timeline';
 import CinematicBackground from './components/CinematicBackground';
 import CinematicHUD from './components/CinematicHUD';
 import DeepDiveModal from './components/DeepDiveModal';
+import MobileSwipeView from './components/MobileSwipeView';
 import { TimelineEvent, TimelineHandle } from './types';
-import { INITIAL_EVENTS } from './constants';
+import { INITIAL_EVENTS, PHASES } from './constants';
 import { Orbit, ChevronLeft, ChevronRight, Play, Pause, RotateCcw, Clock, XCircle } from 'lucide-react';
 
-const PHASES = [
-  { id: 'Phase 1', title: 'Cosmic & Primordial Earth', bg: 'bg-slate-200' },
-  { id: 'Phase 2', title: 'The Age of Ancient Life', bg: 'bg-orange-100' },
-  { id: 'Phase 3', title: 'Hominid Evolution', bg: 'bg-emerald-100' },
-  { id: 'Phase 4', title: 'The Neolithic Revolution', bg: 'bg-amber-100' },
-  { id: 'Phase 5', title: 'The Bronze Age', bg: 'bg-yellow-100' },
-  { id: 'Phase 6', title: 'The Iron Age & Classical Age', bg: 'bg-rose-100' },
-  { id: 'Phase 7', title: 'The Post-Classical World', bg: 'bg-purple-100' },
-  { id: 'Phase 8', title: 'The Age of Exploration', bg: 'bg-blue-100' },
-  { id: 'Phase 9', title: 'The Age of Revolutions', bg: 'bg-indigo-100' },
-  { id: 'Phase 10', title: 'The Early 20th Century', bg: 'bg-teal-100' },
-  { id: 'Phase 11', title: 'The Cold War Era', bg: 'bg-cyan-100' },
-  { id: 'Phase 12', title: 'The Modern Digital Age', bg: 'bg-fuchsia-100' },
-];
+
 
 const DURATION_OPTIONS = [
   { label: '1 Min', value: 60 * 1000 },
@@ -35,7 +23,15 @@ const DURATION_OPTIONS = [
 const App: React.FC = () => {
   const [events] = useState<TimelineEvent[]>(INITIAL_EVENTS);
   const [currentPhaseId, setCurrentPhaseId] = useState<string>('Phase 1');
+  const [isMobile, setIsMobile] = useState(false);
   const timelineRef = useRef<TimelineHandle>(null);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Simulation State
   const [isSimulationActive, setIsSimulationActive] = useState(false);
@@ -258,8 +254,8 @@ const App: React.FC = () => {
           </div>
         </div>
 
-        {/* Right: Phase Navigation (Hidden in Sim Mode to reduce clutter) */}
-        {!isSimulationActive && (
+        {/* Right: Phase Navigation (Hidden in Sim Mode to reduce clutter, and on Mobile to prevent overflow) */}
+        {!isSimulationActive && !isMobile && (
           <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
             {prevPhase ? (
               <button
@@ -308,12 +304,16 @@ const App: React.FC = () => {
         {/* Timeline Component - HIDDEN during simulation */}
         {!isSimulationActive && (
           <div className="relative z-10 w-full h-full animate-in fade-in zoom-in-95 duration-500">
-            <Timeline
-              ref={timelineRef}
-              events={events}
-              onPhaseChange={setCurrentPhaseId}
-              maxIndex={currentEventIndex}
-            />
+            {isMobile ? (
+              <MobileSwipeView events={events} onPhaseChange={setCurrentPhaseId} />
+            ) : (
+              <Timeline
+                ref={timelineRef}
+                events={events}
+                onPhaseChange={setCurrentPhaseId}
+                maxIndex={currentEventIndex}
+              />
+            )}
           </div>
         )}
       </main>
