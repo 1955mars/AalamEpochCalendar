@@ -105,6 +105,17 @@ To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
     - This renders the glowing lines on the customized timeline.
     - Run `npx tsx scripts/validateData.ts` to confirm all connections are valid.
 
+### 6. End-User Simulation & Feedback (The Critic)
+- **Goal**: Verify the "feel" and narrative flow from a user's perspective.
+- **Action**:
+    - **Persona**: Adopt the persona of a curious museum visitor.
+    - **Simulate**: "Watch" the journey (read the events in order).
+    - **Critique**:
+        - Is the pacing right? (Too many dates in one decade? Too big a gap?)
+        - Is the "Golden Thread" logic sound?
+        - Are the visuals distinct?
+    - **Iterate**: If the "User" finds boredom or confusion, go back to Step 2 or 5 and fix it.
+
 ## Protocol: Infinite Expansion (When the Tracker is Empty)
 If `docs/PROJECT_TRACKER.md` has no "ToDo" items:
 1.  **Autonomous Research**: Identify a gap in the timeline (e.g., "We have Art and Tech, but what about the History of Medicine?").

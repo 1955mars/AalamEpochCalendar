@@ -46,6 +46,7 @@ This section tracks the operational side of the project, including version contr
 - [ ] **Research**: Gather precise dates for Big Bang, Reionization, Solar System formation.
 - [ ] **Design**: Define visual style (Dark void, bright stars).
 - [ ] **Implementation**: Add events to `allEvents.ts` and journey to `journeys.ts`.
+- [ ] **Simulation Feedback**: Roleplay as user -> Critique -> Refine.
 - [ ] **Testing**: Verify "billions of years" scale rendering.
 
 ### 2. The Vital Spark: Evolution of Life
