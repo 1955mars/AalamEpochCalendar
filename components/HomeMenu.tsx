@@ -2,6 +2,7 @@ import React from 'react';
 import { Play, Globe, Zap, Cpu, Palette, Dna, ArrowRight, Component } from 'lucide-react';
 import { JOURNEYS } from '../data/journeys';
 import { Journey } from '../types';
+import BrandLogo from './BrandLogo';
 
 interface HomeMenuProps {
     onSelectJourney: (journey: Journey | null) => void;
@@ -54,14 +55,8 @@ const PLANNED_JOURNEYS = [
 const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimeline }) => {
     return (
         <div className="w-full max-w-6xl mx-auto px-6 py-12 flex flex-col items-center justify-center min-h-[80vh] font-sans">
-            <div className="text-center mb-16 space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700">
-                <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 mb-2">
-                    Aalam
-                </h1>
-                <p className="text-xl md:text-2xl font-light text-slate-600 tracking-widest uppercase">
-                    Knowledge Connected
-                </p>
-                <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mt-6" />
+            <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
+                <BrandLogo variant="large" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">

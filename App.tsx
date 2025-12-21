@@ -7,6 +7,7 @@ import CinematicHUD from './components/CinematicHUD';
 import DeepDiveModal from './components/DeepDiveModal';
 import MobileSwipeView from './components/MobileSwipeView';
 import HomeMenu from './components/HomeMenu';
+import BrandLogo from './components/BrandLogo';
 import { TimelineEvent, TimelineHandle, Journey, Connection } from './types';
 import { PHASES } from './constants';
 import { JOURNEYS } from './data/journeys';
@@ -154,17 +155,7 @@ const App: React.FC = () => {
 
       <header className={`relative z-10 px-6 py-4 flex justify-between items-center transition-opacity duration-500 ${isSimulationActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => { setActiveJourney(null); setShowHome(true); }}>
-          <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg ring-2 ring-white/50">
-            E
-          </div>
-          <div>
-            <h1 className={`text-2xl font-black tracking-tighter ${activeJourney ? 'text-white' : 'text-slate-900'}`}>
-              Aalam
-            </h1>
-            <p className={`text-xs font-bold tracking-widest uppercase opacity-60 ${activeJourney ? 'text-slate-300' : 'text-slate-600'}`}>
-              Knowledge Connected
-            </p>
-          </div>
+          <BrandLogo variant="small" />
         </div>
 
         <div className="flex items-center gap-4">
