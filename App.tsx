@@ -6,6 +6,7 @@ import CinematicBackground from './components/CinematicBackground';
 import CinematicHUD from './components/CinematicHUD';
 import DeepDiveModal from './components/DeepDiveModal';
 import MobileSwipeView from './components/MobileSwipeView';
+import HomeMenu from './components/HomeMenu';
 import { TimelineEvent, TimelineHandle, Journey, Connection } from './types';
 import { PHASES } from './constants';
 import { JOURNEYS } from './data/journeys';
@@ -16,6 +17,7 @@ const App: React.FC = () => {
   const [events] = useState<TimelineEvent[]>(ALL_EVENTS.filter(Boolean));
   const [currentPhaseId, setCurrentPhaseId] = useState<string>('Phase 1');
   const [isMobile, setIsMobile] = useState(false);
+  const [showHome, setShowHome] = useState(true);
   const timelineRef = useRef<TimelineHandle>(null);
 
   // --- Journey Mode State ---
@@ -151,7 +153,7 @@ const App: React.FC = () => {
       <DeepDiveModal isOpen={false} onClose={() => { }} event={activeEvent} />
 
       <header className={`relative z-10 px-6 py-4 flex justify-between items-center transition-opacity duration-500 ${isSimulationActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => { setActiveJourney(null); setShowHome(true); }}>
           <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg ring-2 ring-white/50">
             E
           </div>
@@ -166,15 +168,15 @@ const App: React.FC = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          {/* Journey Selector */}
-          {!activeJourney && (
+
+          {/* Back to Home Button (Only show if NOT home) */}
+          {!showHome && (
             <button
-              onClick={() => setActiveJourney(JOURNEYS[0])}
-              className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-bold shadow-lg hover:bg-indigo-700 transition-transform active:scale-95"
+              onClick={() => { setActiveJourney(null); setShowHome(true); }}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-colors ${activeJourney ? 'bg-white/10 text-white hover:bg-white/20' : 'bg-slate-200 text-slate-900 hover:bg-slate-300'}`}
             >
-              <Network size={16} />
-              <span className="hidden md:inline">Explorer: Communication</span>
-              <span className="md:hidden">Start Journey</span>
+              <RotateCcw size={14} />
+              Home
             </button>
           )}
 
@@ -207,7 +209,7 @@ const App: React.FC = () => {
               </button>
 
               <button
-                onClick={() => setActiveJourney(null)}
+                onClick={() => { setActiveJourney(null); setShowHome(true); }}
                 className="ml-1 hover:bg-slate-700 p-2 rounded-full text-slate-400 hover:text-white transition-colors border-l border-slate-700/50"
                 title="Exit Journey"
               >
@@ -216,18 +218,33 @@ const App: React.FC = () => {
             </div>
           )}
 
-          <button
-            onClick={startSimulation}
-            className="flex items-center gap-2 px-6 py-2 bg-slate-900 text-white rounded-full text-sm font-bold shadow-lg hover:bg-slate-800 transition-transform active:scale-95 ring-2 ring-slate-900 ring-offset-2"
-          >
-            <Play size={16} fill="currentColor" />
-            <span className="hidden md:inline">Documentary Mode</span>
-          </button>
+          {!showHome && (
+            <button
+              onClick={startSimulation}
+              className="flex items-center gap-2 px-6 py-2 bg-slate-900 text-white rounded-full text-sm font-bold shadow-lg hover:bg-slate-800 transition-transform active:scale-95 ring-2 ring-slate-900 ring-offset-2"
+            >
+              <Play size={16} fill="currentColor" />
+              <span className="hidden md:inline">Documentary Mode</span>
+            </button>
+          )}
         </div>
       </header>
 
       <main className={`flex-grow relative overflow-hidden flex flex-col justify-center pb-4 transition-all duration-700 ${isSimulationActive ? 'justify-end pb-12' : 'justify-center'}`}>
-        {!isSimulationActive && (
+        {showHome ? (
+          <HomeMenu
+            onSelectJourney={(j) => {
+              if (j) {
+                setActiveJourney(j);
+                setShowHome(false);
+              }
+            }}
+            onExploreFullTimeline={() => {
+              setActiveJourney(null);
+              setShowHome(false);
+            }}
+          />
+        ) : !isSimulationActive && (
           <div className="relative z-10 w-full h-full animate-in fade-in zoom-in-95 duration-500">
             {isMobile ? (
               <MobileSwipeView events={events} onPhaseChange={setCurrentPhaseId} />
