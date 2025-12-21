@@ -1,30 +1,32 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Timeline from './components/Timeline';
+import JourneyTimeline from './components/JourneyTimeline';
 import CinematicBackground from './components/CinematicBackground';
 import CinematicHUD from './components/CinematicHUD';
 import DeepDiveModal from './components/DeepDiveModal';
 import MobileSwipeView from './components/MobileSwipeView';
-import { TimelineEvent, TimelineHandle } from './types';
-import { INITIAL_EVENTS, PHASES } from './constants';
-import { Orbit, ChevronLeft, ChevronRight, Play, Pause, RotateCcw, Clock, XCircle } from 'lucide-react';
-
-
-
-const DURATION_OPTIONS = [
-  { label: '1 Min', value: 60 * 1000 },
-  { label: '5 Mins', value: 5 * 60 * 1000 },
-  { label: '15 Mins', value: 15 * 60 * 1000 },
-  { label: '30 Mins', value: 30 * 60 * 1000 },
-  { label: '1 Hr', value: 60 * 60 * 1000 },
-  { label: '366 Days', value: 366 * 24 * 60 * 60 * 1000 },
-];
+import { TimelineEvent, TimelineHandle, Journey, Connection } from './types';
+import { PHASES } from './constants';
+import { JOURNEYS } from './data/journeys';
+import { ALL_EVENTS } from './data/allEvents';
+import { Orbit, ChevronLeft, ChevronRight, Play, Pause, RotateCcw, Clock, XCircle, Network, X } from 'lucide-react';
 
 const App: React.FC = () => {
-  const [events] = useState<TimelineEvent[]>(INITIAL_EVENTS);
+  const [events] = useState<TimelineEvent[]>(ALL_EVENTS.filter(Boolean));
   const [currentPhaseId, setCurrentPhaseId] = useState<string>('Phase 1');
   const [isMobile, setIsMobile] = useState(false);
   const timelineRef = useRef<TimelineHandle>(null);
+
+  // --- Journey Mode State ---
+  const [activeJourney, setActiveJourney] = useState<Journey | null>(null);
+
+  // --- Simulation State ---
+  const [isSimulationActive, setIsSimulationActive] = useState(false);
+  const [currentEventIndex, setCurrentEventIndex] = useState<number>(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const simulationIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const playbackSpeed = 4000; // 4 seconds per event
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -33,297 +35,224 @@ const App: React.FC = () => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Simulation State
-  const [isSimulationActive, setIsSimulationActive] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [simDuration, setSimDuration] = useState(60000); // Default 1 min
-  const [simProgress, setSimProgress] = useState(0);
-  const [currentEventIndex, setCurrentEventIndex] = useState(events.length);
-  const lastFrameTime = useRef<number>(0);
+  // --- Derived State for Simulation ---
+  const simulationEvents = activeJourney
+    ? events.filter(e => activeJourney.eventIds.includes(e.id))
+    : events;
 
-  const currentPhaseIndex = PHASES.findIndex(p => p.id === currentPhaseId);
-  const prevPhase = currentPhaseIndex > 0 ? PHASES[currentPhaseIndex - 1] : null;
-  const nextPhase = currentPhaseIndex < PHASES.length - 1 ? PHASES[currentPhaseIndex + 1] : null;
-
-  const currentPhaseConfig = PHASES[currentPhaseIndex] || PHASES[0];
-
-  const handlePhaseNav = (phaseId: string) => {
-    timelineRef.current?.scrollToPhase(phaseId);
-  };
-
-  // Simulation Logic
   const startSimulation = () => {
     setIsSimulationActive(true);
-    setIsPlaying(true);
-    if (simProgress >= 1) {
-      setSimProgress(0);
-      setCurrentEventIndex(0);
-    } else if (simProgress === 0) {
-      setCurrentEventIndex(0);
-    }
-  };
-
-  const pauseSimulation = () => {
-    setIsPlaying(false);
-  };
-
-  const resetSimulation = () => {
-    setSimProgress(0);
     setCurrentEventIndex(0);
-    setIsPlaying(false);
+    setIsPaused(false);
+    // Do NOT clear activeJourney here; we want to simulate the current context
   };
 
-  const exitSimulation = () => {
-    setIsSimulationActive(false);
-    setIsPlaying(false);
-    setSimProgress(0);
-    setCurrentEventIndex(events.length);
-  };
+  // --- Journey Navigation ---
+  const [currentJourneyIndex, setCurrentJourneyIndex] = useState(0);
 
-  const updateSimulation = useCallback((timestamp: number) => {
-    if (!lastFrameTime.current) lastFrameTime.current = timestamp;
-    const deltaTime = timestamp - lastFrameTime.current;
-    lastFrameTime.current = timestamp;
+  useEffect(() => {
+    // Reset journey index when journey changes
+    if (activeJourney) {
+      // If we switch journeys while simulation is active, stop it or reset? 
+      // Better to stop simulation safety.
+      if (isSimulationActive) stopSimulation();
 
-    if (isPlaying) {
-      setSimProgress(prev => {
-        const newProgress = prev + (deltaTime / simDuration);
-        if (newProgress >= 1) {
-          setIsPlaying(false);
-          return 1;
+      setCurrentJourneyIndex(0);
+      // Auto-scroll to first event?
+      setTimeout(() => {
+        if (timelineRef.current && activeJourney.eventIds.length > 0) {
+          timelineRef.current.scrollToEvent(activeJourney.eventIds[0]);
         }
-        return newProgress;
-      });
+      }, 500);
     }
-  }, [isPlaying, isModalOpen, simDuration]);
+  }, [activeJourney]);
 
-  const handleSimLayerClick = () => {
-    if (isSimulationActive && !isModalOpen) {
-      setIsPlaying(false);
-      setIsModalOpen(true);
+  const handleJourneyNext = () => {
+    if (!activeJourney) return;
+    if (currentJourneyIndex < activeJourney.eventIds.length - 1) {
+      const nextIndex = currentJourneyIndex + 1;
+      setCurrentJourneyIndex(nextIndex);
+      timelineRef.current?.scrollToEvent(activeJourney.eventIds[nextIndex]);
     }
   };
 
-  useEffect(() => {
-    let animationFrameId: number;
+  const handleJourneyPrev = () => {
+    if (!activeJourney) return;
+    if (currentJourneyIndex > 0) {
+      const prevIndex = currentJourneyIndex - 1;
+      setCurrentJourneyIndex(prevIndex);
+      timelineRef.current?.scrollToEvent(activeJourney.eventIds[prevIndex]);
+    }
+  };
 
-    const loop = (timestamp: number) => {
-      updateSimulation(timestamp);
-      animationFrameId = requestAnimationFrame(loop);
+
+  const stopSimulation = () => {
+    if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
+    setIsSimulationActive(false);
+    setCurrentEventIndex(0);
+  };
+
+  const togglePause = () => setIsPaused(!isPaused);
+
+  useEffect(() => {
+    if (!isSimulationActive || isPaused) {
+      if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
+      return;
+    }
+
+    simulationIntervalRef.current = setInterval(() => {
+      setCurrentEventIndex(prev => {
+        // Use simulationEvents length
+        if (prev >= simulationEvents.length - 1) {
+          stopSimulation();
+          return prev;
+        }
+        return prev + 1;
+      });
+    }, playbackSpeed);
+
+    return () => {
+      if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
     };
+  }, [isSimulationActive, isPaused, simulationEvents.length]); // Depend on simulationEvents
 
-    if (isPlaying) {
-      lastFrameTime.current = performance.now();
-      animationFrameId = requestAnimationFrame(loop);
-    }
+  const currentPhaseConfig = PHASES.find(p => p.id === currentPhaseId) || PHASES[0];
+  const activeEvent = simulationEvents[currentEventIndex]; // Use derived list
 
-    return () => cancelAnimationFrame(animationFrameId);
-  }, [isPlaying, updateSimulation]);
-
-  // Sync progress to event index
-  useEffect(() => {
-    if (isSimulationActive) {
-      const totalEvents = events.length;
-      // Calculate which event corresponds to current progress
-      // We start at 0. If progress is 0, show 0 events (or 1st marker).
-      // If progress is 1, show all events.
-      const index = Math.floor(simProgress * totalEvents);
-      // Ensure at least 1 event is shown if started, max is total length
-      const clampedIndex = Math.max(1, Math.min(totalEvents, index + 1));
-
-      setCurrentEventIndex(clampedIndex);
-    } else {
-      setCurrentEventIndex(events.length);
-    }
-  }, [simProgress, isSimulationActive, events.length]);
-
-  // Get current active event for background
-  const activeEvent = isSimulationActive && events[currentEventIndex - 1]
-    ? events[currentEventIndex - 1]
-    : events[events.length - 1];
+  // If in Journey Mode, use specific background or default?
+  const containerClass = isSimulationActive
+    ? 'bg-black text-white'
+    : activeJourney
+      ? 'bg-slate-900 text-slate-100' // Dark mode for Journey
+      : `${currentPhaseConfig.bg} text-slate-900`;
 
   return (
-    <div className={`min-h-screen flex flex-col font-sans overflow-hidden transition-colors duration-1000 ease-in-out ${isSimulationActive ? 'bg-black text-white' : `${currentPhaseConfig.bg} text-slate-900`}`}>
+    <div className={`min-h-screen flex flex-col font-sans overflow-hidden transition-colors duration-1000 ease-in-out ${containerClass}`}>
 
       {/* Cinematic Background Layer */}
       <CinematicBackground
-        imageUrl={activeEvent?.imageUrl}
         isActive={isSimulationActive}
+        imageUrl={activeEvent?.imageUrl}
       />
 
-      {/* Cinematic HUD Overlay */}
-      {isSimulationActive && (
-        <CinematicHUD
-          event={activeEvent}
-          progress={simProgress}
-        />
-      )}
-
-      {/* Deep Dive Modal */}
-      <DeepDiveModal
+      {/* Cinematic HUD Layer */}
+      <CinematicHUD
+        isActive={isSimulationActive}
         event={activeEvent}
-        isOpen={isModalOpen}
-        onClose={() => {
-          setIsModalOpen(false);
-          // Optional: Resume on close? Or let user click play manually.
-          // Let's resume to keep flow smooth.
-          setIsPlaying(true);
-        }}
+        currentIndex={currentEventIndex}
+        totalEvents={simulationEvents.length}
+        onPause={togglePause}
+        onStop={stopSimulation}
+        isPaused={isPaused}
+        duration={playbackSpeed}
       />
 
-      {/* Click Layer for Deep Dive (Only active in sim mode) */}
-      {isSimulationActive && !isModalOpen && (
-        <div
-          className="fixed inset-0 z-20 cursor-pointer"
-          onClick={handleSimLayerClick}
-          title="Click to Deep Dive"
-        />
-      )}
+      {/* Deep Dive Modal (Placeholder) */}
+      <DeepDiveModal isOpen={false} onClose={() => { }} event={activeEvent} />
 
-      {/* Header / Navbar */}
-      <header className={`flex-none h-20 px-4 md:px-8 flex items-center justify-between border-b z-40 shadow-sm transition-all gap-4 ${isSimulationActive ? 'border-white/10 bg-transparent' : 'border-black/5 bg-white/60 backdrop-blur-md'}`}>
-
-        {/* Left: Logo & Clock Controls */}
-        <div className="flex items-center gap-4 flex-1">
-          <div className={`flex items-center gap-2 md:gap-3 flex-shrink-0 transition-opacity duration-500 ${isSimulationActive ? 'opacity-50 hover:opacity-100' : 'opacity-100'}`}>
-            <div className={`p-2 rounded-lg shadow-md hidden sm:block ${isSimulationActive ? 'bg-white/10' : 'bg-slate-900'}`}>
-              <Orbit className={isSimulationActive ? 'text-white' : 'text-white'} size={24} />
-            </div>
-            <h1 className={`text-xl md:text-2xl font-bold tracking-tight hidden lg:block ${isSimulationActive ? 'text-white' : 'text-slate-900'}`}>
-              Aalam
-            </h1>
+      <header className={`relative z-10 px-6 py-4 flex justify-between items-center transition-opacity duration-500 ${isSimulationActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 bg-slate-900 rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg ring-2 ring-white/50">
+            E
           </div>
-
-          {!isSimulationActive && <div className="h-8 w-px bg-slate-300 hidden md:block mx-2"></div>}
-
-          {/* Clock Controls */}
-          <div className={`flex items-center gap-2 p-1.5 rounded-xl border pointer-events-auto ${isSimulationActive ? 'bg-black/50 border-white/10 backdrop-blur-md' : 'bg-slate-100/50 border-slate-200/50'}`}>
-            <div className="flex items-center gap-1">
-              <select
-                className={`text-xs md:text-sm rounded-lg px-2 py-1.5 focus:outline-none focus:ring-2 focus:ring-blue-500 cursor-pointer ${isSimulationActive ? 'bg-white/10 border-white/20 text-white' : 'bg-white border-slate-200 text-slate-700'}`}
-                value={simDuration}
-                onChange={(e) => {
-                  setSimDuration(Number(e.target.value));
-                  resetSimulation();
-                }}
-                disabled={isSimulationActive && isPlaying}
-              >
-                {DURATION_OPTIONS.map(opt => (
-                  <option key={opt.label} value={opt.value}>{opt.label}</option>
-                ))}
-              </select>
-            </div>
-
-            <div className="flex items-center gap-1">
-              {!isSimulationActive ? (
-                <button
-                  onClick={startSimulation}
-                  className="p-1.5 bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors flex items-center gap-1 px-3"
-                  title="Start Simulation"
-                >
-                  <Play size={16} fill="currentColor" />
-                  <span className="text-xs font-semibold">Start</span>
-                </button>
-              ) : (
-                <>
-                  <button
-                    onClick={() => setIsPlaying(!isPlaying)}
-                    className={`p-1.5 rounded-lg transition-colors text-white ${isPlaying ? 'bg-amber-500 hover:bg-amber-400' : 'bg-green-600 hover:bg-green-500'}`}
-                    title={isPlaying ? "Pause" : "Resume"}
-                  >
-                    {isPlaying ? <Pause size={18} fill="currentColor" /> : <Play size={18} fill="currentColor" />}
-                  </button>
-                  <button
-                    onClick={resetSimulation}
-                    className="p-1.5 bg-white/20 hover:bg-white/30 text-white rounded-lg transition-colors"
-                    title="Reset Clock"
-                  >
-                    <RotateCcw size={18} />
-                  </button>
-                  <button
-                    onClick={exitSimulation}
-                    className="p-1.5 bg-red-500/20 hover:bg-red-500/40 text-red-200 rounded-lg transition-colors"
-                    title="Exit Simulation"
-                  >
-                    <XCircle size={18} />
-                  </button>
-                </>
-              )}
-            </div>
+          <div>
+            <h1 className={`text-2xl font-black tracking-tighter ${activeJourney ? 'text-white' : 'text-slate-900'}`}>
+              AALAM
+            </h1>
+            <p className={`text-xs font-bold tracking-widest uppercase opacity-60 ${activeJourney ? 'text-slate-300' : 'text-slate-600'}`}>
+              Interactive Universal Timeline
+            </p>
           </div>
         </div>
 
-        {/* Right: Phase Navigation (Hidden in Sim Mode to reduce clutter, and on Mobile to prevent overflow) */}
-        {!isSimulationActive && !isMobile && (
-          <div className="flex items-center gap-2 md:gap-4 flex-shrink-0">
-            {prevPhase ? (
-              <button
-                onClick={() => handlePhaseNav(prevPhase.id)}
-                className="flex items-center text-xs md:text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors px-2 py-1 rounded-lg hover:bg-black/5"
-                title={`Go to ${prevPhase.title}`}
-              >
-                <ChevronLeft size={16} className="mr-1" />
-                <span className="hidden xl:inline truncate max-w-[100px]">{prevPhase.title}</span>
-              </button>
-            ) : <div className="w-4"></div>}
+        <div className="flex items-center gap-4">
+          {/* Journey Selector */}
+          {!activeJourney && (
+            <button
+              onClick={() => setActiveJourney(JOURNEYS[0])}
+              className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white rounded-full text-sm font-bold shadow-lg hover:bg-indigo-700 transition-transform active:scale-95"
+            >
+              <Network size={16} />
+              <span className="hidden md:inline">Explorer: Communication</span>
+              <span className="md:hidden">Start Journey</span>
+            </button>
+          )}
 
-            <div className="text-xs md:text-sm font-semibold px-3 py-1.5 rounded-full border shadow-sm text-center min-w-[100px] md:min-w-[180px] truncate bg-white/80 text-slate-800 border-black/10">
-              {currentPhaseConfig.title}
+          {activeJourney && (
+            <div className="flex items-center gap-2 bg-slate-800/90 backdrop-blur-md px-1.5 py-1.5 rounded-full border border-slate-700 text-white animate-in slide-in-from-top-4 shadow-2xl">
+
+              {/* Prev Button */}
+              <button
+                onClick={handleJourneyPrev}
+                disabled={currentJourneyIndex === 0}
+                className="p-2 rounded-full hover:bg-slate-700 disabled:opacity-30 disabled:hover:bg-transparent transition-colors text-slate-300 hover:text-white"
+                title="Previous Event"
+              >
+                <ChevronLeft size={18} />
+              </button>
+
+              <div className="px-3 flex flex-col items-center border-l border-r border-slate-700/50">
+                <span className="text-[10px] text-amber-400 font-bold uppercase tracking-widest leading-none mb-0.5">Journey Active</span>
+                <span className="text-sm font-bold leading-none">{activeJourney.title}</span>
+              </div>
+
+              {/* Next Button */}
+              <button
+                onClick={handleJourneyNext}
+                disabled={currentJourneyIndex === activeJourney.eventIds.length - 1}
+                className="p-2 rounded-full hover:bg-slate-700 disabled:opacity-30 disabled:hover:bg-transparent transition-colors text-slate-300 hover:text-white"
+                title="Next Event"
+              >
+                <ChevronRight size={18} />
+              </button>
+
+              <button
+                onClick={() => setActiveJourney(null)}
+                className="ml-1 hover:bg-slate-700 p-2 rounded-full text-slate-400 hover:text-white transition-colors border-l border-slate-700/50"
+                title="Exit Journey"
+              >
+                <X size={16} />
+              </button>
             </div>
+          )}
 
-            {nextPhase ? (
-              <button
-                onClick={() => handlePhaseNav(nextPhase.id)}
-                className="flex items-center text-xs md:text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors px-2 py-1 rounded-lg hover:bg-black/5"
-                title={`Go to ${nextPhase.title}`}
-              >
-                <span className="hidden xl:inline truncate max-w-[100px]">{nextPhase.title}</span>
-                <ChevronRight size={16} className="ml-1" />
-              </button>
-            ) : <div className="w-4"></div>}
-          </div>
-        )}
-
+          <button
+            onClick={startSimulation}
+            className="flex items-center gap-2 px-6 py-2 bg-slate-900 text-white rounded-full text-sm font-bold shadow-lg hover:bg-slate-800 transition-transform active:scale-95 ring-2 ring-slate-900 ring-offset-2"
+          >
+            <Play size={16} fill="currentColor" />
+            <span className="hidden md:inline">Documentary Mode</span>
+          </button>
+        </div>
       </header>
 
-      {/* Main Content Area */}
       <main className={`flex-grow relative overflow-hidden flex flex-col justify-center pb-4 transition-all duration-700 ${isSimulationActive ? 'justify-end pb-12' : 'justify-center'}`}>
-
-        {/* Subtle Background Pattern (Only in non-sim mode) */}
-        {!isSimulationActive && (
-          <div className="absolute inset-0 z-0 opacity-40 pointer-events-none"
-            style={{
-              backgroundImage: 'radial-gradient(circle at 50% 50%, #000000 1px, transparent 1px)',
-              backgroundSize: '32px 32px',
-              opacity: 0.05
-            }}>
-          </div>
-        )}
-
-        {/* Timeline Component - HIDDEN during simulation */}
         {!isSimulationActive && (
           <div className="relative z-10 w-full h-full animate-in fade-in zoom-in-95 duration-500">
             {isMobile ? (
               <MobileSwipeView events={events} onPhaseChange={setCurrentPhaseId} />
+            ) : activeJourney ? (
+              <JourneyTimeline
+                ref={timelineRef}
+                events={events.filter(e => activeJourney.eventIds.includes(e.id))}
+                activeJourney={activeJourney}
+              />
             ) : (
               <Timeline
                 ref={timelineRef}
-                events={events}
+                events={events} // Show all events in default mode
                 onPhaseChange={setCurrentPhaseId}
-                maxIndex={currentEventIndex}
+                maxIndex={isSimulationActive ? currentEventIndex + 1 : undefined}
+                activeJourney={null} // Default timeline is never a journey timeline now
               />
             )}
           </div>
         )}
       </main>
 
-      {/* Footer (Hidden in Simulation) */}
-      {!isSimulationActive && (
-        <footer className="flex-none h-20 border-t border-black/5 flex items-center justify-center text-slate-400 text-sm bg-white/40 relative z-30">
-          <p>© {new Date().getFullYear()} Aalam.</p>
-        </footer>
-      )}
+      <footer className={`relative z-10 text-center py-4 text-[10px] uppercase tracking-widest transition-opacity duration-1000 ${isSimulationActive ? 'opacity-0' : 'opacity-40 text-slate-900'}`}>
+        <p>© 2024 Epoch Interactive • The Museum of Infinite Connections</p>
+      </footer>
     </div>
   );
 };

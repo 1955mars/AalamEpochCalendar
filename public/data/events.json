@@ -1,0 +1,1128 @@
+[
+    {
+        "id": "phase-1-marker",
+        "year": "13.8 Billion Years Ago",
+        "title": "Cosmic & Primordial Earth",
+        "description": "",
+        "media": {
+            "type": "image",
+            "url": "/images/phase-1-marker.jpg"
+        },
+        "phase": "Phase 1",
+        "type": "phase_marker"
+    },
+    {
+        "id": "1",
+        "year": "13.8 Billion Years Ago",
+        "title": "The Big Bang",
+        "description": "The origin of the universe, representing the rapid expansion of space, time, matter, and energy from an extremely hot, dense state.",
+        "media": {
+            "type": "image",
+            "url": "/images/1.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "2",
+        "year": "13.78 Billion Years Ago",
+        "title": "Formation of First Subatomic Particles",
+        "description": "Quarks and leptons condense out of the super-hot early plasma, eventually leading to protons and neutrons.",
+        "media": {
+            "type": "image",
+            "url": "/images/2.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "3",
+        "year": "13.77 Billion Years Ago",
+        "title": "Cosmic Microwave Background",
+        "description": "About 380,000 years after the Big Bang, the universe cools enough for the first stable atoms (mostly hydrogen and helium) to form, releasing light.",
+        "media": {
+            "type": "image",
+            "url": "/images/3.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "4",
+        "year": "13.5 Billion Years Ago",
+        "title": "The Dark Ages End",
+        "description": "The first stars, massive and extremely luminous (Population III stars), ignite, flooding the universe with light and heavy elements.",
+        "media": {
+            "type": "image",
+            "url": "/images/4.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "5",
+        "year": "13.4 Billion Years Ago",
+        "title": "The First Galaxies",
+        "description": "Gravity causes vast clouds of gas and the earliest stars to coalesce, forming the first small, irregular protogalaxies.",
+        "media": {
+            "type": "image",
+            "url": "/images/5.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "6",
+        "year": "13.0 Billion Years Ago",
+        "title": "Galactic Mergers",
+        "description": "Protogalaxies begin to collide and merge, slowly building the massive spiral and elliptical galaxies we see today.",
+        "media": {
+            "type": "image",
+            "url": "/images/6.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "7",
+        "year": "11.0 Billion Years Ago",
+        "title": "The Milky Way Forms",
+        "description": "The primordial hydrogen/helium cloud that would become our home galaxy collapses and begins spinning, shaping the characteristic disk.",
+        "media": {
+            "type": "image",
+            "url": "/images/7.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "8",
+        "year": "8.8 Billion Years Ago",
+        "title": "Milky Way Disk Complete",
+        "description": "The main spiral structure of the Milky Way, including its disk and arms, becomes fully formed and stabilized.",
+        "media": {
+            "type": "image",
+            "url": "/images/8.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "9",
+        "year": "4.6 Billion Years Ago",
+        "title": "Formation of the Solar System",
+        "description": "A rotating cloud of interstellar dust and gas (the solar nebula) collapses under gravity, forming the Sun and the protoplanetary disk.",
+        "media": {
+            "type": "image",
+            "url": "/images/9.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "10",
+        "year": "4.57 Billion Years Ago",
+        "title": "Planetary Accretion Begins",
+        "description": "Dust particles in the disk collide and stick together to form planetesimals, the building blocks of the terrestrial planets.",
+        "media": {
+            "type": "image",
+            "url": "/images/10.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "11",
+        "year": "4.54 Billion Years Ago",
+        "title": "Earth's Core Formation",
+        "description": "Differentiation occurs: dense iron and nickel sink to the center of the molten Earth, forming the inner and outer cores.",
+        "media": {
+            "type": "image",
+            "url": "/images/11.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "12",
+        "year": "4.53 Billion Years Ago",
+        "title": "The Moon-Forming Impact",
+        "description": "The leading scientific theory suggests a Mars-sized object named Theia collides with the early Earth, ejecting material that coalesces to form the Moon.",
+        "media": {
+            "type": "image",
+            "url": "/images/12.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "13",
+        "year": "4.5 Billion Years Ago",
+        "title": "Beginning of the Hadean Eon",
+        "description": "The earliest, hottest, and most volatile geological eon begins; Earth's surface is molten, undergoing heavy bombardment.",
+        "media": {
+            "type": "image",
+            "url": "/images/13.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "14",
+        "year": "4.4 Billion Years Ago",
+        "title": "Oldest Known Earth Material",
+        "description": "Discovery of zircon crystals in Western Australia, suggesting that solid continental crust and liquid water may have existed earlier than previously thought.",
+        "media": {
+            "type": "image",
+            "url": "/images/14.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "15",
+        "year": "4.1 Billion Years Ago",
+        "title": "Late Heavy Bombardment (LHB)",
+        "description": "A theorized period when a disproportionately large number of asteroids and comets impacted the inner planets, potentially delivering water and organic materials.",
+        "media": {
+            "type": "image",
+            "url": "/images/15.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "16",
+        "year": "4.0 Billion Years Ago",
+        "title": "End of the Hadean Eon",
+        "description": "Marks the point at which the first continental crust rocks are preserved in the geological record, signaling the beginning of the Archean.",
+        "media": {
+            "type": "image",
+            "url": "/images/16.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "17",
+        "year": "3.9 Billion Years Ago",
+        "title": "Formation of the First Continents",
+        "description": "Lighter, silicic rocks float on the denser mantle, forming small, unstable protocontinents that are highly volcanic.",
+        "media": {
+            "type": "image",
+            "url": "/images/17.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "18",
+        "year": "3.8 Billion Years Ago",
+        "title": "First Evidence of Life",
+        "description": "Indirect chemical evidence (carbon isotopic signatures) in ancient rocks suggests the presence of the earliest, single-celled life forms (prokaryotes).",
+        "media": {
+            "type": "image",
+            "url": "/images/18.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "19",
+        "year": "3.5 Billion Years Ago",
+        "title": "Oldest Microfossils (Stromatolites)",
+        "description": "Direct fossil evidence appears in the form of stromatolites, layered mounds created by sheets of early cyanobacteria.",
+        "media": {
+            "type": "image",
+            "url": "/images/19.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "20",
+        "year": "3.4 Billion Years Ago",
+        "title": "Anoxygenic Photosynthesis",
+        "description": "Early microbes begin to use light energy to synthesize food, but initially without producing free oxygen.",
+        "media": {
+            "type": "image",
+            "url": "/images/20.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "21",
+        "year": "3.0 Billion Years Ago",
+        "title": "Stabilization of Continental Crust",
+        "description": "The scattered protocontinents begin to coalesce into the first stable cratons, forming the ancient cores of today's continents.",
+        "media": {
+            "type": "image",
+            "url": "/images/21.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "22",
+        "year": "2.5 Billion Years Ago",
+        "title": "Beginning of the Proterozoic Eon",
+        "description": "The second phase of the Precambrian starts, marked by the rapid rise of atmospheric oxygen and the assembly of supercontinents.",
+        "media": {
+            "type": "image",
+            "url": "/images/22.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "23",
+        "year": "2.4 Billion Years Ago",
+        "title": "The Great Oxidation Event (GOE)",
+        "description": "Oxygen-producing cyanobacteria proliferate, causing atmospheric oxygen levels to rise sharply, resulting in Earth's first ice age (Huronian Glaciation).",
+        "media": {
+            "type": "image",
+            "url": "/images/23.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "24",
+        "year": "2.3 Billion Years Ago",
+        "title": "Huronian Glaciation",
+        "description": "The first and longest ice age, possibly triggered by the GOE which removed atmospheric methane (a strong greenhouse gas).",
+        "media": {
+            "type": "image",
+            "url": "/images/24.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "25",
+        "year": "2.0 Billion Years Ago",
+        "title": "Banded Iron Formations (BIFs) Peak",
+        "description": "Rust-colored sedimentary rock layers form as rising ocean oxygen reacts with dissolved iron, clearing the way for free oxygen accumulation.",
+        "media": {
+            "type": "image",
+            "url": "/images/25.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "26",
+        "year": "1.8 Billion Years Ago",
+        "title": "Oldest Eukaryote Fossils",
+        "description": "The first fossils of complex cells (with a nucleus and organelles) appear, representing a massive leap toward multicellular life.",
+        "media": {
+            "type": "image",
+            "url": "/images/26.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "27",
+        "year": "1.2 Billion Years Ago",
+        "title": "The Invention of Sexual Reproduction",
+        "description": "Eukaryotes develop the ability to share genetic material, greatly accelerating the pace of evolution and increasing genetic diversity.",
+        "media": {
+            "type": "image",
+            "url": "/images/27.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "28",
+        "year": "1.0 Billion Years Ago",
+        "title": "Supercontinent Rodinia Forms",
+        "description": "The first well-documented supercontinent assembles, containing most of Earth's landmass, disrupting ocean circulation and climate.",
+        "media": {
+            "type": "image",
+            "url": "/images/28.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "29",
+        "year": "850 Million Years Ago",
+        "title": "Rodinia Begins to Break Up",
+        "description": "Rifting begins in Rodinia, triggering massive volcanic activity and initiating cycles of extreme global glaciation.",
+        "media": {
+            "type": "image",
+            "url": "/images/29.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "30",
+        "year": "720 Million Years Ago",
+        "title": "\"Snowball Earth\" Glaciation (Cryogenian)",
+        "description": "Massive global ice events (Sturtian and Marinoan) possibly cover the planet from pole to pole, only to be ended by extreme volcanism.",
+        "media": {
+            "type": "image",
+            "url": "/images/30.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "31",
+        "year": "635 Million Years Ago",
+        "title": "The Ediacaran Biota",
+        "description": "Following the Snowball Earth periods, the first large, complex, soft-bodied multicellular organisms appear, preceding the Cambrian Explosion.",
+        "media": {
+            "type": "image",
+            "url": "/images/31.jpg"
+        },
+        "phase": "Phase 1"
+    },
+    {
+        "id": "phase-2-marker",
+        "year": "541 Million Years Ago",
+        "title": "The Age of Ancient Life",
+        "description": "",
+        "media": {
+            "type": "image",
+            "url": "/images/phase-2-marker.jpg"
+        },
+        "phase": "Phase 2",
+        "type": "phase_marker"
+    },
+    {
+        "id": "p2-1",
+        "year": "541 Million Years Ago",
+        "title": "The Cambrian Explosion",
+        "description": "Life diversifies rapidly; most major animal body plans appear in the fossil record, ending the \"Boring Billion\" years.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-1.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-2",
+        "year": "530 Million Years Ago",
+        "title": "Earliest Vertebrates",
+        "description": "The first ancestors of all backboned animals (fish, amphibians, humans) appear, exemplified by Myllokunmingia.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-2.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-3",
+        "year": "521 Million Years Ago",
+        "title": "Rise of the Trilobites",
+        "description": "Trilobites develop sophisticated crystal eyes and hard exoskeletons, becoming the dominant life form of the ocean floor.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-3.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-4",
+        "year": "508 Million Years Ago",
+        "title": "The Burgess Shale Biota",
+        "description": "A burst of bizarre evolutionary experiments, including the five-eyed Opabinia and the apex predator Anomalocaris.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-4.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-5",
+        "year": "485 Million Years Ago",
+        "title": "The Great Ordovician Biodiversity",
+        "description": "Life expands further; the first coral reefs form, and cephalopods (ancestors of squid/octopus) become top predators.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-5.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-6",
+        "year": "470 Million Years Ago",
+        "title": "Plants Colonize Land",
+        "description": "Primitive mosses and liverworts leave the water, turning the barren, rocky continents green for the first time.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-6.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-7",
+        "year": "444 Million Years Ago",
+        "title": "Ordovician-Silurian Extinction",
+        "description": "A severe ice age causes a massive drop in sea levels, wiping out 85% of marine species in the first great mass extinction.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-7.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-8",
+        "year": "430 Million Years Ago",
+        "title": "Life Recovers (The Silurian)",
+        "description": "Seas warm again; the first jawed fish appear, and scorpions (Eurypterids) grow to massive sizes.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-8.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-9",
+        "year": "420 Million Years Ago",
+        "title": "First Breath on Land",
+        "description": "Arthropods (ancestors of spiders and millipedes) become the first animals to walk on dry land and breathe air.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-9.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-10",
+        "year": "400 Million Years Ago",
+        "title": "The Devonian \"Age of Fish\"",
+        "description": "Armored fish (Placoderms) like Dunkleosteus dominate the oceans with bone-crushing jaws.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-10.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-11",
+        "year": "385 Million Years Ago",
+        "title": "The First Forests",
+        "description": "Plants evolve wood and leaves (Archaeopteris), creating the first tall forests and drastically altering the atmosphere.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-11.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-12",
+        "year": "375 Million Years Ago",
+        "title": "Tiktaalik & The Transition",
+        "description": "Lobe-finned fish develop wrist-like bones, allowing them to push up in shallow water—the precursor to walking.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-12.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-13",
+        "year": "365 Million Years Ago",
+        "title": "First Amphibians",
+        "description": "Vertebrates like Acanthostega finally haul themselves onto land, though they must return to water to reproduce.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-13.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-14",
+        "year": "359 Million Years Ago",
+        "title": "Late Devonian Extinction",
+        "description": "A mysterious extinction event, possibly caused by ocean anoxia from nutrient runoff, resets the evolutionary clock.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-14.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-15",
+        "year": "320 Million Years Ago",
+        "title": "Carboniferous Coal Swamps",
+        "description": "Oxygen levels peak (35%); giant insects (dragonflies with 2ft wingspans) and massive millipedes rule the humid swamps.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-15.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-16",
+        "year": "312 Million Years Ago",
+        "title": "The Amniotic Egg",
+        "description": "Reptiles evolve the hard-shelled egg, breaking the bond with water and allowing life to conquer the interior of continents.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-16.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-17",
+        "year": "299 Million Years Ago",
+        "title": "Rise of the Synapsids",
+        "description": "Before dinosaurs, mammal-like reptiles (like the sail-backed Dimetrodon) become the apex predators on land.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-17.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-18",
+        "year": "280 Million Years Ago",
+        "title": "Supercontinent Pangaea",
+        "description": "Earth's landmasses smash together to form a single supercontinent, creating vast, dry interior deserts.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-18.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-19",
+        "year": "252 Million Years Ago",
+        "title": "The Great Dying",
+        "description": "The Permian-Triassic Extinction (volcanic eruptions in Siberia) kills 96% of marine life; the closest life comes to total erasure.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-19.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-20",
+        "year": "240 Million Years Ago",
+        "title": "The Triassic Recovery",
+        "description": "Life slowly rebounds; the first marine reptiles (Ichthyosaurs) take to the seas, resembling dolphins.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-20.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-21",
+        "year": "233 Million Years Ago",
+        "title": "Dawn of the Dinosaurs",
+        "description": "Small, bipedal dinosaurs like Eoraptor appear, initially overshadowed by larger crocodilian relatives.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-21.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-22",
+        "year": "201 Million Years Ago",
+        "title": "Triassic-Jurassic Extinction",
+        "description": "Volcanic activity splits Pangaea; the competition is wiped out, clearing the stage for Dinosaur dominance.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-22.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-23",
+        "year": "155 Million Years Ago",
+        "title": "Age of Giants (Jurassic)",
+        "description": "Dinosaurs reach their peak size; long-necked Sauropods (Brachiosaurus) and plate-backed Stegosaurus roam the earth.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-23.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-24",
+        "year": "150 Million Years Ago",
+        "title": "The First Birds",
+        "description": "Archaeopteris bridges the gap between reptile and bird, developing feathers for flight while keeping its teeth.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-24.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-25",
+        "year": "125 Million Years Ago",
+        "title": "The Flower Revolution",
+        "description": "Angiosperms (flowering plants) appear; their partnership with insects transforms the world from green/brown to colorful.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-25.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-26",
+        "year": "90 Million Years Ago",
+        "title": "Monsters of the Deep",
+        "description": "The Cretaceous Interior Seaway is ruled by massive marine reptiles like Mosasaurus and giant turtles.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-26.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-27",
+        "year": "68 Million Years Ago",
+        "title": "The Tyrant King",
+        "description": "The evolution of Tyrannosaurus Rex and Triceratops; the most famous dinosaurs walk the earth in its final days.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-27.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-28",
+        "year": "66 Million Years Ago",
+        "title": "The Sky Falls (Impact)",
+        "description": "A 10km wide asteroid strikes the Yucatán Peninsula (Chicxulub), releasing the energy of billions of atomic bombs.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-28.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "p2-29",
+        "year": "66 Million Years Ago ",
+        "title": "The End of an Era",
+        "description": "The K-Pg Extinction event. Nuclear winter, firestorms, and the death of 75% of species, including all non-avian dinosaurs.",
+        "media": {
+            "type": "image",
+            "url": "/images/p2-29.jpg"
+        },
+        "phase": "Phase 2"
+    },
+    {
+        "id": "phase-3-marker",
+        "year": "65 Million Years Ago",
+        "title": "Hominid Evolution",
+        "description": "",
+        "media": {
+            "type": "image",
+            "url": "/images/phase-3-marker.jpg"
+        },
+        "phase": "Phase 3",
+        "type": "phase_marker"
+    },
+    {
+        "id": "41",
+        "year": "65 Million Years Ago",
+        "title": "The Paleogene Recovery",
+        "description": "Following the K-Pg extinction, surviving mammals rapidly diversify, filling ecological niches left vacant by the non-avian dinosaurs.",
+        "media": {
+            "type": "image",
+            "url": "/images/41.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "42",
+        "year": "60 Million Years Ago",
+        "title": "Rise of the Primates",
+        "description": "Early primates evolve, characterized by traits like grasping hands, forward-facing eyes, and larger brains, setting the stage for human evolution.",
+        "media": {
+            "type": "image",
+            "url": "/images/42.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "45",
+        "year": "35 Million Years Ago",
+        "title": "Oligocene Cooling",
+        "description": "Global climate cools, leading to the expansion of grasslands and a reduction in forests, which eventually drives primates to adapt to open environments.",
+        "media": {
+            "type": "image",
+            "url": "/images/45.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "46",
+        "year": "25 Million Years Ago",
+        "title": "Apes and Old World Monkeys Diverge",
+        "description": "The evolutionary lineage leading to modern humans separates from the lineage leading to Old World monkeys in Africa.",
+        "media": {
+            "type": "image",
+            "url": "/images/46.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "47",
+        "year": "7 Million Years Ago",
+        "title": "First Hominin Divergence",
+        "description": "The lineage of hominins (bipedal apes) separates from the lineage leading to modern chimpanzees; Sahelanthropus tchadensis may represent one of the earliest hominins.",
+        "media": {
+            "type": "image",
+            "url": "/images/47.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "48",
+        "year": "6 Million Years Ago",
+        "title": "Evolution of Consistent Bipedalism",
+        "description": "Early hominins like Orrorin tugenensis begin walking habitually on two legs, a defining feature that frees the hands for tool use and carrying.",
+        "media": {
+            "type": "image",
+            "url": "/images/48.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "49",
+        "year": "4.4 Million Years Ago",
+        "title": "Ardipithecus ramidus",
+        "description": "This hominin species exhibits a mix of ape-like traits (grasping feet) and hominin traits (bipedal walking), suggesting life in a wooded environment.",
+        "media": {
+            "type": "image",
+            "url": "/images/49.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "50",
+        "year": "4.2 Million Years Ago",
+        "title": "The Australopithecines Emerge",
+        "description": "The genus Australopithecus appears, characterized by fully committed bipedalism, though still possessing a relatively small brain.",
+        "media": {
+            "type": "image",
+            "url": "/images/50.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "51",
+        "year": "3.7 Million Years Ago",
+        "title": "Laetoli Footprints",
+        "description": "Three early hominins (likely Australopithecus afarensis) leave a trail of volcanic ash footprints in Tanzania, offering clear evidence of ancient bipedal walking.",
+        "media": {
+            "type": "image",
+            "url": "/images/51.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "52",
+        "year": "3.2 Million Years Ago",
+        "title": "\"Lucy\" Discovered",
+        "description": "The partial skeleton of Australopithecus afarensis is found in Ethiopia, providing key insight into the size and locomotion of this famous species.",
+        "media": {
+            "type": "image",
+            "url": "/images/52.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "53",
+        "year": "2.5 Million Years Ago",
+        "title": "Oldowan Tool Technology",
+        "description": "The earliest widespread stone tool industry begins, characterized by simple stone cores and sharp flakes used for butchering animals and processing plants.",
+        "media": {
+            "type": "image",
+            "url": "/images/53.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "54",
+        "year": "2.4 Million Years Ago",
+        "title": "Genus Homo Appears",
+        "description": "The first members of the genus Homo (Homo habilis—\"handy man\") emerge in East Africa, identified by larger brains and sophisticated tool use.",
+        "media": {
+            "type": "image",
+            "url": "/images/54.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "55",
+        "year": "2.0 Million Years Ago",
+        "title": "The Great African Aridification",
+        "description": "A major climate shift causes grasslands to expand further, driving hominins to rely more on meat and highly mobile hunting strategies.",
+        "media": {
+            "type": "image",
+            "url": "/images/55.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "56",
+        "year": "1.9 Million Years Ago",
+        "title": "Homo erectus Evolves",
+        "description": "A new hominin emerges, characterized by a large brain, a tall, modern body structure, and the ability to travel vast distances.",
+        "media": {
+            "type": "image",
+            "url": "/images/56.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "57",
+        "year": "1.8 Million Years Ago",
+        "title": "The First Major Out-of-Africa Migration",
+        "description": "Homo erectus leaves Africa and rapidly spreads across Asia (Java, China) and Europe, demonstrating unprecedented adaptability and travel capability.",
+        "media": {
+            "type": "image",
+            "url": "/images/57.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "58",
+        "year": "1.6 Million Years Ago",
+        "title": "Acheulean Hand Axes",
+        "description": "Homo erectus develops more refined, symmetric, pear-shaped stone tools (hand axes), representing a significant cognitive leap in planning and execution.",
+        "media": {
+            "type": "image",
+            "url": "/images/58.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "59",
+        "year": "1.0 Million Years Ago",
+        "title": "Mastery of Fire Begins",
+        "description": "Evidence suggests Homo erectus begins to control fire, providing warmth, protection, and the ability to cook food, which aids in brain development.",
+        "media": {
+            "type": "image",
+            "url": "/images/59.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "60",
+        "year": "800,000 Years Ago",
+        "title": "Human Expansion into Europe",
+        "description": "Early hominins establish a durable presence in Europe, adapting to colder climates using fire and robust hunting techniques.",
+        "media": {
+            "type": "image",
+            "url": "/images/60.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "61",
+        "year": "600,000 Years Ago",
+        "title": "Divergence of Neanderthals and Denisovans",
+        "description": "The common ancestor of Homo sapiens splits from the lineage that will eventually become Neanderthals (Europe) and Denisovans (Asia).",
+        "media": {
+            "type": "image",
+            "url": "/images/61.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "62",
+        "year": "400,000 Years Ago",
+        "title": "Use of Wooden Spears",
+        "description": "Hominin sites reveal ancient wooden spears (Schöningen spears), demonstrating sophisticated hunting technology that predates modern humans.",
+        "media": {
+            "type": "image",
+            "url": "/images/62.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "63",
+        "year": "300,000 Years Ago",
+        "title": "Emergence of Archaic Homo sapiens",
+        "description": "The earliest fossils considered anatomically modern Homo sapiens appear in Morocco, showing the gradual transition toward our species.",
+        "media": {
+            "type": "image",
+            "url": "/images/63.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "64",
+        "year": "200,000 Years Ago",
+        "title": "The Deepest Female Mitochondrial Ancestor",
+        "description": "Mitochondrial Eve, the most recent common ancestor from whom all living humans trace their maternal line, is estimated to have lived around this time in Africa.",
+        "media": {
+            "type": "image",
+            "url": "/images/64.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "65",
+        "year": "120,000 Years Ago",
+        "title": "Beginning of the Last Ice Age (Glacial Period)",
+        "description": "Massive ice sheets expand across the continents, driving complex human migration patterns and requiring further adaptive evolution.",
+        "media": {
+            "type": "image",
+            "url": "/images/65.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "66",
+        "year": "70,000 Years Ago",
+        "title": "The \"Great Leap Forward\" (Cognitive Revolution)",
+        "description": "A potential burst in cognitive abilities leads to complex language, symbolism, ritual burial, and sophisticated art and tools.",
+        "media": {
+            "type": "image",
+            "url": "/images/66.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "67",
+        "year": "60,000 Years Ago",
+        "title": "Second Major Out-of-Africa Migration",
+        "description": "Anatomically modern Homo sapiens (our species) migrate out of Africa via the Arabian Peninsula, rapidly displacing older hominin populations.",
+        "media": {
+            "type": "image",
+            "url": "/images/67.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "68",
+        "year": "50,000 Years Ago",
+        "title": "Settlement of Australia",
+        "description": "Humans cross the sea barriers and colonize Sahul (the combined landmass of Australia and New Guinea), representing a major seafaring achievement.",
+        "media": {
+            "type": "image",
+            "url": "/images/68.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "69",
+        "year": "40,000 Years Ago",
+        "title": "Upper Paleolithic Art Flourishes",
+        "description": "The height of Ice Age cave painting begins in Europe, featuring stunning, detailed depictions of bison, horses, and human hands (e.g., Chauvet Cave).",
+        "media": {
+            "type": "image",
+            "url": "/images/69.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "70",
+        "year": "30,000 Years Ago",
+        "title": "Extinction of Neanderthals",
+        "description": "Neanderthal populations decline and vanish from the fossil record, likely due to a combination of climate change and competition with Homo sapiens.",
+        "media": {
+            "type": "image",
+            "url": "/images/70.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "71",
+        "year": "16,000 Years Ago",
+        "title": "Initial Settlement of the Americas",
+        "description": "Humans cross the Beringia land bridge (connecting Asia and North America) or travel along the coast, becoming the continent's first settlers.",
+        "media": {
+            "type": "image",
+            "url": "/images/71.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "72",
+        "year": "12,000 Years Ago",
+        "title": "Clovis Culture in North America",
+        "description": "A distinctive and widespread North American culture, characterized by unique fluted stone projectile points, appears and dominates the hunting landscape.",
+        "media": {
+            "type": "image",
+            "url": "/images/72.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "73",
+        "year": "10,000 BCE",
+        "title": "End of the Last Ice Age (Holocene Begins)",
+        "description": "The Earth enters the current, relatively warm and stable interglacial period, setting the stage for the development of agriculture and settled civilization.",
+        "media": {
+            "type": "image",
+            "url": "/images/73.jpg"
+        },
+        "phase": "Phase 3"
+    },
+    {
+        "id": "phase-4-marker",
+        "year": "10,000 BCE",
+        "title": "The Neolithic Revolution",
+        "description": "",
+        "media": {
+            "type": "image",
+            "url": "/images/phase-4-marker.jpg"
+        },
+        "phase": "Phase 4",
+        "type": "phase_marker"
+    },
+    {
+        "id": "p4-1",
+        "year": "10,000 BCE",
+        "title": "The Dawn of the Holocene",
+        "description": "The most recent glacial period ends, leading to a stable, warmer, and wetter climate worldwide.",
+        "media": {
+            "type": "image",
+            "url": "/images/p4-1.jpg"
+        },
+        "phase": "Phase 4"
+    },
+    {
+        "id": "p4-2",
+        "year": "9,600 BCE",
+        "title": "First Cereal Cultivation",
+        "description": "Early intentional cultivation of wild einkorn and emmer wheat begins in the Fertile Crescent of Southwest Asia.",
+        "media": {
+            "type": "image",
+            "url": "/images/p4-2.jpg"
+        },
+        "phase": "Phase 4"
+    },
+    {
+        "id": "p4-3",
+        "year": "9,500 BCE",
+        "title": "Permanent Settlement at Jericho",
+        "description": "The site of Jericho is established as one of the world's oldest continuously inhabited proto-cities.",
+        "media": {
+            "type": "image",
+            "url": "/images/p4-3.jpg"
+        },
+        "phase": "Phase 4"
+    },
+    {
+        "id": "p4-4",
+        "year": "9,000 BCE",
+        "title": "Göbekli Tepe Complex",
+        "description": "Hunter-gatherers construct monumental T-shaped stone pillar enclosures in modern Turkey.",
+        "media": {
+            "type": "image",
+            "url": "/images/p4-4.jpg"
+        },
+        "phase": "Phase 4"
+    },
+    {
+        "id": "p4-5",
+        "year": "9,000 BCE",
+        "title": "Domestication of the Dog",
+        "description": "The gray wolf is widely accepted to have been domesticated, providing protection and aid in hunting.",
+        "media": {
+            "type": "image",
+            "url": "/images/p4-5.jpg"
+        },
+        "phase": "Phase 4"
+    },
+    {
+        "id": "p4-6",
+        "year": "8,800 BCE",
+        "title": "Pre-Pottery Neolithic A",
+        "description": "This period sees the construction of round, semi-subterranean houses and communal food storage.",
+        "media": {
+            "type": "image",
+            "url": "/images/p4-6.jpg"
+        },
+        "phase": "Phase 4"
+    },
+    {
+        "id": "p4-7",
+        "year": "8,500 BCE",
+        "title": "Domestication of the Goat",
+        "description": "Wild goats are domesticated in the Zagros Mountains, marking the first major livestock for milk and meat.",
+        "media": {
+            "type": "image",
+            "url": "/images/p4-7.jpg"
+        },
+        "phase": "Phase 4"
+    }
+]
