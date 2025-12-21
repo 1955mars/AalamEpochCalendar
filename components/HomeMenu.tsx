@@ -56,10 +56,10 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
         <div className="w-full max-w-6xl mx-auto px-6 py-12 flex flex-col items-center justify-center min-h-[80vh] font-sans">
             <div className="text-center mb-16 space-y-4 animate-in fade-in slide-in-from-bottom-8 duration-700">
                 <h1 className="text-6xl md:text-8xl font-black tracking-tighter text-slate-900 mb-2">
-                    AALAM
+                    Aalam
                 </h1>
                 <p className="text-xl md:text-2xl font-light text-slate-600 tracking-widest uppercase">
-                    The Museum of Infinite Connections
+                    Knowledge Connected
                 </p>
                 <div className="h-1 w-24 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full mt-6" />
             </div>

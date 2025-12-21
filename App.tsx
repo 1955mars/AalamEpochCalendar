@@ -159,10 +159,10 @@ const App: React.FC = () => {
           </div>
           <div>
             <h1 className={`text-2xl font-black tracking-tighter ${activeJourney ? 'text-white' : 'text-slate-900'}`}>
-              AALAM
+              Aalam
             </h1>
             <p className={`text-xs font-bold tracking-widest uppercase opacity-60 ${activeJourney ? 'text-slate-300' : 'text-slate-600'}`}>
-              Interactive Universal Timeline
+              Knowledge Connected
             </p>
           </div>
         </div>
