@@ -215,10 +215,55 @@ export const CONNECTIONS: Connection[] = [
     { id: 'eol-30', fromEventId: 'p2-27', toEventId: 'p2-28', type: 'preceded' }, // T-Rex -> Impact
     { id: 'eol-31', fromEventId: 'p2-28', toEventId: 'p2-29', type: 'caused' }, // Impact -> Extinction
     { id: 'eol-32', fromEventId: 'p2-29', toEventId: '41', type: 'caused' }, // Extinction -> Mammals
-    { id: 'eol-33', fromEventId: '41', toEventId: '42', type: 'preceded' }
+    { id: 'eol-33', fromEventId: '41', toEventId: '42', type: 'preceded' },
+
+    // Rise of Civilizations Connections
+    { id: 'roc-1', fromEventId: 'p4-3', toEventId: 'p4-9', type: 'related' }, // Jericho -> Rice (Agriculture Spread)
+    { id: 'roc-2', fromEventId: 'p4-9', toEventId: 'p4-14', type: 'related' }, // Rice -> Catalhoyuk (Urbanization)
+    { id: 'roc-3', fromEventId: 'p4-14', toEventId: 'p4-25', type: 'preceded' }, // Catalhoyuk -> Sumer (First Cities)
+    { id: 'roc-4', fromEventId: 'p4-25', toEventId: 'p4-29', type: 'caused' }, // Sumer -> Writing (Admin needs)
+    { id: 'roc-5', fromEventId: 'p4-29', toEventId: 'p5-2', type: 'preceded' }, // Writing -> City States
+    { id: 'roc-6', fromEventId: 'p4-30', toEventId: 'p5-1', type: 'related' }, // Bronze -> Egypt Unification (Tech & Power)
+    { id: 'roc-7', fromEventId: 'p5-2', toEventId: 'p5-8', type: 'related' }, // Sumer -> Indus (Trade/Parallel)
+    { id: 'roc-8', fromEventId: 'p5-1', toEventId: 'p5-9', type: 'caused' }, // Egypt -> Pyramids (State Power)
+    { id: 'roc-9', fromEventId: 'p5-2', toEventId: 'p5-11', type: 'caused' }, // Cities -> Empire (Sargon)
+    { id: 'roc-10', fromEventId: 'p5-15', toEventId: 'p5-24', type: 'related' }, // Caral -> Olmec (Americas)
+    { id: 'roc-11', fromEventId: 'p5-11', toEventId: 'p5-16', type: 'preceded' }, // Akkad -> Hammurabi (Law)
+    { id: 'roc-12', fromEventId: 'p5-17', toEventId: 'p5-21', type: 'caused' }, // China Writing -> Shang Dyn
+    { id: 'roc-13', fromEventId: 'p5-21', toEventId: 'p6-3', type: 'preceded' }, // Shang -> Zhou (Implied link)
+    { id: 'roc-14', fromEventId: 'p5-31', toEventId: 'p6-1', type: 'caused' }, // Collapse -> Iron Age (Necessity)
+    { id: 'roc-15', fromEventId: 'p5-29', toEventId: 'p6-4', type: 'related' }, // Exodus/Levant -> Phoenicians
+    { id: 'roc-16', fromEventId: 'p6-4', toEventId: 'p6-11', type: 'caused' }, // Alphabet -> Homer (Literature)
+    { id: 'roc-17', fromEventId: 'p6-1', toEventId: 'p6-9', type: 'related' }, // Iron Age -> Rome Founding
+    { id: 'roc-18', fromEventId: 'p6-11', toEventId: 'p6-21', type: 'preceded' }, // Greek Culture -> Democracy
+    { id: 'roc-19', fromEventId: 'p6-9', toEventId: 'p6-20', type: 'caused' }, // Rome Kings -> Republic
+    { id: 'roc-20', fromEventId: 'p6-18', toEventId: 'p6-22', type: 'caused' }, // Persia -> Marathon (Conflict)
+    { id: 'roc-21', fromEventId: 'p6-21', toEventId: 'p6-22', type: 'related' }, // Democracy -> Defense of Greece
+    { id: 'roc-22', fromEventId: 'p6-22', toEventId: 'p6-28', type: 'preceded' }, // Greek Victory -> Alexander
+    { id: 'roc-23', fromEventId: 'p6-28', toEventId: 'p6-29', type: 'related' }, // Alexander -> Qin (Empire concept spread?)
+    { id: 'roc-24', fromEventId: 'p6-20', toEventId: 'p6-30', type: 'caused' }, // Republic -> Empire (Augustus)
+    { id: 'roc-25', fromEventId: 'p6-29', toEventId: 'p7-6', type: 'preceded' }, // Qin/Han -> Han Fall
+    { id: 'roc-26', fromEventId: 'p6-30', toEventId: 'p7-4', type: 'related' }, // Rome -> Silk Road
+    { id: 'roc-27', fromEventId: 'p7-4', toEventId: 'p7-10', type: 'related' }, // Trade/Contact -> Rome Fall (Disease/Migration)
+    { id: 'roc-28', fromEventId: 'p7-10', toEventId: 'p7-12', type: 'preceded' } // Rome Fall -> Islam (Power Vacuum/Shift)
 ];
 
 export const JOURNEYS: Journey[] = [
+    {
+        id: 'rise-of-civilizations',
+        title: 'The Human Story: Rise of Civilizations',
+        description: 'From the first mud bricks of Jericho to the marble columns of Rome, witness the birth of society, law, and empire.',
+        eventIds: [
+            'p4-3', 'p4-9', 'p4-14', 'p4-25', 'p4-29', 'p4-30',
+            'p5-1', 'p5-2', 'p5-8', 'p5-9', 'p5-11', 'p5-15',
+            'p5-16', 'p5-17', 'p5-21', 'p5-24', 'p5-31',
+            'p6-1', 'p6-4', 'p6-9', 'p6-11', 'p6-18', 'p6-20',
+            'p6-21', 'p6-22', 'p6-28', 'p6-29', 'p6-30',
+            'p7-4', 'p7-6', 'p7-10', 'p7-12'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('roc-')),
+        overrides: {}
+    },
     {
         id: 'cosmic-origins',
         title: 'Cosmic Origins: The Beginning of Everything',
@@ -232,7 +277,7 @@ export const JOURNEYS: Journey[] = [
             '12', 'cosmic-24', 'cosmic-25', '15', 'cosmic-27',
             '18'
         ],
-        connections: CONNECTIONS.filter(c => !c.id.startsWith('eol-')),
+        connections: CONNECTIONS.filter(c => !c.id.startsWith('eol-') && !c.id.startsWith('roc-')),
         overrides: {
             '1': { // The Big Bang
                 title: 'The Primordial Eruption',

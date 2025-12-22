@@ -11,14 +11,6 @@ interface HomeMenuProps {
 
 const PLANNED_JOURNEYS = [
     {
-        order: 3,
-        title: 'Rise of Civilizations',
-        description: 'The Human Story: Pyramids, Empires, and Cities.',
-        icon: Component,
-        color: 'bg-amber-600',
-        status: 'Coming Soon'
-    },
-    {
         order: 4,
         title: 'Wires & Waves',
         description: 'Evolution of Technology: Wheel to AI.',

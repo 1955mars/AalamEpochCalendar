@@ -18,7 +18,7 @@ This document serves as the central dashboard for tracking the development of th
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
 | **1. Cosmic Origins** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
 | **2. Evolution of Life** | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟡 |
-| **3. Rise of Civilizations** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| **3. Rise of Civilizations** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
 | **4. Evolution of Tech** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | **5. History of Art** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 
