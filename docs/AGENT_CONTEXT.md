@@ -102,6 +102,7 @@ To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
         - If script exists: `npx tsx scripts/downloadImages.ts`
         - If not: Create it.
     4.  **Reference**: Update `allEvents.ts` to use: `(import.meta.env?.BASE_URL || '/') + 'images/your-image.jpg'`.
+    5.  **Journey Thumbnail**: Select a representative image for the journey card on the home page. Update `thumbnailUrl` in `journeys.ts`.
 
 ### 5. Inter-connections (The Golden Thread)
 - **Goal**: Visually link the events to show cause-and-effect or thematic continuity.

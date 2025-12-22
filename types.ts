@@ -35,6 +35,7 @@ export interface Journey {
   id: string;
   title: string;
   description: string;
+  thumbnailUrl?: string; // Image for the journey card
   eventIds: string[]; // The ordered list of events in this journey
   connections: Connection[]; // Specific connections to highlight in this journey
   overrides?: Record<string, {

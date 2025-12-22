@@ -33,17 +33,23 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
                     <button
                         key={journey.id}
                         onClick={() => onSelectJourney(journey)}
-                        className="group relative overflow-hidden bg-slate-900 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 text-left border border-slate-800"
+                        className="group relative overflow-hidden bg-slate-900 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 text-left border border-slate-800 h-96 flex flex-col justify-end"
+                        style={journey.thumbnailUrl ? {
+                            backgroundImage: `url(${import.meta.env.BASE_URL}${journey.thumbnailUrl})`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center'
+                        } : {}}
                     >
-                        <div className="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
-                            <Zap size={120} />
-                        </div>
+                        {/* Dark Gradient Overlay for Readability */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-90 group-hover:opacity-80 transition-opacity" />
+
+                        {/* Content */}
                         <div className="relative z-10">
                             <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
                                 <Play fill="white" size={20} />
                             </div>
-                            <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-300 transition-colors">{journey.title}</h3>
-                            <p className="text-slate-400 text-sm leading-relaxed mb-6">{journey.description}</p>
+                            <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-300 transition-colors drop-shadow-md">{journey.title}</h3>
+                            <p className="text-slate-300 text-sm leading-relaxed mb-6 drop-shadow-sm">{journey.description}</p>
                             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400">
                                 Start Journey <ArrowRight size={14} />
                             </div>

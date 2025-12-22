@@ -280,6 +280,7 @@ export const JOURNEYS: Journey[] = [
         id: 'evolution-of-technology',
         title: 'Wires & Waves: Evolution of Technology',
         description: 'From the spark of the first fire to the neural networks of AI, trace the innovations that defined us.',
+        thumbnailUrl: 'images/p12-29.jpg',
         eventIds: [
             'modern-13', 'p4-30', 'modern-12', 'p6-1', 'modern-9',
             'p8-14', 'p8-20', 'p8-26', 'p8-30', 'modern-7',
@@ -296,6 +297,7 @@ export const JOURNEYS: Journey[] = [
         id: 'rise-of-civilizations',
         title: 'The Human Story: Rise of Civilizations',
         description: 'From the first mud bricks of Jericho to the marble columns of Rome, witness the birth of society, law, and empire.',
+        thumbnailUrl: 'images/p6-25.jpg',
         eventIds: [
             'p4-3', 'p4-9', 'p4-14', 'p4-25', 'p4-29', 'p4-30',
             'p5-1', 'p5-2', 'p5-8', 'p5-9', 'p5-11', 'p5-15',
@@ -311,6 +313,7 @@ export const JOURNEYS: Journey[] = [
         id: 'cosmic-origins',
         title: 'Cosmic Origins: The Beginning of Everything',
         description: 'Trace the history of the universe from the Big Bang to the formation of our home planet.',
+        thumbnailUrl: 'images/cosmic-14.jpg',
         eventIds: [
             'cosmic-1', 'cosmic-2', '1', '2', 'cosmic-3',
             '3', 'cosmic-5', '4', 'cosmic-7', 'cosmic-8',
@@ -332,6 +335,7 @@ export const JOURNEYS: Journey[] = [
         id: 'evolution-of-life',
         title: 'The Vital Spark: Evolution of Life',
         description: 'Witness the miraculous climb from single cells to complex consciousness, surviving five mass extinctions along the way.',
+        thumbnailUrl: 'images/p2-23.jpg',
         eventIds: [
             '18', '19', '20', '23', '24', '26', '27', '31',
             'p2-1', 'p2-2', 'p2-3', 'p2-5', 'p2-6', 'p2-7',
