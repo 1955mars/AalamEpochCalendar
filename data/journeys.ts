@@ -182,6 +182,40 @@ export const CONNECTIONS: Connection[] = [
         toEventId: '18',         // First Life
         type: 'caused'
     },
+    // Evolution of Life Connections
+    { id: 'eol-1', fromEventId: '18', toEventId: '19', type: 'caused' },
+    { id: 'eol-2', fromEventId: '19', toEventId: '20', type: 'caused' }, // Stromatolites -> Photosynthesis
+    { id: 'eol-3', fromEventId: '20', toEventId: '23', type: 'caused' }, // Photosynthesis -> Oxygen
+    { id: 'eol-4', fromEventId: '23', toEventId: '24', type: 'caused' }, // Oxygen -> Ice Age
+    { id: 'eol-5', fromEventId: '24', toEventId: '26', type: 'preceded' }, // Ice Age -> Eukaryotes
+    { id: 'eol-6', fromEventId: '26', toEventId: '27', type: 'caused' }, // Eukaryotes -> Sex
+    { id: 'eol-7', fromEventId: '27', toEventId: '31', type: 'preceded' }, // Sex -> Complex Life
+    { id: 'eol-8', fromEventId: '31', toEventId: 'p2-1', type: 'preceded' }, // Ediacaran -> Cambrian
+    { id: 'eol-9', fromEventId: 'p2-1', toEventId: 'p2-2', type: 'caused' }, // Explosion -> Vertebrates
+    { id: 'eol-10', fromEventId: 'p2-1', toEventId: 'p2-3', type: 'related' }, // Explosion -> Trilobites
+    { id: 'eol-11', fromEventId: 'p2-2', toEventId: 'p2-5', type: 'related' }, // Vertebrates -> Biodiversity
+    { id: 'eol-12', fromEventId: 'p2-5', toEventId: 'p2-6', type: 'preceded' }, // Biodiversity -> Land Plants
+    { id: 'eol-13', fromEventId: 'p2-6', toEventId: 'p2-7', type: 'preceded' }, // Plants -> Extinction 1
+    { id: 'eol-14', fromEventId: 'p2-7', toEventId: 'p2-9', type: 'preceded' }, // Extinction -> Land Arthropods
+    { id: 'eol-15', fromEventId: 'p2-9', toEventId: 'p2-10', type: 'related' }, // Land -> Fish Age
+    { id: 'eol-16', fromEventId: 'p2-10', toEventId: 'p2-11', type: 'related' }, // Fish -> Forests
+    { id: 'eol-17', fromEventId: 'p2-11', toEventId: 'p2-12', type: 'related' }, // Forests -> Tiktaalik
+    { id: 'eol-18', fromEventId: 'p2-12', toEventId: 'p2-13', type: 'caused' }, // Tiktaalik -> Amphibians
+    { id: 'eol-19', fromEventId: 'p2-13', toEventId: 'p2-14', type: 'preceded' }, // Amphibians -> Devonian Extinction
+    { id: 'eol-20', fromEventId: 'p2-14', toEventId: 'p2-15', type: 'preceded' }, // Extinction -> Coal Swamps
+    { id: 'eol-21', fromEventId: 'p2-15', toEventId: 'p2-16', type: 'related' }, // Swamps -> Egg
+    { id: 'eol-22', fromEventId: 'p2-16', toEventId: 'p2-17', type: 'caused' }, // Egg -> Synapsids
+    { id: 'eol-23', fromEventId: 'p2-17', toEventId: 'p2-19', type: 'preceded' }, // Synapsids -> Great Dying
+    { id: 'eol-24', fromEventId: 'p2-19', toEventId: 'p2-21', type: 'caused' }, // Dying -> Dinosaurs
+    { id: 'eol-25', fromEventId: 'p2-21', toEventId: 'p2-22', type: 'preceded' }, // Dinos -> Triassic Extinction
+    { id: 'eol-26', fromEventId: 'p2-22', toEventId: 'p2-23', type: 'caused' }, // Extinction -> Jurassic Giants
+    { id: 'eol-27', fromEventId: 'p2-23', toEventId: 'p2-24', type: 'related' }, // Giants -> Birds
+    { id: 'eol-28', fromEventId: 'p2-24', toEventId: 'p2-25', type: 'preceded' },
+    { id: 'eol-29', fromEventId: 'p2-25', toEventId: 'p2-27', type: 'preceded' }, // Flowers -> T-Rex
+    { id: 'eol-30', fromEventId: 'p2-27', toEventId: 'p2-28', type: 'preceded' }, // T-Rex -> Impact
+    { id: 'eol-31', fromEventId: 'p2-28', toEventId: 'p2-29', type: 'caused' }, // Impact -> Extinction
+    { id: 'eol-32', fromEventId: 'p2-29', toEventId: '41', type: 'caused' }, // Extinction -> Mammals
+    { id: 'eol-33', fromEventId: '41', toEventId: '42', type: 'preceded' }
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -198,7 +232,7 @@ export const JOURNEYS: Journey[] = [
             '12', 'cosmic-24', 'cosmic-25', '15', 'cosmic-27',
             '18'
         ],
-        connections: CONNECTIONS,
+        connections: CONNECTIONS.filter(c => !c.id.startsWith('eol-')),
         overrides: {
             '1': { // The Big Bang
                 title: 'The Primordial Eruption',
@@ -206,4 +240,19 @@ export const JOURNEYS: Journey[] = [
             }
         }
     },
+    {
+        id: 'evolution-of-life',
+        title: 'The Vital Spark: Evolution of Life',
+        description: 'Witness the miraculous climb from single cells to complex consciousness, surviving five mass extinctions along the way.',
+        eventIds: [
+            '18', '19', '20', '23', '24', '26', '27', '31',
+            'p2-1', 'p2-2', 'p2-3', 'p2-5', 'p2-6', 'p2-7',
+            'p2-9', 'p2-10', 'p2-11', 'p2-12', 'p2-13', 'p2-14',
+            'p2-15', 'p2-16', 'p2-17', 'p2-19', 'p2-21',
+            'p2-22', 'p2-23', 'p2-24', 'p2-25', 'p2-27',
+            'p2-28', 'p2-29', '41', '42'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('eol-')),
+        overrides: {}
+    }
 ];

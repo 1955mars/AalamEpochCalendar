@@ -11,14 +11,6 @@ interface HomeMenuProps {
 
 const PLANNED_JOURNEYS = [
     {
-        order: 2,
-        title: 'Evolution of Life',
-        description: 'The Vital Spark: From single cells to dinosaurs.',
-        icon: Dna,
-        color: 'bg-emerald-500',
-        status: 'Coming Soon'
-    },
-    {
         order: 3,
         title: 'Rise of Civilizations',
         description: 'The Human Story: Pyramids, Empires, and Cities.',
