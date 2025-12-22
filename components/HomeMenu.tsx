@@ -11,19 +11,11 @@ interface HomeMenuProps {
 
 const PLANNED_JOURNEYS = [
     {
-        order: 4,
-        title: 'Wires & Waves',
-        description: 'Evolution of Technology: Wheel to AI.',
-        icon: Cpu,
-        color: 'bg-blue-500',
-        status: 'Coming Soon'
-    },
-    {
         order: 5,
         title: 'The Canvas of Time',
-        description: 'History of Art: Cave paintings to Modernism.',
+        description: 'History of Art: Cave Paintings to NFTs.',
         icon: Palette,
-        color: 'bg-pink-500',
+        color: 'bg-purple-500',
         status: 'Coming Soon'
     },
 ];

@@ -245,10 +245,53 @@ export const CONNECTIONS: Connection[] = [
     { id: 'roc-25', fromEventId: 'p6-29', toEventId: 'p7-6', type: 'preceded' }, // Qin/Han -> Han Fall
     { id: 'roc-26', fromEventId: 'p6-30', toEventId: 'p7-4', type: 'related' }, // Rome -> Silk Road
     { id: 'roc-27', fromEventId: 'p7-4', toEventId: 'p7-10', type: 'related' }, // Trade/Contact -> Rome Fall (Disease/Migration)
-    { id: 'roc-28', fromEventId: 'p7-10', toEventId: 'p7-12', type: 'preceded' } // Rome Fall -> Islam (Power Vacuum/Shift)
+    { id: 'roc-28', fromEventId: 'p7-10', toEventId: 'p7-12', type: 'preceded' }, // Rome Fall -> Islam (Power Vacuum/Shift)
+
+    // Evolution of Technology Connections
+    { id: 'eot-1', fromEventId: 'modern-13', toEventId: 'p4-30', type: 'related' }, // Wheel -> Bronze (Metallurgy transport)
+    { id: 'eot-2', fromEventId: 'p4-30', toEventId: 'modern-12', type: 'related' }, // Bronze -> Writing (Complex society tools)
+    { id: 'eot-3', fromEventId: 'modern-12', toEventId: 'p6-1', type: 'preceded' }, // Writing -> Iron Age (Knowledge preservation)
+    { id: 'eot-4', fromEventId: 'p6-1', toEventId: 'modern-9', type: 'preceded' }, // Iron -> Printing Press (Long gap, tool refinement)
+    { id: 'eot-5', fromEventId: 'modern-9', toEventId: 'p8-20', type: 'caused' }, // Print -> Copernican (Scientific Revolution)
+    { id: 'eot-6', fromEventId: 'p8-14', toEventId: 'p8-26', type: 'related' }, // Navigation -> Telescope (Optics & Exploration)
+    { id: 'eot-7', fromEventId: 'p8-20', toEventId: 'p8-30', type: 'caused' }, // Copernicus -> Newton (Physics foundation)
+    { id: 'eot-8', fromEventId: 'p8-30', toEventId: 'modern-7', type: 'caused' }, // Principia -> Industrial Rev (Mechanics applied)
+    { id: 'eot-9', fromEventId: 'modern-7', toEventId: 'p9-1', type: 'caused' }, // Ind Rev -> Steam Engine (Power source)
+    { id: 'eot-10', fromEventId: 'p9-1', toEventId: 'p9-16', type: 'caused' }, // Steam -> Railway (Transport revolution)
+    { id: 'eot-11', fromEventId: 'p9-18', toEventId: 'pilot-1', type: 'caused' }, // Telegraph -> Telephone (Voice comms)
+    { id: 'eot-12', fromEventId: 'p9-23', toEventId: 'p10-11', type: 'related' }, // Darwin -> Penicillin (Biology to Medicine)
+    { id: 'eot-13', fromEventId: 'modern-6', toEventId: 'pilot-2', type: 'related' }, // Light Bulb -> Radio (Electricity applications)
+    { id: 'eot-14', fromEventId: 'modern-7', toEventId: 'modern-5', type: 'related' }, // Ind Rev -> Flight (Internal Combustion)
+    { id: 'eot-15', fromEventId: 'pilot-2', toEventId: 'p10-10', type: 'caused' }, // Radio -> TV (Broadcast evolution)
+    { id: 'eot-16', fromEventId: 'modern-4', toEventId: 'p11-14', type: 'related' }, // Atomic -> Sputnik (Rocketry & War tech)
+    { id: 'eot-17', fromEventId: 'p11-14', toEventId: 'modern-3', type: 'caused' }, // Sputnik -> Moon Landing (Space Race)
+    { id: 'eot-18', fromEventId: 'pilot-3', toEventId: 'p12-3', type: 'caused' }, // ARPANET -> WWW (Internet evolution)
+    { id: 'eot-19', fromEventId: 'modern-5', toEventId: 'modern-3', type: 'related' }, // Flight -> Moon Landing (Aerospace)
+    { id: 'eot-20', fromEventId: 'p12-3', toEventId: 'p12-7', type: 'caused' }, // WWW -> Google (Info organization)
+    { id: 'eot-21', fromEventId: 'p12-3', toEventId: 'p12-13', type: 'caused' }, // WWW -> iPhone (Mobile Web)
+    { id: 'eot-22', fromEventId: 'p12-11', toEventId: 'p12-22', type: 'caused' }, // Genome -> CRISPR (Reading to Editing DNA)
+    { id: 'eot-23', fromEventId: 'p12-7', toEventId: 'p12-29', type: 'related' }, // Google -> ChatGPT (Data & AI Model)
+    { id: 'eot-24', fromEventId: 'p12-13', toEventId: 'modern-1', type: 'related' }, // iPhone -> AI Era (Compute density)
+    { id: 'eot-25', fromEventId: 'modern-12', toEventId: 'p12-29', type: 'related' } // Writing -> ChatGPT (Language evolution)
 ];
 
 export const JOURNEYS: Journey[] = [
+    {
+        id: 'evolution-of-technology',
+        title: 'Wires & Waves: Evolution of Technology',
+        description: 'From the spark of the first fire to the neural networks of AI, trace the innovations that defined us.',
+        eventIds: [
+            'modern-13', 'p4-30', 'modern-12', 'p6-1', 'modern-9',
+            'p8-14', 'p8-20', 'p8-26', 'p8-30', 'modern-7',
+            'p9-1', 'p9-6', 'p9-7', 'p9-16', 'p9-18',
+            'p9-23', 'modern-6', 'pilot-1', 'pilot-2', 'modern-5',
+            'p10-10', 'p10-11', 'modern-4', 'p11-14', 'pilot-3',
+            'modern-3', 'p12-3', 'p12-7', 'p12-8', 'p12-11',
+            'p12-13', 'p12-15', 'p12-22', 'p12-29', 'modern-1'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('eot-')),
+        overrides: {}
+    },
     {
         id: 'rise-of-civilizations',
         title: 'The Human Story: Rise of Civilizations',
@@ -277,7 +320,7 @@ export const JOURNEYS: Journey[] = [
             '12', 'cosmic-24', 'cosmic-25', '15', 'cosmic-27',
             '18'
         ],
-        connections: CONNECTIONS.filter(c => !c.id.startsWith('eol-') && !c.id.startsWith('roc-')),
+        connections: CONNECTIONS.filter(c => !c.id.startsWith('eol-') && !c.id.startsWith('roc-') && !c.id.startsWith('eot-')),
         overrides: {
             '1': { // The Big Bang
                 title: 'The Primordial Eruption',
