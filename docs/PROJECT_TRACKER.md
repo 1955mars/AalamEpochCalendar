@@ -22,13 +22,14 @@ This document serves as the central dashboard for tracking the development of th
 | **4. Evolution of Tech** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
 | **5. History of Art** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
 | **6. Ancestry of AI** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **7. The Money Illusion** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
 
 ## 🔮 Phase 2: "Traction" Roadmap (Planned)
 Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned Journeys".
 
 | Series | Priority Topics | Status |
 | :--- | :--- | :---: |
-| **Power** | The Money Illusion, The Shadow World, Crime & Punishment | 🟢 |
+| **Power** | The Shadow World, Crime & Punishment | 🟢 |
 | **Human** | The Mating Game, The Psycho-Path, Food on Your Plate | 🔴 |
 | **Innovation** | Power Trip, To The Stars, Silicon Brain | 🔴 |
 

@@ -2622,6 +2622,168 @@ export const ALL_EVENTS: TimelineEvent[] = [
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-8.jpg'
   },
+  // --- The Money Illusion Events (Expansion phase) ---
+  {
+    id: 'money-cowrie',
+    year: '1200 BCE',
+    yearNumeric: -1200,
+    title: 'Cowrie Shells',
+    description: 'Nature\'s Cash. The small, durable shell becomes the first global currency, traded across Africa, Asia, and Oceania for millennia.',
+    phase: 'Phase 6',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-cowrie.jpg'
+  },
+  {
+    id: 'money-hammurabi',
+    year: '1754 BCE',
+    yearNumeric: -1754,
+    title: 'Code of Hammurabi',
+    description: 'The Debt Slate. One of the earliest legal codes formalizes interest rates and debt forgiveness, proving that debt is older than money itself.',
+    phase: 'Phase 5',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-hammurabi.jpg'
+  },
+  {
+    id: 'money-sparta',
+    year: '700 BCE',
+    yearNumeric: -700,
+    title: 'Spartan Iron Spits',
+    description: 'Heavy Money. Sparta adopts cumbersome iron rods (pelanors) as currency to discourage effective wealth accumulation and trade.',
+    phase: 'Phase 6',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-sparta.jpg'
+  },
+  {
+    id: 'money-debasement',
+    year: '250 CE',
+    yearNumeric: 250,
+    title: 'Roman Debasement',
+    description: 'The Silver Fade. Emperors dilute the silver content of the Denarius to pay armies, triggering the first great hyperinflationary crisis.',
+    phase: 'Phase 7',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-debasement.jpg'
+  },
+  {
+    id: 'money-templar',
+    year: '1150 CE',
+    yearNumeric: 1150,
+    title: 'The Knights Templar',
+    description: 'The First Banks. Pilgrims deposit gold in Paris and withdraw it in Jerusalem, creating the first international letters of credit.',
+    phase: 'Phase 7',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-templar.jpg'
+  },
+  {
+    id: 'money-tally',
+    year: '1100 CE',
+    yearNumeric: 1100,
+    title: 'Tally Sticks',
+    description: 'The Wood Standard. England uses notched hazelwood sticks to record tax debts, a system of verified public record that lasts for centuries.',
+    phase: 'Phase 7',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-tally.jpg'
+  },
+  {
+    id: 'money-potosi',
+    year: '1545 CE',
+    yearNumeric: 1545,
+    title: 'Mountain of Silver',
+    description: 'Potosí feeds the world. Spanish silver from the Andes floods the global economy, becoming the first universal currency (Pieces of Eight).',
+    phase: 'Phase 8',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-potosi.jpg'
+  },
+  {
+    id: 'money-tulip',
+    year: '1637 CE',
+    yearNumeric: 1637,
+    title: 'Tulip Mania',
+    description: 'The Rational Bubble. The price of specialized bulbs skyrockets and crashes, demonstrating that market value is purely psychological.',
+    phase: 'Phase 8',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-tulip.jpg'
+  },
+  {
+    id: 'money-boe',
+    year: '1694 CE',
+    yearNumeric: 1694,
+    title: 'Bank of England',
+    description: 'The Debt Machine. The bank is formed specifically to lend money to the government for war, inventing the concept of National Debt.',
+    phase: 'Phase 8',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-boe.jpg'
+  },
+  {
+    id: 'money-mississippi',
+    year: '1720 CE',
+    yearNumeric: 1720,
+    title: 'Mississippi Bubble',
+    description: 'John Law\'s Experiment. France replaces gold with paper shares in a company that doesn\'t exist, proving paper money requires absolute trust.',
+    phase: 'Phase 9',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-mississippi.jpg'
+  },
+  {
+    id: 'money-fed',
+    year: '1913 CE',
+    yearNumeric: 1913,
+    title: 'The Federal Reserve',
+    description: 'The Lender of Last Resort. The US institutionalizes the money supply, creating a central authority to manage panic.',
+    phase: 'Phase 10',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-fed.jpg'
+  },
+  {
+    id: 'money-weimar',
+    year: '1923 CE',
+    yearNumeric: 1923,
+    title: 'Weimar Hyperinflation',
+    description: 'Death of a Currency. Printing money to pay war reparations turns cash into wallpaper, searing the fear of inflation into the German psyche.',
+    phase: 'Phase 10',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-weimar.jpg'
+  },
+  {
+    id: 'money-bretton',
+    year: '1944 CE',
+    yearNumeric: 1944,
+    title: 'Bretton Woods',
+    description: 'The Dollar Standard. The world agrees to peg currencies to the US Dollar, which is pegged to gold, cementing American economic hegemony.',
+    phase: 'Phase 10',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-bretton.jpg'
+  },
+  {
+    id: 'money-euro',
+    year: '1999 CE',
+    yearNumeric: 1999,
+    title: 'Launch of the Euro',
+    description: 'Money Without a Nation. Europe attempts a grand experiment: a single currency for disparate states, uncoupling monetary policy from national sovereignty.',
+    phase: 'Phase 12',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-euro.jpg'
+  },
+  {
+    id: 'money-mpesa',
+    year: '2007 CE',
+    yearNumeric: 2007,
+    title: 'M-Pesa Revolution',
+    description: 'Banking the Unbanked. In Kenya, airtime becomes money. A mobile network bypasses traditional banks, showing the future of digital wallets.',
+    phase: 'Phase 12',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-mpesa.jpg'
+  },
+  {
+    id: 'money-eth',
+    year: '2015 CE',
+    yearNumeric: 2015,
+    title: 'Ethereum Genesis',
+    description: 'Code is Law. Money becomes programmable. Smart contracts allow value to self-execute without human intermediaries.',
+    phase: 'Phase 12',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-eth.jpg'
+  },
+
   // --- The Money Illusion Events ---
   {
     id: 'money-shekel',

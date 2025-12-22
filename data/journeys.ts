@@ -448,22 +448,38 @@ export const JOURNEYS: Journey[] = [
         description: 'Discover how money evolved from physical weight to pure belief, and how it shapes our reality.',
         thumbnailUrl: 'images/money-gold.jpg',
         eventIds: [
-            'p4-3',          // Agriculture (Start)
-            'money-shekel',  // Grain Money
-            'p4-29',         // Writing (Admin/Debt)
-            'money-lydia',   // Coins
-            'p6-20',         // Rome (State Power)
-            'money-paper',   // Jiaozi
-            'money-medici',  // Banking
-            'p8-14',         // Navigation (Trade)
-            'money-gold',    // Newton/Gold Std
-            'modern-7',      // Ind Rev
-            'money-card',    // Credit Card
-            'money-nixon',   // Fiat
-            'p12-14',        // 2008 Crisis
-            'p12-15',        // Bitcoin
-            'money-algo',    // HFT
-            'p12-29'         // AI (Future of value?)
+            'p4-3',             // 9500 BCE: Agriculture/Settlement
+            'p4-29',            // 3200 BCE: Writing
+            'money-shekel',     // 3000 BCE: Grain Money
+            'money-hammurabi',  // 1754 BCE
+            'money-cowrie',     // 1200 BCE
+            'money-sparta',     // 700 BCE
+            'money-lydia',      // 600 BCE
+            'p6-20',            // 509 BCE: Rome
+            'money-debasement', // 250 CE
+            'money-paper',      // 1000 CE
+            'money-tally',      // 1100 CE
+            'money-templar',    // 1150 CE
+            'money-medici',     // 1397 CE
+            'p8-14',            // 1519 CE
+            'money-potosi',     // 1545 CE
+            'money-tulip',      // 1637 CE
+            'money-boe',        // 1694 CE
+            'money-gold',       // 1717 CE
+            'money-mississippi',// 1720 CE
+            'modern-7',         // 1760 CE
+            'money-fed',        // 1913 CE
+            'money-weimar',     // 1923 CE
+            'money-bretton',    // 1944 CE
+            'money-card',       // 1950 CE
+            'money-nixon',      // 1971 CE
+            'money-euro',       // 1999 CE
+            'money-mpesa',      // 2007 CE
+            'p12-14',           // 2008 CE
+            'p12-15',           // 2009 CE
+            'money-algo',       // 2010s
+            'money-eth',        // 2015 CE
+            'p12-29'            // 2022 CE
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('money-')),
         overrides: {
