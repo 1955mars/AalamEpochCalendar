@@ -90,13 +90,18 @@ To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
     - `title`: Catchy title.
     - `description`: Brief summary of the journey.
     - `eventIds`: Ordered list of event IDs.
+    - **Overrides (New)**: If an event's generic description doesn't fit your specific story, use the `overrides` property in the `Journey` object to rename it or rewrite the description JUST for this journey.
 
-### 4. Media Preparation
-- **Goal**: Ensure every event has a visual.
+### 4. Media Preparation (The "Localize" Protocol)
+- **Goal**: ensure every event has a visual, but AVOID rate limits and external dependencies in production.
 - **Action**:
-    - Use `generate_image` tool if creating new assets.
-    - Save images to `public/images/`.
-    - Reference schema: `imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/your-image.jpg'`.
+    1.  **Generate**: Use `generate_image` tool.
+    2.  **Workaround (if Rate Limited)**: Use dynamic URLs in `data/allEvents.ts`:
+        - `https://image.pollinations.ai/prompt/Your%20Prompt%20Here`
+    3.  **Localize (MANDATORY)**: Before deployment, you MUST run a script to download these images to `public/images/`.
+        - If script exists: `npx tsx scripts/downloadImages.ts`
+        - If not: Create it.
+    4.  **Reference**: Update `allEvents.ts` to use: `(import.meta.env?.BASE_URL || '/') + 'images/your-image.jpg'`.
 
 ### 5. Inter-connections (The Golden Thread)
 - **Goal**: Visually link the events to show cause-and-effect or thematic continuity.
@@ -115,6 +120,21 @@ To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
         - Is the "Golden Thread" logic sound?
         - Are the visuals distinct?
     - **Iterate**: If the "User" finds boredom or confusion, go back to Step 2 or 5 and fix it.
+
+### 7. Cleanup & Polish
+- **Goal**: Ensure the UI is clean and professional.
+- **Action**:
+    - **Remove Duplicates**: Check `components/HomeMenu.tsx`. If you implemented a journey that was previously in the "Planned" list, **DELETE** the placeholder object from `PLANNED_JOURNEYS`.
+    - **Validation**: Run `npx tsx scripts/validateData.ts` one last time.
+
+### 8. Deployment (The "Go Live" Protocol)
+- **Goal**: Publish your changes to the world (`aalam.xyz`).
+- **Action**:
+    1.  **Commit**: `git add . && git commit -m "feat: description"`
+    2.  **Sync**: `git push origin main`
+    3.  **Build**: `npm run build`
+    4.  **Deploy**: `npm run deploy` (deploys to `gh-pages`)
+    5.  **Verify**: Visit the live site and ensure your new journey works.
 
 ## Protocol: Infinite Expansion (When the Tracker is Empty)
 If `docs/PROJECT_TRACKER.md` has no "ToDo" items:
