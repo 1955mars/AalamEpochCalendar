@@ -20,7 +20,7 @@ This document serves as the central dashboard for tracking the development of th
 | **2. Evolution of Life** | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟡 |
 | **3. Rise of Civilizations** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
 | **4. Evolution of Tech** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
-| **5. History of Art** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| **5. History of Art** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
 
 ## 🏗️ Infrastructure & DevOps
 This section tracks the operational side of the project, including version control and deployments to `aalam.xyz`.
@@ -68,10 +68,10 @@ This section tracks the operational side of the project, including version contr
 - [ ] **Testing**: Ensure smooth scroll through rapid modern changes.
 
 ### 5. The Canvas of Time: History of Art
-- [ ] **Research**: Major art movements (Renaissance, Impressionism, etc.).
-- [ ] **Design**: Use actual art pieces as primary visuals.
-- [ ] **Implementation**: High-res image optimization.
-- [ ] **Testing**: Verify image rendering quality.
+- [x] **Research**: Major art movements (Renaissance, Impressionism, etc.).
+- [x] **Design**: Use actual art pieces as primary visuals.
+- [x] **Implementation**: High-res image optimization.
+- [x] **Testing**: Verify image rendering quality.
 
 ---
 

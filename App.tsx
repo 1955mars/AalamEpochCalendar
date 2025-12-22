@@ -112,6 +112,74 @@ const App: React.FC = () => {
     setCurrentEventIndex(0);
   };
 
+  const handleSimNext = () => {
+    setCurrentEventIndex(prev => {
+      if (prev >= simulationEvents.length - 1) {
+        stopSimulation();
+        return prev;
+      }
+      return prev + 1;
+    });
+    // Reset timer on manual navigation
+    if (simulationIntervalRef.current) {
+      clearInterval(simulationIntervalRef.current);
+      if (!isPaused) {
+        simulationIntervalRef.current = setInterval(() => {
+          setCurrentEventIndex(prev => {
+            if (prev >= simulationEvents.length - 1) {
+              stopSimulation();
+              return prev;
+            }
+            return prev + 1;
+          });
+        }, playbackSpeed);
+      }
+    }
+  };
+
+  const handleSimPrev = () => {
+    setCurrentEventIndex(prev => {
+      if (prev <= 0) return 0;
+      return prev - 1;
+    });
+    // Reset timer on manual navigation
+    if (simulationIntervalRef.current) {
+      clearInterval(simulationIntervalRef.current);
+      if (!isPaused) {
+        simulationIntervalRef.current = setInterval(() => {
+          setCurrentEventIndex(prev => {
+            if (prev >= simulationEvents.length - 1) {
+              stopSimulation();
+              return prev;
+            }
+            return prev + 1;
+          });
+        }, playbackSpeed);
+      }
+    }
+  };
+
+  const handleSimSeek = (index: number) => {
+    const targetIndex = Math.max(0, Math.min(index, simulationEvents.length - 1));
+    setCurrentEventIndex(targetIndex);
+
+    // Reset timer on manual navigation
+    if (simulationIntervalRef.current) {
+      clearInterval(simulationIntervalRef.current);
+      if (!isPaused) {
+        simulationIntervalRef.current = setInterval(() => {
+          setCurrentEventIndex(prev => {
+            if (prev >= simulationEvents.length - 1) {
+              stopSimulation();
+              return prev;
+            }
+            return prev + 1;
+          });
+        }, playbackSpeed);
+      }
+    }
+  };
+
   const togglePause = () => setIsPaused(!isPaused);
 
   useEffect(() => {
@@ -163,6 +231,9 @@ const App: React.FC = () => {
         totalEvents={simulationEvents.length}
         onPause={togglePause}
         onStop={stopSimulation}
+        onNext={handleSimNext}
+        onPrev={handleSimPrev}
+        onSeek={handleSimSeek}
         isPaused={isPaused}
         duration={playbackSpeed}
       />

@@ -2359,6 +2359,267 @@ export const ALL_EVENTS: TimelineEvent[] = [
     phase: 'Modern',
     category: 'Civilization',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-14.jpg'
-  }
+  },
 
+  // --- PHASE: History of Art ---
+  {
+    id: 'art-1',
+    year: '30,000 BCE',
+    yearNumeric: -30000,
+    title: 'The First Dream (Cave Paintings)',
+    description: 'In the flickering light of Lascaux, humans first projected their internal imagination onto the external world, birthing the "Cognitive Revolution".',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-1.jpg'
+  },
+  {
+    id: 'art-venus',
+    year: '28,000 BCE',
+    yearNumeric: -28000,
+    title: 'Venus of Willendorf',
+    description: 'A pocket-sized limestone icon of fertility. By carving the ideal form, humanity began to shape reality to match its desires rather than just observing it.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-venus.jpg'
+  },
+  {
+    id: 'art-gobekli',
+    year: '9500 BCE',
+    yearNumeric: -9500,
+    title: 'Göbekli Tepe',
+    description: 'The World\'s First Temple. Massive carved pillars prove that the urge to create sacred art preceded—and perhaps caused—the invention of agriculture.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-gobekli.jpg'
+  },
+  {
+    id: 'art-ur',
+    year: '2600 BCE',
+    yearNumeric: -2600,
+    title: 'Standard of Ur',
+    description: 'One of the earliest examples of visual narrative. Using distinct registers (comic-strip style), it formalized how we tell stories through images.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-ur.jpg'
+  },
+  {
+    id: 'art-nefertiti',
+    year: '1345 BCE',
+    yearNumeric: -1345,
+    title: 'Bust of Nefertiti',
+    description: 'A masterpiece of realism in an era of stylized symbols. Thutmose captured individual beauty so perfectly it transcends 3,000 years of time.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-nefertiti.jpg'
+  },
+  {
+    id: 'art-terracotta',
+    year: '210 BCE',
+    yearNumeric: -210,
+    title: 'The Terracotta Army',
+    description: 'Industrial-scale art. 8,000 unique statues created to guard Emperor Qin, demonstrating that mass production and individual craftsmanship could coexist.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-terracotta.jpg'
+  },
+  {
+    id: 'art-kells',
+    year: '800',
+    yearNumeric: 800,
+    title: 'The Book of Kells',
+    description: 'Insular art reaches its zenith. Monks turned text into a labyrinth of infinite complexity, proving that the Word was meant to be seen, not just read.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-kells.jpg'
+  },
+  {
+    id: 'art-fankuan',
+    year: '1000',
+    yearNumeric: 1000,
+    title: 'Daoist Landscapes (Fan Kuan)',
+    description: 'While Europe painted religious icons, China perfected the "Shan Shui" landscape—art not as a picture of the world, but as a philosophy of nature\'s immensity.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-fankuan.jpg'
+  },
+  {
+    id: 'art-2',
+    year: '1144',
+    yearNumeric: 1144,
+    title: 'Gothic Light',
+    description: 'The Basilica of Saint-Denis used stained glass as "medieval cinema," using light and image to educate the illiterate masses and placing emotional experience above structural weight.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-2.jpg'
+  },
+  {
+    id: 'art-ife',
+    year: '1300',
+    yearNumeric: 1300,
+    title: 'The Bronzes of Ife',
+    description: 'West African sculptors achieve a level of naturalistic portraiture using *cire perdue* (lost wax) casting that rivals or surpasses the European Renaissance.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-ife.jpg'
+  },
+  {
+    id: 'art-3',
+    year: '1420',
+    yearNumeric: 1420,
+    title: 'The Perspective Shift',
+    description: 'Brunelleschi\'s mathematical perspective aligned art with science, teaching humanity to see the world as a measurable, ordered 3D space.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-3.jpg'
+  },
+  {
+    id: 'art-arnolfini',
+    year: '1434',
+    yearNumeric: 1434,
+    title: 'The Arnolfini Portrait',
+    description: 'Jan van Eyck masters oil paint. The mirror in the background reflects the entire room, symbolizing Art\'s new power to capture the totality of physical existence.',
+    phase: 'Civilization',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-arnolfini.jpg'
+  },
+  {
+    id: 'art-greatwave',
+    year: '1831',
+    yearNumeric: 1831,
+    title: 'The Great Wave',
+    description: 'Hokusai\'s woodblock print becomes the first global icon of "Pop Art," influencing the Impressionists and demonstrating the power of reproducible media.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-greatwave.jpg'
+  },
+  {
+    id: 'art-4',
+    year: '1839',
+    yearNumeric: 1839,
+    title: 'The Crisis of Realism',
+    description: 'The invention of the Daguerreotype forced painting to evolve. When a machine could capture reality perfectly, art was liberated to explore *emotion* rather than just *likeness*.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-4.jpg'
+  },
+  {
+    id: 'art-5',
+    year: '1874',
+    yearNumeric: 1874,
+    title: 'The Subjective Eye',
+    description: 'Impressionists like Monet argued that reality isn\'t objects, but *light*. This shift paved the way for modern physics and the relativity of perception.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-5.jpg'
+  },
+  {
+    id: 'art-starry',
+    year: '1889',
+    yearNumeric: 1889,
+    title: 'Starry Night',
+    description: 'Van Gogh abandons optical reality for emotional reality. The swirling sky isn\'t what he saw, but what he *felt*—the birth of Expressionism.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-starry.jpg'
+  },
+  {
+    id: 'art-6',
+    year: '1907',
+    yearNumeric: 1907,
+    title: 'Shattering Reality',
+    description: 'Picasso\'s *Les Demoiselles d\'Avignon* broke the rule of a single viewpoint, attempting to represent 3D space and time on a 2D plane—paralleling Einstein\'s theories.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-6.jpg'
+  },
+  {
+    id: 'art-7',
+    year: '1917',
+    yearNumeric: 1917,
+    title: 'Art is Context',
+    description: 'By signing a urinal, Duchamp declared that Art is defined by the artist\'s *choice*, not their craft. This conceptual leap birthed modern art.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-7.jpg'
+  },
+  {
+    id: 'art-bauhaus',
+    year: '1919',
+    yearNumeric: 1919,
+    title: 'The Bauhaus Founded',
+    description: 'Walter Gropius unites art and technology. "Form follows function" becomes the mantra of the 20th century, shaping the very cities we live in.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-bauhaus.jpg'
+  },
+  {
+    id: 'art-pollock',
+    year: '1950',
+    yearNumeric: 1950,
+    title: 'Action Painting',
+    description: 'Jackson Pollock puts the canvas on the floor. The painting is no longer a picture, but a record of the artist\'s physical movement.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-pollock.jpg'
+  },
+  {
+    id: 'art-warhol',
+    year: '1962',
+    yearNumeric: 1962,
+    title: 'Campbell\'s Soup Cans',
+    description: 'Andy Warhol erases the line between high art and commercial product. If we consume images like soup, why treat them differently?',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-warhol.jpg'
+  },
+  {
+    id: 'art-paik',
+    year: '1963',
+    yearNumeric: 1963,
+    title: 'Electronic Superhighway',
+    description: 'Nam June Paik uses television sets as sculpture. Video becomes a medium, predicting a world where we are constantly bathed in electronic light.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-paik.jpg'
+  },
+  {
+    id: 'art-basquiat',
+    year: '1982',
+    yearNumeric: 1982,
+    title: 'The Radiant Child',
+    description: 'Basquiat brings the raw energy of graffiti into the gallery. A synthesis of street culture, jazz, and history that challenges the white-dominated art world.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-basquiat.jpg'
+  },
+  {
+    id: 'art-pixar',
+    year: '1995',
+    yearNumeric: 1995,
+    title: 'The Digital Canvas (Toy Story)',
+    description: 'The first fully computer-animated feature film. The pixel replaces the brushstroke, offering a new dimension of control over light and texture.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-pixar.jpg'
+  },
+  {
+    id: 'art-nft',
+    year: '2021',
+    yearNumeric: 2021,
+    title: 'The First 5000 Days',
+    description: 'Beeple\'s $69M sale proves that digital scarcity is possible. Code becomes the certificate of authenticity, upending the economics of art.',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-nft.jpg'
+  },
+  {
+    id: 'art-8',
+    year: '2022',
+    yearNumeric: 2022,
+    title: 'The Synthetic Dream',
+    description: 'Generative AI challenges the final frontier of human uniqueness, forcing us to redefine the role of the artist from "maker" to "curator".',
+    phase: 'Modern',
+    category: 'Art',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-8.jpg'
+  }
 ];

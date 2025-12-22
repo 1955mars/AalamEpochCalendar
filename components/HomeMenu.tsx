@@ -10,14 +10,6 @@ interface HomeMenuProps {
 }
 
 const PLANNED_JOURNEYS = [
-    {
-        order: 5,
-        title: 'The Canvas of Time',
-        description: 'History of Art: Cave Paintings to NFTs.',
-        icon: Palette,
-        color: 'bg-purple-500',
-        status: 'Coming Soon'
-    },
 ];
 
 const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimeline }) => {

@@ -272,7 +272,35 @@ export const CONNECTIONS: Connection[] = [
     { id: 'eot-22', fromEventId: 'p12-11', toEventId: 'p12-22', type: 'caused' }, // Genome -> CRISPR (Reading to Editing DNA)
     { id: 'eot-23', fromEventId: 'p12-7', toEventId: 'p12-29', type: 'related' }, // Google -> ChatGPT (Data & AI Model)
     { id: 'eot-24', fromEventId: 'p12-13', toEventId: 'modern-1', type: 'related' }, // iPhone -> AI Era (Compute density)
-    { id: 'eot-25', fromEventId: 'modern-12', toEventId: 'p12-29', type: 'related' } // Writing -> ChatGPT (Language evolution)
+    { id: 'eot-25', fromEventId: 'modern-12', toEventId: 'p12-29', type: 'related' }, // Writing -> ChatGPT (Language evolution)
+
+    // History of Art Connections
+    { id: 'hoa-1', fromEventId: 'art-1', toEventId: 'p4-29', type: 'related' }, // Cave Art -> Writing
+    { id: 'hoa-venus', fromEventId: 'art-venus', toEventId: 'art-gobekli', type: 'preceded' }, // Sculpture -> Temple
+    { id: 'hoa-gobekli', fromEventId: 'art-gobekli', toEventId: 'p4-3', type: 'caused' }, // Temple -> Agriculture?
+    { id: 'hoa-ur', fromEventId: 'art-ur', toEventId: 'p4-29', type: 'related' }, // Narrative -> Writing
+    { id: 'hoa-nefertiti', fromEventId: 'art-nefertiti', toEventId: 'p6-11', type: 'preceded' }, // Egypt -> Greece
+    { id: 'hoa-terra', fromEventId: 'art-terracotta', toEventId: 'p6-30', type: 'related' }, // China -> Rome (Empire Art)
+    { id: 'hoa-kells', fromEventId: 'art-kells', toEventId: 'art-2', type: 'preceded' }, // Manuscript -> Gothic
+    { id: 'hoa-ife', fromEventId: 'art-ife', toEventId: 'art-3', type: 'related' }, // Ife -> Renaissance (Parallel realism)
+    { id: 'hoa-fankuan', fromEventId: 'art-fankuan', toEventId: 'art-3', type: 'related' }, // Landscape vs Perspective
+    { id: 'hoa-2', fromEventId: 'p6-11', toEventId: 'art-2', type: 'preceded' }, // Greek -> Gothic
+    { id: 'hoa-3', fromEventId: 'art-2', toEventId: 'art-3', type: 'preceded' }, // Gothic -> Renaissance
+    { id: 'hoa-4', fromEventId: 'art-3', toEventId: 'modern-9', type: 'related' }, // Perspective -> Print
+    { id: 'hoa-arnolfini', fromEventId: 'art-arnolfini', toEventId: 'art-4', type: 'preceded' }, // Realism -> Photo
+    { id: 'hoa-5', fromEventId: 'modern-9', toEventId: 'art-4', type: 'preceded' }, // Print -> Photo
+    { id: 'hoa-greatwave', fromEventId: 'art-greatwave', toEventId: 'art-5', type: 'caused' }, // Hokusai -> Impressionism
+    { id: 'hoa-6', fromEventId: 'art-4', toEventId: 'art-5', type: 'caused' }, // Photo -> Impressionism
+    { id: 'hoa-7', fromEventId: 'art-5', toEventId: 'art-starry', type: 'caused' }, // Impressionism -> Expressionism
+    { id: 'hoa-starry', fromEventId: 'art-starry', toEventId: 'art-6', type: 'preceded' }, // Expressionism -> Cubism
+    { id: 'hoa-8', fromEventId: 'art-6', toEventId: 'art-7', type: 'preceded' }, // Cubism -> Conceptual
+    { id: 'hoa-bauhaus', fromEventId: 'art-bauhaus', toEventId: 'p11-14', type: 'related' }, // Modernism -> Space Age
+    { id: 'hoa-9', fromEventId: 'art-7', toEventId: 'art-pollock', type: 'related' },
+    { id: 'hoa-pollock', fromEventId: 'art-pollock', toEventId: 'art-warhol', type: 'preceded' },
+    { id: 'hoa-warhol', fromEventId: 'art-warhol', toEventId: 'art-basquiat', type: 'preceded' },
+    { id: 'hoa-paik', fromEventId: 'art-paik', toEventId: 'art-pixar', type: 'preceded' }, // Video -> CGI
+    { id: 'hoa-pixar', fromEventId: 'art-pixar', toEventId: 'art-nft', type: 'caused' }, // Digital Art -> Digital Value
+    { id: 'hoa-nft', fromEventId: 'art-nft', toEventId: 'art-8', type: 'related' } // NFT -> AI
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -345,6 +373,23 @@ export const JOURNEYS: Journey[] = [
             'p2-28', 'p2-29', '41', '42'
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('eol-')),
+        overrides: {}
+    },
+    {
+        id: 'history-of-art',
+        title: 'The Canvas of Time: History of Art',
+        description: 'Trace the evolution of human expression from the cave wall to the digital dream.',
+        thumbnailUrl: 'images/art-5.jpg',
+        eventIds: [
+            'art-1', 'art-venus', 'art-gobekli', 'p4-29', 'art-ur',
+            'art-nefertiti', 'p5-9', 'p6-11', 'art-terracotta',
+            'art-kells', 'art-fankuan', 'art-2', 'art-ife', 'art-3',
+            'art-arnolfini', 'modern-9', 'art-greatwave', 'art-4',
+            'art-5', 'art-starry', 'art-6', 'art-7', 'art-bauhaus',
+            'art-pollock', 'art-warhol', 'art-paik', 'art-basquiat',
+            'art-pixar', 'art-nft', 'art-8'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('hoa-')),
         overrides: {}
     }
 ];
