@@ -300,7 +300,24 @@ export const CONNECTIONS: Connection[] = [
     { id: 'hoa-warhol', fromEventId: 'art-warhol', toEventId: 'art-basquiat', type: 'preceded' },
     { id: 'hoa-paik', fromEventId: 'art-paik', toEventId: 'art-pixar', type: 'preceded' }, // Video -> CGI
     { id: 'hoa-pixar', fromEventId: 'art-pixar', toEventId: 'art-nft', type: 'caused' }, // Digital Art -> Digital Value
-    { id: 'hoa-nft', fromEventId: 'art-nft', toEventId: 'art-8', type: 'related' } // NFT -> AI
+    { id: 'hoa-nft', fromEventId: 'art-nft', toEventId: 'art-8', type: 'related' }, // NFT -> AI
+
+    // --- Ancestry of AI Connections ---
+    { id: 'ai-1', fromEventId: 'ai-aristotle', toEventId: 'ai-alkhwarizmi', type: 'influenced' }, // Logic -> Algebra
+    { id: 'ai-2', fromEventId: 'ai-alkhwarizmi', toEventId: 'ai-llull', type: 'influenced' }, // Algebra -> Thinking Machine
+    { id: 'ai-3', fromEventId: 'ai-llull', toEventId: 'ai-jacquard', type: 'influenced' }, // Thinking Machine -> Programmable Loom
+    { id: 'ai-4', fromEventId: 'ai-jacquard', toEventId: 'ai-lovelace', type: 'caused' }, // Loom -> First Code
+    { id: 'ai-5', fromEventId: 'ai-lovelace', toEventId: 'ai-boole', type: 'related' }, // Code -> Binary
+    { id: 'ai-6', fromEventId: 'ai-boole', toEventId: 'ai-principia', type: 'caused' }, // Binary -> Formal Math
+    { id: 'ai-7', fromEventId: 'ai-principia', toEventId: 'modern-13', type: 'caused' }, // Formal Math -> Turing (modern-13 is Turing)
+    { id: 'ai-8', fromEventId: 'modern-13', toEventId: 'ai-mcculloch', type: 'influenced' }, // Turing -> Neural Net
+    { id: 'ai-9', fromEventId: 'ai-mcculloch', toEventId: 'ai-dartmouth', type: 'caused' }, // Neural Net -> AI Field
+    { id: 'ai-10', fromEventId: 'ai-dartmouth', toEventId: 'ai-perceptron', type: 'caused' }, // AI Field -> Perceptron
+    { id: 'ai-11', fromEventId: 'ai-perceptron', toEventId: 'ai-winter', type: 'caused' }, // Hype -> Winter
+    { id: 'ai-12', fromEventId: 'ai-winter', toEventId: 'ai-deepblue', type: 'preceded' }, // Winter -> Renewal
+    { id: 'ai-13', fromEventId: 'ai-deepblue', toEventId: 'ai-alexnet', type: 'preceded' }, // Brute Force -> Deep Learning
+    { id: 'ai-14', fromEventId: 'ai-alexnet', toEventId: 'ai-alphago', type: 'caused' }, // DL -> RL
+    { id: 'ai-15', fromEventId: 'ai-alphago', toEventId: 'ai-transformer', type: 'influenced' } // RL -> Attention
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -391,5 +408,24 @@ export const JOURNEYS: Journey[] = [
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('hoa-')),
         overrides: {}
+    },
+    {
+        id: 'ancestry-of-ai',
+        title: 'The Ancestry of AI: From Logic to Lightning',
+        description: 'Trace the genealogy of Artificial Intelligence not from 1950, but from the ancient roots of logic and weaving.',
+        thumbnailUrl: 'images/modern-1.jpg',
+        eventIds: [
+            'ai-aristotle', 'ai-alkhwarizmi', 'ai-llull', 'ai-jacquard',
+            'ai-lovelace', 'ai-boole', 'ai-principia', 'modern-13', // Using existing Turing event
+            'ai-mcculloch', 'ai-dartmouth', 'ai-perceptron', 'ai-winter',
+            'ai-deepblue', 'ai-alexnet', 'ai-alphago', 'ai-transformer'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('ai-')),
+        overrides: {
+            'modern-13': {
+                title: 'Turing\'s Universal Machine',
+                description: 'Alan Turing proves that a machine can compute anything that is computable, providing the theoretical blueprint for the digital brain.',
+            }
+        }
     }
 ];

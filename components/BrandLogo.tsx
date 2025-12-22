@@ -13,14 +13,24 @@ const BrandLogo: React.FC<BrandLogoProps> = ({ variant = 'small', className = ''
         <div className={`flex flex-col items-center justify-center ${className}`}>
             <div className={`flex items-center gap-3 ${isLarge ? 'gap-6' : 'gap-3'}`}>
                 {/* Iconic Mark */}
-                <div className={`relative flex items-center justify-center bg-slate-900 text-white rounded-xl shadow-2xl overflow-hidden ${isLarge ? 'w-24 h-24 text-5xl ring-4 ring-indigo-500/30' : 'w-10 h-10 text-xl ring-2 ring-white/50'}`}>
-                    <div className={`relative z-10 ${isLarge ? 'p-4' : 'p-2'}`}>
-                        <Network size={isLarge ? 48 : 20} strokeWidth={isLarge ? 1.5 : 2} className="text-indigo-100" />
+                <div className={`relative flex items-center justify-center bg-slate-900 text-white rounded-xl shadow-2xl overflow-hidden ${isLarge ? 'w-24 h-24 ring-4 ring-amber-500/30' : 'w-10 h-10 ring-2 ring-slate-900/10'}`}>
+                    <div className={`relative z-10 w-full h-full flex items-center justify-center`}>
+                        {/* Custom "Aalam Nexus" Icon */}
+                        <svg viewBox="0 0 100 100" className={`${isLarge ? 'w-16 h-16' : 'w-7 h-7'} text-amber-200`} fill="none" stroke="currentColor" strokeWidth={isLarge ? "3" : "6"} strokeLinecap="round" strokeLinejoin="round">
+                            {/* Universal Circle */}
+                            <circle cx="50" cy="50" r="40" className="opacity-50 text-indigo-400" />
+                            {/* Connected Nodes */}
+                            <path d="M50 20 L50 50 L80 65 M50 50 L20 65" className="text-amber-100" />
+                            <circle cx="50" cy="20" r="4" fill="currentColor" className="text-white" />
+                            <circle cx="80" cy="65" r="4" fill="currentColor" className="text-white" />
+                            <circle cx="20" cy="65" r="4" fill="currentColor" className="text-white" />
+                            <circle cx="50" cy="50" r="6" fill="currentColor" className="text-amber-400" />
+                        </svg>
                     </div>
 
                     {/* Subtle background effects */}
-                    <div className={`absolute inset-0 bg-gradient-to-br from-indigo-600 to-purple-600 opacity-50 blur-sm ${isLarge ? 'scale-110' : 'scale-105'}`} />
-                    <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-blue-500 rounded-full blur-xl opacity-60" />
+                    <div className={`absolute inset-0 bg-gradient-to-br from-indigo-950 to-slate-900 opacity-90`} />
+                    <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-amber-500/20 via-transparent to-transparent" />
                 </div>
 
                 {/* Text Lockup */}

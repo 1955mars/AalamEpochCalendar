@@ -6,7 +6,7 @@ import CachedImage from './CachedImage';
 
 interface TimelineEventCardProps {
   event: TimelineEvent;
-  position: 'top' | 'bottom';
+  position: 'top' | 'bottom' | 'center';
   onClick?: () => void;
   isExpanded?: boolean;
   isGhost?: boolean;
@@ -14,6 +14,7 @@ interface TimelineEventCardProps {
 
 const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, onClick, isExpanded, isGhost }) => {
   const isTop = position === 'top';
+  const isCenter = position === 'center';
   const isPhaseMarker = event.type === 'phase_marker';
 
   // Render Phase Marker (Big Title with Image)
@@ -64,22 +65,22 @@ const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, 
 
   // Render Standard Event Card
   return (
-    <div className={`relative w-80 md:w-96 flex-shrink-0 flex flex-col items-center h-full justify-center snap-center pointer-events-none animate-fade-in transition-opacity duration-700 ${isGhost ? 'opacity-10 blur-sm' : 'opacity-100'}`}>
+    <div className={`relative w-[85vw] max-w-sm md:w-96 flex-shrink-0 flex flex-col items-center h-full justify-center snap-center pointer-events-none animate-fade-in transition-opacity duration-700 ${isGhost ? 'opacity-10 blur-sm' : 'opacity-100'}`}>
 
       {/* Wrapper to position card relative to the center line */}
-      <div className={`absolute w-full flex flex-col items-center px-4 ${isTop ? 'bottom-1/2 pb-12' : 'top-1/2 pt-12'}`}>
+      <div className={`${isCenter ? 'relative w-full max-w-sm transform transition-all duration-300 hover:-translate-y-2' : `absolute w-full flex flex-col items-center px-4 ${isTop ? 'bottom-1/2 pb-12' : 'top-1/2 pt-12'}`}`}>
 
-        {/* Connector Line */}
-        <div className={`absolute left-1/2 w-0.5 bg-slate-300 ${isTop ? 'bottom-0 h-12' : 'top-0 h-12'}`}></div>
-
-        {/* Connector Dot on the center line */}
-        <div className={`absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-slate-400 z-10 ${isTop ? 'bottom-[-6px]' : 'top-[-6px]'}`}></div>
-
-        {/* Connector Dot attached to card */}
-        <div className={`absolute left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-slate-300 ${isTop ? 'bottom-12' : 'top-12'}`}></div>
+        {/* Connector Lines (Only for Top/Bottom) */}
+        {!isCenter && (
+          <>
+            <div className={`absolute left-1/2 w-0.5 bg-slate-300 ${isTop ? 'bottom-0 h-12' : 'top-0 h-12'}`}></div>
+            <div className={`absolute left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-slate-400 z-10 ${isTop ? 'bottom-[-6px]' : 'top-[-6px]'}`}></div>
+            <div className={`absolute left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-slate-300 ${isTop ? 'bottom-12' : 'top-12'}`}></div>
+          </>
+        )}
 
         {/* Card */}
-        <div className="pointer-events-auto bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-xl hover:border-blue-300 transition-all duration-300 hover:scale-[1.02] w-full group">
+        <div className={`pointer-events-auto bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 w-full group ${isCenter ? 'shadow-md border-slate-300/50' : ''}`}>
 
           {/* Image Section with Cache */}
           <div className="h-40 overflow-hidden relative bg-slate-100">

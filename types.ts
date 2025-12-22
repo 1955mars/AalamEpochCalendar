@@ -27,7 +27,7 @@ export interface Connection {
   id: string;
   fromEventId: string;
   toEventId: string;
-  type: 'caused' | 'preceded' | 'related';
+  type: 'caused' | 'preceded' | 'related' | 'influenced';
   description?: string;
 }
 

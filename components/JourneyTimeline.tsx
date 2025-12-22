@@ -47,8 +47,8 @@ const JourneyTimeline = forwardRef<TimelineHandle, JourneyTimelineProps>(({ even
     return (
         <div className="w-full h-full flex flex-col justify-center items-center relative">
             <div className="relative w-full">
-                {/* Central Axis Line */}
-                <div className="absolute top-1/2 left-0 w-full h-0.5 bg-slate-600 z-0 opacity-50"></div>
+                {/* Central Axis Line - Removed for cleaner centered view */}
+
 
                 {/* Scroll Buttons */}
                 <button
@@ -70,12 +70,8 @@ const JourneyTimeline = forwardRef<TimelineHandle, JourneyTimelineProps>(({ even
                     ref={scrollContainerRef}
                     className="no-scrollbar flex overflow-x-auto gap-0 px-[20vw] py-4 snap-x snap-mandatory relative z-10 w-full items-stretch h-[600px] md:h-[700px]"
                 >
-                    <ConnectionLayer
-                        journey={activeJourney}
-                        eventRefs={eventRefs}
-                        containerRef={scrollContainerRef}
-                        visibleEventIds={events.map(e => e.id)}
-                    />
+                    {/* ConnectionLayer removed as per user request for cleaner view */}
+
 
                     {events.map((event, index) => (
                         <div
@@ -85,7 +81,7 @@ const JourneyTimeline = forwardRef<TimelineHandle, JourneyTimelineProps>(({ even
                         >
                             <TimelineEventCardComponent
                                 event={event}
-                                position={index % 2 === 0 ? 'top' : 'bottom'}
+                                position="center"
                                 onClick={() => { }} // No phase collapsing action needed
                                 isExpanded={true} // Always show full card
                                 isGhost={false} // Always fully visible

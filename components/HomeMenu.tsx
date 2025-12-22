@@ -10,14 +10,26 @@ interface HomeMenuProps {
 }
 
 const PLANNED_JOURNEYS = [
+    {
+        title: 'The Food on Your Plate',
+        description: 'From the Neolithic Revolution to GMOs: The history of what we eat.',
+        icon: Dna,
+        color: 'bg-green-500',
+        status: 'Vote to Build'
+    },
+    {
+        title: 'The Roots of Democracy',
+        description: 'From Athens to the Algorithm: How we choose who leads us.',
+        icon: Globe,
+        color: 'bg-blue-500',
+        status: 'Vote to Build'
+    }
 ];
 
 const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimeline }) => {
     return (
         <div className="w-full max-w-6xl mx-auto px-6 py-12 flex flex-col items-center justify-center min-h-[80vh] font-sans">
-            <div className="text-center mb-16 animate-in fade-in slide-in-from-bottom-8 duration-700">
-                <BrandLogo variant="large" />
-            </div>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
                 {/* Render Actual Implemented Journeys First (if any) */}
@@ -37,14 +49,12 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
 
                         {/* Content */}
                         <div className="relative z-10">
-                            <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform">
-                                <Play fill="white" size={20} />
+                            <div className="absolute top-[-260px] right-0 w-14 h-14 bg-amber-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 active:scale-95 transition-all opacity-100 hover:bg-amber-300 transform translate-y-0 text-black">
+                                <Play fill="currentColor" size={24} className="ml-1" />
                             </div>
-                            <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-300 transition-colors drop-shadow-md">{journey.title}</h3>
-                            <p className="text-slate-300 text-sm leading-relaxed mb-6 drop-shadow-sm">{journey.description}</p>
-                            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-blue-400">
-                                Start Journey <ArrowRight size={14} />
-                            </div>
+
+                            <h3 className="text-3xl font-black mb-3 leading-tight group-hover:text-amber-300 transition-colors drop-shadow-lg">{journey.title}</h3>
+                            <p className="text-slate-200 text-sm font-medium leading-relaxed drop-shadow-md line-clamp-3">{journey.description}</p>
                         </div>
                     </button>
                 ))}

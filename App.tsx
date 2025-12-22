@@ -73,9 +73,7 @@ const App: React.FC = () => {
   useEffect(() => {
     // Reset journey index when journey changes
     if (activeJourney) {
-      // If we switch journeys while simulation is active, stop it or reset? 
-      // Better to stop simulation safety.
-      if (isSimulationActive) stopSimulation();
+      // Reset journey index
 
       setCurrentJourneyIndex(0);
       // Auto-scroll to first event?
@@ -110,6 +108,12 @@ const App: React.FC = () => {
     if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
     setIsSimulationActive(false);
     setCurrentEventIndex(0);
+  };
+
+  const handleExitSimulation = () => {
+    stopSimulation();
+    setActiveJourney(null);
+    setShowHome(true);
   };
 
   const handleSimNext = () => {
@@ -180,6 +184,13 @@ const App: React.FC = () => {
     }
   };
 
+  const handleJumpToEvent = (eventId: string) => {
+    const index = simulationEvents.findIndex(e => e.id === eventId);
+    if (index !== -1) {
+      handleSimSeek(index);
+    }
+  };
+
   const togglePause = () => setIsPaused(!isPaused);
 
   useEffect(() => {
@@ -214,6 +225,33 @@ const App: React.FC = () => {
       ? 'bg-slate-900 text-slate-100' // Dark mode for Journey
       : `${currentPhaseConfig.bg} text-slate-900`;
 
+  /* Compute Connections for HUD */
+  const activeConnections = React.useMemo(() => {
+    if (!activeEvent || !activeJourney) return [];
+
+    // Incoming: Connections where toEventId === activeEvent.id (This event is the RESULT)
+    const incoming = activeJourney.connections
+      .filter(c => c.toEventId === activeEvent.id)
+      .map(c => {
+        const target = ALL_EVENTS.find(e => e?.id === c.fromEventId);
+        if (!target) return null;
+        return { connection: c, targetEvent: target, direction: 'incoming' as const };
+      })
+      .filter((c): c is NonNullable<typeof c> => c !== null);
+
+    // Outgoing: Connections where fromEventId === activeEvent.id (This event is the CAUSE)
+    const outgoing = activeJourney.connections
+      .filter(c => c.fromEventId === activeEvent.id)
+      .map(c => {
+        const target = ALL_EVENTS.find(e => e?.id === c.toEventId);
+        if (!target) return null;
+        return { connection: c, targetEvent: target, direction: 'outgoing' as const };
+      })
+      .filter((c): c is NonNullable<typeof c> => c !== null);
+
+    return [...incoming, ...outgoing];
+  }, [activeEvent, activeJourney]);
+
   return (
     <div className={`min-h-screen flex flex-col font-sans overflow-hidden transition-colors duration-1000 ease-in-out ${containerClass}`}>
 
@@ -236,6 +274,9 @@ const App: React.FC = () => {
         onSeek={handleSimSeek}
         isPaused={isPaused}
         duration={playbackSpeed}
+        connections={activeConnections}
+        onJumpToEvent={handleJumpToEvent}
+        onExit={handleExitSimulation}
       />
 
       {/* Deep Dive Modal (Placeholder) */}
@@ -259,51 +300,15 @@ const App: React.FC = () => {
             </button>
           )}
 
-          {activeJourney && (
-            <div className="flex items-center gap-2 bg-slate-800/90 backdrop-blur-md px-1.5 py-1.5 rounded-full border border-slate-700 text-white animate-in slide-in-from-top-4 shadow-2xl">
 
-              {/* Prev Button */}
-              <button
-                onClick={handleJourneyPrev}
-                disabled={currentJourneyIndex === 0}
-                className="p-2 rounded-full hover:bg-slate-700 disabled:opacity-30 disabled:hover:bg-transparent transition-colors text-slate-300 hover:text-white"
-                title="Previous Event"
-              >
-                <ChevronLeft size={18} />
-              </button>
-
-              <div className="px-3 flex flex-col items-center border-l border-r border-slate-700/50">
-                <span className="text-[10px] text-amber-400 font-bold uppercase tracking-widest leading-none mb-0.5">Journey Active</span>
-                <span className="text-sm font-bold leading-none">{activeJourney.title}</span>
-              </div>
-
-              {/* Next Button */}
-              <button
-                onClick={handleJourneyNext}
-                disabled={currentJourneyIndex === activeJourney.eventIds.length - 1}
-                className="p-2 rounded-full hover:bg-slate-700 disabled:opacity-30 disabled:hover:bg-transparent transition-colors text-slate-300 hover:text-white"
-                title="Next Event"
-              >
-                <ChevronRight size={18} />
-              </button>
-
-              <button
-                onClick={() => { setActiveJourney(null); setShowHome(true); }}
-                className="ml-1 hover:bg-slate-700 p-2 rounded-full text-slate-400 hover:text-white transition-colors border-l border-slate-700/50"
-                title="Exit Journey"
-              >
-                <X size={16} />
-              </button>
-            </div>
-          )}
 
           {!showHome && (
             <button
               onClick={startSimulation}
-              className="flex items-center gap-2 px-6 py-2 bg-slate-900 text-white rounded-full text-sm font-bold shadow-lg hover:bg-slate-800 transition-transform active:scale-95 ring-2 ring-slate-900 ring-offset-2"
+              className="p-3 bg-amber-500 text-black rounded-full shadow-[0_0_15px_rgba(245,158,11,0.5)] hover:bg-amber-400 transition-all hover:scale-110 active:scale-95 flex items-center justify-center"
+              title="Resume Documentary Mode"
             >
-              <Play size={16} fill="currentColor" />
-              <span className="hidden md:inline">Documentary Mode</span>
+              <Play size={20} fill="currentColor" />
             </button>
           )}
         </div>
@@ -316,6 +321,9 @@ const App: React.FC = () => {
               if (j) {
                 setActiveJourney(j);
                 setShowHome(false);
+                setIsSimulationActive(true);
+                setCurrentEventIndex(0);
+                setIsPaused(true);
               }
             }}
             onExploreFullTimeline={() => {
@@ -325,14 +333,14 @@ const App: React.FC = () => {
           />
         ) : !isSimulationActive && (
           <div className="relative z-10 w-full h-full animate-in fade-in zoom-in-95 duration-500">
-            {isMobile ? (
-              <MobileSwipeView events={events} onPhaseChange={setCurrentPhaseId} />
-            ) : activeJourney ? (
+            {activeJourney ? (
               <JourneyTimeline
                 ref={timelineRef}
                 events={simulationEvents}
                 activeJourney={activeJourney}
               />
+            ) : isMobile ? (
+              <MobileSwipeView events={events} onPhaseChange={setCurrentPhaseId} />
             ) : (
               <Timeline
                 ref={timelineRef}
