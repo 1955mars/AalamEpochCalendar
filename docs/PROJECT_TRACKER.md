@@ -28,7 +28,7 @@ Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned J
 
 | Series | Priority Topics | Status |
 | :--- | :--- | :---: |
-| **Power** | The Money Illusion, The Shadow World, Crime & Punishment | 🔴 |
+| **Power** | The Money Illusion, The Shadow World, Crime & Punishment | 🟢 |
 | **Human** | The Mating Game, The Psycho-Path, Food on Your Plate | 🔴 |
 | **Innovation** | Power Trip, To The Stars, Silicon Brain | 🔴 |
 

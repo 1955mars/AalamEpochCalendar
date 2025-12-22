@@ -2622,6 +2622,88 @@ export const ALL_EVENTS: TimelineEvent[] = [
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-8.jpg'
   },
+  // --- The Money Illusion Events ---
+  {
+    id: 'money-shekel',
+    year: '3000 BCE',
+    yearNumeric: -3000,
+    title: 'The First Currency (Shekel)',
+    description: 'Grain becomes Money. In Sumer, barley is standardized into weight (shekels), transforming food into an abstract unit of account that can store value.',
+    phase: 'Civilization',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-shekel.jpg'
+  },
+  {
+    id: 'money-lydia',
+    year: '600 BCE',
+    yearNumeric: -600,
+    title: 'The Lydian Lion',
+    description: 'The invention of the Coin. The State stamps a lion on electrum, guaranteeing weight and purity. Trust shifts from the metal itself to the King who minted it.',
+    phase: 'Civilization',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-lydia.jpg'
+  },
+  {
+    id: 'money-paper',
+    year: '1024',
+    yearNumeric: 1024,
+    title: 'Flying Money (Jiaozi)',
+    description: 'China invents paper cash. Merchants realize that a slip of paper representing coins is lighter than the coins themselves. Value becomes symbolic.',
+    phase: 'Civilization',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-paper.jpg'
+  },
+  {
+    id: 'money-medici',
+    year: '1397',
+    yearNumeric: 1397,
+    title: 'The Ledger (Medici Bank)',
+    description: 'The invention of modern banking. Money ceases to be a physical object and becomes an entry in a book (Credit), allowing value to be teleported across Europe.',
+    phase: 'Civilization',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-medici.jpg'
+  },
+  {
+    id: 'money-gold',
+    year: '1717',
+    yearNumeric: 1717,
+    title: 'The Isaac Newton Standard',
+    description: 'Newton fixes the price of gold. The Gold Standard is born, tethering the abstract world of paper money to the physical reality of a rare metal.',
+    phase: 'Modern',
+    category: 'Economy',
+    imageUrl: 'https://image.pollinations.ai/prompt/Isaac%20Newton%20gold%20standard%20coins%20bars%20mahogany%20table%20cinematic?width=1280&height=720&nolog=true'
+  },
+  {
+    id: 'money-card',
+    year: '1950',
+    yearNumeric: 1950,
+    title: 'The Plastic Card',
+    description: 'Diners Club introduces the credit card. Money becomes invisible, a frictionless promise to pay later, fueling the consumer age.',
+    phase: 'Modern',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-card.jpg'
+  },
+  {
+    id: 'money-nixon',
+    year: '1971',
+    yearNumeric: 1971,
+    title: 'The Nixon Shock',
+    description: 'The end of Gold. Nixon uncouples the dollar from metal. Money becomes pure "Fiat" (Let it be done)—backed by nothing but belief in the State.',
+    phase: 'Modern',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-nixon.jpg'
+  },
+  {
+    id: 'money-algo',
+    year: '2010',
+    yearNumeric: 2010,
+    title: 'High-Frequency Trading',
+    description: 'The Algorithms take over. Machines trade stocks in microseconds. Value fluctuates faster than human thought, detaching finance from the real economy.',
+    phase: 'Modern',
+    category: 'Economy',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-algo.jpg'
+  },
+
   // --- Ancestry of AI Events ---
   {
     id: 'ai-aristotle',

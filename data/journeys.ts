@@ -317,7 +317,21 @@ export const CONNECTIONS: Connection[] = [
     { id: 'ai-12', fromEventId: 'ai-winter', toEventId: 'ai-deepblue', type: 'preceded' }, // Winter -> Renewal
     { id: 'ai-13', fromEventId: 'ai-deepblue', toEventId: 'ai-alexnet', type: 'preceded' }, // Brute Force -> Deep Learning
     { id: 'ai-14', fromEventId: 'ai-alexnet', toEventId: 'ai-alphago', type: 'caused' }, // DL -> RL
-    { id: 'ai-15', fromEventId: 'ai-alphago', toEventId: 'ai-transformer', type: 'influenced' } // RL -> Attention
+    { id: 'ai-15', fromEventId: 'ai-alphago', toEventId: 'ai-transformer', type: 'influenced' }, // RL -> Attention
+
+    // --- The Money Illusion Connections ---
+    { id: 'money-1', fromEventId: 'p4-3', toEventId: 'money-shekel', type: 'caused' }, // Agriculture -> Grain Money
+    { id: 'money-2', fromEventId: 'money-shekel', toEventId: 'money-lydia', type: 'preceded' }, // Commodity -> Coin
+    { id: 'money-3', fromEventId: 'money-lydia', toEventId: 'money-paper', type: 'preceded' }, // Coin -> Paper
+    { id: 'money-4', fromEventId: 'money-paper', toEventId: 'money-medici', type: 'related' }, // Paper -> Ledger (Abstraction)
+    { id: 'money-5', fromEventId: 'money-medici', toEventId: 'money-gold', type: 'preceded' }, // Ledger -> Gold Standard
+    { id: 'money-6', fromEventId: 'money-gold', toEventId: 'modern-7', type: 'influenced' }, // Gold/Capital -> Industrial Rev
+    { id: 'money-7', fromEventId: 'modern-7', toEventId: 'money-card', type: 'preceded' }, // Industrial -> Consumer Credit
+    { id: 'money-8', fromEventId: 'money-card', toEventId: 'money-nixon', type: 'caused' }, // Credit expansion -> Gold collapse? (Loosely)
+    { id: 'money-9', fromEventId: 'money-nixon', toEventId: 'p12-14', type: 'caused' }, // Fiat -> Financial Crisis (Loose money)
+    { id: 'money-10', fromEventId: 'p12-14', toEventId: 'money-algo', type: 'related' }, // Crisis -> Algo/Speed
+    { id: 'money-11', fromEventId: 'p12-14', toEventId: 'p12-15', type: 'caused' }, // Crisis -> Bitcoin (Reaction)
+    { id: 'money-12', fromEventId: 'money-algo', toEventId: 'p12-29', type: 'related' }, // Algo -> AI (Automation of value/thought)
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -426,6 +440,37 @@ export const JOURNEYS: Journey[] = [
                 title: 'Turing\'s Universal Machine',
                 description: 'Alan Turing proves that a machine can compute anything that is computable, providing the theoretical blueprint for the digital brain.',
             }
+        }
+    },
+    {
+        id: 'the-money-illusion',
+        title: 'The Money Illusion: From Grain to Gold to Ghosts',
+        description: 'Discover how money evolved from physical weight to pure belief, and how it shapes our reality.',
+        thumbnailUrl: 'images/money-gold.jpg',
+        eventIds: [
+            'p4-3',          // Agriculture (Start)
+            'money-shekel',  // Grain Money
+            'p4-29',         // Writing (Admin/Debt)
+            'money-lydia',   // Coins
+            'p6-20',         // Rome (State Power)
+            'money-paper',   // Jiaozi
+            'money-medici',  // Banking
+            'p8-14',         // Navigation (Trade)
+            'money-gold',    // Newton/Gold Std
+            'modern-7',      // Ind Rev
+            'money-card',    // Credit Card
+            'money-nixon',   // Fiat
+            'p12-14',        // 2008 Crisis
+            'p12-15',        // Bitcoin
+            'money-algo',    // HFT
+            'p12-29'         // AI (Future of value?)
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('money-')),
+        overrides: {
+            'p4-3': { description: 'Agriculture creates surplus. Staying in one place allows humans to accumulate "stuff"—the problem that money was invented to solve.' },
+            'p4-29': { description: 'Writing begins as accounting. The first tablets aren\'t poetry; they are debt records. History starts with "Who owes what."' },
+            'p6-20': { title: 'Imperial Coinage', description: 'Rome standardizes currency across the known world, proving that money is a function of State Power.' },
+            'p12-14': { title: 'The Illusion Breaks (2008)', description: 'The Global Financial Crisis reveals that the modern economy is built on a web of complex promises that can vanish overnight.' }
         }
     }
 ];

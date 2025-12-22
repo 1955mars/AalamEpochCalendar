@@ -54,6 +54,22 @@ const ConnectionLabel = ({ type, direction }: { type: string, direction: 'incomi
     }
 }
 
+const PHASE_TITLES: Record<string, string> = {
+    'Phase 1': 'Cosmic & Primordial Earth',
+    'Phase 2': 'The Age of Ancient Life',
+    'Phase 3': 'Hominid Evolution',
+    'Phase 4': 'The Neolithic Revolution',
+    'Phase 5': 'The Bronze Age',
+    'Phase 6': 'The Iron Age & Classical Age',
+    'Phase 7': 'The Post-Classical World',
+    'Phase 8': 'The Age of Exploration',
+    'Phase 9': 'The Age of Revolutions',
+    'Phase 10': 'The Early 20th Century',
+    'Phase 11': 'The Cold War Era',
+    'Phase 12': 'The Modern Digital Age',
+    'Modern': 'The Future'
+};
+
 const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentIndex, totalEvents, onPause, onStop, onNext, onPrev, onSeek, isPaused, duration = 4000, connections = [], onJumpToEvent, onExit }) => {
     const progressBarRef = React.useRef<HTMLDivElement>(null);
 
@@ -96,7 +112,7 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                 {/* ID Pill & Connections */}
                 <div className="flex flex-col items-center gap-3 mb-2">
                     <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-xs font-mono tracking-widest uppercase text-blue-200">
-                        {event.phase}
+                        {PHASE_TITLES[event.phase] || event.phase}
                     </div>
 
                     {/* Dependency Badges (Incoming) */}

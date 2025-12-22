@@ -12,7 +12,7 @@ export interface TimelineEvent {
   tags?: string[]; // For semantic relationships and search
 }
 
-export type EventCategory = 'Cosmology' | 'Life' | 'Humanity' | 'Civilization' | 'Science' | 'Technology' | 'Communications' | 'Transport' | 'Art' | 'Philosophy';
+export type EventCategory = 'Cosmology' | 'Life' | 'Humanity' | 'Civilization' | 'Science' | 'Technology' | 'Communications' | 'Transport' | 'Art' | 'Philosophy' | 'Economy';
 
 export interface PhaseDefinition {
   id: string;

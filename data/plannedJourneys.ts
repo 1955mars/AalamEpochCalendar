@@ -23,12 +23,7 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
     },
 
     // Power & Society
-    {
-        title: 'The Money Illusion',
-        description: 'Why we trust paper, crave gold, and bet on invisible coins: The psychology of value.',
-        category: 'Power',
-        icon: Scale
-    },
+
     {
         title: 'The Shadow World',
         description: 'Spies, codes, and the hidden history of the world: From the Enigma machine to Snowden.',
