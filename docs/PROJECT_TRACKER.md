@@ -1,6 +1,6 @@
-# Aalam Project Tracker: v1.0 Content Roadmap
+# Aalam Project Tracker: v1.1 Live & Roadmap
 
-This document serves as the central dashboard for tracking the development of the "Museum of Infinite Connections" first release content.
+This document serves as the central dashboard for tracking the development of the "Museum of Infinite Connections".
 
 ## Status Legend
 | Symbol | Status |
@@ -12,70 +12,46 @@ This document serves as the central dashboard for tracking the development of th
 
 ---
 
-## 🚀 Journey Development Tracker
+## 🚀 Journey Development Tracker (Phase 1: Launch Set)
 
 | Journey Name | Research | Design | Implementation | Mobile UX | Testing | Deployed |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1. Cosmic Origins** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
-| **2. Evolution of Life** | 🟢 | 🟢 | 🟢 | 🟡 | 🟢 | 🟡 |
-| **3. Rise of Civilizations** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
-| **4. Evolution of Tech** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
-| **5. History of Art** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
+| **1. Cosmic Origins** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **2. Evolution of Life** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **3. Rise of Civilizations** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **4. Evolution of Tech** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **5. History of Art** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **6. Ancestry of AI** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
 
-## 🏗️ Infrastructure & DevOps
-This section tracks the operational side of the project, including version control and deployments to `aalam.xyz`.
+## 🔮 Phase 2: "Traction" Roadmap (Planned)
+Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned Journeys".
 
-| Component | Status | Git State | Staging (Local) | Production (`aalam.xyz`) |
-| :--- | :---: | :---: | :---: | :---: |
-| **Core Engine** | 🟢 | Clean | ✅ Verified | 🟡 Pending |
-| **Mobile Views** | 🟡 | WIP | 🟡 Testing | 🔴 Not Deployed |
-| **Assets/Media** | 🟢 | Managed | ✅ Verified | 🟡 Optimizing |
-
-### Deployment Checklist
-- [ ] **GitHub**: Ensure `main` branch is protected and CI/CD (GitHub Actions) is configured.
-- [ ] **Mobile UX Audit**: Verify touch targets and layout on <375px screens.
-- [ ] **Build Optimization**: Run `npm run build` and check bundle size.
-- [ ] **Deploy**: Push to `gh-pages` or host.
-- [ ] **Smoke Test**: Verify `aalam.xyz` loads without console errors.
+| Series | Priority Topics | Status |
+| :--- | :--- | :---: |
+| **Power** | The Money Illusion, The Shadow World, Crime & Punishment | 🔴 |
+| **Human** | The Mating Game, The Psycho-Path, Food on Your Plate | 🔴 |
+| **Innovation** | Power Trip, To The Stars, Silicon Brain | 🔴 |
 
 ---
 
-## 📝 Detailed Task Boards
+## 🏗️ Infrastructure & DevOps
 
-### 1. Cosmic Origins
-- [x] **Research**: Gather precise dates for Big Bang, Reionization, Solar System formation.
-- [x] **Design**: Define visual style (Dark void, bright stars).
-- [x] **Implementation**: Add events to `allEvents.ts` and journey to `journeys.ts`.
-- [x] **Simulation Feedback**: Roleplay as user -> Critique -> Refine.
-- [x] **Testing**: Verify "billions of years" scale rendering.
+| Component | Status | Git State | Production (`aalam.xyz`) |
+| :--- | :---: | :---: | :---: |
+| **Core Engine** | 🔵 | Clean | ✅ Live |
+| **Mobile UX** | 🟢 | Polished | ✅ Live |
+| **Assets/Media** | 🟢 | Unified | ✅ Live |
 
-### 2. The Vital Spark: Evolution of Life
-- [ ] **Research**: Key mass extinctions and evolutionary leaps.
-- [ ] **Design**: Color palette: Organic Greens and Blues.
-- [ ] **Implementation**: Add biological milestones.
-- [ ] **Testing**: Check "millions of years" scale.
-
-### 3. The Human Story: Rise of Civilizations
-- [ ] **Research**: Compare timeline of East vs. West civilizations.
-- [ ] **Design**: Focus on architectural iconography.
-- [ ] **Implementation**: Populate historical data.
-- [ ] **Testing**: Verify historical density does not clutter UI.
-
-### 4. Wires & Waves: Evolution of Technology
-- [ ] **Research**: Industrial revolution to Digital age.
-- [ ] **Design**: Mechanical to Digital visual transition.
-- [ ] **Implementation**: Integrate with existing communication events.
-- [ ] **Testing**: Ensure smooth scroll through rapid modern changes.
-
-### 5. The Canvas of Time: History of Art
-- [x] **Research**: Major art movements (Renaissance, Impressionism, etc.).
-- [x] **Design**: Use actual art pieces as primary visuals.
-- [x] **Implementation**: High-res image optimization.
-- [x] **Testing**: Verify image rendering quality.
+### Recent Milestones
+- [x] **Mobile Polish**: Fixed notch/safe-area issues, optimized HUD controls.
+- [x] **Branding**: Implemented "Cosmic Nexus" logo.
+- [x] **Homepage Refine**: "Poster" style cards, removed clutter.
+- [x] **Content Plan**: Defined 18-item "Traction" roadmap on homepage.
+- [x] **Deploy**: Live on `aalam.xyz`.
 
 ---
 
 ## 🛠 System Maintenance & Tech Debt
-- [ ] **Performance**: Evaluate rendering performance with >500 events.
-- [ ] **Mobile**: Polish mobile touch interactions for complex journeys.
-- [ ] **Accessibility**: Add ARIA labels to all new journey elements.
+- [ ] **Performance**: Evaluate rendering performance with >500 events (Scaling risk).
+- [ ] **Accessibility**: Add ARIA labels to new HUD controls.
+- [ ] **SEO**: OpenGraph tags for individual journeys.
