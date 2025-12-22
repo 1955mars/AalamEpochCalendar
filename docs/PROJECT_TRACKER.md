@@ -16,7 +16,7 @@ This document serves as the central dashboard for tracking the development of th
 
 | Journey Name | Research | Design | Implementation | Mobile UX | Testing | Deployed |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1. Cosmic Origins** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
+| **1. Cosmic Origins** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🟡 |
 | **2. Evolution of Life** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | **3. Rise of Civilizations** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
 | **4. Evolution of Tech** | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 | 🔴 |
@@ -43,11 +43,11 @@ This section tracks the operational side of the project, including version contr
 ## 📝 Detailed Task Boards
 
 ### 1. Cosmic Origins
-- [ ] **Research**: Gather precise dates for Big Bang, Reionization, Solar System formation.
-- [ ] **Design**: Define visual style (Dark void, bright stars).
-- [ ] **Implementation**: Add events to `allEvents.ts` and journey to `journeys.ts`.
-- [ ] **Simulation Feedback**: Roleplay as user -> Critique -> Refine.
-- [ ] **Testing**: Verify "billions of years" scale rendering.
+- [x] **Research**: Gather precise dates for Big Bang, Reionization, Solar System formation.
+- [x] **Design**: Define visual style (Dark void, bright stars).
+- [x] **Implementation**: Add events to `allEvents.ts` and journey to `journeys.ts`.
+- [x] **Simulation Feedback**: Roleplay as user -> Critique -> Refine.
+- [x] **Testing**: Verify "billions of years" scale rendering.
 
 ### 2. The Vital Spark: Evolution of Life
 - [ ] **Research**: Key mass extinctions and evolutionary leaps.

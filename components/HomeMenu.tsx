@@ -11,14 +11,6 @@ interface HomeMenuProps {
 
 const PLANNED_JOURNEYS = [
     {
-        order: 1,
-        title: 'Cosmic Origins',
-        description: 'The Beginning of Everything: Big Bang to Earth.',
-        icon: Globe,
-        color: 'bg-indigo-500',
-        status: 'Coming Soon'
-    },
-    {
         order: 2,
         title: 'Evolution of Life',
         description: 'The Vital Spark: From single cells to dinosaurs.',

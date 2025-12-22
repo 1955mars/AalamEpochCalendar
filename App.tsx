@@ -39,9 +39,26 @@ const App: React.FC = () => {
   }, []);
 
   // --- Derived State for Simulation ---
-  const simulationEvents = activeJourney
-    ? events.filter(e => activeJourney.eventIds.includes(e.id))
-    : events;
+  const simulationEvents = React.useMemo(() => {
+    if (!activeJourney) return events;
+
+    return activeJourney.eventIds
+      .map(id => {
+        const baseEvent = events.find(e => e.id === id);
+        if (!baseEvent) return null;
+
+        const override = activeJourney.overrides?.[id];
+        if (override) {
+          return {
+            ...baseEvent,
+            title: override.title || baseEvent.title,
+            description: override.description || baseEvent.description,
+          };
+        }
+        return baseEvent;
+      })
+      .filter((e): e is TimelineEvent => e !== null);
+  }, [activeJourney, events]);
 
   const startSimulation = () => {
     setIsSimulationActive(true);
@@ -242,7 +259,7 @@ const App: React.FC = () => {
             ) : activeJourney ? (
               <JourneyTimeline
                 ref={timelineRef}
-                events={events.filter(e => activeJourney.eventIds.includes(e.id))}
+                events={simulationEvents}
                 activeJourney={activeJourney}
               />
             ) : (
