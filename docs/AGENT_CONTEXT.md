@@ -75,25 +75,61 @@ To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
 - **Action**: detailed search for pivotal moments that define this topic.
 - **Constraint**: Ensure the topic spans enough time to be visually interesting on the timeline.
 
-### 2. Gather Events (Storytelling)
-- **Goal**: Curate a list of events that narrate a connected story.
-- **Action**: Check `data/allEvents.ts` first.
-    - If events exist, note their `id`.
-    - If not, create new `TimelineEvent` objects in `allEvents.ts`.
-    - **Crucial**: Ensure each event has a descriptive `title` and `description` that fits the narrative.
+### Step 2: Content Selection (The "So What?" Rule)
+**CRITICAL:** We do not want a "Wikipedia summary" timeline. We want a narrative.
+- **Selection**: Choose event IDs from `allEvents.ts`. If an event is missing, create it.
+- **Narrative Arc**: Ensure the sequence tells a story (e.g., "Invention -> Adoption -> Consequence").
+- **Quality Check**: For every event you select, check the description. Does it pass the **"So What?" Test**?
+    - *Fail:* "The Printing Press was invented involved movable type."
+    - *Pass:* "The Printing Press broke the church's monopoly on knowledge, fueling the Reformation and the Scientific Revolution."
+    - **Action**: If an event description is dry, **REWRITE IT** in `allEvents.ts`.
 
-### 3. Define Scope & Narrative (Deep Dive)
-- **Goal**: Decide on the length and depth.
-    - **Short Story**: 5-10 events (High-level overview).
-    - **Deep Dive**: 15-20+ events (Detailed exploration).
-- **Action**: Update the `Journey` object in `data/journeys.ts`.
-    - `title`: Catchy title.
-    - `description`: Brief summary of the journey.
-    - `eventIds`: Ordered list of event IDs.
-    - **Overrides (New)**: If an event's generic description doesn't fit your specific story, use the `overrides` property in the `Journey` object to rename it or rewrite the description JUST for this journey.
+### Step 3: Define Connections
+- **File**: `data/journeys.ts`
+- **Format**: Add entries to the `CONNECTIONS` array.
+- **Philosophy**: Connections are the "synapses" of our brain. They explain *causality*.
+    - Use `caused` for direct links (Fire -> Cooking).
+    - Use `preceded` for loose chronological flow.
+    - Use `related` for thematic parallels.
+- **Naming**: Prefix connection IDs with the journey initials (e.g., `eot-1`, `roc-5`).
+
+### Step 4: Add Journey Metadata
+- **File**: `data/journeys.ts`
+- **Structure**: Add a `Journey` object to the `JOURNEYS` array.
+- **Fields**:
+  - `id`: explicit slug (e.g., `evolution-of-technology`).
+  - `title`: evocative and grand (e.g., "Wires & Waves").
+  - `description`: a hook that promises an insight.
+  - `thumbnailUrl`: path to a representative image (e.g., `images/p12-29.jpg`).
+  - `eventIds`: order matters!
+  - `connections`: filter the global list (e.g., `.filter(c => c.id.startsWith('eot-'))`.
+
+### Step 5: Journey Thumbnail
+- **Action**: Select a high-quality, evocative image from `public/images/` that represents the *essence* of the journey.
+- **Implementation**: Add the `thumbnailUrl` property to the journey object in `journeys.ts`.
+- **Verify**: Check the Home Menu to ensure the text is readable over the chosen image.
+
+### Step 8: Verification
+- **Visual**: Verify the timeline in the browser (`npm run dev`).
+- **Data**: Check for missing images or broken connections.
+- **Deploy**: Run `npm run deploy` to push to `gh-pages`.
+
+### Step 7: Clean Up
+- **Code**: Remove any "Coming Soon" placeholders in `HomeMenu.tsx`.
+- **Docs**: Ensure `task.md` is complete.
+
+## Content Guidelines: The "Aalam Voice"
+
+To maintain quality, all agents must adhere to these writing standards:
+
+1.  **Active Voice**: "Gutenberg invented the press" > "The press was invented by Gutenberg."
+2.  **The "Insight" Ratio**: 20% Fact, 80% Consequence.
+    - *Bad:* "Agriculture began 10,000 years ago."
+    - *Good:* "Agriculture trapped humans in sedentary labor, but produced the caloric surplus needed to build the Pyramids."
+3.  **Grandeur**: Use language that reflects the epic scale of deep time. Words like *shatter, ignite, forge, collapse, birth* are preferred over *start, make, end*.
 
 ### 4. Media Preparation (The "Localize" Protocol)
-- **Goal**: ensure every event has a visual, but AVOID rate limits and external dependencies in production.
+- **Goal**: ensure every every event has a visual, but AVOID rate limits and external dependencies in production.
 - **Action**:
     1.  **Generate**: Use `generate_image` tool.
     2.  **Workaround (if Rate Limited)**: Use dynamic URLs in `data/allEvents.ts`:
@@ -135,13 +171,15 @@ To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
     2.  **Sync**: `git push origin main`
     3.  **Build**: `npm run build`
     4.  **Deploy**: `npm run deploy` (deploys to `gh-pages`)
-    5.  **Verify**: Visit the live site and ensure your new journey works.
+    5.  **Verify & Polish**
+        - Run `npm run verify-assets` to ensure all images are present.
+        - Run `npm run build` and `npm run preview`.
+        - Check the new journey in the browser.
+        - Run the "Content Audit" on the new events.
 
 ## Protocol: Infinite Expansion (When the Tracker is Empty)
 If `docs/PROJECT_TRACKER.md` has no "ToDo" items:
 1.  **Autonomous Research**: Identify a gap in the timeline (e.g., "We have Art and Tech, but what about the History of Medicine?").
 2.  **Propose**: Create a new entry in `docs/PROJECT_TRACKER.md` with status 🔴 (Todo).
 3.  **Execute**: Follow the 5-step Creation Workflow to build it.
-4.  **Connect**: Find at least 3 connections between your new journey and existing events to strengthen the "Golden Thread".
-
 

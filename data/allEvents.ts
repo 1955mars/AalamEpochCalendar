@@ -55,7 +55,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '3 Minutes After Big Bang',
     yearNumeric: -13780000000, // Effectively same for sorting
     title: 'Primordial Nucleosynthesis',
-    description: 'The universe is a nuclear fusion reactor for 17 minutes, creating the first Hydrogen, Helium, and Lithium nuclei.',
+    description: 'The first three minutes. The universe acts as a cosmic fusion reactor, forging the hydrogen and helium that will fuel every star for the next 100 trillion years.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cosmic-3.jpg',
     phase: 'Phase 1'
   },
@@ -63,8 +63,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     id: '3',
     year: '380,000 Years After Big Bang',
     yearNumeric: -13770000000, // 380k is negligible vs BYA
+
     title: 'Recombination (First Light)',
-    description: 'Electrons bind to nuclei, making the universe transparent. The flash of light released becomes the Cosmic Microwave Background (CMB).',
+    description: 'The Fog Lifts. Light breaks free from matter, creating the afterglow we see today as the CMB. The universe becomes transparent.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/3.jpg',
     phase: 'Phase 1'
   },
@@ -72,8 +73,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     id: 'cosmic-5',
     year: '380k - 150 Million Years AB',
     yearNumeric: -13600000000, // Rough estimate
+
     title: 'The Cosmic Dark Ages',
-    description: 'The universe is filled with neutral hydrogen gas but no stars yet exist to light it up. A long era of darkness.',
+    description: 'The Long Wait. A billion years of silence. The universe is filled with neutral fog, waiting for gravity to pull the first stars into existence.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cosmic-5.jpg',
     phase: 'Phase 1'
   },
@@ -108,8 +110,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     id: 'cosmic-9',
     year: '13.2 Billion Years Ago',
     yearNumeric: -13200000000,
+
     title: 'Formation of First Black Holes',
-    description: 'Collapsed cores of ancient stars form black holes, which will eventually become the seeds for galactic centers.',
+    description: 'Gravity\'s Victory. Stars collapse into points of infinite density, punching holes in spacetime that will anchor the galaxies to come.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cosmic-9.jpg',
     phase: 'Phase 1'
   },
@@ -136,7 +139,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '12.0 Billion Years Ago',
     yearNumeric: -12000000000,
     title: 'Birth of the Galactic Halo',
-    description: 'The oldest stars in the Milky Way form in a spherical halo that surrounds the galaxy, predating the spiral disk.',
+    description: 'The Old Guard. The very first generations of stars form a spherical shell around the galaxy, watching the disk slowly take shape inside.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cosmic-12.jpg',
     phase: 'Phase 1'
   },
@@ -198,8 +201,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     id: '9',
     year: '4.6 Billion Years Ago',
     yearNumeric: -4600000000,
+
     title: 'Formation of the Solar System',
-    description: 'The cloud collapses into a spinning protoplanetary disk with the proto-sun at the center.',
+    description: 'Order from Chaos. A spinning disk of dust coagulates into a family of planets, with our proto-sun acting as the fiery anchor.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/9.jpg',
     phase: 'Phase 1'
   },
@@ -325,7 +329,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '3.4 Billion Years Ago',
     yearNumeric: -3400000000,
     title: 'Anoxygenic Photosynthesis',
-    description: 'Early microbes begin to use light energy to synthesize food, but initially without producing free oxygen.',
+    description: 'Life learns to eat sunlight. This energy revolution allows microbes to thrive without scavenging, though it will be millions of years before they release Oxygen.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/20.jpg',
     phase: 'Phase 1'
   },
@@ -388,7 +392,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '1.2 Billion Years Ago',
     yearNumeric: -1200000000,
     title: 'The Invention of Sexual Reproduction',
-    description: 'Eukaryotes develop the ability to share genetic material, greatly accelerating the pace of evolution and increasing genetic diversity.',
+    description: 'The Great Remix. Life stops cloning itself and starts shuffling the genetic deck with every generation, turbocharging evolution\'s ability to adapt and innovate.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/27.jpg',
     phase: 'Phase 1'
   },
@@ -444,8 +448,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     id: 'p2-1',
     year: '541 Million Years Ago',
     yearNumeric: -541000000,
+
     title: 'The Cambrian Explosion',
-    description: 'Life diversifies rapidly; most major animal body plans appear in the fossil record, ending the "Boring Billion" years.',
+    description: 'The Biological Big Bang. In a geological blink, life invents eyes, armor, and predators. The template for every modern animal is drawn here.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p2-1.jpg',
     phase: 'Phase 2'
   },
@@ -498,8 +503,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     id: 'p2-7',
     year: '444 Million Years Ago',
     yearNumeric: -444000000,
+
     title: 'Ordovician-Silurian Extinction',
-    description: 'A severe ice age causes a massive drop in sea levels, wiping out 85% of marine species in the first great mass extinction.',
+    description: 'The First Reset. Ice sheets murder the tropical oceans, wiping out 85% of species and proving that life is fragile in the face of climate change.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p2-7.jpg',
     phase: 'Phase 2'
   },
@@ -517,7 +523,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '420 Million Years Ago',
     yearNumeric: -420000000,
     title: 'First Breath on Land',
-    description: 'Arthropods (ancestors of spiders and millipedes) become the first animals to walk on dry land and breathe air.',
+    description: 'Life invades the dry world. Pioneering arthropods drag the complexity of the ocean onto barren rock, transforming the continents into living ecosystems.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p2-9.jpg',
     phase: 'Phase 2'
   },
@@ -1018,7 +1024,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p4-4', year: '9,000 BCE',
-    yearNumeric: -9000, title: 'Göbekli Tepe Complex', description: 'Hunter-gatherers construct monumental T-shaped stone pillar enclosures in modern Turkey.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-4.jpg', phase: 'Phase 4'
+    yearNumeric: -9000, title: 'Göbekli Tepe Complex', description: 'Before agriculture or cities, hunter-gatherers united to build this massive temple, proving that *belief*—not just food—drove the rise of civilization.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-4.jpg', phase: 'Phase 4'
   },
   {
     id: 'p4-5', year: '9,000 BCE',
@@ -1038,7 +1044,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p4-9', year: '8,000 BCE',
-    yearNumeric: -8000, title: 'Rice Domestication in China', description: 'Evidence for independent domestication of rice appears in the Yangtze River valley.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-9.jpg', phase: 'Phase 4'
+    yearNumeric: -8000, title: 'Rice Domestication', description: 'The taming of rice in the Yangtze valley creates the caloric foundation for the dense populations of East Asia, shaping millennia of culture.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-9.jpg', phase: 'Phase 4'
   },
   {
     id: 'p4-10', year: '7,700 BCE',
@@ -1058,7 +1064,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p4-14', year: '7,000 BCE',
-    yearNumeric: -7000, title: 'Settlement of Çatalhöyük', description: 'A large proto-city in Anatolia flourishes, with houses entered from the roof.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-14.jpg', phase: 'Phase 4'
+    yearNumeric: -7000, title: 'Settlement of Çatalhöyük', description: 'Living on the Roof. Humans experiment with density, creating a hive-city without streets where ancestors sleep beneath the floorboards.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-14.jpg', phase: 'Phase 4'
   },
   {
     id: 'p4-15', year: '7,000 BCE',
@@ -1106,7 +1112,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p4-26', year: '4,000 BCE',
-    yearNumeric: -4000, title: 'Invention of Potter\'s Wheel', description: 'Rapid potter\'s wheel in Mesopotamia revolutionizes ceramic production.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-26.jpg', phase: 'Phase 4'
+    yearNumeric: -4000, title: 'Invention of Potter\'s Wheel', description: 'Mass Production. Humans automate creation, turning distinct crafts into tradable commodities and laying the groundwork for industry.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-26.jpg', phase: 'Phase 4'
   },
   {
     id: 'p4-27', year: '4,000 BCE',
@@ -1118,11 +1124,11 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p4-29', year: '3,500 BCE',
-    yearNumeric: -3500, title: 'Proto-Cuneiform', description: 'Pictographic clay tablets used in Uruk for accounting, a precursor to writing.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-29.jpg', phase: 'Phase 4'
+    yearNumeric: -3500, title: 'The Invention of Writing', description: 'In Uruk, accountants need to track grain. Their clay scratchings evolve into cuneiform, allowing humanity to offload memory onto matter for the first time.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-29.jpg', phase: 'Phase 4'
   },
   {
     id: 'p4-30', year: '3,200 BCE',
-    yearNumeric: -3200, title: 'Bronze Alloy Invention', description: 'Alloying copper with tin creates bronze, ushering in the Bronze Age.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-30.jpg', phase: 'Phase 4'
+    yearNumeric: -3200, title: 'The Bronze Age Begins', description: 'By alloying copper with tin, humans create a metal hard enough for empire. New weapons and tools spark the first arms races and state-level warfare.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-30.jpg', phase: 'Phase 4'
   },
 
   // --- PHASE 5: The Bronze Age ---
@@ -1166,7 +1172,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p5-8', year: '2500 BCE',
-    yearNumeric: -2500, title: 'Indus Valley Civilization', description: 'Major cities like Mohenjo-Daro flourish with sophisticated grid planning and sewage systems.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-8.jpg', phase: 'Phase 5'
+    yearNumeric: -2500, title: 'Indus Valley Civilization', description: 'The Grid Masters. While others built monuments to kings, they built sewers and straight streets, prioritizing public health over royal ego.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-8.jpg', phase: 'Phase 5'
   },
   {
     id: 'p5-9', year: '2500 BCE',
@@ -1178,7 +1184,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p5-11', year: '2334 BCE',
-    yearNumeric: -2334, title: 'Sargon of Akkad', description: 'Sargon establishes the Akkadian Empire, the world\'s first large territorial empire.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-11.jpg', phase: 'Phase 5'
+    yearNumeric: -2334, title: 'Sargon of Akkad', description: 'The blueprint of imperialism. Sargon proves that distinct city-states can be ruled by a single will, creating the world\'s first multi-ethnic empire.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-11.jpg', phase: 'Phase 5'
   },
   {
     id: 'p5-12', year: '2112 BCE',
@@ -1198,7 +1204,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p5-16', year: '1792 BCE',
-    yearNumeric: -1792, title: 'Reign of Hammurabi', description: 'Hammurabi creates the Old Babylonian Empire and his comprehensive legal code.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-16.jpg', phase: 'Phase 5'
+    yearNumeric: -1792, title: 'Reign of Hammurabi', description: 'Law Written in Stone. Justice moves from the whim of the king to the public square, where the weak can *technically* appeal against the strong.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-16.jpg', phase: 'Phase 5'
   },
   {
     id: 'p5-17', year: '1750 BCE',
@@ -1210,11 +1216,11 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p5-19', year: '1600 BCE',
-    yearNumeric: -1600, title: 'Mycenaean Civilization', description: 'Mainland Greece culture emerges with fortified citadels and warrior culture.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-19.jpg', phase: 'Phase 5'
+    yearNumeric: -1600, title: 'Mycenaean Civilization', description: 'The First Greeks. A warrior society of citadel-builders whose exploits would become the myths of the Iliad and the Odyssey.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-19.jpg', phase: 'Phase 5'
   },
   {
     id: 'p5-20', year: '1600 BCE',
-    yearNumeric: -1600, title: 'The Hittite Kingdom', description: 'Hittites establish a kingdom in Anatolia and master chariot warfare.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-20.jpg', phase: 'Phase 5'
+    yearNumeric: -1600, title: 'The Hittite Kingdom', description: 'Chariots of Iron. They mastered ironworking and the war chariot, creating a military dominance that challenged Egypt and reshaped warfare.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-20.jpg', phase: 'Phase 5'
   },
   {
     id: 'p5-21', year: '1600 BCE',
@@ -1258,7 +1264,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p5-31', year: '1200 BCE',
-    yearNumeric: -1200, title: 'Bronze Age Collapse', description: 'Destruction of major cities across the Mediterranean ushers in a dark age.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-31.jpg', phase: 'Phase 5'
+    yearNumeric: -1200, title: 'Bronze Age Collapse', description: 'The First Apocalypse. Trade networks snap, cities burn, and literacy vanishes. A brutal reminder that progress is not a straight line.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p5-31.jpg', phase: 'Phase 5'
   },
 
   // --- PHASE 6: The Iron Age & Classical Age ---
@@ -1294,7 +1300,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p6-6', year: '911 BCE',
-    yearNumeric: -911, title: 'Rise of Neo-Assyrian Empire', description: 'Assyria establishes the first empire to systematically rule conquered territories.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-6.jpg', phase: 'Phase 6'
+    yearNumeric: -911, title: 'Rise of Neo-Assyrian Empire', description: 'The War Machine. Assyria turns conquest into a science, creating the world\'s first professional standing army and a terrifying model of empire.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-6.jpg', phase: 'Phase 6'
   },
   {
     id: 'p6-7', year: '800 BCE',
@@ -1342,7 +1348,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p6-18', year: '550 BCE',
-    yearNumeric: -550, title: 'Achaemenid Empire Founded', description: 'Cyrus the Great unifies Iranian tribes into a massive empire.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-18.jpg', phase: 'Phase 6'
+    yearNumeric: -550, title: 'Achaemenid Empire Founded', description: 'The First Superpower. Cyrus builds an empire of tolerance, proving that diverse cultures can be ruled by a single king without brute force.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-18.jpg', phase: 'Phase 6'
   },
   {
     id: 'p6-19', year: '539 BCE',
@@ -1354,7 +1360,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p6-21', year: '508 BCE',
-    yearNumeric: -508, title: 'Athenian Democracy', description: 'Cleisthenes institutes democratic reforms in Athens.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-21.jpg', phase: 'Phase 6'
+    yearNumeric: -508, title: 'Athenian Democracy', description: 'Thinking Power. Cleisthenes flips the pyramid of governance, suggesting that authority derives from the consensus of citizens, not the decree of gods or kings.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-21.jpg', phase: 'Phase 6'
   },
   {
     id: 'p6-22', year: '490 BCE',
@@ -1442,7 +1448,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p7-10', year: '476 CE',
-    yearNumeric: 476, title: 'Fall of Western Rome', description: 'Romulus Augustulus deposed, marking end of Antiquity in West.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-10.jpg', phase: 'Phase 7'
+    yearNumeric: 476, title: 'Fall of Western Rome', description: 'The Light Dims. The central nervous system of Europe fails, fracturing the continent into a thousand feudal shards.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-10.jpg', phase: 'Phase 7'
   },
   {
     id: 'p7-11', year: '529 CE',
@@ -1506,7 +1512,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p7-26', year: '1206 CE',
-    yearNumeric: 1206, title: 'Genghis Khan Unites Mongols', description: 'Beginning of Mongol Empire expansion.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-26.jpg', phase: 'Phase 7'
+    yearNumeric: 1206, title: 'Genghis Khan Unites Mongols', description: 'The Horse Lords. Khan stitches Asia and Europe together with blood and speed, creating the first true world system.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-26.jpg', phase: 'Phase 7'
   },
   {
     id: 'p7-27', year: '1215 CE',
@@ -1526,7 +1532,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p7-31', year: '1347 CE',
-    yearNumeric: 1347, title: 'Black Death', description: 'Bubonic plague reaches Europe, devastating population.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-31.jpg', phase: 'Phase 7'
+    yearNumeric: 1347, title: 'Black Death', description: 'The Great Leveler. The plague kills serf and lord alike, shattering the feudal system by making labor scarce and valuable.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-31.jpg', phase: 'Phase 7'
   },
 
   // --- PHASE 8: The Age of Exploration ---
@@ -1554,11 +1560,11 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p8-4', year: '1450 CE',
-    yearNumeric: 1450, title: 'Printing Press', description: 'Gutenberg revolutionizes communication.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-4.jpg', phase: 'Phase 8'
+    yearNumeric: 1450, title: 'The Printing Press', description: 'The Democratization of Memory. Gutenberg\'s movable type crashes the cost of knowledge, breaking the elite\'s monopoly on truth and fueling the Reformation.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-9.jpg', phase: 'Phase 8'
   },
   {
     id: 'p8-5', year: '1453 CE',
-    yearNumeric: 1453, title: 'Fall of Constantinople', description: 'Ottomans conquer Byzantine capital.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-5.jpg', phase: 'Phase 8'
+    yearNumeric: 1453, title: 'Fall of Constantinople', description: 'The Walls Fall. The final vestige of Rome collapses, sending Greek scholars west and sparking the intellectual fires of the Renaissance.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-5.jpg', phase: 'Phase 8'
   },
   {
     id: 'p8-6', year: '1478 CE',
@@ -1570,7 +1576,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p8-8', year: '1492 CE',
-    yearNumeric: 1492, title: 'Columbus Reaches Americas', description: 'Initiates Columbian Exchange.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-8.jpg', phase: 'Phase 8'
+    yearNumeric: 1492, title: 'Columbus Reaches Americas', description: 'The Great Collision. Two worlds that had been separate for millennia crash together, exchanging food, disease, and people in a biological revolution.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-8.jpg', phase: 'Phase 8'
   },
   {
     id: 'p8-9', year: '1494 CE',
@@ -1590,7 +1596,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p8-13', year: '1517 CE',
-    yearNumeric: 1517, title: '95 Theses', description: 'Martin Luther starts Protestant Reformation.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-13.jpg', phase: 'Phase 8'
+    yearNumeric: 1517, title: '95 Theses', description: 'The Fracture. One man\'s questions shatter the religious unity of Europe, launching centuries of war and the rise of individualism.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-13.jpg', phase: 'Phase 8'
   },
   {
     id: 'p8-14', year: '1519 CE',
@@ -1618,7 +1624,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p8-20', year: '1543 CE',
-    yearNumeric: 1543, title: 'Copernican Theory', description: 'Heliocentric model proposed, turning point in science.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-20.jpg', phase: 'Phase 8'
+    yearNumeric: 1543, title: 'Copernican Theory', description: 'Dethroning Earth. We realize we are not the center of the stage, but just another rock orbiting a generic star.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p8-20.jpg', phase: 'Phase 8'
   },
   {
     id: 'p8-21', year: '1545 CE',
@@ -1690,7 +1696,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p9-4', year: '1789 CE',
-    yearNumeric: 1789, title: 'French Revolution Begins', description: 'Storming of Bastille starts upheaval in France.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-4.jpg', phase: 'Phase 9'
+    yearNumeric: 1789, title: 'French Revolution Begins', description: 'The People\'s Earthquake. The storming of the Bastille doesn\'t just end a monarchy; it births the modern concept of universal rights and the power of the nation-state.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-4.jpg', phase: 'Phase 9'
   },
   {
     id: 'p9-5', year: '1789 CE',
@@ -1702,7 +1708,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p9-7', year: '1796 CE',
-    yearNumeric: 1796, title: 'Smallpox Vaccine', description: 'Jenner pioneers vaccination.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-7.jpg', phase: 'Phase 9'
+    yearNumeric: 1796, title: 'Smallpox Vaccine', description: 'The Shield. Jenner hacks the immune system, proving we can conquer nature\'s deadliest assassins. The start of modern medicine.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-7.jpg', phase: 'Phase 9'
   },
   {
     id: 'p9-8', year: '1799 CE',
@@ -1746,7 +1752,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p9-18', year: '1837 CE',
-    yearNumeric: 1837, title: 'Telegraph Invented', description: 'Morse creates instant communication.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-18.jpg', phase: 'Phase 9'
+    yearNumeric: 1837, title: 'Telegraph Invented', description: 'The Death of Distance. Information detaches from transportation. News travels at the speed of lightning, not the speed of a horse.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-18.jpg', phase: 'Phase 9'
   },
   {
     id: 'p9-19', year: '1839 CE',
@@ -1782,7 +1788,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p9-27', year: '1869 CE',
-    yearNumeric: 1869, title: 'Suez Canal Opens', description: 'Connects Mediterranean and Red Sea.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-27.jpg', phase: 'Phase 9'
+    yearNumeric: 1869, title: 'Suez Canal Opens', description: 'The Shortcut. Engineering slices continents apart, shrinking the world and supercharging global trade.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p9-27.jpg', phase: 'Phase 9'
   },
   {
     id: 'p9-28', year: '1871 CE',
@@ -1850,7 +1856,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p10-11', year: '1928',
-    yearNumeric: 1928, title: 'Penicillin Discovered', description: 'Fleming finds first antibiotic.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p10-11.jpg', phase: 'Phase 10'
+    yearNumeric: 1928, title: 'Penicillin Discovered', description: 'The Magic Bullet. Fungi fight bacteria, and suddenly, a scratch is no longer a death sentence.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p10-11.jpg', phase: 'Phase 10'
   },
   {
     id: 'p10-12', year: '1929',
@@ -1930,7 +1936,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p10-31', year: '1945',
-    yearNumeric: 1945, title: 'Atomic Bombings', description: 'Hiroshima and Nagasaki bombed, war ends.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p10-31.jpg', phase: 'Phase 10'
+    yearNumeric: 1945, title: 'Atomic Bombings', description: 'The Destroyer of Worlds. Humanity accesses the binding energy of the cosmos to create a weapon that can end history.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p10-31.jpg', phase: 'Phase 10'
   },
 
   // --- PHASE 11: The Cold War Era ---
@@ -1946,7 +1952,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p11-1', year: '1945',
-    yearNumeric: 1945, title: 'UN Founded', description: 'Global body replaces League of Nations.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p11-1.jpg', phase: 'Phase 11'
+    yearNumeric: 1945, title: 'UN Founded', description: 'Never Again. Staring into the abyss of nuclear annihilation, humanity builds a forum to replace the battlefield with the negotiating table.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p11-1.jpg', phase: 'Phase 11'
   },
   {
     id: 'p11-2', year: '1946',
@@ -1998,7 +2004,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p11-14', year: '1957',
-    yearNumeric: 1957, title: 'Sputnik Launch', description: 'First satellite sparks Space Race.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p11-14.jpg', phase: 'Phase 11'
+    yearNumeric: 1957, title: 'Sputnik Launch', description: 'The High Ground. We break gravity\'s chains. The sky is no longer the limit; it is just a new territory to be claimed.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p11-14.jpg', phase: 'Phase 11'
   },
   {
     id: 'p11-15', year: '1959',
@@ -2006,7 +2012,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p11-16', year: '1960',
-    yearNumeric: 1960, title: 'Year of Africa', description: '17 nations gain independence.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p11-16.jpg', phase: 'Phase 11'
+    yearNumeric: 1960, title: 'Year of Africa', description: 'The Wind of Change. The empires that once mapped the world crumble, as 17 nations across Africa reclaim their sovereignty and voice.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p11-16.jpg', phase: 'Phase 11'
   },
   {
     id: 'p11-17', year: '1961',
@@ -2086,7 +2092,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p12-3', year: '1991',
-    yearNumeric: 1991, title: 'WWW Protocol', description: 'Berners-Lee introduces Web standards.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-3.jpg', phase: 'Phase 12'
+    yearNumeric: 1989, title: 'World Wide Web', description: 'The Hive Mind awakens. Berners-Lee dissolves the physical distance between minds, creating a shared digital space that will rewire the human species.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-3.jpg', phase: 'Phase 12'
   },
   {
     id: 'p12-4', year: '1994',
@@ -2102,7 +2108,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p12-7', year: '1998',
-    yearNumeric: 1998, title: 'Google Founded', description: 'Search engine launched.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-7.jpg', phase: 'Phase 12'
+    yearNumeric: 1998, title: 'Google Founded', description: 'Organizing the World. A new era of retrieval begins where all human knowledge is accessible in milliseconds.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-7.jpg', phase: 'Phase 12'
   },
   {
     id: 'p12-8', year: '2000',
@@ -2118,7 +2124,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p12-11', year: '2003',
-    yearNumeric: 2003, title: 'Human Genome Project', description: 'DNA mapping completed.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-11.jpg', phase: 'Phase 12'
+    yearNumeric: 2003, title: 'Human Genome Project', description: 'The Source Code. We read the manual of life itself, opening the door to editing our own biology.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-11.jpg', phase: 'Phase 12'
   },
   {
     id: 'p12-12', year: '2004',
@@ -2126,7 +2132,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p12-13', year: '2007',
-    yearNumeric: 2007, title: 'iPhone Released', description: 'Smartphone era begins.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-13.jpg', phase: 'Phase 12'
+    yearNumeric: 2007, title: 'iPhone Released', description: 'The Second Brain. The internet moves from the desk to the pocket, becoming a permanent prosthetic for the human mind.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-13.jpg', phase: 'Phase 12'
   },
   {
     id: 'p12-14', year: '2008',
@@ -2134,7 +2140,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p12-15', year: '2009',
-    yearNumeric: 2009, title: 'Bitcoin Launched', description: 'First cryptocurrency released.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-15.jpg', phase: 'Phase 12'
+    yearNumeric: 2009, title: 'Bitcoin Launched', description: 'Money Without Masters. The first separation of currency from state control using cryptographic truth.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-15.jpg', phase: 'Phase 12'
   },
   {
     id: 'p12-16', year: '2010',
@@ -2190,7 +2196,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p12-29', year: '2022',
-    yearNumeric: 2022, title: 'ChatGPT Launched', description: 'Generative AI revolution begins.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-29.jpg', phase: 'Phase 12'
+    yearNumeric: 2022, title: 'ChatGPT Released', description: 'The Age of Synthesis. AI moves from analyzing data to generating creativity, challenging the very definition of intelligence and what it means to be human.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-29.jpg', phase: 'Phase 12'
   },
   {
     id: 'p12-30', year: '2023',
@@ -2202,7 +2208,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'pilot-1', year: '1876 CE',
-    yearNumeric: 1876, title: 'Telephone Invented', description: 'Alexander Graham Bell patents the telephone.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/pilot-1.jpg', category: 'Communications', phase: 'Phase 9'
+    yearNumeric: 1876, title: 'Telephone Invented', description: 'Voice Over Wire. For the first time, a human voice can be heard without the body being present. The beginning of virtual presence.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/pilot-1.jpg', category: 'Communications', phase: 'Phase 9'
   },
   {
     id: 'pilot-2', year: '1901 CE',
@@ -2279,7 +2285,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '1760',
     yearNumeric: 1760,
     title: 'The Industrial Revolution',
-    description: 'The transition to new manufacturing processes, steam power, and machine tools reshapes society.',
+    description: 'The Energy Singularity. Humanity breaks the caloric ceiling by unlocking millions of years of stored sunlight (coal), trading a rural past for a mechanical future.',
     phase: 'Modern',
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-7.jpg'

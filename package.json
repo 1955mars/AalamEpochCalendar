@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
+    "verify-assets": "node scripts/verify-images.cjs",
     "generate:images": "npx tsx scripts/generate_images.ts",
     "migrate": "npx tsx scripts/migrate_constants.ts",
     "deploy": "gh-pages -d dist"
