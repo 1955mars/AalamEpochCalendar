@@ -127,6 +127,10 @@ To maintain quality, all agents must adhere to these writing standards:
     - *Bad:* "Agriculture began 10,000 years ago."
     - *Good:* "Agriculture trapped humans in sedentary labor, but produced the caloric surplus needed to build the Pyramids."
 3.  **Grandeur**: Use language that reflects the epic scale of deep time. Words like *shatter, ignite, forge, collapse, birth* are preferred over *start, make, end*.
+4.  **Narrative Consistency (The "Connective Tissue" Rule)**:
+    - A timeline fails if it alternates between "Epic" and "Textbook" sounds (the "Tone Stutter").
+    - When you rewrite a key event, you must also check the events *immediately before and after it*.
+    - **Action**: Smooth the transitions. If you write an epic description for the "Atomic Bomb", you typically must also rewrite the "UN Founded" event to match that gravity (e.g., "Humanity's response to the bomb" vs "A global organization").
 
 ### 4. Media Preparation (The "Localize" Protocol)
 - **Goal**: ensure every every event has a visual, but AVOID rate limits and external dependencies in production.
