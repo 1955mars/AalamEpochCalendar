@@ -4,34 +4,20 @@ import { JOURNEYS } from '../data/journeys';
 import { Journey } from '../types';
 import BrandLogo from './BrandLogo';
 
+import { PLANNED_JOURNEYS } from '../data/plannedJourneys';
+
 interface HomeMenuProps {
     onSelectJourney: (journey: Journey | null) => void;
     onExploreFullTimeline: () => void;
 }
-
-const PLANNED_JOURNEYS = [
-    {
-        title: 'The Food on Your Plate',
-        description: 'From the Neolithic Revolution to GMOs: The history of what we eat.',
-        icon: Dna,
-        color: 'bg-green-500',
-        status: 'Vote to Build'
-    },
-    {
-        title: 'The Roots of Democracy',
-        description: 'From Athens to the Algorithm: How we choose who leads us.',
-        icon: Globe,
-        color: 'bg-blue-500',
-        status: 'Vote to Build'
-    }
-];
 
 const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimeline }) => {
     return (
         <div className="w-full max-w-6xl mx-auto px-6 py-12 flex flex-col items-center justify-center min-h-[80vh] font-sans">
 
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
+            {/* Main Journeys Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200 mb-16">
                 {/* Render Actual Implemented Journeys First (if any) */}
                 {JOURNEYS.map((journey) => (
                     <button
@@ -59,27 +45,10 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
                     </button>
                 ))}
 
-                {/* Render Planned Journeys */}
-                {PLANNED_JOURNEYS.map((item) => (
-                    <div
-                        key={item.title}
-                        className="group relative bg-white border border-slate-200 p-8 rounded-2xl shadow-sm hover:shadow-md transition-all text-left opacity-60 hover:opacity-100 cursor-not-allowed"
-                    >
-                        <div className="absolute top-4 right-4 px-2 py-1 bg-slate-100 rounded text-[10px] font-bold uppercase text-slate-500 tracking-wider">
-                            {item.status}
-                        </div>
-                        <div className={`w-12 h-12 ${item.color} rounded-full flex items-center justify-center mb-6 shadow-md text-white opacity-80 group-hover:opacity-100 transition-opacity`}>
-                            <item.icon size={24} />
-                        </div>
-                        <h3 className="text-2xl font-bold mb-2 text-slate-800">{item.title}</h3>
-                        <p className="text-slate-500 text-sm leading-relaxed">{item.description}</p>
-                    </div>
-                ))}
-
                 {/* Explore Full Timeline Card */}
                 <button
                     onClick={onExploreFullTimeline}
-                    className="group relative overflow-hidden bg-slate-100 text-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 text-left border border-slate-200 border-dashed"
+                    className="group relative overflow-hidden bg-slate-100 text-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 text-left border border-slate-200 border-dashed h-96 flex flex-col justify-end"
                 >
                     <div className="relative z-10">
                         <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform">
@@ -93,6 +62,33 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
                     </div>
                 </button>
 
+            </div>
+
+            {/* Planned Journeys Section */}
+            <div className="w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+                <div className="flex items-center gap-4 mb-8">
+                    <div className="h-px bg-slate-200 flex-1" />
+                    <span className="text-sm font-bold uppercase tracking-widest text-slate-400">Planned Journeys</span>
+                    <div className="h-px bg-slate-200 flex-1" />
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {PLANNED_JOURNEYS.map((item) => (
+                        <div
+                            key={item.title}
+                            className="group relative bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left opacity-70 hover:opacity-100 hover:border-indigo-200 cursor-default"
+                        >
+                            <div className="flex justify-between items-start mb-4">
+                                <div className={`p-2 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors`}>
+                                    <item.icon size={20} />
+                                </div>
+                            </div>
+
+                            <h4 className="text-lg font-bold mb-1 text-slate-800 group-hover:text-indigo-900 leading-tight">{item.title}</h4>
+                            <p className="text-slate-500 text-xs leading-relaxed line-clamp-2">{item.description}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );
