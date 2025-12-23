@@ -1,16 +1,14 @@
-
-import { test } from 'node:test';
-import assert from 'node:assert';
-import { getPhaseId, formatYearShort } from '../utils/timelineUtils.ts';
+import { describe, it, expect } from 'vitest';
+import { getPhaseId, formatYearShort } from '../utils/timelineUtils';
 
 // Mock Data
 const MOCK_PHASES = [
-    { id: 'Phase 1', title: 'Primordial', startYear: -13800000000, endYear: -4500000000, bg: 'bg-slate-900', description: '' },
-    { id: 'Phase 2', title: 'Life', startYear: -4500000000, endYear: -65000000, bg: 'bg-indigo-900', description: '' },
+    { id: 'Phase 1', title: 'Primordial', startYear: -13800000000, endYear: -4500000000, bg: 'bg-slate-900', description: 'test' },
+    { id: 'Phase 2', title: 'Life', startYear: -4500000000, endYear: -65000000, bg: 'bg-indigo-900', description: 'test' },
 ];
 
-test('getPhaseId', async (t) => {
-    await t.test('buckets Big Bang into Phase 1', () => {
+describe('getPhaseId', () => {
+    it('buckets Big Bang into Phase 1', () => {
         const event = {
             id: '1',
             yearNumeric: -13700000000,
@@ -18,15 +16,15 @@ test('getPhaseId', async (t) => {
             title: 'Big Bang',
             description: '',
             year: '',
-            category: 'Cosmology',
+            category: 'Cosmology' as const,
             imageUrl: ''
         };
         // @ts-ignore
         const phase = getPhaseId(event, MOCK_PHASES);
-        assert.strictEqual(phase, 'Phase 1');
+        expect(phase).toBe('Phase 1');
     });
 
-    await t.test('buckets Dinosaur into Phase 2', () => {
+    it('buckets Dinosaur into Phase 2', () => {
         const event = {
             id: '2',
             yearNumeric: -200000000,
@@ -34,46 +32,46 @@ test('getPhaseId', async (t) => {
             title: 'Dino',
             description: '',
             year: '',
-            category: 'Life',
+            category: 'Life' as const,
             imageUrl: ''
         };
         // @ts-ignore
         const phase = getPhaseId(event, MOCK_PHASES);
-        assert.strictEqual(phase, 'Phase 2');
+        expect(phase).toBe('Phase 2');
     });
 
-    await t.test('respects phase_marker explicit phase', () => {
+    it('respects phase_marker explicit phase', () => {
         const event = {
             id: 'marker',
-            type: 'phase_marker',
+            type: 'phase_marker' as const,
             phase: 'Phase X',
             yearNumeric: 0,
             title: '',
             description: '',
             year: '',
-            category: 'Cosmology',
+            category: 'Cosmology' as const,
             imageUrl: ''
         };
         // @ts-ignore
         const phase = getPhaseId(event, MOCK_PHASES);
-        assert.strictEqual(phase, 'Phase X');
+        expect(phase).toBe('Phase X');
     });
 });
 
-test('formatYearShort', async (t) => {
-    await t.test('formats billions', () => {
-        assert.strictEqual(formatYearShort('13.8 Billion Years Ago'), '13.8 BYA');
+describe('formatYearShort', () => {
+    it('formats billions', () => {
+        expect(formatYearShort('13.8 Billion Years Ago')).toBe('13.8 BYA');
     });
 
-    await t.test('formats millions', () => {
-        assert.strictEqual(formatYearShort('65 Million Years Ago'), '65 MYA');
+    it('formats millions', () => {
+        expect(formatYearShort('65 Million Years Ago')).toBe('65 MYA');
     });
 
-    await t.test('formats thousands', () => {
-        assert.strictEqual(formatYearShort('10 Thousand Years Ago'), '10 KYA');
+    it('formats thousands', () => {
+        expect(formatYearShort('10 Thousand Years Ago')).toBe('10 KYA');
     });
 
-    await t.test('formats simple years ago', () => {
-        assert.strictEqual(formatYearShort('50 Years Ago'), '50 YA');
+    it('formats simple years ago', () => {
+        expect(formatYearShort('50 Years Ago')).toBe('50 YA');
     });
 });

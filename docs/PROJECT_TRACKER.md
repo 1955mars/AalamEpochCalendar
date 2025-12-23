@@ -42,7 +42,7 @@ Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned J
 | **Core Engine** | 🔵 | Clean | ✅ Live |
 | **Mobile UX** | 🟢 | Polished | ✅ Live |
 | **Assets/Media** | 🟢 | Unified | ✅ Live |
-| **CI/Test Suite** | 🟢 | Active | ✅ Live |
+| **CI/Test Suite** | 🟢 | Strict (5 Rules) | ✅ Live |
 
 ### Recent Milestones
 - [x] **Mobile Polish**: Fixed notch/safe-area issues, optimized HUD controls.

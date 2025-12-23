@@ -16,6 +16,38 @@ describe('Data Integrity', () => {
             });
         });
 
+        it('should have valid properties (phase, category)', () => {
+            const VALID_PHASES = [
+                'Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5', 'Phase 6',
+                'Phase 7', 'Phase 8', 'Phase 9', 'Phase 10', 'Phase 11', 'Phase 12',
+                'Civilization', 'Industrial', 'Modern' // Legacy/Special phases
+            ];
+            const VALID_CATEGORIES = [
+                'Art', 'Civilization', 'Communications', 'Cosmology', 'Economy',
+                'Science', 'Technology', 'Transport', 'Life', 'Humanity', 'Philosophy' // From types.ts + actual usage
+            ];
+
+            ALL_EVENTS.forEach(event => {
+                // Phase check
+                if (event.phase) {
+                    expect(VALID_PHASES).toContain(event.phase);
+                }
+
+                // Category check
+                if (event.category) {
+                    expect(VALID_CATEGORIES).toContain(event.category);
+                }
+
+                // Skip markers
+                if (event.type === 'phase_marker') return;
+
+                // Description check
+                expect(event.title).toBeTruthy();
+                expect(event.description).toBeTruthy();
+                expect(event.description.length).toBeGreaterThan(10); // Minimal content check
+            });
+        });
+
         it('should have valid numeric years', () => {
             ALL_EVENTS.forEach(event => {
                 expect(typeof event.yearNumeric).toBe('number');
@@ -52,6 +84,24 @@ describe('Data Integrity', () => {
 
     describe('Journeys', () => {
         const eventIds = new Set(ALL_EVENTS.map(e => e.id));
+
+        it('should have causality (connections)', () => {
+            const VALID_CONNECTION_TYPES = ['caused', 'preceded', 'related', 'influenced'];
+
+            JOURNEYS.forEach(journey => {
+                // 1. Must have connections array
+                expect(Array.isArray(journey.connections)).toBe(true);
+
+                // 2. Connections must be valid
+                if (journey.connections) {
+                    journey.connections.forEach(conn => {
+                        expect(eventIds.has(conn.fromEventId), `Journey ${journey.title}: Invalid fromEventId ${conn.fromEventId}`).toBe(true);
+                        expect(eventIds.has(conn.toEventId), `Journey ${journey.title}: Invalid toEventId ${conn.toEventId}`).toBe(true);
+                        expect(VALID_CONNECTION_TYPES).toContain(conn.type);
+                    });
+                }
+            });
+        });
 
         it('should have at least 30 events', () => {
             JOURNEYS.forEach(journey => {

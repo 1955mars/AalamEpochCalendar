@@ -81,10 +81,12 @@ We enforce quality through code, not just policy.
 ### The "Inspector" (CI Pipeline)
 Located in `.github/workflows/ci.yml`. It runs on every push.
 
-**The 3 Golden Rules Enforced by Tests:**
-1.  **The "30-Event" Rule**: Every journey MUST have at least 30 events. If you try to commit a 10-event stub, the build fails.
-2.  **The "No Ghost" Rule**: Every event MUST have a corresponding image file on disk. No broken images allowed.
+**The 5 Golden Rules Enforced by Tests:**
+1.  **The "30-Event" Rule**: Every journey MUST have at least 30 events.
+2.  **The "No Ghost" Rule**: Every event MUST have a corresponding image file on disk.
 3.  **The "Thumbnail" Rule**: Every journey MUST have a cover image.
+4.  **The "Complete Data" Rule**: Events must have a valid `phase` and `category` from the allowed list.
+5.  **The "Causality" Rule**: Journeys must have a valid `connections` array linking events together.
 
 To run these checks locally:
 ```bash
