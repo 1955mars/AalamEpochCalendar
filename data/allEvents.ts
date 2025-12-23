@@ -3016,7 +3016,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     phase: 'Modern',
     category: 'Technology',
     imageUrl: 'https://image.pollinations.ai/prompt/transformer%20ai%20architecture%20diagram%20becoming%20a%20city%20of%20light%2C%20attention%20mechanism%20visualization%2C%20futuristic%20cyberpunk%20gold%20and%20blue?width=1280&height=720&nolog=true'
-  }
+  },
 
   // --- Ancestry of AI Expansion ---
   {
