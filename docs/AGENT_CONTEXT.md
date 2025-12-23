@@ -74,8 +74,15 @@ To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
 Before doing any research or scaffolding, verify that you can generate assets.
 - **Action**: Invoke your `generate_image` tool with a simple prompt (e.g., "A golden apple").
 - **Verification**:
-    - If it works: Proceed to Step 1.
+    - If it works: Proceed to Step 0.5.
     - If it fails (e.g., 429 Rate Limit): **STOP**. Inform the user immediately. Do not build a journey full of placeholders.
+
+### Step 0.5: Integrity Compliance Check (CRITICAL)
+Before creating *anything new*, you must ensure the *existing* museum is intact.
+- **Rule**: "Leave no stone unturned."
+- **Action**: Ask the user: "Would you like me to generate any missing images from the existing timelines first?"
+- **Context**: Recent rapid development may have left some events without assets.
+- **Logic**: If the user says "Yes", execute the `generate_image` workflow for missing assets. If "No", proceed to Step 1.
 
 ### 1. Research & Topic Selection
 - **Goal**: Identify a compelling theme (e.g., "The Evolution of Flight" or "History of Mathematics").
