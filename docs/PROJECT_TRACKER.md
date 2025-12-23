@@ -42,12 +42,14 @@ Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned J
 | **Core Engine** | 🔵 | Clean | ✅ Live |
 | **Mobile UX** | 🟢 | Polished | ✅ Live |
 | **Assets/Media** | 🟢 | Unified | ✅ Live |
+| **CI/Test Suite** | 🟢 | Active | ✅ Live |
 
 ### Recent Milestones
 - [x] **Mobile Polish**: Fixed notch/safe-area issues, optimized HUD controls.
 - [x] **Branding**: Implemented "Cosmic Nexus" logo.
 - [x] **Homepage Refine**: "Poster" style cards, removed clutter.
 - [x] **Content Plan**: Defined 18-item "Traction" roadmap on homepage.
+- [x] **Engineering Overhaul**: Implemented "The Factory" (Scaffolder) and CI/CD Pipeline.
 - [x] **Deploy**: Live on `aalam.xyz`.
 
 ---
