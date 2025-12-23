@@ -3231,4 +3231,246 @@ export const ALL_EVENTS: TimelineEvent[] = [
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-turing-machine.jpg' // Dynamic placeholder
   },
+
+  // --- To The Stars: Space Exploration Events ---
+  {
+    id: 'space-stonehenge',
+    year: '3000 BCE',
+    yearNumeric: -3000,
+    title: 'Stonehenge Astronomy',
+    description: 'The Cosmic Calendar. Ancient Britons align massive stones to track solstices, proving that watching the sky was humanity\'s first science.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-stonehenge.jpg',
+    phase: 'Phase 5',
+    category: 'Science'
+  },
+  {
+    id: 'space-ptolemy',
+    year: '150 CE',
+    yearNumeric: 150,
+    title: 'Ptolemaic Model',
+    description: 'Earth at Center. Ptolemy\'s geocentric model dominates astronomy for 1,400 years—wrong, but beautifully predictive.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-ptolemy.jpg',
+    phase: 'Phase 7',
+    category: 'Science'
+  },
+  {
+    id: 'space-kepler',
+    year: '1609 CE',
+    yearNumeric: 1609,
+    title: 'Kepler\'s Laws',
+    description: 'The Cosmic Choreography. Planets don\'t move in perfect circles—they dance in ellipses, obeying mathematical laws that Newton will later explain.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-kepler.jpg',
+    phase: 'Phase 8',
+    category: 'Science'
+  },
+  {
+    id: 'space-herschel',
+    year: '1781 CE',
+    yearNumeric: 1781,
+    title: 'Discovery of Uranus',
+    description: 'Expanding the Map. William Herschel doubles the size of the known solar system, proving the cosmos is far larger than anyone imagined.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-herschel.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'space-einstein',
+    year: '1915 CE',
+    yearNumeric: 1915,
+    title: 'General Relativity',
+    description: 'Gravity Reimagined. Space bends, time warps, and the universe becomes a four-dimensional fabric—the physics of interstellar travel.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-einstein.jpg',
+    phase: 'Phase 10',
+    category: 'Science'
+  },
+  {
+    id: 'space-goddard',
+    year: '1926',
+    yearNumeric: 1926,
+    title: 'First Liquid-Fuel Rocket',
+    description: 'The Birth of Rocketry. Robert Goddard launches a 10-foot rocket that flies for 2.5 seconds—the ancestor of every Saturn V and Falcon 9.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-goddard.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'space-v2',
+    year: '1944',
+    yearNumeric: 1944,
+    title: 'V-2 Rocket',
+    description: 'Weapon to Spacecraft. Nazi Germany\'s terror weapon becomes the first human object to reach space. Its creator will build America\'s Moon rockets.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-v2.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'space-laika',
+    year: '1957',
+    yearNumeric: 1957,
+    title: 'Laika in Orbit',
+    description: 'First Earthling in Space. A stray Moscow dog becomes the first living creature to orbit Earth—a one-way ticket to prove survival was possible.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-laika.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'space-gagarin',
+    year: '1961',
+    yearNumeric: 1961,
+    title: 'Gagarin Orbits Earth',
+    description: 'Humanity Leaves Home. Yuri Gagarin becomes the first human in space, completing one orbit and proving that flesh can survive the void.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-gagarin.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'space-kennedy',
+    year: '1962',
+    yearNumeric: 1962,
+    title: 'Moon Speech',
+    description: 'We Choose to Go. Kennedy commits America to landing a man on the Moon, not because it\'s easy, but because that goal will organize and measure the best of our energies.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-kennedy.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'space-tereshkova',
+    year: '1963',
+    yearNumeric: 1963,
+    title: 'First Woman in Space',
+    description: 'Breaking the Ceiling. Valentina Tereshkova orbits Earth 48 times, proving space has no gender—two decades before America sends a woman.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-tereshkova.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'space-spacewalk',
+    year: '1965',
+    yearNumeric: 1965,
+    title: 'First Spacewalk',
+    description: 'Walking in the Void. Alexei Leonov floats outside his capsule for 12 minutes, attached only by a tether, humanity\'s first step into the abyss.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-spacewalk.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'space-voyager',
+    year: '1977',
+    yearNumeric: 1977,
+    title: 'Voyager Launches',
+    description: 'Message in a Cosmic Bottle. Twin probes begin their grand tour of the outer planets, carrying golden records for any civilization that finds them.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-voyager.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'space-shuttle',
+    year: '1981',
+    yearNumeric: 1981,
+    title: 'Space Shuttle Era',
+    description: 'Reusable Dreams. Columbia launches, promising routine space travel. The Shuttle will build the ISS, deploy Hubble, and teach us the cost of ambition.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-shuttle.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'space-hubble',
+    year: '1990',
+    yearNumeric: 1990,
+    title: 'Hubble Space Telescope',
+    description: 'The Eye Above Clouds. After a flawed mirror nearly kills the mission, Hubble reveals galaxies at the edge of time and expands our cosmic horizon.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-hubble.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'space-mars-pathfinder',
+    year: '1997',
+    yearNumeric: 1997,
+    title: 'Mars Pathfinder',
+    description: 'Return to the Red Planet. Sojourner becomes the first rover on Mars, proving that wheels can explore other worlds.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-mars-pathfinder.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'space-spirit',
+    year: '2004',
+    yearNumeric: 2004,
+    title: 'Spirit & Opportunity',
+    description: 'The 90-Day Rovers That Ran for Years. Spirit and Opportunity land on Mars, designed for 90 days but exploring for 6 and 15 years.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-spirit.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'space-curiosity',
+    year: '2012',
+    yearNumeric: 2012,
+    title: 'Curiosity Rover',
+    description: 'The Nuclear-Powered Explorer. A car-sized rover lands via sky crane, proving Mars once had conditions for life.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-curiosity.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'space-falcon-landing',
+    year: '2015',
+    yearNumeric: 2015,
+    title: 'SpaceX Rocket Landing',
+    description: 'The Economics of Orbit Change. A Falcon 9 booster lands itself after reaching space—making rockets reusable and slashing the cost of the stars.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-falcon-landing.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'space-gravitational-waves',
+    year: '2016',
+    yearNumeric: 2016,
+    title: 'Gravitational Waves Detected',
+    description: 'Hearing the Universe. LIGO detects ripples in spacetime from colliding black holes, confirming Einstein and opening a new window on the cosmos.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-gravitational-waves.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'space-perseverance',
+    year: '2021',
+    yearNumeric: 2021,
+    title: 'Perseverance & Ingenuity',
+    description: 'First Flight on Another World. The Mars helicopter Ingenuity proves powered flight is possible in thin alien atmospheres.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-perseverance.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'space-jwst',
+    year: '2022',
+    yearNumeric: 2022,
+    title: 'James Webb Telescope',
+    description: 'Seeing the First Light. Webb peers back 13.5 billion years to the birth of the first galaxies, rewriting our understanding of cosmic dawn.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-jwst.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'space-artemis',
+    year: '2022',
+    yearNumeric: 2022,
+    title: 'Artemis Program',
+    description: 'Return to the Moon. NASA\'s Artemis launches, aiming to land the first woman and first person of color on the lunar surface.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-artemis.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'space-starship',
+    year: '2024',
+    yearNumeric: 2024,
+    title: 'Starship Test Flights',
+    description: 'The Mars Ship. SpaceX\'s Starship, designed to carry 100 humans to Mars, proves itself through iterative test flights.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-starship.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  }
 ];

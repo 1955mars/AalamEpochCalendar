@@ -480,6 +480,40 @@ export const CONNECTIONS: Connection[] = [
     { id: 'money-32', fromEventId: 'money-fed', toEventId: 'money-weimar', type: 'related' }, // Central Bank fail vs success
     { id: 'money-33', fromEventId: 'money-weimar', toEventId: 'money-bretton', type: 'caused' }, // Hyperinflation fear -> Stability Pact
     { id: 'money-34', fromEventId: 'money-bretton', toEventId: 'money-card', type: 'related' }, // Dollar hegemony -> Consumerism
+
+    // --- To The Stars Connections ---
+    { id: 'tts-1', fromEventId: 'space-stonehenge', toEventId: 'space-ptolemy', type: 'preceded' },
+    { id: 'tts-2', fromEventId: 'space-ptolemy', toEventId: 'p8-20', type: 'preceded' }, // Ptolemy -> Copernicus
+    { id: 'tts-3', fromEventId: 'p8-20', toEventId: 'space-kepler', type: 'caused' }, // Copernicus -> Kepler
+    { id: 'tts-4', fromEventId: 'space-kepler', toEventId: 'p8-26', type: 'related' }, // Kepler -> Galileo
+    { id: 'tts-5', fromEventId: 'p8-26', toEventId: 'p8-30', type: 'caused' }, // Galileo -> Newton
+    { id: 'tts-6', fromEventId: 'p8-30', toEventId: 'space-herschel', type: 'caused' }, // Newton -> Herschel
+    { id: 'tts-7', fromEventId: 'space-herschel', toEventId: 'space-einstein', type: 'preceded' },
+    { id: 'tts-8', fromEventId: 'space-einstein', toEventId: 'space-goddard', type: 'influenced' }, // Relativity -> Rockets
+    { id: 'tts-9', fromEventId: 'space-goddard', toEventId: 'space-v2', type: 'caused' },
+    { id: 'tts-10', fromEventId: 'space-v2', toEventId: 'p11-14', type: 'caused' }, // V2 -> Sputnik
+    { id: 'tts-11', fromEventId: 'p11-14', toEventId: 'space-laika', type: 'caused' }, // Sputnik -> Laika
+    { id: 'tts-12', fromEventId: 'space-laika', toEventId: 'space-gagarin', type: 'caused' },
+    { id: 'tts-13', fromEventId: 'space-gagarin', toEventId: 'space-kennedy', type: 'caused' },
+    { id: 'tts-14', fromEventId: 'space-kennedy', toEventId: 'space-tereshkova', type: 'preceded' },
+    { id: 'tts-15', fromEventId: 'space-tereshkova', toEventId: 'space-spacewalk', type: 'preceded' },
+    { id: 'tts-16', fromEventId: 'space-spacewalk', toEventId: 'p11-24', type: 'preceded' }, // Spacewalk -> Apollo
+    { id: 'tts-17', fromEventId: 'p11-24', toEventId: 'space-voyager', type: 'preceded' }, // Apollo -> Voyager
+    { id: 'tts-18', fromEventId: 'space-voyager', toEventId: 'space-shuttle', type: 'preceded' },
+    { id: 'tts-19', fromEventId: 'space-shuttle', toEventId: 'space-hubble', type: 'caused' },
+    { id: 'tts-20', fromEventId: 'space-hubble', toEventId: 'space-mars-pathfinder', type: 'preceded' },
+    { id: 'tts-21', fromEventId: 'space-hubble', toEventId: 'p12-8', type: 'preceded' }, // Hubble -> ISS
+    { id: 'tts-22', fromEventId: 'space-mars-pathfinder', toEventId: 'space-spirit', type: 'caused' },
+    { id: 'tts-23', fromEventId: 'space-spirit', toEventId: 'space-curiosity', type: 'caused' },
+    { id: 'tts-24', fromEventId: 'space-curiosity', toEventId: 'space-perseverance', type: 'caused' },
+    { id: 'tts-25', fromEventId: 'p12-8', toEventId: 'space-falcon-landing', type: 'preceded' }, // ISS -> SpaceX
+    { id: 'tts-26', fromEventId: 'space-falcon-landing', toEventId: 'space-gravitational-waves', type: 'related' },
+    { id: 'tts-27', fromEventId: 'space-gravitational-waves', toEventId: 'p12-25', type: 'related' }, // LIGO -> Black Hole Image
+    { id: 'tts-28', fromEventId: 'p12-25', toEventId: 'space-jwst', type: 'preceded' },
+    { id: 'tts-29', fromEventId: 'space-jwst', toEventId: 'space-artemis', type: 'related' },
+    { id: 'tts-30', fromEventId: 'space-artemis', toEventId: 'space-starship', type: 'related' },
+    { id: 'tts-31', fromEventId: 'space-perseverance', toEventId: 'space-starship', type: 'related' }, // Mars exploration -> Mars ship
+    { id: 'tts-32', fromEventId: 'modern-5', toEventId: 'space-goddard', type: 'influenced' } // Wright Bros -> Rockets
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -723,5 +757,52 @@ export const JOURNEYS: Journey[] = [
             'p6-20': { title: 'Imperial Coinage', description: 'Rome standardizes currency across the known world, proving that money is a function of State Power.' },
             'p12-14': { title: 'The Illusion Breaks (2008)', description: 'The Global Financial Crisis reveals that the modern economy is built on a web of complex promises that can vanish overnight.' }
         }
+    },
+    {
+        id: 'to-the-stars',
+        title: 'To The Stars: The Quest for the Cosmos',
+        description: 'From ancient stargazers to Mars colonizers—trace humanity\'s 5,000-year journey to escape Earth.',
+        thumbnailUrl: 'images/space-jwst.jpg',
+        eventIds: [
+            // Ancient Astronomy
+            'space-stonehenge',     // 3000 BCE
+            'space-ptolemy',        // 150 CE
+            // Scientific Revolution
+            'p8-20',                // 1543: Copernicus
+            'space-kepler',         // 1609
+            'p8-26',                // 1610: Galileo
+            'p8-30',                // 1687: Newton
+            'space-herschel',       // 1781
+            // Modern Physics & Rockets
+            'modern-5',             // 1903: Wright Brothers
+            'space-einstein',       // 1915
+            'space-goddard',        // 1926
+            'space-v2',             // 1944
+            // Space Race
+            'p11-14',               // 1957: Sputnik
+            'space-laika',          // 1957
+            'space-gagarin',        // 1961
+            'space-kennedy',        // 1962
+            'space-tereshkova',     // 1963
+            'space-spacewalk',      // 1965
+            'p11-24',               // 1969: Apollo 11
+            'space-voyager',        // 1977
+            'space-shuttle',        // 1981
+            // Deep Space Era
+            'space-hubble',         // 1990
+            'space-mars-pathfinder',// 1997
+            'p12-8',                // 2000: ISS
+            'space-spirit',         // 2004
+            'space-curiosity',      // 2012
+            'space-falcon-landing', // 2015
+            'space-gravitational-waves', // 2016
+            'p12-25',               // 2019: Black Hole Image
+            'space-perseverance',   // 2021
+            'space-jwst',           // 2022
+            'space-artemis',        // 2022
+            'space-starship'        // 2024
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('tts-')),
+        overrides: {}
     }
 ];
