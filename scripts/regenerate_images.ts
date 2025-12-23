@@ -140,6 +140,27 @@ function getEventsToRegenerate(args: string[]): EventToRegenerate[] {
                     });
                 }
             });
+
+            // check thumbnail
+            if (journey.thumbnailUrl) {
+                const thumbFile = journey.thumbnailUrl.split('/').pop()!;
+                const thumbPath = path.join(IMAGES_DIR, thumbFile);
+
+                // Add if missing or forcing (we don't have force flag yet, so just missing/small check?)
+                // Actually, if we are running for a journey, we usually want to regen all? 
+                // But the user asked why we *miss* it. 
+                // Let's add it if it's missing OR if we are doing a full regen.
+                // The current logic for events is: "Regenerate all events in the journey" (unconditional).
+                // So we should add the thumbnail unconditionally too.
+
+                events.push({
+                    id: `${journey.id}-thumbnail`,
+                    title: journey.title,
+                    description: journey.description,
+                    year: 'Journey Cover',
+                    imageFile: thumbFile
+                });
+            }
         } else {
             // Treat args as event IDs
             args.forEach(id => {
