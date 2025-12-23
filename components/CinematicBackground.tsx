@@ -11,14 +11,44 @@ const CinematicBackground: React.FC<CinematicBackgroundProps> = ({ imageUrl, isA
     const [isTransitioning, setIsTransitioning] = useState(false);
 
     useEffect(() => {
-        if (imageUrl !== displayedImage) {
-            setIsTransitioning(true);
-            const timer = setTimeout(() => {
-                setDisplayedImage(imageUrl);
-                setIsTransitioning(false);
-            }, 500); // Half of the transition duration for cross-fade feel
-            return () => clearTimeout(timer);
+        // New image is the same as current? Do nothing.
+        if (imageUrl === displayedImage) return;
+
+        // If no image provided, clear it immediately (or transition out?)
+        // Currently we just set it to null so it disappears/fades if we want logic for that?
+        // But if we want to crossfade to black?
+        // For now, let's treat empty imageUrl as "transition to nothing"
+        if (!imageUrl) {
+            setDisplayedImage(undefined);
+            return;
         }
+
+        let active = true;
+        setIsTransitioning(true);
+
+        const img = new Image();
+        img.src = imageUrl;
+
+        // Use decode() to ensure image is ready to paint, avoiding blank flashes
+        img.decode()
+            .then(() => {
+                if (active) {
+                    setDisplayedImage(imageUrl);
+                    setIsTransitioning(false);
+                }
+            })
+            .catch((err) => {
+                console.warn(`Failed to decode cinematic image: ${imageUrl}`, err);
+                // Fix: Clear the stale image if the new one fails to load to prevent context mismatch
+                if (active) {
+                    setDisplayedImage(undefined);
+                    setIsTransitioning(false);
+                }
+            });
+
+        return () => {
+            active = false;
+        };
     }, [imageUrl, displayedImage]);
 
     // If not active, we fade out entirely
