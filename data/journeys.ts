@@ -484,6 +484,99 @@ export const CONNECTIONS: Connection[] = [
 
 export const JOURNEYS: Journey[] = [
     {
+        id: 'cosmic-origins',
+        title: 'Cosmic Origins: The Beginning of Everything',
+        description: 'Trace the history of the universe from the Big Bang to the formation of our home planet.',
+        thumbnailUrl: 'images/cosmic-14.jpg',
+        eventIds: [
+            'cosmic-1', 'cosmic-2', '1', '2', 'cosmic-3',
+            '3', 'cosmic-5', '4', 'cosmic-7', 'cosmic-8',
+            'cosmic-9', '5', '6', 'cosmic-12', '7',
+            'cosmic-14', '8', 'cosmic-15', 'cosmic-16', 'cosmic-17',
+            '9', 'cosmic-19', 'cosmic-20', '10', '11',
+            '12', 'cosmic-24', 'cosmic-25', '15', 'cosmic-27',
+            '18'
+        ],
+        connections: CONNECTIONS.filter(c => !c.id.startsWith('eol-') && !c.id.startsWith('roc-') && !c.id.startsWith('eot-')),
+        overrides: {
+            '1': { // The Big Bang
+                title: 'The Primordial Eruption',
+                description: 'Before there was stars, before there was space, there was a single moment of perfect potential that erupted into everything we know.'
+            }
+        }
+    },
+    {
+        id: 'evolution-of-life',
+        title: 'The Vital Spark: Evolution of Life',
+        description: 'Witness the miraculous climb from single cells to complex consciousness, surviving five mass extinctions along the way.',
+        thumbnailUrl: 'images/p2-23.jpg',
+        eventIds: [
+            '18', '19', '20', '23', '24', '26', '27', '31',
+            'p2-1', 'p2-2', 'p2-3', 'p2-5', 'p2-6', 'p2-7',
+            'p2-9', 'p2-10', 'p2-11', 'p2-12', 'p2-13', 'p2-14',
+            'p2-15', 'p2-16', 'p2-17', 'p2-19', 'p2-21',
+            'p2-22', 'p2-23', 'p2-24', 'p2-25', 'p2-27',
+            'p2-28', 'p2-29', '41', '42',
+            // Human Evolution Extension
+            '45', '46', '47', '48', '49', '50', '51', '52', '53', '54',
+            '55', '56', '57', '58', '59', '60', '61', '62', '63', '64',
+            '65', '66', '67', 'p4-3'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('eol-')),
+        overrides: {}
+    },
+    {
+        id: 'rise-of-civilizations',
+        title: 'The Human Story: Rise of Civilizations',
+        description: 'From the first mud bricks of Jericho to the digital age—witness 11,500 years of human society, empires, revolutions, and transformation.',
+        thumbnailUrl: 'images/p6-25.jpg',
+        eventIds: [
+            // Phase 4-7: Ancient Origins (9500 BCE - 570 CE)
+            'p4-3', 'p4-9', 'p4-14', 'p4-25', 'p4-29', 'p4-30',
+            'p5-1', 'p5-2', 'p5-8', 'p5-9', 'p5-11', 'p5-15',
+            'p5-16', 'p5-17', 'p5-21', 'p5-24', 'p5-31',
+            'p6-1', 'p6-4', 'p6-9', 'p6-11', 'p6-18', 'p6-20',
+            'p6-21', 'p6-22', 'p6-28', 'p6-29', 'p6-30',
+            'p7-4', 'p7-6', 'p7-10', 'p7-12',
+            // Phase 7 continued: Medieval Period (622-1347 CE)
+            'p7-14', 'p7-15', 'p7-17', 'p7-19', 'p7-24', 'p7-26', 'p7-27', 'p7-31',
+            // Phase 8: Age of Exploration & Renaissance (1450-1750)
+            'p8-4', 'p8-5', 'p8-8', 'p8-13', 'p8-14', 'p8-16',
+            'p8-20', 'p8-24', 'p8-25', 'p8-29', 'p8-30', 'p8-31',
+            // Phase 9: Age of Revolutions (1765-1914)
+            'p9-1', 'p9-2', 'p9-4', 'p9-18', 'p9-21', 'p9-23',
+            'p9-26', 'p9-27', 'p9-28', 'p9-29', 'p9-30',
+            // Phase 10: World Wars (1914-1945)
+            'p10-1', 'p10-5', 'p10-7', 'p10-12', 'p10-14',
+            'p10-20', 'p10-23', 'p10-27', 'p10-31',
+            // Phase 11: Cold War (1945-1991)
+            'p11-1', 'p11-4', 'p11-8', 'p11-14', 'p11-16',
+            'p11-17', 'p11-18', 'p11-24', 'p11-29', 'p11-30',
+            // Phase 12: Digital Age (1991-2025)
+            'p12-3', 'p12-4', 'p12-7', 'p12-9', 'p12-11',
+            'p12-13', 'p12-21', 'p12-26', 'p12-29', 'p12-31'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('roc-')),
+        overrides: {}
+    },
+    {
+        id: 'history-of-art',
+        title: 'The Canvas of Time: History of Art',
+        description: 'Trace the evolution of human expression from the cave wall to the digital dream.',
+        thumbnailUrl: 'images/art-5.jpg',
+        eventIds: [
+            'art-1', 'art-venus', 'art-gobekli', 'p4-29', 'art-ur',
+            'art-nefertiti', 'p5-9', 'p6-11', 'art-terracotta',
+            'art-kells', 'art-fankuan', 'art-2', 'art-ife', 'art-3',
+            'art-arnolfini', 'modern-9', 'art-greatwave', 'art-4',
+            'art-5', 'art-starry', 'art-6', 'art-7', 'art-bauhaus',
+            'art-pollock', 'art-warhol', 'art-paik', 'art-basquiat',
+            'art-pixar', 'art-nft', 'art-8'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('hoa-')),
+        overrides: {}
+    },
+    {
         id: 'evolution-of-technology',
         title: 'Wires & Waves: Evolution of Technology',
         description: 'From the spark of the first fire to the neural networks of AI, trace the innovations that defined us.',
@@ -532,65 +625,6 @@ export const JOURNEYS: Journey[] = [
             'p12-13', 'p12-21', 'p12-26', 'p12-29', 'p12-31'
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('roc-')),
-        overrides: {}
-    },
-    {
-        id: 'cosmic-origins',
-        title: 'Cosmic Origins: The Beginning of Everything',
-        description: 'Trace the history of the universe from the Big Bang to the formation of our home planet.',
-        thumbnailUrl: 'images/cosmic-14.jpg',
-        eventIds: [
-            'cosmic-1', 'cosmic-2', '1', '2', 'cosmic-3',
-            '3', 'cosmic-5', '4', 'cosmic-7', 'cosmic-8',
-            'cosmic-9', '5', '6', 'cosmic-12', '7',
-            'cosmic-14', '8', 'cosmic-15', 'cosmic-16', 'cosmic-17',
-            '9', 'cosmic-19', 'cosmic-20', '10', '11',
-            '12', 'cosmic-24', 'cosmic-25', '15', 'cosmic-27',
-            '18'
-        ],
-        connections: CONNECTIONS.filter(c => !c.id.startsWith('eol-') && !c.id.startsWith('roc-') && !c.id.startsWith('eot-')),
-        overrides: {
-            '1': { // The Big Bang
-                title: 'The Primordial Eruption',
-                description: 'Before there was stars, before there was space, there was a single moment of perfect potential that erupted into everything we know.'
-            }
-        }
-    },
-    {
-        id: 'evolution-of-life',
-        title: 'The Vital Spark: Evolution of Life',
-        description: 'Witness the miraculous climb from single cells to complex consciousness, surviving five mass extinctions along the way.',
-        thumbnailUrl: 'images/p2-23.jpg',
-        eventIds: [
-            '18', '19', '20', '23', '24', '26', '27', '31',
-            'p2-1', 'p2-2', 'p2-3', 'p2-5', 'p2-6', 'p2-7',
-            'p2-9', 'p2-10', 'p2-11', 'p2-12', 'p2-13', 'p2-14',
-            'p2-15', 'p2-16', 'p2-17', 'p2-19', 'p2-21',
-            'p2-22', 'p2-23', 'p2-24', 'p2-25', 'p2-27',
-            'p2-28', 'p2-29', '41', '42',
-            // Human Evolution Extension
-            '45', '46', '47', '48', '49', '50', '51', '52', '53', '54',
-            '55', '56', '57', '58', '59', '60', '61', '62', '63', '64',
-            '65', '66', '67', 'p4-3'
-        ],
-        connections: CONNECTIONS.filter(c => c.id.startsWith('eol-')),
-        overrides: {}
-    },
-    {
-        id: 'history-of-art',
-        title: 'The Canvas of Time: History of Art',
-        description: 'Trace the evolution of human expression from the cave wall to the digital dream.',
-        thumbnailUrl: 'images/art-5.jpg',
-        eventIds: [
-            'art-1', 'art-venus', 'art-gobekli', 'p4-29', 'art-ur',
-            'art-nefertiti', 'p5-9', 'p6-11', 'art-terracotta',
-            'art-kells', 'art-fankuan', 'art-2', 'art-ife', 'art-3',
-            'art-arnolfini', 'modern-9', 'art-greatwave', 'art-4',
-            'art-5', 'art-starry', 'art-6', 'art-7', 'art-bauhaus',
-            'art-pollock', 'art-warhol', 'art-paik', 'art-basquiat',
-            'art-pixar', 'art-nft', 'art-8'
-        ],
-        connections: CONNECTIONS.filter(c => c.id.startsWith('hoa-')),
         overrides: {}
     },
     {
