@@ -7,7 +7,7 @@ import fs from 'fs';
 const PUBLIC_IMAGES_DIR = path.join(process.cwd(), 'public');
 
 describe('Data Integrity', () => {
-    describe('Events', () => {
+    describe('Event Schema', () => {
         it('should have unique IDs', () => {
             const ids = new Set<string>();
             ALL_EVENTS.forEach(event => {
@@ -20,31 +20,33 @@ describe('Data Integrity', () => {
             const VALID_PHASES = [
                 'Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5', 'Phase 6',
                 'Phase 7', 'Phase 8', 'Phase 9', 'Phase 10', 'Phase 11', 'Phase 12',
-                'Civilization', 'Industrial', 'Modern' // Legacy/Special phases
+                'Civilization', 'Industrial', 'Modern'
             ];
             const VALID_CATEGORIES = [
                 'Art', 'Civilization', 'Communications', 'Cosmology', 'Economy',
-                'Science', 'Technology', 'Transport', 'Life', 'Humanity', 'Philosophy' // From types.ts + actual usage
+                'Science', 'Technology', 'Transport', 'Life', 'Humanity', 'Philosophy'
             ];
 
             ALL_EVENTS.forEach(event => {
-                // Phase check
-                if (event.phase) {
-                    expect(VALID_PHASES).toContain(event.phase);
+                if (event.phase) expect(VALID_PHASES).toContain(event.phase);
+                if (event.category) expect(VALID_CATEGORIES).toContain(event.category);
+
+                if (event.semanticTags) {
+                    expect(Array.isArray(event.semanticTags)).toBe(true);
+                    event.semanticTags.forEach(tag => {
+                        expect(tag).toHaveProperty('type');
+                        expect(tag).toHaveProperty('value');
+                        expect(['Topic', 'Location', 'Entity', 'Period']).toContain(tag.type);
+                        expect(typeof tag.value).toBe('string');
+                        expect(tag.value.length).toBeGreaterThan(0);
+                    });
                 }
 
-                // Category check
-                if (event.category) {
-                    expect(VALID_CATEGORIES).toContain(event.category);
-                }
-
-                // Skip markers
                 if (event.type === 'phase_marker') return;
 
-                // Description check
                 expect(event.title).toBeTruthy();
                 expect(event.description).toBeTruthy();
-                expect(event.description.length).toBeGreaterThan(10); // Minimal content check
+                expect(event.description.length).toBeGreaterThan(10);
             });
         });
 
@@ -54,45 +56,15 @@ describe('Data Integrity', () => {
                 expect(Number.isNaN(event.yearNumeric)).toBe(false);
             });
         });
-
-        it('should have a corresponding image file on disk', () => {
-            // Define known missing images to allow tests to pass while we fix them
-            // This prevents the CI from breaking on known technical debt
-            // Define known missing images to allow tests to pass while we fix them
-            // This prevents the CI from breaking on known technical debt
-            const KNOWN_MISSING: string[] = [];
-
-            ALL_EVENTS.forEach(event => {
-                if (event.imageUrl && !event.imageUrl.startsWith('http')) {
-                    // Normalize path
-                    let relativePath = event.imageUrl;
-                    if (relativePath.startsWith(import.meta.env?.BASE_URL || '/')) {
-                        relativePath = relativePath.replace(import.meta.env?.BASE_URL || '/', '');
-                    }
-                    if (relativePath.startsWith('/')) relativePath = relativePath.substring(1);
-                    relativePath = relativePath.split('?')[0];
-
-                    const fullPath = path.join(PUBLIC_IMAGES_DIR, relativePath);
-
-                    if (!KNOWN_MISSING.includes(event.id)) {
-                        expect(fs.existsSync(fullPath), `Missing image for ${event.id}: ${relativePath}`).toBe(true);
-                    }
-                }
-            });
-        });
     });
 
-    describe('Journeys', () => {
+    describe('Journey Structure', () => {
         const eventIds = new Set(ALL_EVENTS.map(e => e.id));
 
         it('should have causality (connections)', () => {
             const VALID_CONNECTION_TYPES = ['caused', 'preceded', 'related', 'influenced'];
-
             JOURNEYS.forEach(journey => {
-                // 1. Must have connections array
                 expect(Array.isArray(journey.connections)).toBe(true);
-
-                // 2. Connections must be valid
                 if (journey.connections) {
                     journey.connections.forEach(conn => {
                         expect(eventIds.has(conn.fromEventId), `Journey ${journey.title}: Invalid fromEventId ${conn.fromEventId}`).toBe(true);
@@ -109,32 +81,6 @@ describe('Data Integrity', () => {
             });
         });
 
-        it('should have a valid thumbnail image', () => {
-            JOURNEYS.forEach(journey => {
-                expect(journey.thumbnailUrl).toBeDefined();
-                if (journey.thumbnailUrl) {
-                    const fullPath = path.join(PUBLIC_IMAGES_DIR, journey.thumbnailUrl);
-                    expect(fs.existsSync(fullPath), `Missing thumbnail for ${journey.title}: ${journey.thumbnailUrl}`).toBe(true);
-                }
-            });
-        });
-
-        it('should have unique images within the journey', () => {
-            JOURNEYS.forEach(journey => {
-                const imagesSeen = new Set<string>();
-                journey.eventIds.forEach(id => {
-                    const event = ALL_EVENTS.find(e => e && e.id === id);
-                    if (event && event.imageUrl) {
-                        // Normalize: remove query params
-                        const cleanUrl = event.imageUrl.split('?')[0];
-
-                        expect(imagesSeen.has(cleanUrl), `Journey "${journey.title}" has duplicate image: ${cleanUrl} (Event: ${id})`).toBe(false);
-                        imagesSeen.add(cleanUrl);
-                    }
-                });
-            });
-        });
-
         it('should reference existing events', () => {
             JOURNEYS.forEach(journey => {
                 journey.eventIds.forEach(id => {
@@ -142,14 +88,72 @@ describe('Data Integrity', () => {
                 });
             });
         });
+    });
+});
 
-        it('should have valid connections', () => {
-            JOURNEYS.forEach(journey => {
-                if (journey.connections) {
-                    journey.connections.forEach(conn => {
-                        expect(eventIds.has(conn.fromEventId), `Connection invalid from: ${conn.fromEventId}`).toBe(true);
-                        expect(eventIds.has(conn.toEventId), `Connection invalid to: ${conn.toEventId}`).toBe(true);
-                    });
+describe('Asset Verification', () => {
+    it('should have a corresponding image file on disk for every event', () => {
+        const KNOWN_MISSING: string[] = [];
+
+        ALL_EVENTS.forEach(event => {
+            if (event.imageUrl && !event.imageUrl.startsWith('http')) {
+                let relativePath = event.imageUrl;
+                if (relativePath.startsWith(import.meta.env?.BASE_URL || '/')) {
+                    relativePath = relativePath.replace(import.meta.env?.BASE_URL || '/', '');
+                }
+                if (relativePath.startsWith('/')) relativePath = relativePath.substring(1);
+                relativePath = relativePath.split('?')[0];
+
+                const fullPath = path.join(PUBLIC_IMAGES_DIR, relativePath);
+
+                if (!KNOWN_MISSING.includes(event.id)) {
+                    expect(fs.existsSync(fullPath), `Missing image for ${event.id}: ${relativePath}`).toBe(true);
+                }
+            }
+        });
+    });
+
+    it('should have a valid thumbnail image for every journey', () => {
+        JOURNEYS.forEach(journey => {
+            expect(journey.thumbnailUrl).toBeDefined();
+            if (journey.thumbnailUrl) {
+                const fullPath = path.join(PUBLIC_IMAGES_DIR, journey.thumbnailUrl);
+                expect(fs.existsSync(fullPath), `Missing thumbnail for ${journey.title}: ${journey.thumbnailUrl}`).toBe(true);
+            }
+        });
+    });
+
+    it('should have unique images (by content) within each journey', () => {
+        const crypto = require('crypto');
+
+        JOURNEYS.forEach(journey => {
+            const hashesSeen = new Map<string, string>();
+
+            journey.eventIds.forEach(id => {
+                const event = ALL_EVENTS.find(e => e && e.id === id);
+                if (event && event.imageUrl) {
+                    let relativePath = event.imageUrl;
+                    if (relativePath.startsWith(import.meta.env?.BASE_URL || '/')) {
+                        relativePath = relativePath.replace(import.meta.env?.BASE_URL || '/', '');
+                    }
+                    if (relativePath.startsWith('/')) relativePath = relativePath.substring(1);
+                    relativePath = relativePath.split('?')[0];
+
+                    const fullPath = path.join(PUBLIC_IMAGES_DIR, relativePath);
+
+                    if (fs.existsSync(fullPath)) {
+                        const stats = fs.statSync(fullPath);
+                        expect(stats.size).toBeGreaterThan(0);
+
+                        const fileBuffer = fs.readFileSync(fullPath);
+                        const hash = crypto.createHash('md5').update(fileBuffer).digest('hex');
+
+                        if (hashesSeen.has(hash)) {
+                            const originalId = hashesSeen.get(hash);
+                            throw new Error(`Journey "${journey.title}" has duplicate image content.\n   Event A: ${id}\n   Event B: ${originalId}\n   Image A: ${event.imageUrl}\n   Hash: ${hash}`);
+                        }
+                        hashesSeen.set(hash, id);
+                    }
                 }
             });
         });

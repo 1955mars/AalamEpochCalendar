@@ -9,7 +9,7 @@ export interface TimelineEvent {
   type?: 'event' | 'phase_marker';
   category?: EventCategory;
   phase?: string; // Legacy/Migration
-  tags?: string[]; // For semantic relationships and search
+  semanticTags?: SemanticTag[]; // For semantic relationships and search
 }
 
 export type EventCategory = 'Cosmology' | 'Life' | 'Humanity' | 'Civilization' | 'Science' | 'Technology' | 'Communications' | 'Transport' | 'Art' | 'Philosophy' | 'Economy';

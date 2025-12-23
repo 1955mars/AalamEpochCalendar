@@ -275,6 +275,7 @@ const App: React.FC = () => {
         isPaused={isPaused}
         duration={playbackSpeed}
         connections={activeConnections}
+        tags={activeEvent?.semanticTags}
         onJumpToEvent={handleJumpToEvent}
         onExit={handleExitSimulation}
       />

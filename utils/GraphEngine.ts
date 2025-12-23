@@ -75,4 +75,36 @@ export class GraphEngine {
             ...this.traceAncestry(primaryCause.event.id, depth - 1)
         ];
     }
+
+    /**
+     * Find the shortest path between two events using BFS.
+     */
+    public findPath(startId: string, endId: string): TimelineEvent[] | null {
+        if (!this.eventMap.has(startId) || !this.eventMap.has(endId)) return null;
+        if (startId === endId) return [this.eventMap.get(startId)!];
+
+        const queue: { id: string, path: TimelineEvent[] }[] = [{
+            id: startId,
+            path: [this.eventMap.get(startId)!]
+        }];
+        const visited = new Set<string>([startId]);
+
+        while (queue.length > 0) {
+            const { id, path } = queue.shift()!;
+
+            // Get effects (downstream)
+            const effects = this.getEffects(id);
+            for (const { event } of effects) {
+                if (!visited.has(event.id)) {
+                    visited.add(event.id);
+                    const newPath = [...path, event];
+                    if (event.id === endId) {
+                        return newPath;
+                    }
+                    queue.push({ id: event.id, path: newPath });
+                }
+            }
+        }
+        return null;
+    }
 }

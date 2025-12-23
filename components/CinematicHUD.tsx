@@ -1,7 +1,7 @@
 
 import React from 'react';
-import { TimelineEvent, Connection } from '../types';
-import { GitBranch, Fingerprint, ArrowRight, Zap, Link, List, X } from 'lucide-react';
+import { TimelineEvent, Connection, SemanticTag } from '../types';
+import { GitBranch, Fingerprint, ArrowRight, Zap, Link, List, X, Tag } from 'lucide-react';
 
 export interface ConnectionBadgeData {
     connection: Connection;
@@ -23,6 +23,7 @@ interface CinematicHUDProps {
     progress?: number;
     duration?: number;
     connections?: ConnectionBadgeData[];
+    tags?: SemanticTag[];
     onJumpToEvent?: (eventId: string) => void;
     onExit?: () => void;
 }
@@ -70,7 +71,7 @@ const PHASE_TITLES: Record<string, string> = {
     'Modern': 'The Future'
 };
 
-const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentIndex, totalEvents, onPause, onStop, onNext, onPrev, onSeek, isPaused, duration = 4000, connections = [], onJumpToEvent, onExit }) => {
+const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentIndex, totalEvents, onPause, onStop, onNext, onPrev, onSeek, isPaused, duration = 4000, connections = [], tags = [], onJumpToEvent, onExit }) => {
     const progressBarRef = React.useRef<HTMLDivElement>(null);
 
     if (!isActive || !event) return null;
@@ -135,6 +136,22 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                             </div>
                         </button>
                     ))}
+                    {/* Tags */}
+                    {tags && tags.length > 0 && (
+                        <div className="flex flex-wrap justify-center gap-2 mt-2 animate-in fade-in slide-in-from-top-2 duration-500 delay-200">
+                            {tags.map((tag, i) => (
+                                <div key={i} className="flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 border border-white/5 text-[10px] uppercase font-bold tracking-wider text-white/50">
+                                    <Tag size={10} className={
+                                        tag.type === 'Location' ? 'text-emerald-400' :
+                                            tag.type === 'Entity' ? 'text-amber-400' :
+                                                tag.type === 'Topic' ? 'text-purple-400' :
+                                                    'text-slate-400'
+                                    } />
+                                    <span>{tag.value}</span>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 {/* Year Label */}

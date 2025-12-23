@@ -50,6 +50,7 @@ Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned J
 - [x] **Homepage Refine**: "Poster" style cards, removed clutter.
 - [x] **Content Plan**: Defined 18-item "Traction" roadmap on homepage.
 - [x] **Engineering Overhaul**: Implemented "The Factory" (Scaffolder) and CI/CD Pipeline.
+- [x] **Verification Framework**: Added Offline Atlas Stitching (`verification_artifacts/`) and Agent Audit.
 - [x] **Deploy**: Live on `aalam.xyz`.
 
 ---

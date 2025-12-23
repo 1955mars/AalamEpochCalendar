@@ -60,9 +60,9 @@ const CachedImage: React.FC<CachedImageProps> = ({ src, fallbackSrc, className, 
           if (!response.ok) {
             throw new Error(`Failed to load: ${response.statusText}`);
           }
-          
+
           const blob = await response.blob();
-          
+
           // C. Save to Cache
           await saveImageToDB(src, blob);
 
@@ -75,8 +75,9 @@ const CachedImage: React.FC<CachedImageProps> = ({ src, fallbackSrc, className, 
       } catch (error) {
         // Silent fallback on error to keep UI clean
         if (isMounted) {
-          // Use fallback or a generic placeholder if fallback is missing
-          setImageSrc(fallbackSrc || 'https://picsum.photos/seed/error/600/400');
+          // Use fallback or a unique placeholder if fallback is missing
+          const seed = encodeURIComponent(alt || 'error');
+          setImageSrc(fallbackSrc || `https://picsum.photos/seed/${seed}/600/400`);
           setIsLoading(false);
         }
       }
@@ -96,7 +97,7 @@ const CachedImage: React.FC<CachedImageProps> = ({ src, fallbackSrc, className, 
       {isLoading && (
         <div className="absolute inset-0 bg-slate-300 animate-pulse z-10" />
       )}
-      
+
       {imageSrc && (
         <img
           src={imageSrc}
@@ -104,8 +105,9 @@ const CachedImage: React.FC<CachedImageProps> = ({ src, fallbackSrc, className, 
           className={`${className} ${isLoading ? 'opacity-0' : 'opacity-100'} transition-opacity duration-500`}
           {...props}
           onError={(e) => {
-               // Final safety net
-               (e.target as HTMLImageElement).src = fallbackSrc || 'https://picsum.photos/seed/error/600/400';
+            // Final safety net - usage unique seed based on alt text to avoid duplicates
+            const seed = encodeURIComponent(alt || 'error');
+            (e.target as HTMLImageElement).src = fallbackSrc || `https://picsum.photos/seed/${seed}/600/400`;
           }}
         />
       )}

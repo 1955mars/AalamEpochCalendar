@@ -205,7 +205,12 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: 'Formation of the Solar System',
     description: 'Order from Chaos. A spinning disk of dust coagulates into a family of planets, with our proto-sun acting as the fiery anchor.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/9.jpg',
-    phase: 'Phase 1'
+    phase: 'Phase 1',
+    semanticTags: [
+      { type: 'Location', value: 'Solar System' },
+      { type: 'Entity', value: 'Sun' },
+      { type: 'Topic', value: 'Astronomy' }
+    ]
   },
   {
     id: 'cosmic-19',
@@ -2833,7 +2838,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     description: 'Newton fixes the price of gold. The Gold Standard is born, tethering the abstract world of paper money to the physical reality of a rare metal.',
     phase: 'Modern',
     category: 'Economy',
-    imageUrl: 'https://image.pollinations.ai/prompt/Isaac%20Newton%20gold%20standard%20coins%20bars%20mahogany%20table%20cinematic?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-gold.jpg'
   },
   {
     id: 'money-card',
@@ -3116,7 +3121,13 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "Deep Blue Defeats Kasparov",
     description: "Brute force logic conquers human intuition in chess, a watershed moment for machine intelligence.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-deep-blue-defeats-kasparov.jpg',
-    category: 'Technology'
+    phase: 'Phase 12',
+    category: 'Technology',
+    semanticTags: [
+      { type: 'Topic', value: 'Artificial Intelligence' },
+      { type: 'Entity', value: 'IBM' },
+      { type: 'Entity', value: 'Garry Kasparov' }
+    ]
   },
   {
     id: 'ai-watson-wins-jeopardy',

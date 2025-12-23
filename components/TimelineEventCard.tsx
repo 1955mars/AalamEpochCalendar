@@ -30,7 +30,7 @@ const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, 
             src={event.imageUrl}
             alt={event.title}
             className="w-full h-full object-cover opacity-80 transition-opacity duration-500 group-hover:opacity-100 absolute inset-0"
-            fallbackSrc="https://picsum.photos/seed/phase_fallback/1600/900"
+            fallbackSrc={`https://picsum.photos/seed/${event.id}/1600/900`}
           />
 
           {/* Gradient Overlay */}
@@ -88,7 +88,7 @@ const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, 
               src={event.imageUrl}
               alt={event.title}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              fallbackSrc="https://picsum.photos/seed/fallback/600/400"
+              fallbackSrc={`https://picsum.photos/seed/${event.id}/600/400`}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
             <div className="absolute bottom-3 left-4 z-10">

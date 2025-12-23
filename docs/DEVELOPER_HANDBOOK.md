@@ -87,7 +87,14 @@ Located in `.github/workflows/ci.yml`. It runs on every push.
 3.  **The "No Clone" Rule**: No two events in the same journey can reuse the same image file.
 4.  **The "Thumbnail" Rule**: Every journey MUST have a cover image.
 5.  **The "Complete Data" Rule**: Events must have a valid `phase` and `category` from the allowed list.
-5.  **The "Causality" Rule**: Journeys must have a valid `connections` array linking events together.
+6.  **The "Causality" Rule**: Journeys must have a valid `connections` array linking events together.
+7.  **The "Visual Integrity" Rule**: All journeys must pass the offline atlas generation test (`tests/visual.test.ts`).
+
+### Visual Verification (Offline Atlas)
+We generate composite "Atlases" (long strips of all event images) to verify narrative flow without clicking through the UI.
+-   **Run**: `npx vitest tests/visual.test.ts`
+-   **Output**: `verification_artifacts/[journey-id]_composite.jpg`
+-   **Audit**: Review these artifacts to catch missing images or context mismatches.
 
 To run these checks locally:
 ```bash

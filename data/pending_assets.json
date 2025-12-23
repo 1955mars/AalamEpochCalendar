@@ -1,0 +1,415 @@
+[
+  {
+    "eventId": "cosmic-25",
+    "title": "Formation of First Oceans",
+    "description": "As Earth cools below the boiling point, water vapor in the atmosphere condenses and rains down for centuries.",
+    "imagePath": "images/cosmic-25.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "cosmic-27",
+    "title": "Delivery of Organics",
+    "description": "Comets and meteorites deliver water, amino acids, and other building blocks of life to the early Earth.",
+    "imagePath": "images/cosmic-27.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "25",
+    "title": "Banded Iron Formations (BIFs) Peak",
+    "description": "Rust-colored sedimentary rock layers form as rising ocean oxygen reacts with dissolved iron, clearing the way for free oxygen accumulation.",
+    "imagePath": "images/25.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "73",
+    "title": "End of the Last Ice Age (Holocene Begins)",
+    "description": "The Earth enters the current, relatively warm and stable interglacial period, setting the stage for the development of agriculture and settled civilization.",
+    "imagePath": "images/73.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p8-4",
+    "title": "The Printing Press",
+    "description": "The Democratization of Memory. Gutenberg's movable type crashes the cost of knowledge, breaking the elite's monopoly on truth and fueling the Reformation.",
+    "imagePath": "images/modern-9.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p10-1",
+    "title": "World War I Begins",
+    "description": "Declarations of war trigger massive conflict.",
+    "imagePath": "images/p10-1.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p10-4",
+    "title": "US Enters WWI",
+    "description": "US shifts balance of power.",
+    "imagePath": "images/p10-4.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-10",
+    "title": "China Joins WTO",
+    "description": "Accelerates global economic integration.",
+    "imagePath": "images/p12-10.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-13",
+    "title": "iPhone Released",
+    "description": "The Second Brain. The internet moves from the desk to the pocket, becoming a permanent prosthetic for the human mind.",
+    "imagePath": "images/p12-13.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-14",
+    "title": "Global Financial Crisis",
+    "description": "Recession triggered by housing collapse.",
+    "imagePath": "images/p12-14.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-15",
+    "title": "Bitcoin Launched",
+    "description": "Money Without Masters. The first separation of currency from state control using cryptographic truth.",
+    "imagePath": "images/p12-15.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-16",
+    "title": "Arab Spring",
+    "description": "Pro-democracy protests in Middle East.",
+    "imagePath": "images/p12-16.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-20",
+    "title": "Annexation of Crimea",
+    "description": "Russia seizes territory from Ukraine.",
+    "imagePath": "images/p12-20.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-22",
+    "title": "CRISPR Rising",
+    "description": "Gene editing technology adopts.",
+    "imagePath": "images/p12-22.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-23",
+    "title": "Brexit Vote",
+    "description": "UK votes to leave EU.",
+    "imagePath": "images/p12-23.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-24",
+    "title": "#MeToo Movement",
+    "description": "Global movement against abuse.",
+    "imagePath": "images/p12-24.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-26",
+    "title": "COVID-19 Pandemic",
+    "description": "Global lockdowns and vaccines.",
+    "imagePath": "images/p12-26.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "p12-31",
+    "title": "The Present Day",
+    "description": "End of known history.",
+    "imagePath": "images/p12-31.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "modern-9",
+    "title": "The Printing Press",
+    "description": "Gutenberg's invention democratizes knowledge, fueling the Renaissance and the Scientific Revolution.",
+    "imagePath": "images/modern-9.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "modern-11",
+    "title": "The Common Era Begins",
+    "description": "The approximate start of the Common Era (AD), used as the reference point for the modern calendar.",
+    "imagePath": "images/modern-11.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "modern-12",
+    "title": "Invention of Writing",
+    "description": "Cuneiform script emerges in Sumer, marking the dawn of recorded history.",
+    "imagePath": "images/modern-12.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "modern-13",
+    "title": "Invention of the Wheel",
+    "description": "The potter's wheel is adapted for transport, revolutionizing trade and warfare.",
+    "imagePath": "images/modern-13.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "art-ur",
+    "title": "Standard of Ur",
+    "description": "One of the earliest examples of visual narrative. Using distinct registers (comic-strip style), it formalized how we tell stories through images.",
+    "imagePath": "images/art-ur.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "art-paik",
+    "title": "Electronic Superhighway",
+    "description": "Nam June Paik uses television sets as sculpture. Video becomes a medium, predicting a world where we are constantly bathed in electronic light.",
+    "imagePath": "images/art-paik.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "art-basquiat",
+    "title": "The Radiant Child",
+    "description": "Basquiat brings the raw energy of graffiti into the gallery. A synthesis of street culture, jazz, and history that challenges the white-dominated art world.",
+    "imagePath": "images/art-basquiat.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "art-pixar",
+    "title": "The Digital Canvas (Toy Story)",
+    "description": "The first fully computer-animated feature film. The pixel replaces the brushstroke, offering a new dimension of control over light and texture.",
+    "imagePath": "images/art-pixar.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "art-nft",
+    "title": "The First 5000 Days",
+    "description": "Beeple's $69M sale proves that digital scarcity is possible. Code becomes the certificate of authenticity, upending the economics of art.",
+    "imagePath": "images/art-nft.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-hammurabi",
+    "title": "Code of Hammurabi",
+    "description": "The Debt Slate. One of the earliest legal codes formalizes interest rates and debt forgiveness, proving that debt is older than money itself.",
+    "imagePath": "images/money-hammurabi.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-debasement",
+    "title": "Roman Debasement",
+    "description": "The Silver Fade. Emperors dilute the silver content of the Denarius to pay armies, triggering the first great hyperinflationary crisis.",
+    "imagePath": "images/money-debasement.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-tally",
+    "title": "Tally Sticks",
+    "description": "The Wood Standard. England uses notched hazelwood sticks to record tax debts, a system of verified public record that lasts for centuries.",
+    "imagePath": "images/money-tally.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-potosi",
+    "title": "Mountain of Silver",
+    "description": "Potosí feeds the world. Spanish silver from the Andes floods the global economy, becoming the first universal currency (Pieces of Eight).",
+    "imagePath": "images/money-potosi.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-tulip",
+    "title": "Tulip Mania",
+    "description": "The Rational Bubble. The price of specialized bulbs skyrockets and crashes, demonstrating that market value is purely psychological.",
+    "imagePath": "images/money-tulip.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-boe",
+    "title": "Bank of England",
+    "description": "The Debt Machine. The bank is formed specifically to lend money to the government for war, inventing the concept of National Debt.",
+    "imagePath": "images/money-boe.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-mississippi",
+    "title": "Mississippi Bubble",
+    "description": "John Law's Experiment. France replaces gold with paper shares in a company that doesn't exist, proving paper money requires absolute trust.",
+    "imagePath": "images/money-mississippi.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-weimar",
+    "title": "Weimar Hyperinflation",
+    "description": "Death of a Currency. Printing money to pay war reparations turns cash into wallpaper, searing the fear of inflation into the German psyche.",
+    "imagePath": "images/money-weimar.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-bretton",
+    "title": "Bretton Woods",
+    "description": "The Dollar Standard. The world agrees to peg currencies to the US Dollar, which is pegged to gold, cementing American economic hegemony.",
+    "imagePath": "images/money-bretton.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-mpesa",
+    "title": "M-Pesa Revolution",
+    "description": "Banking the Unbanked. In Kenya, airtime becomes money. A mobile network bypasses traditional banks, showing the future of digital wallets.",
+    "imagePath": "images/money-mpesa.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-eth",
+    "title": "Ethereum Genesis",
+    "description": "Code is Law. Money becomes programmable. Smart contracts allow value to self-execute without human intermediaries.",
+    "imagePath": "images/money-eth.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-shekel",
+    "title": "The First Currency (Shekel)",
+    "description": "Grain becomes Money. In Sumer, barley is standardized into weight (shekels), transforming food into an abstract unit of account that can store value.",
+    "imagePath": "images/money-shekel.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-lydia",
+    "title": "The Lydian Lion",
+    "description": "The invention of the Coin. The State stamps a lion on electrum, guaranteeing weight and purity. Trust shifts from the metal itself to the King who minted it.",
+    "imagePath": "images/money-lydia.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-paper",
+    "title": "Flying Money (Jiaozi)",
+    "description": "China invents paper cash. Merchants realize that a slip of paper representing coins is lighter than the coins themselves. Value becomes symbolic.",
+    "imagePath": "images/money-paper.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-medici",
+    "title": "The Ledger (Medici Bank)",
+    "description": "The invention of modern banking. Money ceases to be a physical object and becomes an entry in a book (Credit), allowing value to be teleported across Europe.",
+    "imagePath": "images/money-medici.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "money-card",
+    "title": "The Plastic Card",
+    "description": "Diners Club introduces the credit card. Money becomes invisible, a frictionless promise to pay later, fueling the consumer age.",
+    "imagePath": "images/money-card.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-leibniz-binary-system",
+    "title": "Leibniz Binary System",
+    "description": "Gottfried Wilhelm Leibniz perfects binary arithmetic, the language of 0s and 1s that will one day speak for all machines.",
+    "imagePath": "images/ai-leibniz-binary-system.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-the-difference-engine",
+    "title": "The Difference Engine",
+    "description": "Charles Babbage designs the first automatic mechanical calculator, dreaming of a machine that can crunch numbers without human error.",
+    "imagePath": "images/ai-the-difference-engine.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-pitts-mcculloch-neuron",
+    "title": "Pitts & McCulloch Neuron",
+    "description": "The first mathematical model of a neural network.",
+    "imagePath": "images/ai-pitts-mcculloch-neuron.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-cybernetics",
+    "title": "Cybernetics",
+    "description": "Norbert Wiener defines the study of control and communication in the animal and the machine.",
+    "imagePath": "images/ai-cybernetics.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-asimovs-three-laws",
+    "title": "Asimov's Three Laws",
+    "description": "Science fiction lays the ethical groundwork for robotics before the technology even exists.",
+    "imagePath": "images/ai-asimovs-three-laws.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-the-logic-theorist",
+    "title": "The Logic Theorist",
+    "description": "Often called the first AI program, written by Newell, Shaw, and Simon to mimic human problem-solving skills.",
+    "imagePath": "images/ai-the-logic-theorist.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-eliza",
+    "title": "ELIZA",
+    "description": "Joseph Weizenbaum creates the first chatbot, demonstrating how easily humans attribute emotion to simple code.",
+    "imagePath": "images/ai-eliza.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-perceptrons-book",
+    "title": "Perceptrons Book",
+    "description": "Minsky and Papert publish a critique of neural networks that inadvertently freezes funding for a decade (AI Winter).",
+    "imagePath": "images/ai-perceptrons-book.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-expert-systems",
+    "title": "Expert Systems",
+    "description": "AI finds commercial success by mimicking the decision-making ability of a human expert in specific domains.",
+    "imagePath": "images/ai-expert-systems.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-backpropagation",
+    "title": "Backpropagation",
+    "description": "Hinton and colleagues popularize the algorithm that allows neural networks to learn from their mistakes, ending the AI winter.",
+    "imagePath": "images/ai-backpropagation.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-deep-blue-defeats-kasparov",
+    "title": "Deep Blue Defeats Kasparov",
+    "description": "Brute force logic conquers human intuition in chess, a watershed moment for machine intelligence.",
+    "imagePath": "images/ai-deep-blue-defeats-kasparov.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-watson-wins-jeopardy",
+    "title": "Watson Wins Jeopardy",
+    "description": "IBM's Watson demonstrates that machines can understand natural language processing and nuance.",
+    "imagePath": "images/ai-watson-wins-jeopardy.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-imagenet-breakthrough",
+    "title": "ImageNet Breakthrough",
+    "description": "AlexNet smashes error rates in image recognition, proving the power of Deep Learning and GPUs.",
+    "imagePath": "images/ai-imagenet-breakthrough.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-alphago-zero",
+    "title": "AlphaGo Zero",
+    "description": "AI teaches itself Go without human data, creating strategies alien to 3,000 years of human history.",
+    "imagePath": "images/ai-alphago-zero.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-gpt-3",
+    "title": "GPT-3",
+    "description": "OpenAI releases a language model so powerful it blurs the line between human and machine writing.",
+    "imagePath": "images/ai-gpt-3.jpg",
+    "status": "pending"
+  },
+  {
+    "eventId": "ai-generative-reality",
+    "title": "Generative Reality",
+    "description": "AI moves beyond text to creating video, code, and virtual worlds, challenging the nature of creativity itself.",
+    "imagePath": "images/ai-generative-reality.jpg",
+    "status": "pending"
+  }
+]
