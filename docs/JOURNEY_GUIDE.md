@@ -56,19 +56,23 @@ A journey consists of:
 ## 3. Verification Commands
 
 ```bash
-# Run narrative tests (checks for orphans)
-npx vitest run tests/narrative.test.ts
+# Quick verify (data + narrative tests)
+npm run verify
+
+# Full verify (tests + build)
+npm run verify:full
+
+# Validate images (missing, size, duplicates)
+npm run verify:images
+npm run verify:images cosmic-origins  # specific journey
 
 # Generate visual atlas for manual review
-npx tsx scripts/stitch_atlas.ts <journey-id>
+npm run verify:atlas <journey-id>
 
-# Print narrative flow
-npx tsx scripts/print_journey_narrative.ts <journey-id>
-
-# Check image file sizes
-for img in public/images/<prefix>-*.jpg; do
-  stat -f "%z %N" "$img"
-done
+# Regenerate images
+npm run regenerate:images <journey-id>       # all images for journey
+npm run regenerate:images <event-id> [...]   # specific events
+npm run regenerate:images --missing          # only missing/corrupt
 ```
 
 ---

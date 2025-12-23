@@ -7,11 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "verify-assets": "node scripts/verify-images.cjs",
-    "generate:images": "npx tsx scripts/generate_images.ts",
-    "migrate": "npx tsx scripts/migrate_constants.ts",
-    "deploy": "gh-pages -d dist",
-    "test": "vitest"
+    "test": "vitest",
+    "verify": "vitest run tests/data.test.ts tests/narrative.test.ts",
+    "verify:full": "npm run verify && npm run build",
+    "verify:atlas": "npx tsx scripts/stitch_atlas.ts",
+    "verify:images": "npx tsx scripts/validate_images.ts",
+    "regenerate:images": "npx tsx scripts/regenerate_images.ts",
+    "scaffold": "npx tsx scripts/scaffold.ts",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@google/genai": "^1.30.0",
