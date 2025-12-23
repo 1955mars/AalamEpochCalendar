@@ -51,9 +51,18 @@ const main = async () => {
         console.log(`⬇️ Downloading image for event ${event.id}: ${imageUrl}`);
 
         try {
+            let shouldDownload = true;
             if (fs.existsSync(localPath)) {
-                console.log(`  - File already exists: ${filename}, skipping download.`);
-            } else {
+                const stats = fs.statSync(localPath);
+                if (stats.size > 1000) {
+                    console.log(`  - File exists and is valid (${stats.size} bytes): ${filename}, skipping.`);
+                    shouldDownload = false;
+                } else {
+                    console.log(`  - File exists but is a PLACEHOLDER (${stats.size} bytes): ${filename}, overwriting...`);
+                }
+            }
+
+            if (shouldDownload) {
                 await downloadImage(imageUrl, localPath);
                 // Add a small delay to avoid hammering the server too hard
                 await new Promise(r => setTimeout(r, 500));

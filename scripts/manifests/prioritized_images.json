@@ -1,0 +1,370 @@
+[
+  {
+    "id": "p12-13",
+    "path": "images/p12-13.jpg",
+    "title": "iPhone Released",
+    "description": "The Second Brain. The internet moves from the desk to the pocket, becoming a permanent prosthetic for the human mind.",
+    "prompt": "The Second Brain. The internet moves from the desk to the pocket, becoming a permanent prosthetic for the human mind. in style of Historical, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "p12-14",
+    "path": "images/p12-14.jpg",
+    "title": "Global Financial Crisis",
+    "description": "Recession triggered by housing collapse.",
+    "prompt": "Recession triggered by housing collapse. in style of Historical, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "p12-15",
+    "path": "images/p12-15.jpg",
+    "title": "Bitcoin Launched",
+    "description": "Money Without Masters. The first separation of currency from state control using cryptographic truth.",
+    "prompt": "Money Without Masters. The first separation of currency from state control using cryptographic truth. in style of Historical, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "p12-22",
+    "path": "images/p12-22.jpg",
+    "title": "CRISPR Rising",
+    "description": "Gene editing technology adopts.",
+    "prompt": "Gene editing technology adopts. in style of Historical, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "modern-12",
+    "path": "images/modern-12.jpg",
+    "title": "Invention of Writing",
+    "description": "The first external hard drive. In Sumer, accountants press reeds into wet clay, inventing a system to freeze thought in time. Writing allows humanity to converse across millennia, birthing history itself.",
+    "prompt": "The first external hard drive. In Sumer, accountants press reeds into wet clay, inventing a system to freeze thought in time. Writing allows humanity to converse across millennia, birthing history itself. in style of Communications, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "modern-13",
+    "path": "images/modern-13.jpg",
+    "title": "Invention of the Wheel",
+    "description": "Motion Unbound. Humanity breaks the friction of the earth. With the wheel, we could carry more than we could lift and travel faster than we could walk.",
+    "prompt": "Motion Unbound. Humanity breaks the friction of the earth. With the wheel, we could carry more than we could lift and travel faster than we could walk. in style of Transport, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "art-ur",
+    "path": "images/art-ur.jpg",
+    "title": "Standard of Ur",
+    "description": "One of the earliest examples of visual narrative. Using distinct registers (comic-strip style), it formalized how we tell stories through images.",
+    "prompt": "One of the earliest examples of visual narrative. Using distinct registers (comic-strip style), it formalized how we tell stories through images. in style of Art, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "art-paik",
+    "path": "images/art-paik.jpg",
+    "title": "Electronic Superhighway",
+    "description": "Nam June Paik uses television sets as sculpture. Video becomes a medium, predicting a world where we are constantly bathed in electronic light.",
+    "prompt": "Nam June Paik uses television sets as sculpture. Video becomes a medium, predicting a world where we are constantly bathed in electronic light. in style of Art, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "art-basquiat",
+    "path": "images/art-basquiat.jpg",
+    "title": "The Radiant Child",
+    "description": "Basquiat brings the raw energy of graffiti into the gallery. A synthesis of street culture, jazz, and history that challenges the white-dominated art world.",
+    "prompt": "Basquiat brings the raw energy of graffiti into the gallery. A synthesis of street culture, jazz, and history that challenges the white-dominated art world. in style of Art, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "art-pixar",
+    "path": "images/art-pixar.jpg",
+    "title": "The Digital Canvas (Toy Story)",
+    "description": "The first fully computer-animated feature film. The pixel replaces the brushstroke, offering a new dimension of control over light and texture.",
+    "prompt": "The first fully computer-animated feature film. The pixel replaces the brushstroke, offering a new dimension of control over light and texture. in style of Art, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "art-nft",
+    "path": "images/art-nft.jpg",
+    "title": "The First 5000 Days",
+    "description": "Beeple's $69M sale proves that digital scarcity is possible. Code becomes the certificate of authenticity, upending the economics of art.",
+    "prompt": "Beeple's $69M sale proves that digital scarcity is possible. Code becomes the certificate of authenticity, upending the economics of art. in style of Art, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-hammurabi",
+    "path": "images/money-hammurabi.jpg",
+    "title": "Code of Hammurabi",
+    "description": "The Debt Slate. One of the earliest legal codes formalizes interest rates and debt forgiveness, proving that debt is older than money itself.",
+    "prompt": "The Debt Slate. One of the earliest legal codes formalizes interest rates and debt forgiveness, proving that debt is older than money itself. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-debasement",
+    "path": "images/money-debasement.jpg",
+    "title": "Roman Debasement",
+    "description": "The Silver Fade. Emperors dilute the silver content of the Denarius to pay armies, triggering the first great hyperinflationary crisis.",
+    "prompt": "The Silver Fade. Emperors dilute the silver content of the Denarius to pay armies, triggering the first great hyperinflationary crisis. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-tally",
+    "path": "images/money-tally.jpg",
+    "title": "Tally Sticks",
+    "description": "The Wood Standard. England uses notched hazelwood sticks to record tax debts, a system of verified public record that lasts for centuries.",
+    "prompt": "The Wood Standard. England uses notched hazelwood sticks to record tax debts, a system of verified public record that lasts for centuries. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-potosi",
+    "path": "images/money-potosi.jpg",
+    "title": "Mountain of Silver",
+    "description": "Potosí feeds the world. Spanish silver from the Andes floods the global economy, becoming the first universal currency (Pieces of Eight).",
+    "prompt": "Potosí feeds the world. Spanish silver from the Andes floods the global economy, becoming the first universal currency (Pieces of Eight). in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-tulip",
+    "path": "images/money-tulip.jpg",
+    "title": "Tulip Mania",
+    "description": "The Rational Bubble. The price of specialized bulbs skyrockets and crashes, demonstrating that market value is purely psychological.",
+    "prompt": "The Rational Bubble. The price of specialized bulbs skyrockets and crashes, demonstrating that market value is purely psychological. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-boe",
+    "path": "images/money-boe.jpg",
+    "title": "Bank of England",
+    "description": "The Debt Machine. The bank is formed specifically to lend money to the government for war, inventing the concept of National Debt.",
+    "prompt": "The Debt Machine. The bank is formed specifically to lend money to the government for war, inventing the concept of National Debt. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-mississippi",
+    "path": "images/money-mississippi.jpg",
+    "title": "Mississippi Bubble",
+    "description": "John Law's Experiment. France replaces gold with paper shares in a company that doesn't exist, proving paper money requires absolute trust.",
+    "prompt": "John Law's Experiment. France replaces gold with paper shares in a company that doesn't exist, proving paper money requires absolute trust. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-weimar",
+    "path": "images/money-weimar.jpg",
+    "title": "Weimar Hyperinflation",
+    "description": "Death of a Currency. Printing money to pay war reparations turns cash into wallpaper, searing the fear of inflation into the German psyche.",
+    "prompt": "Death of a Currency. Printing money to pay war reparations turns cash into wallpaper, searing the fear of inflation into the German psyche. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-bretton",
+    "path": "images/money-bretton.jpg",
+    "title": "Bretton Woods",
+    "description": "The Dollar Standard. The world agrees to peg currencies to the US Dollar, which is pegged to gold, cementing American economic hegemony.",
+    "prompt": "The Dollar Standard. The world agrees to peg currencies to the US Dollar, which is pegged to gold, cementing American economic hegemony. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-mpesa",
+    "path": "images/money-mpesa.jpg",
+    "title": "M-Pesa Revolution",
+    "description": "Banking the Unbanked. In Kenya, airtime becomes money. A mobile network bypasses traditional banks, showing the future of digital wallets.",
+    "prompt": "Banking the Unbanked. In Kenya, airtime becomes money. A mobile network bypasses traditional banks, showing the future of digital wallets. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-eth",
+    "path": "images/money-eth.jpg",
+    "title": "Ethereum Genesis",
+    "description": "Code is Law. Money becomes programmable. Smart contracts allow value to self-execute without human intermediaries.",
+    "prompt": "Code is Law. Money becomes programmable. Smart contracts allow value to self-execute without human intermediaries. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-shekel",
+    "path": "images/money-shekel.jpg",
+    "title": "The First Currency (Shekel)",
+    "description": "Grain becomes Money. In Sumer, barley is standardized into weight (shekels), transforming food into an abstract unit of account that can store value.",
+    "prompt": "Grain becomes Money. In Sumer, barley is standardized into weight (shekels), transforming food into an abstract unit of account that can store value. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-lydia",
+    "path": "images/money-lydia.jpg",
+    "title": "The Lydian Lion",
+    "description": "The invention of the Coin. The State stamps a lion on electrum, guaranteeing weight and purity. Trust shifts from the metal itself to the King who minted it.",
+    "prompt": "The invention of the Coin. The State stamps a lion on electrum, guaranteeing weight and purity. Trust shifts from the metal itself to the King who minted it. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-paper",
+    "path": "images/money-paper.jpg",
+    "title": "Flying Money (Jiaozi)",
+    "description": "China invents paper cash. Merchants realize that a slip of paper representing coins is lighter than the coins themselves. Value becomes symbolic.",
+    "prompt": "China invents paper cash. Merchants realize that a slip of paper representing coins is lighter than the coins themselves. Value becomes symbolic. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "modern-paper",
+    "path": "images/modern-paper.jpg",
+    "title": "Invention of Paper",
+    "description": "The Canvas of Thought. Cai Lun standardizes papermaking in China. Knowledge leaves the heavy clay tablet and the expensive scroll, becoming light, cheap, and infinite.",
+    "prompt": "The Canvas of Thought. Cai Lun standardizes papermaking in China. Knowledge leaves the heavy clay tablet and the expensive scroll, becoming light, cheap, and infinite. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "modern-archimedes",
+    "path": "images/modern-archimedes.jpg",
+    "title": "Archimedes' Engines",
+    "description": "Give me a lever long enough. In Syracuse, Archimedes lays the foundations of mechanics and hydrostatics. His screw pumps water, his claw lifts ships, demonstrating that the physical world obeys mathematical laws.",
+    "prompt": "Give me a lever long enough. In Syracuse, Archimedes lays the foundations of mechanics and hydrostatics. His screw pumps water, his claw lifts ships, demonstrating that the physical world obeys mathematical laws. in style of Science, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "modern-compass",
+    "path": "images/modern-compass.jpg",
+    "title": "The Magnetic Compass",
+    "description": "The south-pointing fish. Chinese scholars discover that a lodestone needle floats to align with the Earth's invisible field. This subtle force would eventually guide ships across open oceans, mapping the entire globe.",
+    "prompt": "The south-pointing fish. Chinese scholars discover that a lodestone needle floats to align with the Earth's invisible field. This subtle force would eventually guide ships across open oceans, mapping the entire globe. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-antikythera",
+    "path": "images/ai-antikythera.jpg",
+    "title": "The Antikythera Mechanism",
+    "description": "An ancient bronze computer lost to the sea. This clockwork cosmos predicted celestial movements with gear ratios of astonishing precision, a level of analog computing that would not be seen again for a thousand years.",
+    "prompt": "An ancient bronze computer lost to the sea. This clockwork cosmos predicted celestial movements with gear ratios of astonishing precision, a level of analog computing that would not be seen again for a thousand years. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-medici",
+    "path": "images/money-medici.jpg",
+    "title": "The Ledger (Medici Bank)",
+    "description": "The invention of modern banking. Money ceases to be a physical object and becomes an entry in a book (Credit), allowing value to be teleported across Europe.",
+    "prompt": "The invention of modern banking. Money ceases to be a physical object and becomes an entry in a book (Credit), allowing value to be teleported across Europe. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "money-card",
+    "path": "images/money-card.jpg",
+    "title": "The Plastic Card",
+    "description": "Diners Club introduces the credit card. Money becomes invisible, a frictionless promise to pay later, fueling the consumer age.",
+    "prompt": "Diners Club introduces the credit card. Money becomes invisible, a frictionless promise to pay later, fueling the consumer age. in style of Economy, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-leibniz-binary-system",
+    "path": "images/ai-leibniz-binary-system.jpg",
+    "title": "Leibniz Binary System",
+    "description": "Gottfried Wilhelm Leibniz perfects binary arithmetic, the language of 0s and 1s that will one day speak for all machines.",
+    "prompt": "Gottfried Wilhelm Leibniz perfects binary arithmetic, the language of 0s and 1s that will one day speak for all machines. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-the-difference-engine",
+    "path": "images/ai-the-difference-engine.jpg",
+    "title": "The Difference Engine",
+    "description": "Charles Babbage designs the first automatic mechanical calculator, dreaming of a machine that can crunch numbers without human error.",
+    "prompt": "Charles Babbage designs the first automatic mechanical calculator, dreaming of a machine that can crunch numbers without human error. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-pitts-mcculloch-neuron",
+    "path": "images/ai-pitts-mcculloch-neuron.jpg",
+    "title": "Pitts & McCulloch Neuron",
+    "description": "The first mathematical model of a neural network.",
+    "prompt": "The first mathematical model of a neural network. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-cybernetics",
+    "path": "images/ai-cybernetics.jpg",
+    "title": "Cybernetics",
+    "description": "Norbert Wiener defines the study of control and communication in the animal and the machine.",
+    "prompt": "Norbert Wiener defines the study of control and communication in the animal and the machine. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-asimovs-three-laws",
+    "path": "images/ai-asimovs-three-laws.jpg",
+    "title": "Asimov's Three Laws",
+    "description": "Science fiction lays the ethical groundwork for robotics before the technology even exists.",
+    "prompt": "Science fiction lays the ethical groundwork for robotics before the technology even exists. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-the-logic-theorist",
+    "path": "images/ai-the-logic-theorist.jpg",
+    "title": "The Logic Theorist",
+    "description": "Often called the first AI program, written by Newell, Shaw, and Simon to mimic human problem-solving skills.",
+    "prompt": "Often called the first AI program, written by Newell, Shaw, and Simon to mimic human problem-solving skills. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-eliza",
+    "path": "images/ai-eliza.jpg",
+    "title": "ELIZA",
+    "description": "Joseph Weizenbaum creates the first chatbot, demonstrating how easily humans attribute emotion to simple code.",
+    "prompt": "Joseph Weizenbaum creates the first chatbot, demonstrating how easily humans attribute emotion to simple code. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-perceptrons-book",
+    "path": "images/ai-perceptrons-book.jpg",
+    "title": "Perceptrons Book",
+    "description": "Minsky and Papert publish a critique of neural networks that inadvertently freezes funding for a decade (AI Winter).",
+    "prompt": "Minsky and Papert publish a critique of neural networks that inadvertently freezes funding for a decade (AI Winter). in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-expert-systems",
+    "path": "images/ai-expert-systems.jpg",
+    "title": "Expert Systems",
+    "description": "AI finds commercial success by mimicking the decision-making ability of a human expert in specific domains.",
+    "prompt": "AI finds commercial success by mimicking the decision-making ability of a human expert in specific domains. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-backpropagation",
+    "path": "images/ai-backpropagation.jpg",
+    "title": "Backpropagation",
+    "description": "Hinton and colleagues popularize the algorithm that allows neural networks to learn from their mistakes, ending the AI winter.",
+    "prompt": "Hinton and colleagues popularize the algorithm that allows neural networks to learn from their mistakes, ending the AI winter. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-watson-wins-jeopardy",
+    "path": "images/ai-watson-wins-jeopardy.jpg",
+    "title": "Watson Wins Jeopardy",
+    "description": "IBM's Watson demonstrates that machines can understand natural language processing and nuance.",
+    "prompt": "IBM's Watson demonstrates that machines can understand natural language processing and nuance. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-imagenet-breakthrough",
+    "path": "images/ai-imagenet-breakthrough.jpg",
+    "title": "ImageNet Breakthrough",
+    "description": "AlexNet smashes error rates in image recognition, proving the power of Deep Learning and GPUs.",
+    "prompt": "AlexNet smashes error rates in image recognition, proving the power of Deep Learning and GPUs. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-alphago-zero",
+    "path": "images/ai-alphago-zero.jpg",
+    "title": "AlphaGo Zero",
+    "description": "AI teaches itself Go without human data, creating strategies alien to 3,000 years of human history.",
+    "prompt": "AI teaches itself Go without human data, creating strategies alien to 3,000 years of human history. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-gpt-3",
+    "path": "images/ai-gpt-3.jpg",
+    "title": "GPT-3",
+    "description": "OpenAI releases a language model so powerful it blurs the line between human and machine writing.",
+    "prompt": "OpenAI releases a language model so powerful it blurs the line between human and machine writing. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  },
+  {
+    "id": "ai-generative-reality",
+    "path": "images/ai-generative-reality.jpg",
+    "title": "Generative Reality",
+    "description": "AI moves beyond text to creating video, code, and virtual worlds, challenging the nature of creativity itself.",
+    "prompt": "AI moves beyond text to creating video, code, and virtual worlds, challenging the nature of creativity itself. in style of Technology, cinematic, photorealistic, high resolution, 8k",
+    "status": "PENDING"
+  }
+]

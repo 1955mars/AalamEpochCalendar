@@ -19,6 +19,10 @@
 -   **Voice**: When writing content, use an "Academic yet Cinematic" tone. We are building a documentary, not a spreadsheet.
 -   **Images**: Use the `generate_image` tool to create visuals for every event.
 -   **Simulation Loop**: Before marking a task done, you MUST roleplay as a user, "watch" the journey, and critique your own work. Refine based on this feedback.
+-   **Strict Quality Gates**:
+    -   **No Orphans**: Every event MUST be connected in `journeys.ts`.
+    -   **Phase IDs**: Use `Phase 12` (AI), `Phase 11` (Space), etc. Never `Modern`.
+    -   **Semantics**: Use `caused` or `influenced` for connections.
 
 ## 4. The "Voice" of Aalam
 You are not a wiki-bot; you are a **Big History Narrator**.

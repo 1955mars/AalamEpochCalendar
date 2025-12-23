@@ -217,6 +217,32 @@ export const CONNECTIONS: Connection[] = [
     { id: 'eol-32', fromEventId: 'p2-29', toEventId: '41', type: 'caused' }, // Extinction -> Mammals
     { id: 'eol-33', fromEventId: '41', toEventId: '42', type: 'preceded' },
 
+    // Human Evolution Extension
+    { id: 'eol-34', fromEventId: '42', toEventId: '45', type: 'preceded' }, // Primates -> Cooling
+    { id: 'eol-35', fromEventId: '45', toEventId: '46', type: 'caused' }, // Cooling -> Ape Divergence
+    { id: 'eol-36', fromEventId: '46', toEventId: '47', type: 'preceded' }, // Apes -> Hominins
+    { id: 'eol-37', fromEventId: '47', toEventId: '48', type: 'caused' }, // Hominins -> Bipedalism
+    { id: 'eol-38', fromEventId: '48', toEventId: '49', type: 'preceded' }, // Bipedalism -> Ardi
+    { id: 'eol-39', fromEventId: '49', toEventId: '50', type: 'preceded' }, // Ardi -> Australopithecus
+    { id: 'eol-40', fromEventId: '50', toEventId: '51', type: 'related' }, // Australo -> Footprints
+    { id: 'eol-41', fromEventId: '51', toEventId: '52', type: 'related' }, // Footprints -> Lucy
+    { id: 'eol-42', fromEventId: '52', toEventId: '53', type: 'preceded' }, // Lucy -> Tools
+    { id: 'eol-43', fromEventId: '53', toEventId: '54', type: 'caused' }, // Tools -> Homo
+    { id: 'eol-44', fromEventId: '54', toEventId: '55', type: 'preceded' }, // Homo -> Aridification
+    { id: 'eol-45', fromEventId: '55', toEventId: '56', type: 'caused' }, // Climate -> H. erectus
+    { id: 'eol-46', fromEventId: '56', toEventId: '57', type: 'caused' }, // H. erectus -> Out of Africa
+    { id: 'eol-47', fromEventId: '57', toEventId: '58', type: 'related' }, // Migration -> Hand Axes
+    { id: 'eol-48', fromEventId: '58', toEventId: '59', type: 'preceded' }, // Axes -> Fire
+    { id: 'eol-49', fromEventId: '59', toEventId: '60', type: 'caused' }, // Fire -> Europe
+    { id: 'eol-50', fromEventId: '60', toEventId: '61', type: 'preceded' }, // Europe -> Neanderthals
+    { id: 'eol-51', fromEventId: '61', toEventId: '62', type: 'related' }, // Neanderthals -> Spears
+    { id: 'eol-52', fromEventId: '62', toEventId: '63', type: 'preceded' }, // Spears -> H. sapiens
+    { id: 'eol-53', fromEventId: '63', toEventId: '64', type: 'related' }, // H. sapiens -> Mito Eve
+    { id: 'eol-54', fromEventId: '64', toEventId: '65', type: 'preceded' }, // Eve -> Ice Age
+    { id: 'eol-55', fromEventId: '65', toEventId: '66', type: 'caused' }, // Ice Age -> Cognitive Rev
+    { id: 'eol-56', fromEventId: '66', toEventId: '67', type: 'caused' }, // Cognitive -> Out of Africa 2
+    { id: 'eol-57', fromEventId: '67', toEventId: 'p4-3', type: 'caused' }, // Migration -> Agriculture
+
     // Rise of Civilizations Connections
     { id: 'roc-1', fromEventId: 'p4-3', toEventId: 'p4-9', type: 'related' }, // Jericho -> Rice (Agriculture Spread)
     { id: 'roc-2', fromEventId: 'p4-9', toEventId: 'p4-14', type: 'related' }, // Rice -> Catalhoyuk (Urbanization)
@@ -245,13 +271,82 @@ export const CONNECTIONS: Connection[] = [
     { id: 'roc-25', fromEventId: 'p6-29', toEventId: 'p7-6', type: 'preceded' }, // Qin/Han -> Han Fall
     { id: 'roc-26', fromEventId: 'p6-30', toEventId: 'p7-4', type: 'related' }, // Rome -> Silk Road
     { id: 'roc-27', fromEventId: 'p7-4', toEventId: 'p7-10', type: 'related' }, // Trade/Contact -> Rome Fall (Disease/Migration)
-    { id: 'roc-28', fromEventId: 'p7-10', toEventId: 'p7-12', type: 'preceded' }, // Rome Fall -> Islam (Power Vacuum/Shift)
+    { id: 'roc-28', fromEventId: 'p7-10', toEventId: 'p7-12', type: 'preceded' }, // Rome Fall -> Muhammad
+    // Phase 7 continued: Medieval Period (622-1347 CE)
+    { id: 'roc-28a', fromEventId: 'p7-12', toEventId: 'p7-14', type: 'caused' }, // Muhammad -> Hijra
+    { id: 'roc-28b', fromEventId: 'p7-14', toEventId: 'p7-15', type: 'caused' }, // Hijra -> Umayyad
+    { id: 'roc-28c', fromEventId: 'p7-15', toEventId: 'p7-17', type: 'caused' }, // Umayyad -> Abbasid (Golden Age)
+    { id: 'roc-28d', fromEventId: 'p7-17', toEventId: 'p7-19', type: 'related' }, // Abbasid -> Charlemagne
+    { id: 'roc-28e', fromEventId: 'p7-19', toEventId: 'p7-24', type: 'preceded' }, // Charlemagne -> Crusades
+    { id: 'roc-28f', fromEventId: 'p7-24', toEventId: 'p7-26', type: 'preceded' }, // Crusades -> Mongols
+    { id: 'roc-28g', fromEventId: 'p7-26', toEventId: 'p7-27', type: 'related' }, // Mongols -> Magna Carta
+    { id: 'roc-28h', fromEventId: 'p7-27', toEventId: 'p7-31', type: 'preceded' }, // Magna Carta -> Black Death
+    // Phase 8: Age of Exploration & Renaissance
+    { id: 'roc-29', fromEventId: 'p7-31', toEventId: 'p8-4', type: 'caused' }, // Black Death -> Printing Press
+    { id: 'roc-30', fromEventId: 'p8-4', toEventId: 'p8-5', type: 'related' }, // Press -> Constantinople Falls
+    { id: 'roc-31', fromEventId: 'p8-5', toEventId: 'p8-8', type: 'caused' }, // Byzantine scholars flee -> Columbus
+    { id: 'roc-32', fromEventId: 'p8-8', toEventId: 'p8-13', type: 'related' }, // Columbus -> Reformation
+    { id: 'roc-33', fromEventId: 'p8-13', toEventId: 'p8-14', type: 'related' }, // Reformation -> Magellan
+    { id: 'roc-34', fromEventId: 'p8-14', toEventId: 'p8-16', type: 'related' }, // Magellan -> Mughals
+    { id: 'roc-35', fromEventId: 'p8-16', toEventId: 'p8-20', type: 'preceded' }, // Mughals -> Copernicus
+    { id: 'roc-36', fromEventId: 'p8-20', toEventId: 'p8-24', type: 'preceded' }, // Copernicus -> East India Co
+    { id: 'roc-37', fromEventId: 'p8-24', toEventId: 'p8-25', type: 'related' }, // EIC -> Tokugawa
+    { id: 'roc-38', fromEventId: 'p8-25', toEventId: 'p8-29', type: 'preceded' }, // Japan -> Westphalia
+    { id: 'roc-39', fromEventId: 'p8-29', toEventId: 'p8-30', type: 'caused' }, // Westphalia -> Newton
+    { id: 'roc-40', fromEventId: 'p8-30', toEventId: 'p8-31', type: 'caused' }, // Newton -> Enlightenment
+    // Phase 9: Age of Revolutions
+    { id: 'roc-41', fromEventId: 'p8-31', toEventId: 'p9-1', type: 'caused' }, // Enlightenment -> Steam
+    { id: 'roc-42', fromEventId: 'p9-1', toEventId: 'p9-2', type: 'related' }, // Industrial -> Independence
+    { id: 'roc-43', fromEventId: 'p9-2', toEventId: 'p9-4', type: 'caused' }, // US Rev -> French Rev
+    { id: 'roc-44', fromEventId: 'p9-4', toEventId: 'p9-18', type: 'preceded' }, // French Rev -> Telegraph
+    { id: 'roc-45', fromEventId: 'p9-18', toEventId: 'p9-21', type: 'related' }, // Comms -> Manifesto
+    { id: 'roc-46', fromEventId: 'p9-21', toEventId: 'p9-23', type: 'related' }, // Marx -> Darwin
+    { id: 'roc-47', fromEventId: 'p9-23', toEventId: 'p9-26', type: 'preceded' }, // Darwin -> Meiji
+    { id: 'roc-48', fromEventId: 'p9-26', toEventId: 'p9-27', type: 'related' }, // Japan -> Suez
+    { id: 'roc-49', fromEventId: 'p9-27', toEventId: 'p9-28', type: 'related' }, // Suez -> Germany
+    { id: 'roc-50', fromEventId: 'p9-28', toEventId: 'p9-29', type: 'caused' }, // Germany -> Berlin Conf
+    { id: 'roc-51', fromEventId: 'p9-29', toEventId: 'p9-30', type: 'caused' }, // Imperialism -> WWI trigger
+    // Phase 10: World Wars
+    { id: 'roc-52', fromEventId: 'p9-30', toEventId: 'p10-1', type: 'caused' }, // Assassination -> WWI
+    { id: 'roc-53', fromEventId: 'p10-1', toEventId: 'p10-5', type: 'caused' }, // WWI -> Russian Rev
+    { id: 'roc-54', fromEventId: 'p10-5', toEventId: 'p10-7', type: 'preceded' }, // Revolution -> Versailles
+    { id: 'roc-55', fromEventId: 'p10-7', toEventId: 'p10-12', type: 'caused' }, // Versailles -> Depression
+    { id: 'roc-56', fromEventId: 'p10-12', toEventId: 'p10-14', type: 'caused' }, // Depression -> Hitler
+    { id: 'roc-57', fromEventId: 'p10-14', toEventId: 'p10-20', type: 'caused' }, // Hitler -> WWII
+    { id: 'roc-58', fromEventId: 'p10-20', toEventId: 'p10-23', type: 'caused' }, // WWII -> Pearl Harbor
+    { id: 'roc-59', fromEventId: 'p10-23', toEventId: 'p10-27', type: 'preceded' }, // Pearl Harbor -> D-Day
+    { id: 'roc-60', fromEventId: 'p10-27', toEventId: 'p10-31', type: 'preceded' }, // D-Day -> Atomic
+    // Phase 11: Cold War
+    { id: 'roc-61', fromEventId: 'p10-31', toEventId: 'p11-1', type: 'caused' }, // Atomic -> UN
+    { id: 'roc-62', fromEventId: 'p11-1', toEventId: 'p11-4', type: 'preceded' }, // UN -> India Partition
+    { id: 'roc-63', fromEventId: 'p11-4', toEventId: 'p11-8', type: 'related' }, // Decolonization -> China Rev
+    { id: 'roc-64', fromEventId: 'p11-8', toEventId: 'p11-14', type: 'preceded' }, // China -> Sputnik
+    { id: 'roc-65', fromEventId: 'p11-14', toEventId: 'p11-16', type: 'related' }, // Space -> Africa
+    { id: 'roc-66', fromEventId: 'p11-16', toEventId: 'p11-17', type: 'related' }, // Decolonization -> Berlin Wall
+    { id: 'roc-67', fromEventId: 'p11-17', toEventId: 'p11-18', type: 'caused' }, // Wall -> Cuba Crisis
+    { id: 'roc-68', fromEventId: 'p11-18', toEventId: 'p11-24', type: 'preceded' }, // Tension -> Moon
+    { id: 'roc-69', fromEventId: 'p11-24', toEventId: 'p11-29', type: 'preceded' }, // Moon -> Wall Falls
+    { id: 'roc-70', fromEventId: 'p11-29', toEventId: 'p11-30', type: 'caused' }, // Wall Falls -> USSR Ends
+    // Phase 12: Digital Age
+    { id: 'roc-71', fromEventId: 'p11-30', toEventId: 'p12-3', type: 'preceded' }, // USSR -> WWW
+    { id: 'roc-72', fromEventId: 'p12-3', toEventId: 'p12-4', type: 'related' }, // WWW -> Apartheid
+    { id: 'roc-73', fromEventId: 'p12-4', toEventId: 'p12-7', type: 'preceded' }, // Mandela -> Google
+    { id: 'roc-74', fromEventId: 'p12-7', toEventId: 'p12-9', type: 'preceded' }, // Google -> 9/11
+    { id: 'roc-75', fromEventId: 'p12-9', toEventId: 'p12-11', type: 'preceded' }, // 9/11 -> Genome
+    { id: 'roc-76', fromEventId: 'p12-11', toEventId: 'p12-13', type: 'preceded' }, // Genome -> iPhone
+    { id: 'roc-77', fromEventId: 'p12-13', toEventId: 'p12-21', type: 'preceded' }, // iPhone -> Paris
+    { id: 'roc-78', fromEventId: 'p12-21', toEventId: 'p12-26', type: 'preceded' }, // Paris -> COVID
+    { id: 'roc-79', fromEventId: 'p12-26', toEventId: 'p12-29', type: 'preceded' }, // COVID -> ChatGPT
+    { id: 'roc-80', fromEventId: 'p12-29', toEventId: 'p12-31', type: 'preceded' }, // ChatGPT -> Present
 
     // Evolution of Technology Connections
     { id: 'eot-1', fromEventId: 'modern-13', toEventId: 'p4-30', type: 'related' }, // Wheel -> Bronze (Metallurgy transport)
     { id: 'eot-2', fromEventId: 'p4-30', toEventId: 'modern-12', type: 'related' }, // Bronze -> Writing (Complex society tools)
     { id: 'eot-3', fromEventId: 'modern-12', toEventId: 'p6-1', type: 'preceded' }, // Writing -> Iron Age (Knowledge preservation)
-    { id: 'eot-4', fromEventId: 'p6-1', toEventId: 'modern-9', type: 'preceded' }, // Iron -> Printing Press (Long gap, tool refinement)
+    { id: 'eot-4', fromEventId: 'p6-1', toEventId: 'modern-archimedes', type: 'related' }, // Iron -> Archimedes (Engineering peaks)
+    { id: 'eot-new-1', fromEventId: 'modern-archimedes', toEventId: 'modern-paper', type: 'preceded' }, // Archimedes -> Paper
+    { id: 'eot-new-2', fromEventId: 'modern-paper', toEventId: 'modern-compass', type: 'related' }, // Paper -> Compass (Four Great Inventions)
+    { id: 'eot-new-3', fromEventId: 'modern-compass', toEventId: 'modern-9', type: 'caused' }, // Compass -> Print (Spread of ideas/navigation)
     { id: 'eot-5', fromEventId: 'modern-9', toEventId: 'p8-20', type: 'caused' }, // Print -> Copernican (Scientific Revolution)
     { id: 'eot-6', fromEventId: 'p8-14', toEventId: 'p8-26', type: 'related' }, // Navigation -> Telescope (Optics & Exploration)
     { id: 'eot-7', fromEventId: 'p8-20', toEventId: 'p8-30', type: 'caused' }, // Copernicus -> Newton (Physics foundation)
@@ -273,6 +368,14 @@ export const CONNECTIONS: Connection[] = [
     { id: 'eot-23', fromEventId: 'p12-7', toEventId: 'p12-29', type: 'related' }, // Google -> ChatGPT (Data & AI Model)
     { id: 'eot-24', fromEventId: 'p12-13', toEventId: 'modern-1', type: 'related' }, // iPhone -> AI Era (Compute density)
     { id: 'eot-25', fromEventId: 'modern-12', toEventId: 'p12-29', type: 'related' }, // Writing -> ChatGPT (Language evolution)
+
+    // Fix Orphans
+    { id: 'eot-26', fromEventId: 'modern-12', toEventId: 'p6-4', type: 'caused' }, // Writing -> Alphabet
+    { id: 'eot-27', fromEventId: 'modern-7', toEventId: 'p9-6', type: 'caused' }, // Ind Rev -> Cotton Gin (Mechanization)
+    { id: 'eot-28', fromEventId: 'p8-30', toEventId: 'p9-7', type: 'related' }, // Scientific Focus -> Vaccine
+    { id: 'eot-29', fromEventId: 'p9-7', toEventId: 'p10-11', type: 'preceded' }, // Vaccine -> Penicillin (Medical Tech)
+    { id: 'eot-30', fromEventId: 'modern-3', toEventId: 'p12-8', type: 'caused' }, // Moon Landing -> ISS (Space Station)
+    { id: 'eot-31', fromEventId: 'p12-3', toEventId: 'p12-15', type: 'related' }, // WWW -> Bitcoin (Digital Network)
 
     // History of Art Connections
     { id: 'hoa-1', fromEventId: 'art-1', toEventId: 'p4-29', type: 'related' }, // Cave Art -> Writing
@@ -303,14 +406,15 @@ export const CONNECTIONS: Connection[] = [
     { id: 'hoa-nft', fromEventId: 'art-nft', toEventId: 'art-8', type: 'related' }, // NFT -> AI
 
     // --- Ancestry of AI Connections ---
-    { id: 'ai-1', fromEventId: 'ai-aristotle', toEventId: 'ai-alkhwarizmi', type: 'influenced' }, // Logic -> Algebra
+    { id: 'ai-1', fromEventId: 'ai-aristotle', toEventId: 'ai-antikythera', type: 'influenced' }, // Logic -> Machines
+    { id: 'ai-new-1', fromEventId: 'ai-antikythera', toEventId: 'ai-alkhwarizmi', type: 'preceded' }, // Mechanism -> Algorithm
     { id: 'ai-2', fromEventId: 'ai-alkhwarizmi', toEventId: 'ai-llull', type: 'influenced' }, // Algebra -> Thinking Machine
     { id: 'ai-3', fromEventId: 'ai-llull', toEventId: 'ai-jacquard', type: 'influenced' }, // Thinking Machine -> Programmable Loom
     { id: 'ai-4', fromEventId: 'ai-jacquard', toEventId: 'ai-lovelace', type: 'caused' }, // Loom -> First Code
     { id: 'ai-5', fromEventId: 'ai-lovelace', toEventId: 'ai-boole', type: 'related' }, // Code -> Binary
     { id: 'ai-6', fromEventId: 'ai-boole', toEventId: 'ai-principia', type: 'caused' }, // Binary -> Formal Math
-    { id: 'ai-7', fromEventId: 'ai-principia', toEventId: 'modern-13', type: 'caused' }, // Formal Math -> Turing (modern-13 is Turing)
-    { id: 'ai-8', fromEventId: 'modern-13', toEventId: 'ai-mcculloch', type: 'influenced' }, // Turing -> Neural Net
+    { id: 'ai-7', fromEventId: 'ai-principia', toEventId: 'ai-turing-machine', type: 'caused' }, // Formal Math -> Turing (modern-13 is Turing)
+    { id: 'ai-8', fromEventId: 'ai-turing-machine', toEventId: 'ai-mcculloch', type: 'influenced' }, // Turing -> Neural Net
     { id: 'ai-9', fromEventId: 'ai-mcculloch', toEventId: 'ai-dartmouth', type: 'caused' }, // Neural Net -> AI Field
     { id: 'ai-10', fromEventId: 'ai-dartmouth', toEventId: 'ai-perceptron', type: 'caused' }, // AI Field -> Perceptron
     { id: 'ai-11', fromEventId: 'ai-perceptron', toEventId: 'ai-winter', type: 'caused' }, // Hype -> Winter
@@ -318,9 +422,28 @@ export const CONNECTIONS: Connection[] = [
     { id: 'ai-13', fromEventId: 'ai-deepblue', toEventId: 'ai-alexnet', type: 'preceded' }, // Brute Force -> Deep Learning
     { id: 'ai-14', fromEventId: 'ai-alexnet', toEventId: 'ai-alphago', type: 'caused' }, // DL -> RL
     { id: 'ai-15', fromEventId: 'ai-alphago', toEventId: 'ai-transformer', type: 'influenced' }, // RL -> Attention
+    // Orphan Fixes (Ancestry of AI)
+    { id: 'ai-22', fromEventId: 'ai-leibniz-binary-system', toEventId: 'ai-boole', type: 'influenced' }, // Binary -> Boolean Logic
+    { id: 'ai-23', fromEventId: 'ai-the-difference-engine', toEventId: 'ai-lovelace', type: 'caused' }, // Engine -> First Program
+    { id: 'ai-24', fromEventId: 'ai-cybernetics', toEventId: 'ai-dartmouth', type: 'influenced' }, // Cybernetics -> AI Field
+    { id: 'ai-25', fromEventId: 'ai-asimovs-three-laws', toEventId: 'ai-dartmouth', type: 'influenced' }, // Sci-Fi/Ethics -> AI Goal
+    { id: 'ai-26', fromEventId: 'ai-the-logic-theorist', toEventId: 'ai-dartmouth', type: 'related' }, // Early Program -> Conference
+    { id: 'ai-27', fromEventId: 'ai-eliza', toEventId: 'ai-perceptrons-book', type: 'preceded' }, // NLP -> Analysis
+    { id: 'ai-28', fromEventId: 'ai-perceptrons-book', toEventId: 'ai-winter', type: 'caused' }, // Critique -> Funding Cut
+    { id: 'ai-29', fromEventId: 'ai-expert-systems', toEventId: 'ai-deepblue', type: 'preceded' }, // Limited AI -> Deep Blue
+    { id: 'ai-30', fromEventId: 'ai-backpropagation', toEventId: 'ai-alexnet', type: 'caused' }, // Algorithm -> Implementation
+
+    // New AI Connections
+    { id: 'ai-16', fromEventId: 'ai-deepblue', toEventId: 'ai-watson-wins-jeopardy', type: 'preceded' }, // Chess -> Jeopardy (Games)
+    { id: 'ai-17', fromEventId: 'ai-watson-wins-jeopardy', toEventId: 'ai-imagenet-breakthrough', type: 'related' }, // NLP -> Vision (Renaissance)
+    { id: 'ai-18', fromEventId: 'ai-imagenet-breakthrough', toEventId: 'ai-alexnet', type: 'related' }, // Same event context
+    { id: 'ai-19', fromEventId: 'ai-alphago', toEventId: 'ai-alphago-zero', type: 'caused' }, // Evolution
+    { id: 'ai-20', fromEventId: 'ai-transformer', toEventId: 'ai-gpt-3', type: 'caused' }, // Architecture -> Model
+    { id: 'ai-21', fromEventId: 'ai-gpt-3', toEventId: 'ai-generative-reality', type: 'caused' }, // Text -> Multimodal
 
     // --- The Money Illusion Connections ---
-    { id: 'money-1', fromEventId: 'p4-3', toEventId: 'money-shekel', type: 'caused' }, // Agriculture -> Grain Money
+    { id: 'money-1', fromEventId: 'p4-3', toEventId: 'p4-29', type: 'caused' }, // Agriculture -> Accounting (Writing)
+    { id: 'money-new-1', fromEventId: 'p4-29', toEventId: 'money-shekel', type: 'caused' }, // Writing -> Grain Money (Standardzation)
     { id: 'money-2', fromEventId: 'money-shekel', toEventId: 'money-lydia', type: 'preceded' }, // Commodity -> Coin
     { id: 'money-3', fromEventId: 'money-lydia', toEventId: 'money-paper', type: 'preceded' }, // Coin -> Paper
     { id: 'money-4', fromEventId: 'money-paper', toEventId: 'money-medici', type: 'related' }, // Paper -> Ledger (Abstraction)
@@ -332,6 +455,31 @@ export const CONNECTIONS: Connection[] = [
     { id: 'money-10', fromEventId: 'p12-14', toEventId: 'money-algo', type: 'related' }, // Crisis -> Algo/Speed
     { id: 'money-11', fromEventId: 'p12-14', toEventId: 'p12-15', type: 'caused' }, // Crisis -> Bitcoin (Reaction)
     { id: 'money-12', fromEventId: 'money-algo', toEventId: 'p12-29', type: 'related' }, // Algo -> AI (Automation of value/thought)
+    // New Money Connections
+    { id: 'money-13', fromEventId: 'money-euro', toEventId: 'money-mpesa', type: 'related' }, // Currency evolution
+    { id: 'money-14', fromEventId: 'p12-15', toEventId: 'money-eth', type: 'caused' }, // Bitcoin -> Ethereum
+
+    // Orphan Fixes (The Money Illusion)
+    { id: 'money-15', fromEventId: 'money-shekel', toEventId: 'money-cowrie', type: 'related' }, // Grain -> Shells (Alternative)
+    { id: 'money-16', fromEventId: 'money-cowrie', toEventId: 'money-hammurabi', type: 'preceded' }, // Physical -> Legal Debt
+    { id: 'money-17', fromEventId: 'money-hammurabi', toEventId: 'money-lydia', type: 'preceded' }, // Debt -> Coin
+    { id: 'money-18', fromEventId: 'money-lydia', toEventId: 'money-sparta', type: 'related' }, // Gold -> Iron (Contrast)
+    { id: 'money-19', fromEventId: 'money-sparta', toEventId: 'p6-20', type: 'preceded' }, // Police State -> Republic
+    { id: 'money-20', fromEventId: 'p6-20', toEventId: 'money-debasement', type: 'caused' }, // Republic -> Empire -> Inflation
+    { id: 'money-21', fromEventId: 'money-debasement', toEventId: 'money-paper', type: 'preceded' }, // Coin Fail -> Paper Rise
+    { id: 'money-22', fromEventId: 'money-paper', toEventId: 'money-tally', type: 'related' }, // Paper -> Wood (Fiat variants)
+    { id: 'money-23', fromEventId: 'money-tally', toEventId: 'money-templar', type: 'preceded' }, // Record Keeping -> Banking
+    { id: 'money-24', fromEventId: 'money-templar', toEventId: 'money-medici', type: 'caused' }, // Pilgrimage Banking -> Merchant Banking
+    { id: 'money-25', fromEventId: 'money-medici', toEventId: 'p8-14', type: 'related' }, // Banking -> Global Trade
+    { id: 'money-26', fromEventId: 'p8-14', toEventId: 'money-potosi', type: 'caused' }, // Exploration -> Silver Flood
+    { id: 'money-27', fromEventId: 'money-potosi', toEventId: 'money-tulip', type: 'caused' }, // Excess Capital -> Speculation
+    { id: 'money-28', fromEventId: 'money-tulip', toEventId: 'money-boe', type: 'caused' }, // Crash -> Centralization/Debt
+    { id: 'money-29', fromEventId: 'money-boe', toEventId: 'money-mississippi', type: 'related' }, // Debt -> Paper Bubble
+    { id: 'money-30', fromEventId: 'money-mississippi', toEventId: 'money-gold', type: 'caused' }, // Failure -> Gold Standard (Back to basics)
+    { id: 'money-31', fromEventId: 'money-gold', toEventId: 'money-fed', type: 'caused' }, // Gold rigidity -> Need for flex? (Or Fed protects gold?)
+    { id: 'money-32', fromEventId: 'money-fed', toEventId: 'money-weimar', type: 'related' }, // Central Bank fail vs success
+    { id: 'money-33', fromEventId: 'money-weimar', toEventId: 'money-bretton', type: 'caused' }, // Hyperinflation fear -> Stability Pact
+    { id: 'money-34', fromEventId: 'money-bretton', toEventId: 'money-card', type: 'related' }, // Dollar hegemony -> Consumerism
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -341,7 +489,7 @@ export const JOURNEYS: Journey[] = [
         description: 'From the spark of the first fire to the neural networks of AI, trace the innovations that defined us.',
         thumbnailUrl: 'images/p12-29.jpg',
         eventIds: [
-            'modern-13', 'p4-30', 'modern-12', 'p6-1', 'modern-9',
+            'modern-13', 'p4-30', 'modern-12', 'p6-4', 'p6-1', 'modern-archimedes', 'modern-paper', 'modern-compass', 'modern-9',
             'p8-14', 'p8-20', 'p8-26', 'p8-30', 'modern-7',
             'p9-1', 'p9-6', 'p9-7', 'p9-16', 'p9-18',
             'p9-23', 'modern-6', 'pilot-1', 'pilot-2', 'modern-5',
@@ -355,15 +503,33 @@ export const JOURNEYS: Journey[] = [
     {
         id: 'rise-of-civilizations',
         title: 'The Human Story: Rise of Civilizations',
-        description: 'From the first mud bricks of Jericho to the marble columns of Rome, witness the birth of society, law, and empire.',
+        description: 'From the first mud bricks of Jericho to the digital age—witness 11,500 years of human society, empires, revolutions, and transformation.',
         thumbnailUrl: 'images/p6-25.jpg',
         eventIds: [
+            // Phase 4-7: Ancient Origins (9500 BCE - 570 CE)
             'p4-3', 'p4-9', 'p4-14', 'p4-25', 'p4-29', 'p4-30',
             'p5-1', 'p5-2', 'p5-8', 'p5-9', 'p5-11', 'p5-15',
             'p5-16', 'p5-17', 'p5-21', 'p5-24', 'p5-31',
             'p6-1', 'p6-4', 'p6-9', 'p6-11', 'p6-18', 'p6-20',
             'p6-21', 'p6-22', 'p6-28', 'p6-29', 'p6-30',
-            'p7-4', 'p7-6', 'p7-10', 'p7-12'
+            'p7-4', 'p7-6', 'p7-10', 'p7-12',
+            // Phase 7 continued: Medieval Period (622-1347 CE)
+            'p7-14', 'p7-15', 'p7-17', 'p7-19', 'p7-24', 'p7-26', 'p7-27', 'p7-31',
+            // Phase 8: Age of Exploration & Renaissance (1450-1750)
+            'p8-4', 'p8-5', 'p8-8', 'p8-13', 'p8-14', 'p8-16',
+            'p8-20', 'p8-24', 'p8-25', 'p8-29', 'p8-30', 'p8-31',
+            // Phase 9: Age of Revolutions (1765-1914)
+            'p9-1', 'p9-2', 'p9-4', 'p9-18', 'p9-21', 'p9-23',
+            'p9-26', 'p9-27', 'p9-28', 'p9-29', 'p9-30',
+            // Phase 10: World Wars (1914-1945)
+            'p10-1', 'p10-5', 'p10-7', 'p10-12', 'p10-14',
+            'p10-20', 'p10-23', 'p10-27', 'p10-31',
+            // Phase 11: Cold War (1945-1991)
+            'p11-1', 'p11-4', 'p11-8', 'p11-14', 'p11-16',
+            'p11-17', 'p11-18', 'p11-24', 'p11-29', 'p11-30',
+            // Phase 12: Digital Age (1991-2025)
+            'p12-3', 'p12-4', 'p12-7', 'p12-9', 'p12-11',
+            'p12-13', 'p12-21', 'p12-26', 'p12-29', 'p12-31'
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('roc-')),
         overrides: {}
@@ -401,7 +567,11 @@ export const JOURNEYS: Journey[] = [
             'p2-9', 'p2-10', 'p2-11', 'p2-12', 'p2-13', 'p2-14',
             'p2-15', 'p2-16', 'p2-17', 'p2-19', 'p2-21',
             'p2-22', 'p2-23', 'p2-24', 'p2-25', 'p2-27',
-            'p2-28', 'p2-29', '41', '42'
+            'p2-28', 'p2-29', '41', '42',
+            // Human Evolution Extension
+            '45', '46', '47', '48', '49', '50', '51', '52', '53', '54',
+            '55', '56', '57', '58', '59', '60', '61', '62', '63', '64',
+            '65', '66', '67', 'p4-3'
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('eol-')),
         overrides: {}
@@ -431,6 +601,7 @@ export const JOURNEYS: Journey[] = [
         eventIds: [
             // Ancient Roots
             'ai-aristotle',     // 350 BCE: Logic
+            'ai-antikythera',   // 100 BCE: Analog Computer
             'ai-alkhwarizmi',   // 820 CE: Algorithm
             'ai-llull',         // 1275 CE: Combinatorics
 
@@ -443,8 +614,8 @@ export const JOURNEYS: Journey[] = [
 
             // The Dawn of Computing
             'ai-principia',     // 1910
-            'modern-13',        // 1936: Turing Machine
-            'ai-pitts-mcculloch-neuron', // 1943
+            'ai-turing-machine',        // 1936: Turing Machine
+            'ai-mcculloch', // 1943 (Canonical ID)
             'ai-cybernetics',   // 1948
             'ai-asimovs-three-laws', // 1950 (Fiction/Ethics)
 
@@ -470,12 +641,7 @@ export const JOURNEYS: Journey[] = [
             'ai-generative-reality' // 2024
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('ai-')),
-        overrides: {
-            'modern-13': {
-                title: 'Turing\'s Universal Machine',
-                description: 'Alan Turing proves that a machine can compute anything that is computable, providing the theoretical blueprint for the digital brain.',
-            }
-        }
+        overrides: {}
     },
     {
         id: 'the-money-illusion',

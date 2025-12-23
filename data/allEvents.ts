@@ -19,7 +19,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '13.8 Billion Years Ago',
     yearNumeric: -13800000000,
     title: 'Planck Epoch',
-    description: 'The very first instant of time (0 to 10^-43 seconds) where the known laws of physics break down and gravity is as strong as other forces.',
+    description: 'The Moment of Creation. Before stars, before space, asking "what happened before" was meaningless. In this fractional instant, the clock of the universe began to tick.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cosmic-1.jpg',
     phase: 'Phase 1'
   },
@@ -316,7 +316,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '3.8 Billion Years Ago',
     yearNumeric: -3800000000,
     title: 'First Evidence of Life',
-    description: 'Indirect chemical evidence (carbon isotopic signatures) in ancient rocks suggests the presence of the earliest, single-celled life forms (prokaryotes).',
+    description: 'The Spark. On a volcanic, hostile Earth, something impossible happened: dead matter came alive. A microscopic struggle for survival began that would eventually lead to you.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/18.jpg',
     phase: 'Phase 1'
   },
@@ -1025,7 +1025,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p4-3', year: '9,500 BCE',
-    yearNumeric: -9500, title: 'Permanent Settlement at Jericho', description: 'The site of Jericho is established as one of the world\'s oldest continuously inhabited proto-cities.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-3.jpg', phase: 'Phase 4'
+    yearNumeric: -9500, title: 'The First Hearth (Jericho)', description: 'The First Hearth. For 200,000 years, we wandered. At Jericho, we stopped. By building permanent walls, we traded the freedom of the hunt for the security of the home.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p4-3.jpg', phase: 'Phase 4'
   },
   {
     id: 'p4-4', year: '9,000 BCE',
@@ -1285,7 +1285,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p6-1', year: '1200 BCE',
-    yearNumeric: -1200, title: 'Iron Technology Spreads', description: 'Iron production replaces bronze as the primary metal for tools and weapons.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-1.jpg', phase: 'Phase 6'
+    yearNumeric: -1200, title: 'Iron Technology Spreads', description: 'Scarcity breeds Innovation. When the bronze trade collapsed, humanity was forced to master the difficult art of smelting iron—a metal that was everywhere, democratizing warfare and farming.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p6-1.jpg', phase: 'Phase 6'
   },
   {
     id: 'p6-2', year: '1150 BCE',
@@ -1461,7 +1461,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p7-12', year: '570 CE',
-    yearNumeric: 570, title: 'Birth of Muhammad', description: 'Traditional date for birth of Islam\'s founder.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-12.jpg', phase: 'Phase 7'
+    yearNumeric: 570, title: 'Birth of Muhammad', description: 'The Power Vacuum. With Rome fractured and Persia exhausted by war, the desert was silent—waiting for a voice that would unite the tribes and reshape the world map.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p7-12.jpg', phase: 'Phase 7'
   },
   {
     id: 'p7-13', year: '618 CE',
@@ -2223,7 +2223,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     id: 'pilot-3', year: '1969 CE',
     yearNumeric: 1969, title: 'ARPANET Established', description: 'The first packet-switching network and precursor to the Internet.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/pilot-3.jpg', category: 'Communications', phase: 'Phase 11'
   },
-  ,
+
 
   {
     id: 'modern-1',
@@ -2231,7 +2231,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2024,
     title: 'The AI Era Begins',
     description: 'Artificial Intelligence reaches a tipping point, transforming how humanity interacts with information and creativity.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-1.jpg'
   },
@@ -2241,7 +2241,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2007,
     title: 'The Smartphone Revolution',
     description: 'The launch of the iPhone ushers in the age of mobile computing and constant connectivity.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-2.jpg'
   },
@@ -2251,7 +2251,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1969,
     title: 'Apollo 11 Moon Landing',
     description: 'Humans set foot on another world for the first time, marking the pinnacle of the Space Race.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Cosmology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-3.jpg'
   },
@@ -2261,7 +2261,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1945,
     title: 'The Atomic Age',
     description: 'The detonation of the first nuclear weapon alters the geopolitical landscape forever.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Science',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-4.jpg'
   },
@@ -2271,7 +2271,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1903,
     title: 'First Powered Flight',
     description: 'The Wright brothers achieve the first controlled, sustained flight of a powered, heavier-than-air aircraft.',
-    phase: 'Modern',
+    phase: 'Phase 10',
     category: 'Transport',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-5.jpg'
   },
@@ -2281,7 +2281,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1880,
     title: 'The Electric Light Bulb',
     description: 'Widespread adoption of electric lighting extends the day and transforms human productivity.',
-    phase: 'Modern',
+    phase: 'Phase 9',
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-6.jpg'
   },
@@ -2291,7 +2291,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1760,
     title: 'The Industrial Revolution',
     description: 'The Energy Singularity. Humanity breaks the caloric ceiling by unlocking millions of years of stored sunlight (coal), trading a rural past for a mechanical future.',
-    phase: 'Modern',
+    phase: 'Phase 9',
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-7.jpg'
   },
@@ -2301,7 +2301,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1492,
     title: 'The Columbian Exchange',
     description: 'Global exchange of goods, ideas, and populations follows the contact between the Old and New Worlds.',
-    phase: 'Modern',
+    phase: 'Phase 8',
     category: 'Civilization',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-8.jpg'
   },
@@ -2311,7 +2311,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1440,
     title: 'The Printing Press',
     description: 'Gutenberg\'s invention democratizes knowledge, fueling the Renaissance and the Scientific Revolution.',
-    phase: 'Modern',
+    phase: 'Phase 7',
     category: 'Communications',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-9.jpg'
   },
@@ -2321,7 +2321,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 476,
     title: 'Fall of the Western Roman Empire',
     description: 'The collapse of Rome marks the end of ancient history and the beginning of the Middle Ages.',
-    phase: 'Modern',
+    phase: 'Phase 7',
     category: 'Civilization',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-10.jpg'
   },
@@ -2331,7 +2331,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 0,
     title: 'The Common Era Begins',
     description: 'The approximate start of the Common Era (AD), used as the reference point for the modern calendar.',
-    phase: 'Modern',
+    phase: 'Phase 6',
     category: 'Civilization',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-11.jpg'
   },
@@ -2340,8 +2340,8 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '3200 BCE',
     yearNumeric: -3200,
     title: 'Invention of Writing',
-    description: 'Cuneiform script emerges in Sumer, marking the dawn of recorded history.',
-    phase: 'Modern',
+    description: 'The first external hard drive. In Sumer, accountants press reeds into wet clay, inventing a system to freeze thought in time. Writing allows humanity to converse across millennia, birthing history itself.',
+    phase: 'Phase 5',
     category: 'Communications',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-12.jpg'
   },
@@ -2350,8 +2350,8 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '4500 BCE',
     yearNumeric: -4500,
     title: 'Invention of the Wheel',
-    description: 'The potter\'s wheel is adapted for transport, revolutionizing trade and warfare.',
-    phase: 'Modern',
+    description: 'Motion Unbound. Humanity breaks the friction of the earth. With the wheel, we could carry more than we could lift and travel faster than we could walk.',
+    phase: 'Phase 4',
     category: 'Transport',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-13.jpg'
   },
@@ -2361,7 +2361,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -2560,
     title: 'Great Pyramid of Giza',
     description: 'Construction of the Great Pyramid, the oldest of the Seven Wonders of the Ancient World.',
-    phase: 'Modern',
+    phase: 'Phase 5',
     category: 'Civilization',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-14.jpg'
   },
@@ -2373,7 +2373,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -30000,
     title: 'The First Dream (Cave Paintings)',
     description: 'In the flickering light of Lascaux, humans first projected their internal imagination onto the external world, birthing the "Cognitive Revolution".',
-    phase: 'Civilization',
+    phase: 'Phase 4',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-1.jpg'
   },
@@ -2383,7 +2383,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -28000,
     title: 'Venus of Willendorf',
     description: 'A pocket-sized limestone icon of fertility. By carving the ideal form, humanity began to shape reality to match its desires rather than just observing it.',
-    phase: 'Civilization',
+    phase: 'Phase 4',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-venus.jpg'
   },
@@ -2393,7 +2393,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -9500,
     title: 'Göbekli Tepe',
     description: 'The World\'s First Temple. Massive carved pillars prove that the urge to create sacred art preceded—and perhaps caused—the invention of agriculture.',
-    phase: 'Civilization',
+    phase: 'Phase 4',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-gobekli.jpg'
   },
@@ -2403,7 +2403,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -2600,
     title: 'Standard of Ur',
     description: 'One of the earliest examples of visual narrative. Using distinct registers (comic-strip style), it formalized how we tell stories through images.',
-    phase: 'Civilization',
+    phase: 'Phase 5',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-ur.jpg'
   },
@@ -2413,7 +2413,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -1345,
     title: 'Bust of Nefertiti',
     description: 'A masterpiece of realism in an era of stylized symbols. Thutmose captured individual beauty so perfectly it transcends 3,000 years of time.',
-    phase: 'Civilization',
+    phase: 'Phase 5',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-nefertiti.jpg'
   },
@@ -2423,7 +2423,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -210,
     title: 'The Terracotta Army',
     description: 'Industrial-scale art. 8,000 unique statues created to guard Emperor Qin, demonstrating that mass production and individual craftsmanship could coexist.',
-    phase: 'Civilization',
+    phase: 'Phase 5',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-terracotta.jpg'
   },
@@ -2433,7 +2433,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 800,
     title: 'The Book of Kells',
     description: 'Insular art reaches its zenith. Monks turned text into a labyrinth of infinite complexity, proving that the Word was meant to be seen, not just read.',
-    phase: 'Civilization',
+    phase: 'Phase 6',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-kells.jpg'
   },
@@ -2443,7 +2443,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1000,
     title: 'Daoist Landscapes (Fan Kuan)',
     description: 'While Europe painted religious icons, China perfected the "Shan Shui" landscape—art not as a picture of the world, but as a philosophy of nature\'s immensity.',
-    phase: 'Civilization',
+    phase: 'Phase 6',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-fankuan.jpg'
   },
@@ -2453,7 +2453,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1144,
     title: 'Gothic Light',
     description: 'The Basilica of Saint-Denis used stained glass as "medieval cinema," using light and image to educate the illiterate masses and placing emotional experience above structural weight.',
-    phase: 'Civilization',
+    phase: 'Phase 6',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-2.jpg'
   },
@@ -2463,7 +2463,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1300,
     title: 'The Bronzes of Ife',
     description: 'West African sculptors achieve a level of naturalistic portraiture using *cire perdue* (lost wax) casting that rivals or surpasses the European Renaissance.',
-    phase: 'Civilization',
+    phase: 'Phase 6',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-ife.jpg'
   },
@@ -2473,7 +2473,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1420,
     title: 'The Perspective Shift',
     description: 'Brunelleschi\'s mathematical perspective aligned art with science, teaching humanity to see the world as a measurable, ordered 3D space.',
-    phase: 'Civilization',
+    phase: 'Phase 7',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-3.jpg'
   },
@@ -2483,7 +2483,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1434,
     title: 'The Arnolfini Portrait',
     description: 'Jan van Eyck masters oil paint. The mirror in the background reflects the entire room, symbolizing Art\'s new power to capture the totality of physical existence.',
-    phase: 'Civilization',
+    phase: 'Phase 7',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-arnolfini.jpg'
   },
@@ -2493,7 +2493,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1831,
     title: 'The Great Wave',
     description: 'Hokusai\'s woodblock print becomes the first global icon of "Pop Art," influencing the Impressionists and demonstrating the power of reproducible media.',
-    phase: 'Modern',
+    phase: 'Phase 9',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-greatwave.jpg'
   },
@@ -2503,7 +2503,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1839,
     title: 'The Crisis of Realism',
     description: 'The invention of the Daguerreotype forced painting to evolve. When a machine could capture reality perfectly, art was liberated to explore *emotion* rather than just *likeness*.',
-    phase: 'Modern',
+    phase: 'Phase 9',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-4.jpg'
   },
@@ -2513,7 +2513,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1874,
     title: 'The Subjective Eye',
     description: 'Impressionists like Monet argued that reality isn\'t objects, but *light*. This shift paved the way for modern physics and the relativity of perception.',
-    phase: 'Modern',
+    phase: 'Phase 9',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-5.jpg'
   },
@@ -2523,7 +2523,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1889,
     title: 'Starry Night',
     description: 'Van Gogh abandons optical reality for emotional reality. The swirling sky isn\'t what he saw, but what he *felt*—the birth of Expressionism.',
-    phase: 'Modern',
+    phase: 'Phase 9',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-starry.jpg'
   },
@@ -2533,7 +2533,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1907,
     title: 'Shattering Reality',
     description: 'Picasso\'s *Les Demoiselles d\'Avignon* broke the rule of a single viewpoint, attempting to represent 3D space and time on a 2D plane—paralleling Einstein\'s theories.',
-    phase: 'Modern',
+    phase: 'Phase 10',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-6.jpg'
   },
@@ -2543,7 +2543,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1917,
     title: 'Art is Context',
     description: 'By signing a urinal, Duchamp declared that Art is defined by the artist\'s *choice*, not their craft. This conceptual leap birthed modern art.',
-    phase: 'Modern',
+    phase: 'Phase 10',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-7.jpg'
   },
@@ -2553,7 +2553,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1919,
     title: 'The Bauhaus Founded',
     description: 'Walter Gropius unites art and technology. "Form follows function" becomes the mantra of the 20th century, shaping the very cities we live in.',
-    phase: 'Modern',
+    phase: 'Phase 10',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-bauhaus.jpg'
   },
@@ -2563,7 +2563,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1950,
     title: 'Action Painting',
     description: 'Jackson Pollock puts the canvas on the floor. The painting is no longer a picture, but a record of the artist\'s physical movement.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-pollock.jpg'
   },
@@ -2573,7 +2573,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1962,
     title: 'Campbell\'s Soup Cans',
     description: 'Andy Warhol erases the line between high art and commercial product. If we consume images like soup, why treat them differently?',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-warhol.jpg'
   },
@@ -2583,7 +2583,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1963,
     title: 'Electronic Superhighway',
     description: 'Nam June Paik uses television sets as sculpture. Video becomes a medium, predicting a world where we are constantly bathed in electronic light.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-paik.jpg'
   },
@@ -2593,7 +2593,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1982,
     title: 'The Radiant Child',
     description: 'Basquiat brings the raw energy of graffiti into the gallery. A synthesis of street culture, jazz, and history that challenges the white-dominated art world.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-basquiat.jpg'
   },
@@ -2603,7 +2603,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1995,
     title: 'The Digital Canvas (Toy Story)',
     description: 'The first fully computer-animated feature film. The pixel replaces the brushstroke, offering a new dimension of control over light and texture.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-pixar.jpg'
   },
@@ -2613,7 +2613,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2021,
     title: 'The First 5000 Days',
     description: 'Beeple\'s $69M sale proves that digital scarcity is possible. Code becomes the certificate of authenticity, upending the economics of art.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-nft.jpg'
   },
@@ -2623,7 +2623,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2022,
     title: 'The Synthetic Dream',
     description: 'Generative AI challenges the final frontier of human uniqueness, forcing us to redefine the role of the artist from "maker" to "curator".',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Art',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/art-8.jpg'
   },
@@ -2796,7 +2796,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -3000,
     title: 'The First Currency (Shekel)',
     description: 'Grain becomes Money. In Sumer, barley is standardized into weight (shekels), transforming food into an abstract unit of account that can store value.',
-    phase: 'Civilization',
+    phase: 'Phase 5',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-shekel.jpg'
   },
@@ -2806,7 +2806,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -600,
     title: 'The Lydian Lion',
     description: 'The invention of the Coin. The State stamps a lion on electrum, guaranteeing weight and purity. Trust shifts from the metal itself to the King who minted it.',
-    phase: 'Civilization',
+    phase: 'Phase 5',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-lydia.jpg'
   },
@@ -2816,9 +2816,49 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1024,
     title: 'Flying Money (Jiaozi)',
     description: 'China invents paper cash. Merchants realize that a slip of paper representing coins is lighter than the coins themselves. Value becomes symbolic.',
-    phase: 'Civilization',
+    phase: 'Phase 6',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-paper.jpg'
+  },
+  {
+    id: 'modern-paper',
+    year: '105 CE',
+    yearNumeric: 105,
+    title: 'Invention of Paper',
+    description: 'The Canvas of Thought. Cai Lun standardizes papermaking in China. Knowledge leaves the heavy clay tablet and the expensive scroll, becoming light, cheap, and infinite.',
+    phase: 'Phase 6',
+    category: 'Technology',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-paper.jpg'
+  },
+  {
+    id: 'modern-archimedes',
+    year: '250 BCE',
+    yearNumeric: -250,
+    title: "Archimedes' Engines",
+    description: "Give me a lever long enough. In Syracuse, Archimedes lays the foundations of mechanics and hydrostatics. His screw pumps water, his claw lifts ships, demonstrating that the physical world obeys mathematical laws.",
+    phase: 'Phase 6',
+    category: 'Science',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-archimedes.jpg'
+  },
+  {
+    id: 'modern-compass',
+    year: '1044 CE',
+    yearNumeric: 1044,
+    title: 'The Magnetic Compass',
+    description: "The south-pointing fish. Chinese scholars discover that a lodestone needle floats to align with the Earth's invisible field. This subtle force would eventually guide ships across open oceans, mapping the entire globe.",
+    phase: 'Phase 7',
+    category: 'Technology',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/modern-compass.jpg'
+  },
+  {
+    id: 'ai-antikythera',
+    year: '100 BCE',
+    yearNumeric: -100,
+    title: 'The Antikythera Mechanism',
+    description: 'An ancient bronze computer lost to the sea. This clockwork cosmos predicted celestial movements with gear ratios of astonishing precision, a level of analog computing that would not be seen again for a thousand years.',
+    phase: 'Phase 6',
+    category: 'Technology',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-antikythera.jpg'
   },
   {
     id: 'money-medici',
@@ -2826,7 +2866,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1397,
     title: 'The Ledger (Medici Bank)',
     description: 'The invention of modern banking. Money ceases to be a physical object and becomes an entry in a book (Credit), allowing value to be teleported across Europe.',
-    phase: 'Civilization',
+    phase: 'Phase 6',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-medici.jpg'
   },
@@ -2836,7 +2876,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1717,
     title: 'The Isaac Newton Standard',
     description: 'Newton fixes the price of gold. The Gold Standard is born, tethering the abstract world of paper money to the physical reality of a rare metal.',
-    phase: 'Modern',
+    phase: 'Phase 9',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-gold.jpg'
   },
@@ -2846,7 +2886,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1950,
     title: 'The Plastic Card',
     description: 'Diners Club introduces the credit card. Money becomes invisible, a frictionless promise to pay later, fueling the consumer age.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-card.jpg'
   },
@@ -2856,7 +2896,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1971,
     title: 'The Nixon Shock',
     description: 'The end of Gold. Nixon uncouples the dollar from metal. Money becomes pure "Fiat" (Let it be done)—backed by nothing but belief in the State.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-nixon.jpg'
   },
@@ -2866,7 +2906,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2010,
     title: 'High-Frequency Trading',
     description: 'The Algorithms take over. Machines trade stocks in microseconds. Value fluctuates faster than human thought, detaching finance from the real economy.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Economy',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/money-algo.jpg'
   },
@@ -2878,7 +2918,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: -350,
     title: 'The First Code (Aristotle\'s Logic)',
     description: 'Aristotle invents Formal Logic (syllogisms), creating the first set of rules for "correct" reasoning. He planted the seed that thought could be processed like math.',
-    phase: 'Civilization',
+    phase: 'Phase 5',
     category: 'Science',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-aristotle.jpg'
   },
@@ -2887,8 +2927,8 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '820 CE',
     yearNumeric: 820,
     title: 'The Algorithm (Al-Khwarizmi)',
-    description: 'The invention of Algebra explicitly defines step-by-step procedures to solve problems—the very definition of an algorithm.',
-    phase: 'Civilization',
+    description: 'The Algorithm. 1,000 years after Greek logic slept, the Golden Age of Islam awakened it. Al-Khwarizmi defined step-by-step procedures (Algebra), translating "reasoning" into "calculation".',
+    phase: 'Phase 6',
     category: 'Science',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-alkhwarizmi.jpg'
   },
@@ -2898,7 +2938,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1305,
     title: 'The Thinking Machine (Ars Magna)',
     description: 'Ramon Llull builds a paper machine of rotating wheels to combine concepts. It was the first attempt to mechanize the generation of new knowledge.',
-    phase: 'Civilization',
+    phase: 'Phase 6',
     category: 'Science',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-llull.jpg'
   },
@@ -2908,7 +2948,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1804,
     title: 'Programmable Hardware (Jacquard Loom)',
     description: 'Joseph Marie Jacquard uses punch cards to control a loom. This separated the "hardware" (the loom) from the "software" (the pattern)—the birth of programming.',
-    phase: 'Industrial',
+    phase: 'Phase 9',
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-jacquard.jpg'
   },
@@ -2918,7 +2958,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1843,
     title: 'The First Algorithm (Ada Lovelace)',
     description: 'Ada Lovelace realizes Babbage\'s machine can manipulate symbols, not just numbers. She writes the first code, envisioning a computer that could compose music.',
-    phase: 'Industrial',
+    phase: 'Phase 9',
     category: 'Technology',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-lovelace.jpg'
   },
@@ -2928,9 +2968,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1847,
     title: 'Binary Logic (George Boole)',
     description: 'Boole proves that logic can be represented as math (0s and 1s). This "Boolean Logic" becomes the physical language of every future computer circuit.',
-    phase: 'Industrial',
+    phase: 'Phase 9',
     category: 'Science',
-    imageUrl: 'https://image.pollinations.ai/prompt/george%20boole%20visualizing%20binary%20code%200s%20and%201s%20in%20the%20air%2C%20victorian%20study%2C%20matrix%20rain%20effect%20subtle%2C%20cinematic?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-boole.jpg'
   },
   {
     id: 'ai-principia',
@@ -2938,9 +2978,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1910,
     title: 'Principia Mathematica',
     description: 'Russell and Whitehead attempt to encode all of mathematics into pure logic. Though they failed, they formalized the language that AI would eventually speak.',
-    phase: 'Modern',
+    phase: 'Phase 10',
     category: 'Science',
-    imageUrl: 'https://image.pollinations.ai/prompt/principia%20mathematica%20book%20glowing%20with%20logic%20symbols%2C%20bertrand%20russell%20study%2C%20complex%20mathematical%20proofs%20floating%2C%20cinematic?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-principia.jpg'
   },
   {
     id: 'ai-mcculloch',
@@ -2948,9 +2988,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1943,
     title: 'The First Neural Net',
     description: 'McCulloch and Pitts propose the first mathematical model of a biological neuron, suggesting that a network of simple switches could perform complex logic.',
-    phase: 'Modern',
+    phase: 'Phase 10',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/abstract%20biological%20neuron%20turning%20into%20digital%20circuit%2C%20mcculloch%20pitts%20model%2C%20cyan%20and%20purple%20neon%20lighting%2C%20cinematic%20macro?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-mcculloch.jpg'
   },
   {
     id: 'ai-dartmouth',
@@ -2958,9 +2998,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1956,
     title: 'Artificial Intelligence Born',
     description: 'At the Dartmouth Conference, McCarthy, Minsky, and others coin the term "AI" and set the goal: "Every aspect of learning can be so precisely described that a machine can be made to simulate it."',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/dartmouth%20conference%201956%20scientists%20around%20chalkboard%20drawing%20robot%20brains%2C%20vintage%20kodachrome%20style%2C%20academic%20setting?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-dartmouth.jpg'
   },
   {
     id: 'ai-perceptron',
@@ -2968,9 +3008,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1958,
     title: 'The Perceptron',
     description: 'Frank Rosenblatt builds the Perceptron, a machine that can "learn" to recognize shapes. The NYT predicts it will soon "walk, talk, see, and write."',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/frank%20rosenblatt%20perceptron%20machine%20wires%20and%20camera%2C%201950s%20lab%2C%20retro%20futurism%2C%20cinematic%20lighting?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-perceptron.jpg'
   },
   {
     id: 'ai-winter',
@@ -2978,9 +3018,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1974,
     title: 'The AI Winter',
     description: 'Overhyped promises fail to materialize. Funding dries up. The field learns a hard lesson: logic is easy, but intuition and ambiguity are hard.',
-    phase: 'Modern',
+    phase: 'Phase 11',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/frozen%20computer%20server%20room%20covered%20in%20ice%20and%20snow%2C%20ai%20winter%20concept%2C%20desolate%20technological%20landscape%2C%20cinematic%20blue?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-winter.jpg'
   },
   {
     id: 'ai-deepblue',
@@ -2988,9 +3028,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 1997,
     title: 'Deep Blue Defeats Kasparov',
     description: 'Brute force wins. IBM\'s Deep Blue beats the World Chess Champion, proving machines can outperform humans in complex, closed systems.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/deep%20blue%20computer%20playing%20chess%20against%20human%20shadow%2C%20intense%20focus%2C%20digital%20chess%20pieces%20glowing%2C%20cinematic?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-deepblue.jpg'
   },
   {
     id: 'ai-alexnet',
@@ -2998,9 +3038,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2012,
     title: 'The Deep Learning Explosion',
     description: 'AlexNet destroys the competition in image recognition using deep neural networks on GPUs. The modern AI boom officially begins.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/alexnet%20neural%20network%20visualization%20recognizing%20cats%20and%20objects%2C%20layers%20of%20neurons%20firing%2C%20digital%20abstract%20art?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-alexnet.jpg'
   },
   {
     id: 'ai-alphago',
@@ -3008,9 +3048,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2016,
     title: 'AlphaGo',
     description: 'Move 37. AlphaGo defeats Lee Sedol at Go, a game of intuition. The machine makes a move so creative that it initially confused human experts.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/alphago%20move%2037%20visualization%2C%20go%20board%20with%20glowing%20stones%2C%20ai%20vs%20human%20mind%2C%20abstract%20strategic%20beauty%2C%20cinematic?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-alphago.jpg'
   },
   {
     id: 'ai-transformer',
@@ -3018,9 +3058,9 @@ export const ALL_EVENTS: TimelineEvent[] = [
     yearNumeric: 2017,
     title: 'Attention Is All You Need',
     description: 'Google researchers invent the Transformer architecture. This mechanism allows models to understand context in vast amounts of data, paving the way for ChatGPT.',
-    phase: 'Modern',
+    phase: 'Phase 12',
     category: 'Technology',
-    imageUrl: 'https://image.pollinations.ai/prompt/transformer%20ai%20architecture%20diagram%20becoming%20a%20city%20of%20light%2C%20attention%20mechanism%20visualization%2C%20futuristic%20cyberpunk%20gold%20and%20blue?width=1280&height=720&nolog=true'
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-transformer.jpg'
   },
 
   // --- Ancestry of AI Expansion ---
@@ -3031,7 +3071,8 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "Leibniz Binary System",
     description: "Gottfried Wilhelm Leibniz perfects binary arithmetic, the language of 0s and 1s that will one day speak for all machines.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-leibniz-binary-system.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 8'
   },
   {
     id: 'ai-the-difference-engine',
@@ -3040,43 +3081,39 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "The Difference Engine",
     description: "Charles Babbage designs the first automatic mechanical calculator, dreaming of a machine that can crunch numbers without human error.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-the-difference-engine.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 9'
   },
-  {
-    id: 'ai-pitts-mcculloch-neuron',
-    year: '1943 CE',
-    yearNumeric: 1943,
-    title: "Pitts & McCulloch Neuron",
-    description: "The first mathematical model of a neural network.",
-    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-pitts-mcculloch-neuron.jpg',
-    category: 'Technology'
-  },
+
   {
     id: 'ai-cybernetics',
     year: '1948 CE',
     yearNumeric: 1948,
     title: "Cybernetics",
-    description: "Norbert Wiener defines the study of control and communication in the animal and the machine.",
+    description: "The Feedback Loop. Norbert Wiener reveals that the secret of control—whether in a thermostat, a brain, or a society—is information flowing in circles. This single insight unifies biology and engineering, laying the conceptual foundation for AI.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-cybernetics.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 11'
   },
   {
     id: 'ai-asimovs-three-laws',
     year: '1950 CE',
     yearNumeric: 1950,
     title: "Asimov's Three Laws",
-    description: "Science fiction lays the ethical groundwork for robotics before the technology even exists.",
+    description: "The Ethics Before the Machine. Asimov pens the Three Laws of Robotics in fiction, forcing humanity to confront the moral implications of intelligent machines decades before they exist. These laws would shape real AI policy.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-asimovs-three-laws.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 11'
   },
   {
     id: 'ai-the-logic-theorist',
     year: '1956 CE',
     yearNumeric: 1956,
     title: "The Logic Theorist",
-    description: "Often called the first AI program, written by Newell, Shaw, and Simon to mimic human problem-solving skills.",
+    description: "The First Thinking Program. Newell, Shaw, and Simon create a machine that can prove mathematical theorems—the first software to simulate human reasoning. It debuts at Dartmouth, sparking the AI revolution.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-the-logic-theorist.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 11'
   },
   {
     id: 'ai-eliza',
@@ -3085,7 +3122,8 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "ELIZA",
     description: "Joseph Weizenbaum creates the first chatbot, demonstrating how easily humans attribute emotion to simple code.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-eliza.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 11'
   },
   {
     id: 'ai-perceptrons-book',
@@ -3094,25 +3132,28 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "Perceptrons Book",
     description: "Minsky and Papert publish a critique of neural networks that inadvertently freezes funding for a decade (AI Winter).",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-perceptrons-book.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 11'
   },
   {
     id: 'ai-expert-systems',
     year: '1980 CE',
     yearNumeric: 1980,
     title: "Expert Systems",
-    description: "AI finds commercial success by mimicking the decision-making ability of a human expert in specific domains.",
+    description: "Knowledge Bottled. AI finds its first commercial success by encoding human expertise into if-then rules. These systems diagnose diseases and configure computers, proving AI can generate profit—not just papers.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-expert-systems.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 11'
   },
   {
     id: 'ai-backpropagation',
     year: '1986 CE',
     yearNumeric: 1986,
     title: "Backpropagation",
-    description: "Hinton and colleagues popularize the algorithm that allows neural networks to learn from their mistakes, ending the AI winter.",
+    description: "Geoffrey Hinton and colleagues show that neural networks can learn from their own mistakes, solving the problem that stalled AI for decades.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-backpropagation.jpg',
-    category: 'Technology'
+    category: 'Technology',
+    phase: 'Phase 11'
   },
   {
     id: 'ai-deep-blue-defeats-kasparov',
@@ -3136,6 +3177,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "Watson Wins Jeopardy",
     description: "IBM's Watson demonstrates that machines can understand natural language processing and nuance.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-watson-wins-jeopardy.jpg',
+    phase: 'Phase 12',
     category: 'Technology'
   },
   {
@@ -3145,6 +3187,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "ImageNet Breakthrough",
     description: "AlexNet smashes error rates in image recognition, proving the power of Deep Learning and GPUs.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-imagenet-breakthrough.jpg',
+    phase: 'Phase 12',
     category: 'Technology'
   },
   {
@@ -3154,6 +3197,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "AlphaGo Zero",
     description: "AI teaches itself Go without human data, creating strategies alien to 3,000 years of human history.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-alphago-zero.jpg',
+    phase: 'Phase 12',
     category: 'Technology'
   },
   {
@@ -3163,6 +3207,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "GPT-3",
     description: "OpenAI releases a language model so powerful it blurs the line between human and machine writing.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-gpt-3.jpg',
+    phase: 'Phase 12',
     category: 'Technology'
   },
   {
@@ -3172,6 +3217,18 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: "Generative Reality",
     description: "AI moves beyond text to creating video, code, and virtual worlds, challenging the nature of creativity itself.",
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-generative-reality.jpg',
+    phase: 'Phase 12',
     category: 'Technology'
+  },
+  // --- New AI Events ---
+  {
+    id: 'ai-turing-machine',
+    year: '1936',
+    yearNumeric: 1936,
+    title: 'Turing\'s Universal Machine',
+    description: 'Alan Turing proves that a machine can compute anything that is computable, providing the theoretical blueprint for the digital brain.',
+    phase: 'Phase 10',
+    category: 'Technology',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-turing-machine.jpg' // Dynamic placeholder
   },
 ];

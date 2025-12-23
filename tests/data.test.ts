@@ -19,8 +19,7 @@ describe('Data Integrity', () => {
         it('should have valid properties (phase, category)', () => {
             const VALID_PHASES = [
                 'Phase 1', 'Phase 2', 'Phase 3', 'Phase 4', 'Phase 5', 'Phase 6',
-                'Phase 7', 'Phase 8', 'Phase 9', 'Phase 10', 'Phase 11', 'Phase 12',
-                'Civilization', 'Industrial', 'Modern'
+                'Phase 7', 'Phase 8', 'Phase 9', 'Phase 10', 'Phase 11', 'Phase 12'
             ];
             const VALID_CATEGORIES = [
                 'Art', 'Civilization', 'Communications', 'Cosmology', 'Economy',
@@ -143,7 +142,8 @@ describe('Asset Verification', () => {
 
                     if (fs.existsSync(fullPath)) {
                         const stats = fs.statSync(fullPath);
-                        expect(stats.size).toBeGreaterThan(0);
+                        // Strictly enforce > 1KB to catch corrupt/placeholder files
+                        expect(stats.size).toBeGreaterThan(1000);
 
                         const fileBuffer = fs.readFileSync(fullPath);
                         const hash = crypto.createHash('md5').update(fileBuffer).digest('hex');

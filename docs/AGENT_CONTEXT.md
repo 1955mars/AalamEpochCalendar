@@ -67,6 +67,21 @@ The system uses a **Unified Data Model** centered around a single source of trut
 
     - Run `npx tsx scripts/validateData.ts` after modifying data to ensure no IDs are broken.
 
+2a. **Quality Gates (MANDATORY)**:
+    - **No Orphans**: Every event in a journey MUST be connected. Run `tests/narrative.test.ts` to verify.
+    - **Semantic Connections**: Do not just link events. Use specific types:
+        - `caused`: Direct causality (Input -> Output).
+        - `influenced`: Intellectual inspiration.
+        - `preceded`: Chronological flow without direct cause.
+        - `related`: Thematic similarity.
+    - **Phase Mapping**: Do NOT use generic phases like 'Modern' or 'Civilization'. Use strict IDs:
+        - `Phase 12`: AI / Digital Age (2000+)
+        - `Phase 11`: Space / Info Age (1950-1999)
+        - `Phase 10`: Modernism / World Wars (1900-1949)
+        - `Phase 9`: Industrial / Empire (1700-1899)
+        - ...consult `data/allEvents.ts` for older phases.
+    - **Cinematic Intros**: The first 3 events of ANY journey must have descriptions > 80 chars.
+
 ## Agent Workflow: Creating a New Journey (Timeline)
 To create a new "Journey" (a specific narrative timeline), follow these 5 steps:
 
