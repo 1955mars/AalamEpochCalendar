@@ -58,9 +58,9 @@ describe('Data Integrity', () => {
         it('should have a corresponding image file on disk', () => {
             // Define known missing images to allow tests to pass while we fix them
             // This prevents the CI from breaking on known technical debt
-            const KNOWN_MISSING = [
-                'modern-8', 'modern-10', 'modern-11', 'modern-12', 'modern-13', 'modern-14'
-            ];
+            // Define known missing images to allow tests to pass while we fix them
+            // This prevents the CI from breaking on known technical debt
+            const KNOWN_MISSING: string[] = [];
 
             ALL_EVENTS.forEach(event => {
                 if (event.imageUrl && !event.imageUrl.startsWith('http')) {
