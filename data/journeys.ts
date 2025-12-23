@@ -429,10 +429,45 @@ export const JOURNEYS: Journey[] = [
         description: 'Trace the genealogy of Artificial Intelligence not from 1950, but from the ancient roots of logic and weaving.',
         thumbnailUrl: 'images/modern-1.jpg',
         eventIds: [
-            'ai-aristotle', 'ai-alkhwarizmi', 'ai-llull', 'ai-jacquard',
-            'ai-lovelace', 'ai-boole', 'ai-principia', 'modern-13', // Using existing Turing event
-            'ai-mcculloch', 'ai-dartmouth', 'ai-perceptron', 'ai-winter',
-            'ai-deepblue', 'ai-alexnet', 'ai-alphago', 'ai-transformer'
+            // Ancient Roots
+            'ai-aristotle',     // 350 BCE: Logic
+            'ai-alkhwarizmi',   // 820 CE: Algorithm
+            'ai-llull',         // 1275 CE: Combinatorics
+
+            // The Machine Age
+            'ai-leibniz-binary-system', // 1679
+            'ai-jacquard',      // 1804: Punch Cards
+            'ai-the-difference-engine', // 1822
+            'ai-lovelace',      // 1843: First Program
+            'ai-boole',         // 1854: Boolean Logic
+
+            // The Dawn of Computing
+            'ai-principia',     // 1910
+            'modern-13',        // 1936: Turing Machine
+            'ai-pitts-mcculloch-neuron', // 1943
+            'ai-cybernetics',   // 1948
+            'ai-asimovs-three-laws', // 1950 (Fiction/Ethics)
+
+            // The AI Era Begins
+            'ai-the-logic-theorist', // 1956
+            'ai-dartmouth',     // 1956: The Term "AI"
+            'ai-perceptron',    // 1958
+            'ai-eliza',         // 1966
+            'ai-perceptrons-book', // 1969 (Winter begins)
+            'ai-winter',        // 1974
+
+            // Renaissance
+            'ai-expert-systems', // 1980
+            'ai-backpropagation', // 1986
+            'ai-deepblue',      // 1997
+            'ai-watson-wins-jeopardy', // 2011
+            'ai-imagenet-breakthrough', // 2012
+            'ai-alexnet',       // 2012 (Specific Model)
+            'ai-alphago',       // 2016
+            'ai-alphago-zero',  // 2017
+            'ai-transformer',   // 2017
+            'ai-gpt-3',         // 2020
+            'ai-generative-reality' // 2024
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('ai-')),
         overrides: {

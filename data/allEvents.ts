@@ -3017,4 +3017,150 @@ export const ALL_EVENTS: TimelineEvent[] = [
     category: 'Technology',
     imageUrl: 'https://image.pollinations.ai/prompt/transformer%20ai%20architecture%20diagram%20becoming%20a%20city%20of%20light%2C%20attention%20mechanism%20visualization%2C%20futuristic%20cyberpunk%20gold%20and%20blue?width=1280&height=720&nolog=true'
   }
+
+  // --- Ancestry of AI Expansion ---
+  {
+    id: 'ai-leibniz-binary-system',
+    year: '1679 CE',
+    yearNumeric: 1679,
+    title: "Leibniz Binary System",
+    description: "Gottfried Wilhelm Leibniz perfects binary arithmetic, the language of 0s and 1s that will one day speak for all machines.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-leibniz-binary-system.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-the-difference-engine',
+    year: '1822 CE',
+    yearNumeric: 1822,
+    title: "The Difference Engine",
+    description: "Charles Babbage designs the first automatic mechanical calculator, dreaming of a machine that can crunch numbers without human error.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-the-difference-engine.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-pitts-mcculloch-neuron',
+    year: '1943 CE',
+    yearNumeric: 1943,
+    title: "Pitts & McCulloch Neuron",
+    description: "The first mathematical model of a neural network.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-pitts-mcculloch-neuron.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-cybernetics',
+    year: '1948 CE',
+    yearNumeric: 1948,
+    title: "Cybernetics",
+    description: "Norbert Wiener defines the study of control and communication in the animal and the machine.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-cybernetics.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-asimovs-three-laws',
+    year: '1950 CE',
+    yearNumeric: 1950,
+    title: "Asimov's Three Laws",
+    description: "Science fiction lays the ethical groundwork for robotics before the technology even exists.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-asimovs-three-laws.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-the-logic-theorist',
+    year: '1956 CE',
+    yearNumeric: 1956,
+    title: "The Logic Theorist",
+    description: "Often called the first AI program, written by Newell, Shaw, and Simon to mimic human problem-solving skills.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-the-logic-theorist.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-eliza',
+    year: '1966 CE',
+    yearNumeric: 1966,
+    title: "ELIZA",
+    description: "Joseph Weizenbaum creates the first chatbot, demonstrating how easily humans attribute emotion to simple code.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-eliza.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-perceptrons-book',
+    year: '1969 CE',
+    yearNumeric: 1969,
+    title: "Perceptrons Book",
+    description: "Minsky and Papert publish a critique of neural networks that inadvertently freezes funding for a decade (AI Winter).",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-perceptrons-book.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-expert-systems',
+    year: '1980 CE',
+    yearNumeric: 1980,
+    title: "Expert Systems",
+    description: "AI finds commercial success by mimicking the decision-making ability of a human expert in specific domains.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-expert-systems.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-backpropagation',
+    year: '1986 CE',
+    yearNumeric: 1986,
+    title: "Backpropagation",
+    description: "Hinton and colleagues popularize the algorithm that allows neural networks to learn from their mistakes, ending the AI winter.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-backpropagation.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-deep-blue-defeats-kasparov',
+    year: '1997 CE',
+    yearNumeric: 1997,
+    title: "Deep Blue Defeats Kasparov",
+    description: "Brute force logic conquers human intuition in chess, a watershed moment for machine intelligence.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-deep-blue-defeats-kasparov.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-watson-wins-jeopardy',
+    year: '2011 CE',
+    yearNumeric: 2011,
+    title: "Watson Wins Jeopardy",
+    description: "IBM's Watson demonstrates that machines can understand natural language processing and nuance.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-watson-wins-jeopardy.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-imagenet-breakthrough',
+    year: '2012 CE',
+    yearNumeric: 2012,
+    title: "ImageNet Breakthrough",
+    description: "AlexNet smashes error rates in image recognition, proving the power of Deep Learning and GPUs.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-imagenet-breakthrough.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-alphago-zero',
+    year: '2017 CE',
+    yearNumeric: 2017,
+    title: "AlphaGo Zero",
+    description: "AI teaches itself Go without human data, creating strategies alien to 3,000 years of human history.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-alphago-zero.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-gpt-3',
+    year: '2020 CE',
+    yearNumeric: 2020,
+    title: "GPT-3",
+    description: "OpenAI releases a language model so powerful it blurs the line between human and machine writing.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-gpt-3.jpg',
+    category: 'Technology'
+  },
+  {
+    id: 'ai-generative-reality',
+    year: '2024 CE',
+    yearNumeric: 2024,
+    title: "Generative Reality",
+    description: "AI moves beyond text to creating video, code, and virtual worlds, challenging the nature of creativity itself.",
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/ai-generative-reality.jpg',
+    category: 'Technology'
+  },
 ];

@@ -53,6 +53,22 @@ describe('Data Integrity', () => {
     describe('Journeys', () => {
         const eventIds = new Set(ALL_EVENTS.map(e => e.id));
 
+        it('should have at least 30 events', () => {
+            JOURNEYS.forEach(journey => {
+                expect(journey.eventIds.length, `Journey "${journey.title}" has only ${journey.eventIds.length} events`).toBeGreaterThanOrEqual(30);
+            });
+        });
+
+        it('should have a valid thumbnail image', () => {
+            JOURNEYS.forEach(journey => {
+                expect(journey.thumbnailUrl).toBeDefined();
+                if (journey.thumbnailUrl) {
+                    const fullPath = path.join(PUBLIC_IMAGES_DIR, journey.thumbnailUrl);
+                    expect(fs.existsSync(fullPath), `Missing thumbnail for ${journey.title}: ${journey.thumbnailUrl}`).toBe(true);
+                }
+            });
+        });
+
         it('should reference existing events', () => {
             JOURNEYS.forEach(journey => {
                 journey.eventIds.forEach(id => {

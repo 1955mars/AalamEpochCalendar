@@ -1,0 +1,104 @@
+{
+    "journeyId": "ai",
+    "title": "Ancestry of AI Expansion",
+    "category": "Technology",
+    "description": "Additional events to complete the AI timeline.",
+    "events": [
+        {
+            "yearNumeric": 1679,
+            "title": "Leibniz Binary System",
+            "description": "Gottfried Wilhelm Leibniz perfects binary arithmetic, the language of 0s and 1s that will one day speak for all machines.",
+            "imageKeyword": "binary"
+        },
+        {
+            "yearNumeric": 1822,
+            "title": "The Difference Engine",
+            "description": "Charles Babbage designs the first automatic mechanical calculator, dreaming of a machine that can crunch numbers without human error.",
+            "imageKeyword": "steampunk"
+        },
+        {
+            "yearNumeric": 1943,
+            "title": "Pitts & McCulloch Neuron",
+            "description": "The first mathematical model of a neural network.",
+            "imageKeyword": "neuron"
+        },
+        {
+            "yearNumeric": 1948,
+            "title": "Cybernetics",
+            "description": "Norbert Wiener defines the study of control and communication in the animal and the machine.",
+            "imageKeyword": "cybernetics"
+        },
+        {
+            "yearNumeric": 1950,
+            "title": "Asimov's Three Laws",
+            "description": "Science fiction lays the ethical groundwork for robotics before the technology even exists.",
+            "imageKeyword": "robot"
+        },
+        {
+            "yearNumeric": 1956,
+            "title": "The Logic Theorist",
+            "description": "Often called the first AI program, written by Newell, Shaw, and Simon to mimic human problem-solving skills.",
+            "imageKeyword": "logic"
+        },
+        {
+            "yearNumeric": 1966,
+            "title": "ELIZA",
+            "description": "Joseph Weizenbaum creates the first chatbot, demonstrating how easily humans attribute emotion to simple code.",
+            "imageKeyword": "chatbot"
+        },
+        {
+            "yearNumeric": 1969,
+            "title": "Perceptrons Book",
+            "description": "Minsky and Papert publish a critique of neural networks that inadvertently freezes funding for a decade (AI Winter).",
+            "imageKeyword": "book"
+        },
+        {
+            "yearNumeric": 1980,
+            "title": "Expert Systems",
+            "description": "AI finds commercial success by mimicking the decision-making ability of a human expert in specific domains.",
+            "imageKeyword": "computer"
+        },
+        {
+            "yearNumeric": 1986,
+            "title": "Backpropagation",
+            "description": "Hinton and colleagues popularize the algorithm that allows neural networks to learn from their mistakes, ending the AI winter.",
+            "imageKeyword": "network"
+        },
+        {
+            "yearNumeric": 1997,
+            "title": "Deep Blue Defeats Kasparov",
+            "description": "Brute force logic conquers human intuition in chess, a watershed moment for machine intelligence.",
+            "imageKeyword": "chess"
+        },
+        {
+            "yearNumeric": 2011,
+            "title": "Watson Wins Jeopardy",
+            "description": "IBM's Watson demonstrates that machines can understand natural language processing and nuance.",
+            "imageKeyword": "quiz"
+        },
+        {
+            "yearNumeric": 2012,
+            "title": "ImageNet Breakthrough",
+            "description": "AlexNet smashes error rates in image recognition, proving the power of Deep Learning and GPUs.",
+            "imageKeyword": "vision"
+        },
+        {
+            "yearNumeric": 2017,
+            "title": "AlphaGo Zero",
+            "description": "AI teaches itself Go without human data, creating strategies alien to 3,000 years of human history.",
+            "imageKeyword": "go"
+        },
+        {
+            "yearNumeric": 2020,
+            "title": "GPT-3",
+            "description": "OpenAI releases a language model so powerful it blurs the line between human and machine writing.",
+            "imageKeyword": "text"
+        },
+        {
+            "yearNumeric": 2024,
+            "title": "Generative Reality",
+            "description": "AI moves beyond text to creating video, code, and virtual worlds, challenging the nature of creativity itself.",
+            "imageKeyword": "virtual"
+        }
+    ]
+}
