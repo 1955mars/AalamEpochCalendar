@@ -163,4 +163,21 @@ dramatic lighting, cinematic astronomical art style
 
 ---
 
+## 8. Best Practices & Learnings
+(Added Dec 2023)
+
+### 🖼️ Asset Management
+- **Thumbnails**: Always check `journey.thumbnailUrl` separately from event lists. The `regenerate_images.ts` script now auto-generates them as "Journey Cover" items, but they must be defined in `journeys.ts` first.
+- **Verification**: Trust `npm run verify:images` over manual checks. It validates file existence, size (>5KB), and duplicates.
+- **Placeholders**: If an image API fails repeatedly (e.g., 502 errors), use an existing relevant image as a temporary placeholder to unblock testing, but document it as a "Known Issue" in your walkthrough/PR.
+
+### 🛠️ Tooling
+- **`regenerate_images.ts`**: 
+  - Iterates over `journey.eventIds`.
+  - NOW includes `journey.thumbnailUrl` in the queue.
+  - Supports `--missing` flag to fix gaps without re-doing everything.
+- **`verify:images`**: Failing checks here will break CI/CD. Ensure it passes before pushing.
+
+---
+
 *Last updated: December 23, 2025*
