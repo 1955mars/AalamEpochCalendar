@@ -513,10 +513,72 @@ export const CONNECTIONS: Connection[] = [
     { id: 'tts-29', fromEventId: 'space-jwst', toEventId: 'space-artemis', type: 'related' },
     { id: 'tts-30', fromEventId: 'space-artemis', toEventId: 'space-starship', type: 'related' },
     { id: 'tts-31', fromEventId: 'space-perseverance', toEventId: 'space-starship', type: 'related' }, // Mars exploration -> Mars ship
-    { id: 'tts-32', fromEventId: 'modern-5', toEventId: 'space-goddard', type: 'influenced' } // Wright Bros -> Rockets
+    { id: 'tts-32', fromEventId: 'modern-5', toEventId: 'space-goddard', type: 'influenced' }, // Wright Bros -> Rockets
+
+    // --- The Cure Connections ---
+    { id: 'cure-1', fromEventId: 'cure-trepanning', toEventId: 'cure-imhotep', type: 'preceded' },
+    { id: 'cure-2', fromEventId: 'cure-imhotep', toEventId: 'cure-ayurveda', type: 'related' },
+    { id: 'cure-3', fromEventId: 'cure-ayurveda', toEventId: 'cure-hippocrates', type: 'influenced' },
+    { id: 'cure-4', fromEventId: 'cure-hippocrates', toEventId: 'cure-galen', type: 'influenced' }, // Humors
+    { id: 'cure-5', fromEventId: 'cure-galen', toEventId: 'cure-avicenna', type: 'influenced' }, // Canon built on Galen
+    { id: 'cure-6', fromEventId: 'cure-avicenna', toEventId: 'p7-31', type: 'preceded' }, // Canon -> Plague (failure)
+    { id: 'cure-7', fromEventId: 'p7-31', toEventId: 'cure-vesalius', type: 'caused' }, // Plague -> Need for anatomy? (Loose)
+    { id: 'cure-8', fromEventId: 'cure-vesalius', toEventId: 'cure-harvey', type: 'caused' }, // Structure -> Function
+    { id: 'cure-9', fromEventId: 'cure-harvey', toEventId: 'cure-leeuwenhoek', type: 'preceded' },
+    { id: 'cure-10', fromEventId: 'cure-leeuwenhoek', toEventId: 'cure-lind', type: 'preceded' },
+    { id: 'cure-11', fromEventId: 'cure-lind', toEventId: 'p9-7', type: 'influenced' }, // Trial -> Vaccine (Empiricism)
+    { id: 'cure-12', fromEventId: 'p9-7', toEventId: 'cure-stethoscope', type: 'preceded' },
+    { id: 'cure-13', fromEventId: 'cure-stethoscope', toEventId: 'cure-anesthesia', type: 'preceded' },
+    { id: 'cure-14', fromEventId: 'cure-anesthesia', toEventId: 'cure-semmelweis', type: 'preceded' },
+    { id: 'cure-15', fromEventId: 'cure-semmelweis', toEventId: 'cure-pasteur', type: 'influenced' }, // Hygiene -> Germs
+    { id: 'cure-16', fromEventId: 'cure-pasteur', toEventId: 'cure-lister', type: 'caused' }, // Germ Theory -> Antiseptics
+    { id: 'cure-17', fromEventId: 'cure-lister', toEventId: 'cure-koch', type: 'related' }, // Killing germs -> Finding germs
+    { id: 'cure-18', fromEventId: 'cure-koch', toEventId: 'cure-xray', type: 'preceded' },
+    { id: 'cure-19', fromEventId: 'cure-xray', toEventId: 'cure-flu', type: 'preceded' },
+    { id: 'cure-20', fromEventId: 'cure-flu', toEventId: 'cure-insulin', type: 'preceded' },
+    { id: 'cure-21', fromEventId: 'cure-insulin', toEventId: 'cure-penicillin', type: 'preceded' },
+    { id: 'cure-22', fromEventId: 'cure-penicillin', toEventId: 'cure-dna', type: 'preceded' },
+    { id: 'cure-23', fromEventId: 'cure-dna', toEventId: 'cure-polio', type: 'related' }, // Bio discoveries
+    { id: 'cure-24', fromEventId: 'cure-polio', toEventId: 'cure-transplant', type: 'preceded' },
+    { id: 'cure-25', fromEventId: 'cure-transplant', toEventId: 'cure-smallpox-end', type: 'preceded' },
+    { id: 'cure-26', fromEventId: 'cure-smallpox-end', toEventId: 'cure-hiv', type: 'related' }, // Victory -> New Challenge
+    { id: 'cure-27', fromEventId: 'cure-hiv', toEventId: 'cure-genome', type: 'influenced' }, // AIDS research -> Genetics
+    { id: 'cure-28', fromEventId: 'cure-genome', toEventId: 'cure-crispr', type: 'caused' }, // Map -> Edit
+    { id: 'cure-29', fromEventId: 'cure-crispr', toEventId: 'p12-26', type: 'preceded' }, // Tech -> Pandemic
+    { id: 'cure-30', fromEventId: 'p12-26', toEventId: 'cure-mrna', type: 'caused' } // Pandemic -> Solution
 ];
 
 export const JOURNEYS: Journey[] = [
+    {
+        id: 'the-cure',
+        title: 'The Cure: Humanity vs. Disease',
+        description: 'From shamans to mRNA—the 10,000-year war against invisible killers.',
+        thumbnailUrl: 'images/the-cure-thumb.jpg',
+        eventIds: [
+            // Ancient
+            'cure-trepanning', 'cure-imhotep', 'cure-ayurveda', 'cure-hippocrates',
+            'cure-galen',
+            // Medieval
+            'cure-avicenna', 'p7-31', // Black Death
+            'p8-20', // Copernicus (context)
+            // Renaissance
+            'cure-vesalius', 'cure-harvey', 'cure-leeuwenhoek',
+            // Enlightenment
+            'cure-lind', 'p9-7', // Smallpox
+            // 19th Century
+            'cure-stethoscope', 'cure-anesthesia', 'cure-semmelweis',
+            'cure-pasteur', 'cure-lister', 'cure-koch', 'cure-xray',
+            // 20th Century
+            'cure-flu', 'cure-insulin', 'cure-penicillin',
+            'cure-dna', 'cure-polio', 'cure-transplant',
+            'cure-smallpox-end', 'cure-hiv',
+            // 21st Century
+            'cure-genome', 'cure-crispr', 'p12-26', // COVID
+            'cure-mrna'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('cure-')),
+        overrides: {}
+    },
     {
         id: 'cosmic-origins',
         title: 'Cosmic Origins: The Beginning of Everything',

@@ -3472,5 +3472,287 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/space-starship.jpg',
     phase: 'Phase 12',
     category: 'Technology'
+  },
+
+  // --- The Cure: History of Medicine Events ---
+  {
+    id: 'cure-trepanning',
+    year: '10,000 BCE',
+    yearNumeric: -10000,
+    title: 'Trepanning',
+    description: 'The First Surgery. Stone Age healers drill holes in skulls to release demons or pressure, marking the beginning of humanity\'s attempt to hack the body.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-trepanning.jpg',
+    phase: 'Phase 4',
+    category: 'Science'
+  },
+  {
+    id: 'cure-imhotep',
+    year: '2600 BCE',
+    yearNumeric: -2600,
+    title: 'Imhotep',
+    description: 'The First Physician. An Egyptian architect and healer who treats disease as a physical problem, not a curse, laying the groundwork for diagnosis.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-imhotep.jpg',
+    phase: 'Phase 5',
+    category: 'Science'
+  },
+  {
+    id: 'cure-ayurveda',
+    year: '800 BCE',
+    yearNumeric: -800,
+    title: 'Ayurveda',
+    description: 'Knowledge of Life. Early Indian medicine systematizes the body into doshas, emphasizing balance, diet, and surgery centuries before the West.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-ayurveda.jpg',
+    phase: 'Phase 6',
+    category: 'Science'
+  },
+  {
+    id: 'cure-hippocrates',
+    year: '400 BCE',
+    yearNumeric: -400,
+    title: 'Hippocrates',
+    description: 'Do No Harm. The "Father of Medicine" separates healing from religion, insisting that diseases have natural causes, not divine ones.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-hippocrates.jpg',
+    phase: 'Phase 6',
+    category: 'Science'
+  },
+  {
+    id: 'cure-galen',
+    year: '180 CE',
+    yearNumeric: 180,
+    title: 'Galen',
+    description: 'The Authority. His theory of the Four Humors dominates medicine for 1,500 years—incorrectly, but establishing anatomy as a discipline.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-galen.jpg',
+    phase: 'Phase 7',
+    category: 'Science'
+  },
+  {
+    id: 'cure-avicenna',
+    year: '1025 CE',
+    yearNumeric: 1025,
+    title: 'Canon of Medicine',
+    description: 'The Prince of Physicians. Ibn Sina (Avicenna) compiles the medical knowledge of the world into a text that will guide doctors for centuries.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-avicenna.jpg',
+    phase: 'Phase 7',
+    category: 'Science'
+  },
+  {
+    id: 'cure-vesalius',
+    year: '1543 CE',
+    yearNumeric: 1543,
+    title: 'De Humani Corporis Fabrica',
+    description: 'The Body Revealed. Vesalius dissects corpses to draw the first accurate maps of human anatomy, overthrowing Galen\'s ancient errors.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-vesalius.jpg',
+    phase: 'Phase 8',
+    category: 'Science'
+  },
+  {
+    id: 'cure-harvey',
+    year: '1628 CE',
+    yearNumeric: 1628,
+    title: 'Circulation of Blood',
+    description: 'The Living Pump. William Harvey proves the heart pumps blood in a closed loop, turning the body into a hydraulic machine.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-harvey.jpg',
+    phase: 'Phase 8',
+    category: 'Science'
+  },
+  {
+    id: 'cure-leeuwenhoek',
+    year: '1676 CE',
+    yearNumeric: 1676,
+    title: 'Microscopy',
+    description: 'The Invisible World. Van Leeuwenhoek peers through a lens and sees "animalcules," discovering the biological universe that lives within us.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-leeuwenhoek.jpg',
+    phase: 'Phase 8',
+    category: 'Science'
+  },
+  {
+    id: 'cure-lind',
+    year: '1747 CE',
+    yearNumeric: 1747,
+    title: 'Taming Scurvy',
+    description: 'The First Clinical Trial. James Lind proves citrus cures scurvy by testing treatments on sailors, inventing the methodology of modern medicine.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-lind.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'cure-stethoscope',
+    year: '1816 CE',
+    yearNumeric: 1816,
+    title: 'Stethoscope Invented',
+    description: 'Listening In. Laennec invents a tool to hear the heart and lungs, allowing doctors to diagnose without cutting.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-stethoscope.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'cure-anesthesia',
+    year: '1846 CE',
+    yearNumeric: 1846,
+    title: 'The End of Agony',
+    description: 'Ether Day. The first public demonstration of anesthesia turns surgery from a torture endurance test into a precise science.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-anesthesia.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'cure-semmelweis',
+    year: '1847 CE',
+    yearNumeric: 1847,
+    title: 'Hand Washing',
+    description: 'The Savior of Mothers. Ignaz Semmelweis discovers that hand washing saves lives, but is mocked by doctors who refuse to believe they are carriers of death.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-semmelweis.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'cure-pasteur',
+    year: '1861 CE',
+    yearNumeric: 1861,
+    title: 'Germ Theory',
+    description: 'Life from Life. Louis Pasteur proves that invisible microbes cause spoilage and disease, finally killing the idea of "spontaneous generation."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-pasteur.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'cure-lister',
+    year: '1867 CE',
+    yearNumeric: 1867,
+    title: 'Antiseptic Surgery',
+    description: 'Sterile Field. Joseph Lister applies germ theory to surgery, spraying carbolic acid to kill the invisible killers in the operating room.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-lister.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'cure-koch',
+    year: '1882 CE',
+    yearNumeric: 1882,
+    title: 'Identifying Pathogens',
+    description: 'The Hunter of Microbes. Robert Koch isolates the bacteria causing tuberculosis, proving specific germs cause specific diseases.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-koch.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'cure-xray',
+    year: '1895 CE',
+    yearNumeric: 1895,
+    title: 'Discovery of X-Rays',
+    description: 'Seeing Through Flesh. Wilhelm Roentgen discovers a mysterious ray that reveals the skeleton inside the living body.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-xray.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'cure-flu',
+    year: '1918 CE',
+    yearNumeric: 1918,
+    title: 'Spanish Flu',
+    description: 'The Great Pandemic. An influenza virus kills 50 million people, more than WWI, reshaping public health forever.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-flu.jpg',
+    phase: 'Phase 10',
+    category: 'Science'
+  },
+  {
+    id: 'cure-insulin',
+    year: '1921 CE',
+    yearNumeric: 1921,
+    title: 'Discovery of Insulin',
+    description: 'Resurrecting the Dying. Banting and Best isolate insulin, turning Type 1 diabetes from a death sentence into a manageable condition.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-insulin.jpg',
+    phase: 'Phase 10',
+    category: 'Science'
+  },
+  {
+    id: 'cure-penicillin',
+    year: '1928 CE',
+    yearNumeric: 1928,
+    title: 'Penicillin',
+    description: 'The Mold That Saves. Alexander Fleming accidentally discovers the first antibiotic, beginning the era where infections are no longer fatal.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-penicillin.jpg',
+    phase: 'Phase 10',
+    category: 'Science'
+  },
+  {
+    id: 'cure-dna', // Using new ID instead of verifying p11-13 to ensure accuracy
+    year: '1953 CE',
+    yearNumeric: 1953,
+    title: 'The Double Helix',
+    description: 'The Code of Life. Watson, Crick, Franklin, and Wilkins reveal DNA\'s structure, unlocking the biological software of every living thing.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-dna.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'cure-polio',
+    year: '1955 CE',
+    yearNumeric: 1955,
+    title: 'Polio Vaccine',
+    description: 'The Crusade Ended. Jonas Salk develops a vaccine that eradicates the terror of childhood paralysis, asking "Could you patent the sun?"',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-polio.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'cure-transplant',
+    year: '1967 CE',
+    yearNumeric: 1967,
+    title: 'First Heart Transplant',
+    description: 'Exchange of Engines. Christiaan Barnard performs the first human heart transplant, challenging the definition of death and the limits of surgery.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-transplant.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'cure-smallpox-end',
+    year: '1980 CE',
+    yearNumeric: 1980,
+    title: 'Eradication of Smallpox',
+    description: 'Victory. The WHO declares smallpox eradicated—the first and only time humanity has driven a disease to total extinction.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-smallpox-end.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'cure-hiv',
+    year: '1981 CE',
+    yearNumeric: 1981,
+    title: 'HIV/AIDS Emerges',
+    description: 'The New Plague. A mysterious virus challenges modern medicine, leading to decades of activism, research, and life-saving antiretrovirals.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-hiv.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'cure-genome',
+    year: '2003 CE',
+    yearNumeric: 2003,
+    title: 'Human Genome Project',
+    description: 'The Book of Man. Scientists finish sequencing the 3 billion letters of human DNA, opening the door to personalized medicine.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-genome.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'cure-crispr',
+    year: '2012 CE',
+    yearNumeric: 2012,
+    title: 'CRISPR Gene Editing',
+    description: 'Molecular Scissors. Doudna and Charpentier develop a tool to edit DNA with precision, giving humanity control over its own evolution.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-crispr.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'cure-mrna',
+    year: '2020 CE',
+    yearNumeric: 2020,
+    title: 'mRNA Vaccines',
+    description: 'Speed of Science. In response to COVID-19, mRNA technology is deployed, turning the body\'s cells into vaccine factories.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-mrna.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
   }
 ];
