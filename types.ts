@@ -31,6 +31,21 @@ export interface Connection {
   description?: string;
 }
 
+export interface GlobalConnection {
+  id: string;
+  fromEventId: string;
+  toEventId: string;
+  type: 'caused' | 'preceded' | 'related' | 'influenced';
+  description?: string;
+  weight?: number; // 0.1 to 1.0 strength
+}
+
+export type TagType = 'Topic' | 'Location' | 'Entity' | 'Period';
+export interface SemanticTag {
+  type: TagType;
+  value: string;
+}
+
 export interface Journey {
   id: string;
   title: string;
