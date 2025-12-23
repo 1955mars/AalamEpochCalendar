@@ -119,6 +119,22 @@ describe('Data Integrity', () => {
             });
         });
 
+        it('should have unique images within the journey', () => {
+            JOURNEYS.forEach(journey => {
+                const imagesSeen = new Set<string>();
+                journey.eventIds.forEach(id => {
+                    const event = ALL_EVENTS.find(e => e && e.id === id);
+                    if (event && event.imageUrl) {
+                        // Normalize: remove query params
+                        const cleanUrl = event.imageUrl.split('?')[0];
+
+                        expect(imagesSeen.has(cleanUrl), `Journey "${journey.title}" has duplicate image: ${cleanUrl} (Event: ${id})`).toBe(false);
+                        imagesSeen.add(cleanUrl);
+                    }
+                });
+            });
+        });
+
         it('should reference existing events', () => {
             JOURNEYS.forEach(journey => {
                 journey.eventIds.forEach(id => {

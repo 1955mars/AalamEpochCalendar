@@ -84,8 +84,9 @@ Located in `.github/workflows/ci.yml`. It runs on every push.
 **The 5 Golden Rules Enforced by Tests:**
 1.  **The "30-Event" Rule**: Every journey MUST have at least 30 events.
 2.  **The "No Ghost" Rule**: Every event MUST have a corresponding image file on disk.
-3.  **The "Thumbnail" Rule**: Every journey MUST have a cover image.
-4.  **The "Complete Data" Rule**: Events must have a valid `phase` and `category` from the allowed list.
+3.  **The "No Clone" Rule**: No two events in the same journey can reuse the same image file.
+4.  **The "Thumbnail" Rule**: Every journey MUST have a cover image.
+5.  **The "Complete Data" Rule**: Events must have a valid `phase` and `category` from the allowed list.
 5.  **The "Causality" Rule**: Journeys must have a valid `connections` array linking events together.
 
 To run these checks locally:
