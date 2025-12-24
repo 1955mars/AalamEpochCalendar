@@ -9,24 +9,7 @@ export interface PlannedJourney {
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
     // === PRIORITY 1: High Impact, Many Existing Events ===
-    {
-        title: 'To The Stars',
-        description: 'The Space Race, the Moon Landing, and the future of Mars colonization.',
-        category: 'Innovation',
-        icon: Zap
-    },
-    {
-        title: 'The Cure',
-        description: 'From shamans to mRNA: The eternal war against disease.',
-        category: 'Life',
-        icon: Anchor
-    },
-    {
-        title: 'Gods & Mortals',
-        description: 'The evolution of belief: How myths and religions shaped civilizations.',
-        category: 'Culture',
-        icon: BookOpen
-    },
+    // COMPLETED: To The Stars, The Cure, Gods & Mortals
     {
         title: 'The Art of War',
         description: 'How conflict drove innovation, from the first chariot to the nuclear triad.',
