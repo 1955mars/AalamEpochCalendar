@@ -188,6 +188,42 @@ dramatic lighting, cinematic astronomical art style
 - **Recommended order**: Chronological by scope (Cosmic → Life → Civilizations → Modern).
 - Newly added journeys go at the **end** of the array unless you deliberately reorder.
 
+### ✨ Journey Overrides (Added Dec 23, 2025)
+When reusing existing events in a new journey, their descriptions may not fit the narrative. Use `overrides` in the journey definition:
+
+```typescript
+{
+    id: 'gods-mortals',
+    eventIds: ['p6-16', 'p7-2', ...],
+    overrides: {
+        'p6-16': { 
+            title: 'The Buddha Awakens',
+            description: 'The Middle Way. A prince abandons his palace...' 
+        },
+        'p7-2': { 
+            title: 'The Crucifixion',
+            description: 'Death Becomes Life. A Jewish rabbi is executed...' 
+        }
+    }
+}
+```
+
+**When to use overrides:**
+- Existing event description is too terse (e.g., "Foundational event of Christianity")
+- Event title doesn't fit the journey's narrative angle  
+- Description lacks the "Big History Narrator" voice
+
+### 🔍 Narrative Review Workflow (Added Dec 23, 2025)
+After implementing a journey, always run a narrative review:
+
+1. **Print narrative**: `npx tsx scripts/print_journey_narrative.ts <journey-id>`
+2. **Look for**:
+   - Weak descriptions (< 20 words, no "So What?")
+   - Events with generic titles
+   - Off-topic events that break thematic flow
+3. **Fix using**: Journey `overrides` for reused events, or edit `allEvents.ts` for new events
+4. **Commit separately**: Use `fix(journey): Improve narrative quality` commit message
+
 ---
 
 *Last updated: December 23, 2025*

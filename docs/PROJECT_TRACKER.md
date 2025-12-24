@@ -23,6 +23,9 @@ This document serves as the central dashboard for tracking the development of th
 | **5. History of Art** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
 | **6. Ancestry of AI** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
 | **7. The Money Illusion** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **8. To The Stars** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **9. The Cure** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
+| **10. Gods & Mortals** | 🟢 | 🟢 | 🟢 | 🟢 | 🟢 | 🔵 |
 
 ## 🔮 Phase 2: "Traction" Roadmap (Planned)
 Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned Journeys".
@@ -31,7 +34,9 @@ Selected for mass appeal based on `CONTENT_STRATEGY.md`. See homepage "Planned J
 | :--- | :--- | :---: |
 | **Power** | The Shadow World, Crime & Punishment | 🟢 |
 | **Human** | The Mating Game, The Psycho-Path, Food on Your Plate | 🔴 |
-| **Innovation** | Power Trip, To The Stars, Silicon Brain | 🔴 |
+| **Innovation** | Power Trip, ~~To The Stars~~, Silicon Brain | 🟢 |
+| **Culture** | ~~Gods & Mortals~~, The Rhythm of Life | 🟢 |
+| **Life** | ~~The Cure~~, Food on Your Plate | 🟢 |
 
 ---
 
