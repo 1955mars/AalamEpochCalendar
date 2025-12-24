@@ -929,6 +929,55 @@ export const JOURNEYS: Journey[] = [
             'gm-darwin', 'gm-secularism', 'gm-new-age', 'gm-interfaith'
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('gm-')),
-        overrides: {}
+        overrides: {
+            'p4-6': {
+                title: 'Göbekli Tepe',
+                description: 'Before the Farm, the Temple. Hunter-gatherers build massive stone circles 6,000 years before the pyramids—suggesting religion came before agriculture, not after.'
+            },
+            'p5-23': {
+                title: 'Akhenaten\'s Revolution',
+                description: 'One God, One Pharaoh. Egypt\'s heretic king erases a thousand gods to worship only the sun disk—the first monotheistic experiment, and a spectacular failure.'
+            },
+            'p5-25': {
+                title: 'The Vedas',
+                description: 'Songs of the Aryans. Sanskrit hymns memorized for millennia define the cosmic order—karma, duty, and the gods that will become Hinduism.'
+            },
+            'p6-5': {
+                title: 'Solomon\'s Temple',
+                description: 'The House of the Name. A golden shrine rises in Jerusalem, anchoring Jewish identity to a single sacred place—and setting up millennia of conflict.'
+            },
+            'p6-16': {
+                title: 'The Buddha Awakens',
+                description: 'The Middle Way. A prince abandons his palace, sits under a tree, and discovers that desire is the root of suffering—launching a philosophy that will reshape Asia.'
+            },
+            'p6-17': {
+                title: 'Confucius and Social Harmony',
+                description: 'The Rectification of Names. A wandering teacher insists that civilization depends on proper relationships—parent to child, ruler to subject, friend to friend.'
+            },
+            'p7-2': {
+                title: 'The Crucifixion',
+                description: 'Death Becomes Life. A Jewish rabbi is executed by Rome as a criminal. His followers claim he rises again, and a new religion is born from martyrdom.'
+            },
+            'p7-7': {
+                title: 'Constantine\'s Gamble',
+                description: 'In Hoc Signo Vinces. An emperor sees a vision before battle and legalizes Christianity, transforming a persecuted cult into the state religion of the world\'s greatest empire.'
+            },
+            'p7-15': {
+                title: 'The Umayyad Empire',
+                description: 'From Mecca to Spain. Within a century of Muhammad\'s death, Islam spans from the Atlantic to Central Asia—the fastest religious expansion in history.'
+            },
+            'p7-22': {
+                title: 'The Great Schism',
+                description: 'East and West Part Ways. Pope and Patriarch excommunicate each other over theology and power, splitting Christianity into two hostile camps that remain divided today.'
+            },
+            'p7-24': {
+                title: 'The Crusades Begin',
+                description: 'Deus Vult! The Pope promises heaven to warriors who reclaim Jerusalem, launching two centuries of religious war that scars relations between faiths to this day.'
+            },
+            'p8-18': {
+                title: 'The King\'s Church',
+                description: 'Divorce as Theology. Henry VIII breaks with Rome not over doctrine but a wife, creating a national church and proving that religion and politics are inseparable.'
+            }
+        }
     }
 ];
