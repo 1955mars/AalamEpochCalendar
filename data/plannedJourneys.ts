@@ -1,4 +1,4 @@
-import { Globe, Lightbulb, Music, Utensils, Zap, Cpu, Anchor, BookOpen, Scale, Landmark, Feather, Videotape, Gamepad, Shirt, Medal, Heart, Leaf, Users, Gavel, Ship } from 'lucide-react';
+import { Globe, Lightbulb, Music, Utensils, Zap, Cpu, Anchor, BookOpen, Scale, Landmark, Feather, Videotape, Gamepad, Medal, Heart, Leaf, Users, Gavel, Ship } from 'lucide-react';
 
 export interface PlannedJourney {
     title: string;
@@ -47,10 +47,10 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
         icon: Lightbulb
     },
     {
-        title: 'Crime & Punishment',
-        description: 'From the dungeon to DNA evidence: The evolution of justice and law.',
+        title: 'Rights & Revolutions',
+        description: 'Magna Carta to UN Declaration: How humanity invented freedom.',
         category: 'Power',
-        icon: Gavel
+        icon: Scale
     },
     {
         title: 'The Climate Chronicle',
@@ -75,6 +75,12 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
         icon: Music
     },
     {
+        title: 'The Examined Life',
+        description: 'From Socrates to Existentialism: The quest to understand existence.',
+        category: 'Culture',
+        icon: BookOpen
+    },
+    {
         title: 'The Silver Screen',
         description: 'From silent shadows to streaming: The evolution of cinema.',
         category: 'Culture',
@@ -93,16 +99,10 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
         icon: Utensils
     },
     {
-        title: 'The Written Word',
-        description: 'From clay tablets to Kindle: The stories that shaped civilization.',
-        category: 'Culture',
-        icon: BookOpen
-    },
-    {
-        title: 'Faster, Higher, Stronger',
-        description: 'The history of sports: Ancient Olympics to modern esports.',
-        category: 'Life',
-        icon: Medal
+        title: 'Crime & Punishment',
+        description: 'From the dungeon to DNA evidence: The evolution of justice and law.',
+        category: 'Power',
+        icon: Gavel
     },
     {
         title: 'The Mating Game',
