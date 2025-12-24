@@ -4300,5 +4300,277 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-antibiotic.jpg',
     phase: 'Phase 12',
     category: 'Life'
+  },
+
+  // --- WOMEN WHO CHANGED HISTORY ---
+  {
+    id: 'women-hatshepsut',
+    year: '1479 BCE',
+    yearNumeric: -1479,
+    title: 'Hatshepsut',
+    description: 'The King Who Was a Woman. For 22 years she ruled as Pharaoh, built monuments, and expanded trade—then her successors tried to erase her from history.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-hatshepsut.jpg',
+    phase: 'Phase 5',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-nefertiti',
+    year: '1350 BCE',
+    yearNumeric: -1350,
+    title: 'Nefertiti',
+    description: 'The Beautiful One Has Come. More than a pretty face—she may have ruled Egypt alone after Akhenaten, guiding a religious revolution.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-nefertiti.jpg',
+    phase: 'Phase 5',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-cleopatra',
+    year: '51 BCE',
+    yearNumeric: -51,
+    title: 'Cleopatra VII',
+    description: 'The Last Pharaoh. She spoke nine languages, seduced two Roman rulers, and when she fell, so did independent Egypt—forever.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-cleopatra.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-boudica',
+    year: '60 CE',
+    yearNumeric: 60,
+    title: 'Boudica',
+    description: 'The Warrior Queen. When Rome humiliated her, she raised an army and burned three cities—a reminder that empires can be challenged.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-boudica.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-hypatia',
+    year: '400 CE',
+    yearNumeric: 400,
+    title: 'Hypatia of Alexandria',
+    description: 'The Martyr of Reason. The greatest mathematician of her age, murdered by a mob—a symbol of ancient knowledge lost to religious fury.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-hypatia.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'women-wu',
+    year: '690 CE',
+    yearNumeric: 690,
+    title: 'Wu Zetian',
+    description: 'The Dragon Empress. The only woman to rule China as Emperor in her own right—ruthless, brilliant, and unforgettable.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-wu.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-murasaki',
+    year: '1000 CE',
+    yearNumeric: 1000,
+    title: 'Murasaki Shikibu',
+    description: 'The First Novelist. A Japanese lady-in-waiting writes "The Tale of Genji"—the world\'s first psychological novel, a millennium before its time.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-murasaki.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'women-hildegard',
+    year: '1150 CE',
+    yearNumeric: 1150,
+    title: 'Hildegard of Bingen',
+    description: 'The Polymath Abbess. Composer, philosopher, scientist, mystic—she corresponded with popes and kings, centuries ahead of her time.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-hildegard.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'women-eleanor',
+    year: '1137 CE',
+    yearNumeric: 1137,
+    title: 'Eleanor of Aquitaine',
+    description: 'Queen Twice Over. She divorced a king, married another, led a Crusade, and raised two more kings—the most powerful woman in medieval Europe.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-eleanor.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-joan',
+    year: '1429 CE',
+    yearNumeric: 1429,
+    title: 'Joan of Arc',
+    description: 'The Maid of Orléans. A peasant girl who heard voices, led armies, saved France, and was burned at 19—then canonized as a saint.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-joan.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-catherine',
+    year: '1762 CE',
+    yearNumeric: 1762,
+    title: 'Catherine the Great',
+    description: 'The Enlightened Empress. A German princess who seized Russia, expanded its borders, and made it a European superpower through wit and will.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-catherine.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-olympe',
+    year: '1791 CE',
+    yearNumeric: 1791,
+    title: 'Declaration of the Rights of Woman',
+    description: 'The First Feminist Manifesto. Olympe de Gouges demands equality—and is guillotined for it. Her words outlived her executioners.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-olympe.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-tubman',
+    year: '1850 CE',
+    yearNumeric: 1850,
+    title: 'Harriet Tubman',
+    description: 'Moses of Her People. She escaped slavery, then went back 13 times to free 70 more—"I never ran my train off the track and I never lost a passenger."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-tubman.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-suffrage',
+    year: '1893 CE',
+    yearNumeric: 1893,
+    title: 'Women\'s Suffrage Begins',
+    description: 'New Zealand First. Women vote for the first time in a national election—a crack in the wall that would eventually crumble worldwide.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-suffrage.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-curie',
+    year: '1898 CE',
+    yearNumeric: 1898,
+    title: 'Marie Curie',
+    description: 'Radiant Genius. The first woman to win a Nobel, then the first person to win two—she discovered radioactivity and paid with her life.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-curie.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'women-pankhurst',
+    year: '1913 CE',
+    yearNumeric: 1913,
+    title: 'Emmeline Pankhurst',
+    description: 'Deeds Not Words. She was jailed, force-fed, and denounced—but her militancy won British women the vote. "We are here not because we are law-breakers; we are here in our efforts to become law-makers."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-pankhurst.jpg',
+    phase: 'Phase 10',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-earhart',
+    year: '1932 CE',
+    yearNumeric: 1932,
+    title: 'Amelia Earhart',
+    description: 'First Across Alone. She flew solo across the Atlantic, then vanished over the Pacific—a mystery, but her courage is not.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-earhart.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'women-parks',
+    year: '1955 CE',
+    yearNumeric: 1955,
+    title: 'Rosa Parks',
+    description: 'The Seamstress Who Sat. By refusing to give up her seat, she ignited the Montgomery Bus Boycott and the modern Civil Rights movement.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-parks.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-valentina',
+    year: '1963 CE',
+    yearNumeric: 1963,
+    title: 'Valentina Tereshkova',
+    description: 'First Woman in Space. A textile worker became a cosmonaut and orbited Earth 48 times—"Hey sky, take off your hat, I am coming!"',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-valentina.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'women-thatcher',
+    year: '1979 CE',
+    yearNumeric: 1979,
+    title: 'Margaret Thatcher',
+    description: 'The Iron Lady. Love her or hate her, she transformed Britain, winning three elections and reshaping the global economic order.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-thatcher.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-bhutto',
+    year: '1988 CE',
+    yearNumeric: 1988,
+    title: 'Benazir Bhutto',
+    description: 'Breaking the Barrier. The first woman to lead a Muslim-majority nation—twice PM of Pakistan, assassinated but never silenced.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-bhutto.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-merkel',
+    year: '2005 CE',
+    yearNumeric: 2005,
+    title: 'Angela Merkel',
+    description: 'The Quiet Chancellor. For 16 years she led Germany and shaped Europe—a physicist who became the world\'s most powerful woman.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-merkel.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'women-malala',
+    year: '2012 CE',
+    yearNumeric: 2012,
+    title: 'Malala Yousafzai',
+    description: 'The Girl Who Stood Up. Shot by the Taliban for wanting an education, she became the youngest Nobel laureate—"One child, one teacher, one book, one pen can change the world."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-malala.jpg',
+    phase: 'Phase 12',
+    category: 'Philosophy'
+  },
+  {
+    id: 'women-sappho',
+    year: '610 BCE',
+    yearNumeric: -610,
+    title: 'Sappho',
+    description: 'The Tenth Muse. Her poetry was so powerful that Plato called her the tenth Muse—and her love lyrics invented the language of the heart.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-sappho.jpg',
+    phase: 'Phase 6',
+    category: 'Art'
+  },
+  {
+    id: 'women-christine',
+    year: '1405 CE',
+    yearNumeric: 1405,
+    title: 'Christine de Pizan',
+    description: 'The First Feminist Writer. A widow who became Europe\'s first professional female author, defending women\'s worth and intellect centuries before the movement had a name.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-christine.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'women-sojourner',
+    year: '1851 CE',
+    yearNumeric: 1851,
+    title: 'Sojourner Truth',
+    description: 'Ain\'t I a Woman? Born a slave, she became an abolitionist and women\'s rights activist whose speeches still resonate today.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-sojourner.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'women-beauvoir',
+    year: '1949 CE',
+    yearNumeric: 1949,
+    title: 'Simone de Beauvoir',
+    description: 'One Is Not Born a Woman. Her book "The Second Sex" launched second-wave feminism, arguing that gender is constructed, not natural.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-beauvoir.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
   }
 ];

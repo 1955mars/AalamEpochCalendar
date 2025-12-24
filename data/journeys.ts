@@ -649,7 +649,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'plague-17', fromEventId: 'plague-sars', toEventId: 'plague-ebola', type: 'preceded' },
     { id: 'plague-18', fromEventId: 'plague-ebola', toEventId: 'plague-antibiotic', type: 'related' },
     { id: 'plague-19', fromEventId: 'plague-antibiotic', toEventId: 'p12-26', type: 'preceded' }, // Antibiotic Resistance -> COVID
-    { id: 'plague-20', fromEventId: 'p12-26', toEventId: 'cure-mrna', type: 'caused' } // COVID -> mRNA
+    { id: 'plague-20', fromEventId: 'p12-26', toEventId: 'cure-mrna', type: 'caused' }, // COVID -> mRNA
+
+    // --- Women Who Changed History ---
+    { id: 'women-1', fromEventId: 'women-hatshepsut', toEventId: 'women-nefertiti', type: 'preceded' },
+    { id: 'women-2', fromEventId: 'women-nefertiti', toEventId: 'women-sappho', type: 'preceded' },
+    { id: 'women-3', fromEventId: 'women-sappho', toEventId: 'women-cleopatra', type: 'preceded' },
+    { id: 'women-4', fromEventId: 'women-cleopatra', toEventId: 'women-boudica', type: 'preceded' },
+    { id: 'women-5', fromEventId: 'women-boudica', toEventId: 'women-hypatia', type: 'preceded' },
+    { id: 'women-6', fromEventId: 'women-hypatia', toEventId: 'women-wu', type: 'preceded' },
+    { id: 'women-7', fromEventId: 'women-wu', toEventId: 'women-murasaki', type: 'preceded' },
+    { id: 'women-8', fromEventId: 'women-murasaki', toEventId: 'women-eleanor', type: 'preceded' },
+    { id: 'women-9', fromEventId: 'women-eleanor', toEventId: 'women-hildegard', type: 'preceded' },
+    { id: 'women-10', fromEventId: 'women-hildegard', toEventId: 'women-christine', type: 'preceded' },
+    { id: 'women-11', fromEventId: 'women-christine', toEventId: 'women-joan', type: 'preceded' },
+    { id: 'women-12', fromEventId: 'women-joan', toEventId: 'p8-22', type: 'preceded' }, // -> Elizabeth I
+    { id: 'women-13', fromEventId: 'p8-22', toEventId: 'women-catherine', type: 'preceded' }, // Elizabeth -> Catherine
+    { id: 'women-14', fromEventId: 'women-catherine', toEventId: 'women-olympe', type: 'preceded' },
+    { id: 'women-15', fromEventId: 'women-olympe', toEventId: 'ai-lovelace', type: 'preceded' }, // -> Lovelace
+    { id: 'women-16', fromEventId: 'ai-lovelace', toEventId: 'women-tubman', type: 'preceded' },
+    { id: 'women-17', fromEventId: 'women-tubman', toEventId: 'women-sojourner', type: 'preceded' },
+    { id: 'women-18', fromEventId: 'women-sojourner', toEventId: 'cure-nightingale', type: 'preceded' }, // -> Nightingale
+    { id: 'women-19', fromEventId: 'cure-nightingale', toEventId: 'women-suffrage', type: 'preceded' },
+    { id: 'women-20', fromEventId: 'women-suffrage', toEventId: 'women-curie', type: 'preceded' },
+    { id: 'women-21', fromEventId: 'women-curie', toEventId: 'women-pankhurst', type: 'preceded' },
+    { id: 'women-22', fromEventId: 'women-pankhurst', toEventId: 'women-earhart', type: 'preceded' },
+    { id: 'women-23', fromEventId: 'women-earhart', toEventId: 'women-beauvoir', type: 'preceded' },
+    { id: 'women-24', fromEventId: 'women-beauvoir', toEventId: 'women-parks', type: 'preceded' },
+    { id: 'women-25', fromEventId: 'women-parks', toEventId: 'women-valentina', type: 'preceded' },
+    { id: 'women-26', fromEventId: 'women-valentina', toEventId: 'women-thatcher', type: 'preceded' },
+    { id: 'women-27', fromEventId: 'women-thatcher', toEventId: 'women-bhutto', type: 'preceded' },
+    { id: 'women-28', fromEventId: 'women-bhutto', toEventId: 'women-merkel', type: 'preceded' },
+    { id: 'women-29', fromEventId: 'women-merkel', toEventId: 'women-malala', type: 'preceded' }
 ];
 
 
@@ -1184,6 +1215,56 @@ export const JOURNEYS: Journey[] = [
             'cure-penicillin': { title: 'The Mold That Saves', description: 'Accidents Change History. Fleming notices mold killing bacteria, accidentally discovering antibiotics—the most important medical advance of the 20th century.' },
             'cure-hiv': { title: 'The Modern Plague', description: 'A New Kind of Enemy. HIV kills 36 million and transforms medicine, activism, and attitudes toward sexuality and disease forever.' },
             'p12-26': { title: 'COVID-19: The World Stops', description: 'The Invisible Siege. A novel coronavirus circles the globe in weeks, locking billions indoors in the largest disruption to daily life since WWII.' }
+        }
+    },
+    {
+        id: 'women-history',
+        title: 'Women Who Changed History',
+        description: 'From Cleopatra to Curie: The hidden half of human achievement.',
+        thumbnailUrl: 'images/women-history-thumb.jpg',
+        eventIds: [
+            // Ancient Era
+            'women-hatshepsut',   // 1479 BCE - Pharaoh
+            'women-nefertiti',    // 1350 BCE - Queen
+            'women-sappho',       // 610 BCE - Poet
+            'women-cleopatra',    // 51 BCE - Last Pharaoh
+            'women-boudica',      // 60 CE - Celtic Queen
+            'women-hypatia',      // 400 CE - Philosopher
+            // Medieval Era
+            'women-wu',           // 690 CE - Chinese Emperor
+            'women-murasaki',     // 1000 CE - First Novelist
+            'women-eleanor',      // 1137 CE - Queen x2
+            'women-hildegard',    // 1150 CE - Polymath
+            'women-christine',    // 1405 CE - First Feminist Writer
+            'women-joan',         // 1429 CE - Maid of Orléans
+            // Early Modern
+            'p8-22',              // 1558 CE - Elizabeth I
+            'women-catherine',    // 1762 CE - Catherine the Great
+            'women-olympe',       // 1791 CE - Rights of Woman
+            // 19th Century
+            'ai-lovelace',        // 1843 CE - Ada Lovelace
+            'women-tubman',       // 1850 CE - Underground Railroad
+            'women-sojourner',    // 1851 CE - Ain't I a Woman
+            'cure-nightingale',   // 1854 CE - Florence Nightingale
+            'women-suffrage',     // 1893 CE - NZ First
+            'women-curie',        // 1898 CE - Marie Curie
+            // 20th Century
+            'women-pankhurst',    // 1913 CE - Suffragette
+            'women-earhart',      // 1932 CE - Aviator
+            'women-beauvoir',     // 1949 CE - Second Sex
+            'women-parks',        // 1955 CE - Civil Rights
+            'women-valentina',    // 1963 CE - First Woman in Space
+            'women-thatcher',     // 1979 CE - Iron Lady
+            'women-bhutto',       // 1988 CE - First Muslim PM
+            // 21st Century
+            'women-merkel',       // 2005 CE - Chancellor
+            'women-malala'        // 2012 CE - Youngest Nobel
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('women-')),
+        overrides: {
+            'p8-22': { title: 'The Virgin Queen', description: 'Gloriana. She refused marriage, defeated the Armada, and ruled for 45 years—making England a global power through sheer force of will.' },
+            'cure-nightingale': { title: 'The Lady with the Lamp', description: 'Data Saves Lives. She didn\'t just nurse soldiers—she proved with statistics that sanitation, not medicine, was the cure.' },
+            'ai-lovelace': { title: 'The Prophet of Code', description: 'The First Programmer. While men saw a calculator, Ada Lovelace saw a universal machine that could compose music and manipulate symbols—a century ahead of her time.' }
         }
     }
 ];
