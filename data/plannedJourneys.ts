@@ -9,21 +9,16 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 13 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women)
-// Need to Build: 12 (below)
+// Currently Live: 14 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade)
+// Need to Build: 11 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 1: Can leverage many existing events (Est. 5-10 new events each)
-    // COMPLETED: The Art of War, Pandemics & Plagues, Women Who Changed History
+    // COMPLETED: The Art of War, Pandemics & Plagues, Women Who Changed History, Empires of Trade
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'Empires of Trade',
-        description: 'Silk Road to Amazon: How commerce connected and conquered the world.',
-        category: 'Power',
-        icon: Ship
-    },
+
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 2: Moderate new content (Est. 15-20 new events each)
