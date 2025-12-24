@@ -66,32 +66,34 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
 
             </div>
 
-            {/* Planned Journeys Section */}
-            <div className="w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
-                <div className="flex items-center gap-4 mb-8">
-                    <div className="h-px bg-slate-200 flex-1" />
-                    <span className="text-sm font-bold uppercase tracking-widest text-slate-400">Planned Journeys</span>
-                    <div className="h-px bg-slate-200 flex-1" />
-                </div>
+            {/* Planned Journeys Section - Dev Only */}
+            {import.meta.env.DEV && (
+                <div className="w-full animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-300">
+                    <div className="flex items-center gap-4 mb-8">
+                        <div className="h-px bg-slate-200 flex-1" />
+                        <span className="text-sm font-bold uppercase tracking-widest text-slate-400">Planned Journeys</span>
+                        <div className="h-px bg-slate-200 flex-1" />
+                    </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {PLANNED_JOURNEYS.map((item) => (
-                        <div
-                            key={item.title}
-                            className="group relative bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left opacity-70 hover:opacity-100 hover:border-indigo-200 cursor-default"
-                        >
-                            <div className="flex justify-between items-start mb-4">
-                                <div className={`p-2 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors`}>
-                                    <item.icon size={20} />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                        {PLANNED_JOURNEYS.map((item) => (
+                            <div
+                                key={item.title}
+                                className="group relative bg-white border border-slate-200 p-6 rounded-xl shadow-sm hover:shadow-md transition-all text-left opacity-70 hover:opacity-100 hover:border-indigo-200 cursor-default"
+                            >
+                                <div className="flex justify-between items-start mb-4">
+                                    <div className={`p-2 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-indigo-50 group-hover:text-indigo-600 transition-colors`}>
+                                        <item.icon size={20} />
+                                    </div>
                                 </div>
-                            </div>
 
-                            <h4 className="text-lg font-bold mb-1 text-slate-800 group-hover:text-indigo-900 leading-tight">{item.title}</h4>
-                            <p className="text-slate-500 text-xs leading-relaxed line-clamp-2">{item.description}</p>
-                        </div>
-                    ))}
+                                <h4 className="text-lg font-bold mb-1 text-slate-800 group-hover:text-indigo-900 leading-tight">{item.title}</h4>
+                                <p className="text-slate-500 text-xs leading-relaxed line-clamp-2">{item.description}</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            )}
         </div>
     );
 };
