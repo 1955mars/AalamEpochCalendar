@@ -1,4 +1,4 @@
-import { Globe, Lightbulb, Music, Utensils, Zap, Cpu, Anchor, BookOpen, Scale, Landmark, Feather, Videotape, Gamepad, Shirt, Medal } from 'lucide-react';
+import { Globe, Lightbulb, Music, Utensils, Zap, Cpu, Anchor, BookOpen, Scale, Landmark, Feather, Videotape, Gamepad, Shirt, Medal, Heart, Leaf, Users, Gavel, Ship } from 'lucide-react';
 
 export interface PlannedJourney {
     title: string;
@@ -7,23 +7,44 @@ export interface PlannedJourney {
     icon: any;
 }
 
+// ═══════════════════════════════════════════════════════════════════════════
+// LAUNCH TARGET: 25 Journeys
+// Currently Live: 10 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods)
+// Need to Build: 15 (below)
+// ═══════════════════════════════════════════════════════════════════════════
+
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
-    // === PRIORITY 1: High Impact, Many Existing Events ===
-    // COMPLETED: To The Stars, The Cure, Gods & Mortals
+    // ═══════════════════════════════════════════════════════════════════════
+    // PHASE 1: Can leverage many existing events (Est. 5-10 new events each)
+    // ═══════════════════════════════════════════════════════════════════════
     {
         title: 'The Art of War',
         description: 'How conflict drove innovation, from the first chariot to the nuclear triad.',
         category: 'Power',
-        icon: getIcon('Sword')
+        icon: Anchor // Sword fallback
+    },
+    {
+        title: 'Pandemics & Plagues',
+        description: 'Black Death to COVID: The invisible enemies that shaped humanity.',
+        category: 'Life',
+        icon: Zap
+    },
+    {
+        title: 'Women Who Changed History',
+        description: 'From Cleopatra to Curie: The hidden half of human achievement.',
+        category: 'Power',
+        icon: Users
+    },
+    {
+        title: 'Empires of Trade',
+        description: 'Silk Road to Amazon: How commerce connected and conquered the world.',
+        category: 'Power',
+        icon: Ship
     },
 
-    // === PRIORITY 2: High Interest, Moderate Overlap ===
-    {
-        title: 'The Rhythm of Life',
-        description: 'A history of music: Bone flutes, Bach, The Beatles, and the algorithm.',
-        category: 'Culture',
-        icon: Music
-    },
+    // ═══════════════════════════════════════════════════════════════════════
+    // PHASE 2: Moderate new content (Est. 15-20 new events each)
+    // ═══════════════════════════════════════════════════════════════════════
     {
         title: 'Power Trip',
         description: 'Fire, Oil, Atom, Fusion: The energy cravings that built (and burn) the world.',
@@ -31,75 +52,67 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
         icon: Lightbulb
     },
     {
-        title: 'The Food on Your Plate',
-        description: 'Neolithic farming to Lab-Grown Meat: The history of what we eat.',
-        category: 'Life',
-        icon: Utensils
+        title: 'Crime & Punishment',
+        description: 'From the dungeon to DNA evidence: The evolution of justice and law.',
+        category: 'Power',
+        icon: Gavel
     },
     {
-        title: 'Sapiens',
-        description: 'From the Cognitive Revolution to the Agricultural Revolution: How we conquered the planet.',
+        title: 'The Climate Chronicle',
+        description: 'Ice ages to global warming: The planet\'s story and humanity\'s impact.',
         category: 'Origins',
-        icon: Globe
+        icon: Leaf
+    },
+    {
+        title: 'The Shadow World',
+        description: 'Spies, codes, and secrets: From the Enigma machine to Snowden.',
+        category: 'Power',
+        icon: Feather
     },
 
-    // === PRIORITY 3: Niche but Engaging ===
+    // ═══════════════════════════════════════════════════════════════════════
+    // PHASE 3: Heavy new content (Est. 25+ new events each)
+    // ═══════════════════════════════════════════════════════════════════════
+    {
+        title: 'The Rhythm of Life',
+        description: 'A history of music: Bone flutes, Bach, The Beatles, and the algorithm.',
+        category: 'Culture',
+        icon: Music
+    },
     {
         title: 'The Silver Screen',
-        description: 'From silent shadows to virtual realities: The evolution of cinema.',
+        description: 'From silent shadows to streaming: The evolution of cinema.',
         category: 'Culture',
         icon: Videotape
     },
     {
-        title: 'The Shadow World',
-        description: 'Spies, codes, and the hidden history of the world: From the Enigma machine to Snowden.',
-        category: 'Power',
-        icon: Feather
-    },
-    {
         title: 'Level Up',
-        description: 'How video games grew from a pixelated dot to the Metaverse.',
+        description: 'How video games grew from Pong to the Metaverse.',
         category: 'Culture',
         icon: Gamepad
     },
     {
-        title: 'The Silicon Brain',
-        description: 'The history of computing, bridging the abacus to the quantum era.',
-        category: 'Innovation',
-        icon: Cpu
-    },
-
-    // === PRIORITY 4: Specialized ===
-    {
-        title: 'The Mating Game',
-        description: 'From arranged marriage to Tinder: The evolution of love, sex, and family.',
+        title: 'The Food on Your Plate',
+        description: 'Neolithic farming to lab-grown meat: The history of what we eat.',
         category: 'Life',
-        icon: getIcon('Heart')
+        icon: Utensils
     },
     {
-        title: 'Crime & Punishment',
-        description: 'From the dungeon to DNA evidence: The evolution of justice and law.',
-        category: 'Power',
-        icon: Landmark
-    },
-    {
-        title: 'The Psycho-Path',
-        description: 'A history of the human mind: Madness, dreams, psychedelics, and the discovery of the unconscious.',
-        category: 'Origins',
-        icon: getIcon('Brain')
+        title: 'The Written Word',
+        description: 'From clay tablets to Kindle: The stories that shaped civilization.',
+        category: 'Culture',
+        icon: BookOpen
     },
     {
         title: 'Faster, Higher, Stronger',
-        description: 'The history of sports, competition, and human limits.',
+        description: 'The history of sports: Ancient Olympics to modern esports.',
         category: 'Life',
         icon: Medal
+    },
+    {
+        title: 'The Mating Game',
+        description: 'From arranged marriage to Tinder: The evolution of love and family.',
+        category: 'Life',
+        icon: Heart
     }
 ];
-
-function getIcon(name: string) {
-    // Basic mapping or fallback
-    if (name === 'Brain') return Lightbulb;
-    if (name === 'Heart') return Anchor; // Temporary fallback needing simpler icon
-    if (name === 'Sword') return Anchor;
-    return Globe;
-}
