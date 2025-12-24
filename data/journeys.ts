@@ -1081,10 +1081,28 @@ export const JOURNEYS: Journey[] = [
         connections: CONNECTIONS.filter(c => c.id.startsWith('war-')),
         overrides: {
             'p4-30': { description: 'Arms Race Begins. By alloying copper with tin, humans create a metal hard enough for killing. New weapons spark the first arms races and state-level warfare.' },
+            'p5-18': { title: 'The Chariot Revolution', description: 'Wheels of War. The Hyksos conquer Egypt not with numbers but with technology—horse-drawn chariots that turn infantry into targets.' },
+            'p5-30': { title: 'The First World War', description: 'Empires Collide. Ramesses II and the Hittites clash at Kadesh in history\'s first recorded battle—and history\'s first peace treaty.' },
             'p6-22': { title: 'Marathon: Democracy Stands', description: 'The Odds Defied. Athenian hoplites charge a Persian army twice their size—and win. The phalanx proves that discipline beats numbers.' },
+            'p6-23': { title: 'Salamis: The Wooden Wall', description: 'Thermopylae\'s Revenge. Athenian triremes trap and destroy the Persian fleet in narrow straits—naval warfare decides the fate of Greece.' },
+            'p6-24': { title: 'China at War with Itself', description: 'The Crucible of Strategy. Seven kingdoms fight for supremacy, giving birth to Sun Tzu\'s Art of War and the concept of total war.' },
+            'p6-26': { title: 'Athens vs. Sparta', description: 'Democracy vs. Militarism. A 27-year war between Greek superpowers ends the Golden Age and proves that even victors can be destroyed.' },
             'p6-28': { title: 'Alexander\'s Blitzkrieg', description: 'The Hammer of Macedon. In 13 years, Alexander conquers from Greece to India, creating the largest empire the world has seen—military genius at unprecedented scale.' },
+            'p7-23': { title: 'The Last Successful Invasion', description: '1066: England Falls. Norman cavalry and archers crush the Saxon shield wall at Hastings—the last time Britain would be conquered.' },
+            'p7-24': { title: 'Holy War Begins', description: 'Deus Vult! The Pope promises salvation to warriors who take Jerusalem, launching two centuries of religious warfare between Christianity and Islam.' },
             'p7-26': { title: 'The Mongol Storm', description: 'Terror Without Limits. Genghis Khan\'s horsemen conquer more territory than any army in history, using psychological warfare and ruthless efficiency.' },
-            'p10-31': { title: 'The Bomb', description: 'The Final Weapon. Hiroshima and Nagasaki end WWII and begin a new era where humanity can destroy itself—war\'s ultimate evolution.' }
+            'p8-15': { title: 'Steel Meets Stone', description: 'The End of an Empire. With 500 men, horses, and gunpowder, Cortés topples a civilization of millions—technology as the ultimate weapon.' },
+            'p8-27': { title: 'Europe Bleeds', description: 'The War That Killed Millions. Religious hatred and dynastic ambition destroy a third of Germany\'s population—a preview of total war.' },
+            'p9-14': { title: 'The End of Napoleon', description: 'The Eagle Falls. At Waterloo, the greatest general of the age meets his final defeat, reshaping Europe for a century.' },
+            'p9-25': { title: 'Brother Against Brother', description: 'The First Modern War. Railroads, telegraphs, ironclads, and 620,000 dead—America\'s Civil War previews the industrial slaughter to come.' },
+            'p10-1': { title: 'The Guns of August', description: 'The Lights Go Out. Mobilization tables and railway timetables drag Europe\'s great powers into a war that will kill 20 million.' },
+            'p10-3': { title: 'The Somme: Industrialized Death', description: '60,000 Casualties in One Day. British soldiers walk into machine gun fire, proving that courage is no match for technology.' },
+            'p10-21': { title: 'Their Finest Hour', description: 'The Few. RAF pilots in Spitfires prevent Operation Sea Lion, saving Britain from invasion in history\'s first decisive air battle.' },
+            'p10-23': { title: 'Day of Infamy', description: 'A Sleeping Giant Awakens. Japan\'s surprise attack on Pearl Harbor brings America into WWII—and seals Japan\'s fate.' },
+            'p10-25': { title: 'The Pacific Turns', description: 'Five Minutes at Midway. American dive bombers sink four Japanese carriers in five minutes, reversing the tide of the Pacific War.' },
+            'p10-27': { title: 'The Longest Day', description: 'Fortress Europe Falls. 150,000 Allied troops storm Normandy\'s beaches—the largest amphibious invasion in history begins the liberation of Europe.' },
+            'p10-31': { title: 'The Bomb', description: 'The Final Weapon. Hiroshima and Nagasaki end WWII and begin a new era where humanity can destroy itself—war\'s ultimate evolution.' },
+            'p12-27': { title: 'War Returns to Europe', description: 'The Post-Cold War Illusion Ends. Russia\'s invasion of Ukraine shatters decades of peace, returning great power war to the European continent.' }
         }
     }
 ];
