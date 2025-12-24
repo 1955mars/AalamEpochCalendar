@@ -545,7 +545,47 @@ export const CONNECTIONS: Connection[] = [
     { id: 'cure-27', fromEventId: 'cure-hiv', toEventId: 'cure-genome', type: 'influenced' }, // AIDS research -> Genetics
     { id: 'cure-28', fromEventId: 'cure-genome', toEventId: 'cure-crispr', type: 'caused' }, // Map -> Edit
     { id: 'cure-29', fromEventId: 'cure-crispr', toEventId: 'p12-26', type: 'preceded' }, // Tech -> Pandemic
-    { id: 'cure-30', fromEventId: 'p12-26', toEventId: 'cure-mrna', type: 'caused' } // Pandemic -> Solution
+    { id: 'cure-30', fromEventId: 'p12-26', toEventId: 'cure-mrna', type: 'caused' }, // Pandemic -> Solution
+
+    // --- Gods & Mortals: The Evolution of Belief ---
+    { id: 'gm-1', fromEventId: 'gm-burial', toEventId: 'gm-cave-art', type: 'preceded' },
+    { id: 'gm-2', fromEventId: 'gm-cave-art', toEventId: 'gm-shaman', type: 'preceded' },
+    { id: 'gm-3', fromEventId: 'gm-shaman', toEventId: 'gm-goddess', type: 'related' },
+    { id: 'gm-4', fromEventId: 'gm-goddess', toEventId: 'gm-animism', type: 'preceded' },
+    { id: 'gm-5', fromEventId: 'gm-animism', toEventId: 'p4-6', type: 'caused' }, // Animism -> Gobekli Tepe
+    { id: 'gm-6', fromEventId: 'p4-6', toEventId: 'gm-ziggurats', type: 'preceded' },
+    { id: 'gm-7', fromEventId: 'gm-ziggurats', toEventId: 'gm-book-dead', type: 'related' },
+    { id: 'gm-8', fromEventId: 'gm-book-dead', toEventId: 'p5-23', type: 'related' }, // Book of Dead -> Aten
+    { id: 'gm-9', fromEventId: 'p5-23', toEventId: 'p5-25', type: 'related' }, // Aten -> Vedic
+    { id: 'gm-10', fromEventId: 'p5-25', toEventId: 'p6-5', type: 'preceded' }, // Vedic -> Solomon
+    { id: 'gm-11', fromEventId: 'p6-5', toEventId: 'gm-zoroaster', type: 'preceded' },
+    { id: 'gm-12', fromEventId: 'gm-zoroaster', toEventId: 'p6-16', type: 'related' }, // Zoroaster -> Buddha
+    { id: 'gm-13', fromEventId: 'p6-16', toEventId: 'p6-17', type: 'related' }, // Buddha -> Confucius
+    { id: 'gm-14', fromEventId: 'p6-17', toEventId: 'gm-taoism', type: 'related' }, // Confucius -> Taoism
+    { id: 'gm-15', fromEventId: 'gm-taoism', toEventId: 'gm-mystery', type: 'related' },
+    { id: 'gm-16', fromEventId: 'gm-mystery', toEventId: 'gm-maccabees', type: 'preceded' },
+    { id: 'gm-17', fromEventId: 'gm-maccabees', toEventId: 'p7-2', type: 'preceded' }, // Maccabees -> Jesus
+    { id: 'gm-18', fromEventId: 'p7-2', toEventId: 'gm-paul', type: 'caused' },
+    { id: 'gm-19', fromEventId: 'gm-paul', toEventId: 'p7-7', type: 'caused' }, // Paul -> Milan
+    { id: 'gm-20', fromEventId: 'p7-7', toEventId: 'gm-councils', type: 'caused' },
+    { id: 'gm-21', fromEventId: 'gm-councils', toEventId: 'gm-benedict', type: 'related' },
+    { id: 'gm-22', fromEventId: 'gm-benedict', toEventId: 'p7-12', type: 'preceded' }, // Benedict -> Muhammad
+    { id: 'gm-23', fromEventId: 'p7-12', toEventId: 'gm-hijra', type: 'caused' },
+    { id: 'gm-24', fromEventId: 'gm-hijra', toEventId: 'p7-15', type: 'caused' }, // Hijra -> Umayyad
+    { id: 'gm-25', fromEventId: 'p7-15', toEventId: 'gm-golden-age', type: 'preceded' },
+    { id: 'gm-26', fromEventId: 'gm-golden-age', toEventId: 'p7-22', type: 'preceded' }, // Golden Age -> Schism
+    { id: 'gm-27', fromEventId: 'p7-22', toEventId: 'p7-24', type: 'caused' }, // Schism -> Crusades
+    { id: 'gm-28', fromEventId: 'p7-24', toEventId: 'gm-inquisition', type: 'related' },
+    { id: 'gm-29', fromEventId: 'gm-inquisition', toEventId: 'gm-kabbalah', type: 'related' },
+    { id: 'gm-30', fromEventId: 'gm-kabbalah', toEventId: 'gm-sikhism', type: 'preceded' },
+    { id: 'gm-31', fromEventId: 'gm-sikhism', toEventId: 'p8-13', type: 'preceded' }, // Sikhism -> Reformation
+    { id: 'gm-32', fromEventId: 'p8-13', toEventId: 'p8-18', type: 'caused' }, // Reformation -> Church of England
+    { id: 'gm-33', fromEventId: 'p8-18', toEventId: 'gm-scientific', type: 'preceded' },
+    { id: 'gm-34', fromEventId: 'gm-scientific', toEventId: 'gm-enlightenment', type: 'caused' },
+    { id: 'gm-35', fromEventId: 'gm-enlightenment', toEventId: 'gm-darwin', type: 'influenced' },
+    { id: 'gm-36', fromEventId: 'gm-darwin', toEventId: 'gm-secularism', type: 'influenced' },
+    { id: 'gm-37', fromEventId: 'gm-secularism', toEventId: 'gm-new-age', type: 'preceded' },
+    { id: 'gm-38', fromEventId: 'gm-new-age', toEventId: 'gm-interfaith', type: 'preceded' }
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -864,6 +904,31 @@ export const JOURNEYS: Journey[] = [
             'cure-mrna'
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('cure-')),
+        overrides: {}
+    },
+    {
+        id: 'gods-mortals',
+        title: 'Gods & Mortals: The Evolution of Belief',
+        description: 'From cave paintings to cathedrals—100,000 years of humanity seeking the divine.',
+        thumbnailUrl: 'images/gods-mortals-thumb.jpg',
+        eventIds: [
+            // Prehistoric Origins
+            'gm-burial', 'gm-cave-art', 'gm-shaman', 'gm-goddess', 'gm-animism',
+            // Ancient Temples & Texts
+            'p4-6',  // Göbekli Tepe
+            'gm-ziggurats', 'gm-book-dead', 'p5-23', 'p5-25', // Aten, Vedic
+            // Axial Age
+            'p6-5', 'gm-zoroaster', 'p6-16', 'p6-17', 'gm-taoism', 'gm-mystery', 'gm-maccabees',
+            // Christianity & Islam
+            'p7-2', 'gm-paul', 'p7-7', 'gm-councils', 'gm-benedict',
+            'p7-12', 'gm-hijra', 'p7-15', 'gm-golden-age',
+            // Medieval Tensions
+            'p7-22', 'p7-24', 'gm-inquisition', 'gm-kabbalah',
+            // Reformation & Modernity
+            'gm-sikhism', 'p8-13', 'p8-18', 'gm-scientific', 'gm-enlightenment',
+            'gm-darwin', 'gm-secularism', 'gm-new-age', 'gm-interfaith'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('gm-')),
         overrides: {}
     }
 ];

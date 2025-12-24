@@ -3764,5 +3764,257 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-mrna.jpg',
     phase: 'Phase 12',
     category: 'Science'
+  },
+
+  // --- GODS & MORTALS: The Evolution of Belief ---
+  {
+    id: 'gm-burial',
+    year: '100,000 BCE',
+    yearNumeric: -100000,
+    title: 'First Burial Rituals',
+    description: 'Beyond the Grave. Death becomes more than an ending—our ancestors begin burying their dead with care and offerings, hinting at belief in an afterlife.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-burial.jpg',
+    phase: 'Phase 3',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-cave-art',
+    year: '40,000 BCE',
+    yearNumeric: -40000,
+    title: 'Cave Paintings as Sacred Acts',
+    description: 'Communion with Spirits. Deep in the darkness of Lascaux and Altamira, humans paint animals and handprints—not decoration, but rituals to summon power.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-cave-art.jpg',
+    phase: 'Phase 3',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-shaman',
+    year: '30,000 BCE',
+    yearNumeric: -30000,
+    title: 'Rise of the Shaman',
+    description: 'The First Priests. Specialists of the invisible world emerge—healers, dreamers, and intermediaries who journey between the realm of mortals and gods.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-shaman.jpg',
+    phase: 'Phase 3',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-goddess',
+    year: '25,000 BCE',
+    yearNumeric: -25000,
+    title: 'Venus Figurines',
+    description: 'The Divine Feminine. Across Ice Age Europe, small statues of exaggerated female forms suggest worship of fertility and the creative power of women.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-goddess.jpg',
+    phase: 'Phase 3',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-animism',
+    year: '10,000 BCE',
+    yearNumeric: -10000,
+    title: 'Animism & Nature Spirits',
+    description: 'Everything Is Alive. Every rock, river, and storm has a soul. The world is sacred, and humans must negotiate with it.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-animism.jpg',
+    phase: 'Phase 4',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-ziggurats',
+    year: '2100 BCE',
+    yearNumeric: -2100,
+    title: 'Ziggurats of Mesopotamia',
+    description: 'Stairways to Heaven. Artificial mountains reaching toward the sky—platforms for the gods to descend to Earth and dwell among mortals.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-ziggurats.jpg',
+    phase: 'Phase 5',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-book-dead',
+    year: '1500 BCE',
+    yearNumeric: -1500,
+    title: 'Egyptian Book of the Dead',
+    description: 'Instructions for Eternity. Spells and guides for navigating the afterlife, where the heart is weighed against the feather of Ma\'at.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-book-dead.jpg',
+    phase: 'Phase 5',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-zoroaster',
+    year: '600 BCE',
+    yearNumeric: -600,
+    title: 'Zoroastrianism',
+    description: 'Light vs. Darkness. The prophet Zarathustra teaches of cosmic struggle between Ahura Mazda and Angra Mainyu—influencing Judaism, Christianity, and Islam.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-zoroaster.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-taoism',
+    year: '500 BCE',
+    yearNumeric: -500,
+    title: 'Taoism Emerges',
+    description: 'The Way That Cannot Be Named. Laozi\'s Tao Te Ching offers a path of harmony with the natural order—wu wei, effortless action.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-taoism.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-mystery',
+    year: '500 BCE',
+    yearNumeric: -500,
+    title: 'Greek Mystery Cults',
+    description: 'Secrets of Eleusis. Initiates undergo secret rituals promising visions of the afterlife and communion with Demeter and Persephone.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-mystery.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-maccabees',
+    year: '165 BCE',
+    yearNumeric: -165,
+    title: 'Maccabean Revolt',
+    description: 'Faith Over Empire. Jews rebel against forced Hellenization, establishing Hanukkah and the precedent of dying for one\'s beliefs.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-maccabees.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-paul',
+    year: '50 CE',
+    yearNumeric: 50,
+    title: 'Paul\'s Missions',
+    description: 'The Apostle to the Gentiles. A former persecutor becomes Christianity\'s greatest missionary, spreading the faith from Jerusalem to Rome.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-paul.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-councils',
+    year: '325 CE',
+    yearNumeric: 325,
+    title: 'Council of Nicaea',
+    description: 'Defining Orthodoxy. Emperors and bishops forge Christian doctrine, deciding which beliefs are truth and which are heresy.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-councils.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-benedict',
+    year: '529 CE',
+    yearNumeric: 529,
+    title: 'Monasticism Spreads',
+    description: 'Islands of Light. Benedict of Nursia establishes his Rule, and monasteries become sanctuaries of learning in a chaotic world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-benedict.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-hijra',
+    year: '622 CE',
+    yearNumeric: 622,
+    title: 'The Hijra',
+    description: 'Year One. Muhammad\'s migration from Mecca to Medina marks the beginning of the Islamic calendar and the birth of the first Muslim community.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-hijra.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-golden-age',
+    year: '800 CE',
+    yearNumeric: 800,
+    title: 'Islamic Golden Age',
+    description: 'The House of Wisdom. Baghdad becomes the intellectual center of the world, translating Greek philosophy and advancing science under the Abbasid Caliphate.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-golden-age.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-inquisition',
+    year: '1231 CE',
+    yearNumeric: 1231,
+    title: 'The Inquisition',
+    description: 'Enforcing Belief. The Church creates a mechanism to root out heresy—belief becomes a matter of life and death across Europe.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-inquisition.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-kabbalah',
+    year: '1280 CE',
+    yearNumeric: 1280,
+    title: 'Zohar & Jewish Mysticism',
+    description: 'Hidden Dimensions. The Zohar reveals secret layers of Torah, mapping the ten sefirot and influencing Jewish thought for centuries.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-kabbalah.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-sikhism',
+    year: '1500 CE',
+    yearNumeric: 1500,
+    title: 'Sikhism Founded',
+    description: 'One God, Many Paths. Guru Nanak synthesizes Hindu and Islamic ideas into a new faith of equality, devotion, and community service in Punjab.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-sikhism.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-scientific',
+    year: '1687 CE',
+    yearNumeric: 1687,
+    title: 'Science vs. Faith',
+    description: 'The Clockwork Universe. Newton\'s Principia reveals a cosmos governed by mathematical laws—does God still wind the clock?',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-scientific.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-enlightenment',
+    year: '1762 CE',
+    yearNumeric: 1762,
+    title: 'Enlightenment Critique',
+    description: 'Reason Over Revelation. Voltaire and Rousseau challenge religious authority, planting seeds of secularism and religious tolerance.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-enlightenment.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-darwin',
+    year: '1859 CE',
+    yearNumeric: 1859,
+    title: 'Origin of Species',
+    description: 'Alternative Genesis. Darwin\'s theory offers an alternative creation story—not from clay, but from common ancestry through natural selection.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-darwin.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-secularism',
+    year: '1905 CE',
+    yearNumeric: 1905,
+    title: 'Rise of Secularism',
+    description: 'Church and State Divided. France passes laïcité, separating religion from government—a model for modern secular democracies worldwide.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-secularism.jpg',
+    phase: 'Phase 10',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-new-age',
+    year: '1960 CE',
+    yearNumeric: 1960,
+    title: 'New Religious Movements',
+    description: 'The Marketplace of Faith. From Hare Krishna to Scientology to the Jesus Movement, the 20th century spawns a diverse array of spiritual alternatives.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-new-age.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
+  },
+  {
+    id: 'gm-interfaith',
+    year: '2000 CE',
+    yearNumeric: 2000,
+    title: 'Interfaith Dialogue',
+    description: 'Bridges Between Faiths. In a globalized world, religions that once warred now meet to find common ground and address shared challenges.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-interfaith.jpg',
+    phase: 'Phase 12',
+    category: 'Philosophy'
   }
 ];
