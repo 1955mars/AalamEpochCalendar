@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Globe, Zap, Cpu, Palette, Dna, ArrowRight, Component } from 'lucide-react';
+import { Globe, Zap, Cpu, Palette, Dna, ArrowRight, Component } from 'lucide-react';
 import { JOURNEYS } from '../data/journeys';
 import { Journey } from '../types';
 import BrandLogo from './BrandLogo';
@@ -35,10 +35,6 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
 
                         {/* Content */}
                         <div className="relative z-10">
-                            <div className="absolute top-[-260px] right-0 w-14 h-14 bg-amber-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 active:scale-95 transition-all opacity-0 group-hover:opacity-100 hover:bg-amber-300 transform translate-y-0 text-black">
-                                <Play fill="currentColor" size={24} className="ml-1" />
-                            </div>
-
                             <h3 className="text-3xl font-black mb-3 leading-tight group-hover:text-amber-300 transition-colors drop-shadow-lg">{journey.title}</h3>
                             <p className="text-slate-200 text-sm font-medium leading-relaxed drop-shadow-md line-clamp-3">{journey.description}</p>
                         </div>
