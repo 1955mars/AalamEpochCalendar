@@ -1147,14 +1147,14 @@ export const JOURNEYS: Journey[] = [
             'plague-aztec',     // Smallpox Conquers Mexico
             'plague-london',    // Great Plague of London
             // Enlightenment & Scientific Revolution
-            'cure-leeuwenhoek', // Microscope/microbes
-            'p9-7',             // Smallpox Vaccine
-            'plague-cholera',   // Cholera & John Snow
-            'cure-semmelweis',  // Handwashing saves lives
-            'cure-nightingale', // Florence Nightingale
-            'cure-pasteur',     // Germ theory
-            'cure-lister',      // Antiseptic surgery
-            'cure-koch',        // TB bacteria
+            'cure-leeuwenhoek', // Microscope/microbes (1676)
+            'p9-7',             // Smallpox Vaccine (1796)
+            'cure-semmelweis',  // Handwashing saves lives (1847)
+            'plague-cholera',   // Cholera & John Snow (1854)
+            'cure-nightingale', // Florence Nightingale (1854)
+            'cure-pasteur',     // Germ theory (1861)
+            'cure-lister',      // Antiseptic surgery (1867)
+            'cure-koch',        // TB bacteria (1882)
             // Industrial Era
             'plague-yellow',    // Yellow Fever & Panama
             'plague-typhoid',   // Typhoid Mary
