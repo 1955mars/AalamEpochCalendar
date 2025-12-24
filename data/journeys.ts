@@ -627,8 +627,31 @@ export const CONNECTIONS: Connection[] = [
     { id: 'war-37', fromEventId: 'p10-31', toEventId: 'war-guerrilla', type: 'influenced' }, // Atomic -> Guerrilla
     { id: 'war-38', fromEventId: 'war-guerrilla', toEventId: 'war-precision', type: 'preceded' }, // Guerrilla -> Precision
     { id: 'war-39', fromEventId: 'war-precision', toEventId: 'war-drone', type: 'caused' }, // Precision -> Drone
-    { id: 'war-40', fromEventId: 'war-drone', toEventId: 'p12-27', type: 'preceded' } // Drone -> Ukraine
+    { id: 'war-40', fromEventId: 'war-drone', toEventId: 'p12-27', type: 'preceded' }, // Drone -> Ukraine
+
+    // --- Pandemics & Plagues: Disease Through History ---
+    { id: 'plague-1', fromEventId: 'plague-athens', toEventId: 'plague-antonine', type: 'preceded' },
+    { id: 'plague-2', fromEventId: 'plague-antonine', toEventId: 'plague-justinian', type: 'preceded' },
+    { id: 'plague-3', fromEventId: 'plague-justinian', toEventId: 'p7-31', type: 'preceded' }, // Justinian -> Black Death
+    { id: 'plague-4', fromEventId: 'p7-31', toEventId: 'plague-aztec', type: 'preceded' }, // Black Death -> Aztec
+    { id: 'plague-5', fromEventId: 'plague-aztec', toEventId: 'plague-london', type: 'preceded' },
+    { id: 'plague-6', fromEventId: 'plague-london', toEventId: 'p9-7', type: 'preceded' }, // London -> Vaccine
+    { id: 'plague-7', fromEventId: 'p9-7', toEventId: 'plague-cholera', type: 'preceded' }, // Vaccine -> Cholera
+    { id: 'plague-8', fromEventId: 'plague-cholera', toEventId: 'plague-yellow', type: 'preceded' },
+    { id: 'plague-9', fromEventId: 'plague-yellow', toEventId: 'plague-typhoid', type: 'preceded' },
+    { id: 'plague-10', fromEventId: 'plague-typhoid', toEventId: 'cure-flu', type: 'preceded' }, // Typhoid -> Spanish Flu
+    { id: 'plague-11', fromEventId: 'cure-flu', toEventId: 'cure-penicillin', type: 'caused' }, // Flu -> Antibiotics
+    { id: 'plague-12', fromEventId: 'cure-penicillin', toEventId: 'plague-who', type: 'preceded' },
+    { id: 'plague-13', fromEventId: 'plague-who', toEventId: 'cure-polio', type: 'caused' }, // WHO -> Polio
+    { id: 'plague-14', fromEventId: 'cure-polio', toEventId: 'cure-smallpox-end', type: 'caused' }, // Polio -> Smallpox End
+    { id: 'plague-15', fromEventId: 'cure-smallpox-end', toEventId: 'cure-hiv', type: 'preceded' }, // Smallpox End -> HIV
+    { id: 'plague-16', fromEventId: 'cure-hiv', toEventId: 'plague-sars', type: 'preceded' }, // HIV -> SARS
+    { id: 'plague-17', fromEventId: 'plague-sars', toEventId: 'plague-ebola', type: 'preceded' },
+    { id: 'plague-18', fromEventId: 'plague-ebola', toEventId: 'plague-antibiotic', type: 'related' },
+    { id: 'plague-19', fromEventId: 'plague-antibiotic', toEventId: 'p12-26', type: 'preceded' }, // Antibiotic Resistance -> COVID
+    { id: 'plague-20', fromEventId: 'p12-26', toEventId: 'cure-mrna', type: 'caused' } // COVID -> mRNA
 ];
+
 
 export const JOURNEYS: Journey[] = [
     {
@@ -1104,5 +1127,64 @@ export const JOURNEYS: Journey[] = [
             'p10-31': { title: 'The Bomb', description: 'The Final Weapon. Hiroshima and Nagasaki end WWII and begin a new era where humanity can destroy itself—war\'s ultimate evolution.' },
             'p12-27': { title: 'War Returns to Europe', description: 'The Post-Cold War Illusion Ends. Russia\'s invasion of Ukraine shatters decades of peace, returning great power war to the European continent.' }
         }
+    },
+    {
+        id: 'pandemics-plagues',
+        title: 'Pandemics & Plagues: The Invisible Enemies',
+        description: 'Black Death to COVID: How disease shaped human civilization.',
+        thumbnailUrl: 'images/pandemics-plagues-thumb.jpg',
+        eventIds: [
+            // Ancient Medicine & Plagues
+            'cure-imhotep',     // First physician
+            'cure-hippocrates', // Father of medicine
+            'plague-athens',    // Plague of Athens
+            'plague-antonine',  // Antonine Plague
+            'plague-justinian', // Plague of Justinian
+            // Medieval
+            'p7-31',            // Black Death
+            // Colonial Exchange
+            'p8-8',             // Columbus (disease exchange)
+            'plague-aztec',     // Smallpox Conquers Mexico
+            'plague-london',    // Great Plague of London
+            // Enlightenment & Scientific Revolution
+            'cure-leeuwenhoek', // Microscope/microbes
+            'p9-7',             // Smallpox Vaccine
+            'plague-cholera',   // Cholera & John Snow
+            'cure-semmelweis',  // Handwashing saves lives
+            'cure-nightingale', // Florence Nightingale
+            'cure-pasteur',     // Germ theory
+            'cure-lister',      // Antiseptic surgery
+            'cure-koch',        // TB bacteria
+            // Industrial Era
+            'plague-yellow',    // Yellow Fever & Panama
+            'plague-typhoid',   // Typhoid Mary
+            'cure-flu',         // Spanish Flu
+            'cure-insulin',     // Insulin discovered
+            'cure-penicillin',  // Penicillin
+            // Modern Era
+            'plague-who',       // World Health Organization
+            'cure-dna',         // DNA structure
+            'cure-polio',       // Polio Vaccine
+            'cure-transplant',  // Heart Transplant
+            'cure-smallpox-end',// Eradication of Smallpox
+            'cure-hiv',         // HIV/AIDS
+            'plague-sars',      // SARS
+            'cure-genome',      // Human Genome
+            'plague-ebola',     // Ebola
+            'plague-antibiotic',// Antibiotic Resistance
+            'p12-26',           // COVID-19
+            'cure-mrna'         // mRNA Vaccines
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('plague-')),
+        overrides: {
+            'p7-31': { title: 'The Black Death', description: 'A Third of Europe Dies. Bubonic plague kills 75-200 million, shattering feudalism and the Church\'s authority—a restart button for Western civilization.' },
+            'p8-8': { title: 'The Columbian Exchange', description: 'Biological Collision. Columbus doesn\'t just bring ships—he brings smallpox, measles, and typhus that will kill 90% of Native Americans.' },
+            'p9-7': { title: 'The First Vaccine', description: 'Humanity Fights Back. Jenner proves cowpox protects against smallpox, launching the vaccine era that will save billions of lives.' },
+            'cure-flu': { title: 'The Great Pandemic', description: 'More Deadly Than War. Spanish flu kills 50-100 million in 1918-1919—more than WWI—spreading faster than any disease in history.' },
+            'cure-penicillin': { title: 'The Mold That Saves', description: 'Accidents Change History. Fleming notices mold killing bacteria, accidentally discovering antibiotics—the most important medical advance of the 20th century.' },
+            'cure-hiv': { title: 'The Modern Plague', description: 'A New Kind of Enemy. HIV kills 36 million and transforms medicine, activism, and attitudes toward sexuality and disease forever.' },
+            'p12-26': { title: 'COVID-19: The World Stops', description: 'The Invisible Siege. A novel coronavirus circles the globe in weeks, locking billions indoors in the largest disruption to daily life since WWII.' }
+        }
     }
 ];
+

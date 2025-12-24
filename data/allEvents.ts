@@ -4178,5 +4178,127 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-drone.jpg',
     phase: 'Phase 12',
     category: 'Technology'
+  },
+
+  // --- PANDEMICS & PLAGUES: Disease History Events ---
+  {
+    id: 'plague-athens',
+    year: '430 BCE',
+    yearNumeric: -430,
+    title: 'Plague of Athens',
+    description: 'The Death of Democracy. A mysterious epidemic kills a third of Athens—including Pericles—helping end the Golden Age and lose the Peloponnesian War.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-athens.jpg',
+    phase: 'Phase 6',
+    category: 'Life'
+  },
+  {
+    id: 'plague-antonine',
+    year: '165 CE',
+    yearNumeric: 165,
+    title: 'Antonine Plague',
+    description: 'Rome\'s Invisible Enemy. Soldiers returning from Parthia bring smallpox that kills 5 million, beginning the slow decline of the Roman Empire.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-antonine.jpg',
+    phase: 'Phase 7',
+    category: 'Life'
+  },
+  {
+    id: 'plague-justinian',
+    year: '541 CE',
+    yearNumeric: 541,
+    title: 'Plague of Justinian',
+    description: 'The End of Antiquity. Bubonic plague kills 25-50 million, derailing Justinian\'s dream of restoring Rome and reshaping the Mediterranean world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-justinian.jpg',
+    phase: 'Phase 7',
+    category: 'Life'
+  },
+  {
+    id: 'plague-aztec',
+    year: '1520 CE',
+    yearNumeric: 1520,
+    title: 'Smallpox Conquers Mexico',
+    description: 'The Invisible Conquistador. Smallpox kills more Aztecs than Spanish swords, reducing the population from 25 million to 1 million in a century.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-aztec.jpg',
+    phase: 'Phase 8',
+    category: 'Life'
+  },
+  {
+    id: 'plague-london',
+    year: '1665 CE',
+    yearNumeric: 1665,
+    title: 'Great Plague of London',
+    description: 'The Last Visit. Bubonic plague kills 100,000 Londoners—a quarter of the population—in a final European outbreak before mysteriously retreating.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-london.jpg',
+    phase: 'Phase 8',
+    category: 'Life'
+  },
+  {
+    id: 'plague-cholera',
+    year: '1854 CE',
+    yearNumeric: 1854,
+    title: 'Cholera & John Snow',
+    description: 'The Detective Doctor. Snow maps cholera deaths to a single water pump, proving disease spreads through water—not "bad air"—and inventing epidemiology.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-cholera.jpg',
+    phase: 'Phase 9',
+    category: 'Life'
+  },
+  {
+    id: 'plague-yellow',
+    year: '1900 CE',
+    yearNumeric: 1900,
+    title: 'Yellow Fever & Panama',
+    description: 'Mosquitoes vs. Empire. Yellow fever kills 22,000 French canal workers. Only after Walter Reed proves mosquitoes carry it can America finish the job.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-yellow.jpg',
+    phase: 'Phase 9',
+    category: 'Life'
+  },
+  {
+    id: 'plague-typhoid',
+    year: '1906 CE',
+    yearNumeric: 1906,
+    title: 'Typhoid Mary',
+    description: 'The Healthy Carrier. Mary Mallon infects 51 people while showing no symptoms herself, raising questions about public health vs. individual liberty.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-typhoid.jpg',
+    phase: 'Phase 10',
+    category: 'Life'
+  },
+  {
+    id: 'plague-who',
+    year: '1948 CE',
+    yearNumeric: 1948,
+    title: 'World Health Organization',
+    description: 'Global Health Governance. The UN creates a body to fight disease across borders, coordinating the campaigns that will eradicate smallpox and nearly end polio.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-who.jpg',
+    phase: 'Phase 11',
+    category: 'Life'
+  },
+  {
+    id: 'plague-sars',
+    year: '2003 CE',
+    yearNumeric: 2003,
+    title: 'SARS Outbreak',
+    description: 'The Warning Ignored. A coronavirus kills 774 in Asia before containment works. Scientists warn a deadlier variant is inevitable. The world forgets.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-sars.jpg',
+    phase: 'Phase 12',
+    category: 'Life'
+  },
+  {
+    id: 'plague-ebola',
+    year: '2014 CE',
+    yearNumeric: 2014,
+    title: 'Ebola Outbreak',
+    description: 'The Horror in West Africa. Ebola kills 11,000 in the largest outbreak ever, exposing how unprepared the world remains for emerging diseases.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-ebola.jpg',
+    phase: 'Phase 12',
+    category: 'Life'
+  },
+  {
+    id: 'plague-antibiotic',
+    year: '2015 CE',
+    yearNumeric: 2015,
+    title: 'Antibiotic Resistance Crisis',
+    description: 'The Clock Runs Out. Bacteria evolve faster than we can make drugs. Superbugs threaten to return us to an era when any infection could kill.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/plague-antibiotic.jpg',
+    phase: 'Phase 12',
+    category: 'Life'
   }
 ];
