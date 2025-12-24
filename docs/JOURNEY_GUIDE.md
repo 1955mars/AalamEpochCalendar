@@ -178,6 +178,17 @@ dramatic lighting, cinematic astronomical art style
   - Supports `--missing` flag to fix gaps without re-doing everything.
 - **`verify:images`**: Failing checks here will break CI/CD. Ensure it passes before pushing.
 
+### 📝 Content Quality Checks
+- **Review Narrative Flow**: After implementation, inspect `npx tsx scripts/print_journey_narrative.ts <journey-id>` output.
+- **Remove Off-Topic Events**: If an event breaks thematic flow (e.g., Copernicus in a medical journey), remove it.
+- **Rewrite Weak Descriptions**: Look for terse descriptions like "Global lockdowns and vaccines" and expand them with the "Big History Narrator" voice.
+
+### 🏠 Homepage Order
+- Journeys appear in the order they are defined in the `JOURNEYS` array.
+- **Recommended order**: Chronological by scope (Cosmic → Life → Civilizations → Modern).
+- Newly added journeys go at the **end** of the array unless you deliberately reorder.
+
 ---
 
 *Last updated: December 23, 2025*
+

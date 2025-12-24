@@ -550,35 +550,6 @@ export const CONNECTIONS: Connection[] = [
 
 export const JOURNEYS: Journey[] = [
     {
-        id: 'the-cure',
-        title: 'The Cure: Humanity vs. Disease',
-        description: 'From shamans to mRNA—the 10,000-year war against invisible killers.',
-        thumbnailUrl: 'images/the-cure-thumb.jpg',
-        eventIds: [
-            // Ancient
-            'cure-trepanning', 'cure-imhotep', 'cure-ayurveda', 'cure-hippocrates',
-            'cure-galen',
-            // Medieval
-            'cure-avicenna', 'p7-31', // Black Death
-            // Renaissance
-            'cure-vesalius', 'cure-harvey', 'cure-leeuwenhoek',
-            // Enlightenment
-            'cure-lind', 'p9-7', // Smallpox
-            // 19th Century
-            'cure-stethoscope', 'cure-anesthesia', 'cure-semmelweis',
-            'cure-nightingale', 'cure-pasteur', 'cure-lister', 'cure-koch', 'cure-xray',
-            // 20th Century
-            'cure-flu', 'cure-insulin', 'cure-penicillin',
-            'cure-dna', 'cure-polio', 'cure-transplant',
-            'cure-smallpox-end', 'cure-hiv',
-            // 21st Century
-            'cure-genome', 'cure-crispr', 'p12-26', // COVID
-            'cure-mrna'
-        ],
-        connections: CONNECTIONS.filter(c => c.id.startsWith('cure-')),
-        overrides: {}
-    },
-    {
         id: 'cosmic-origins',
         title: 'Cosmic Origins: The Beginning of Everything',
         description: 'Trace the history of the universe from the Big Bang to the formation of our home planet.',
@@ -864,6 +835,35 @@ export const JOURNEYS: Journey[] = [
             'space-starship'        // 2024
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('tts-')),
+        overrides: {}
+    },
+    {
+        id: 'the-cure',
+        title: 'The Cure: Humanity vs. Disease',
+        description: 'From shamans to mRNA—the 10,000-year war against invisible killers.',
+        thumbnailUrl: 'images/the-cure-thumb.jpg',
+        eventIds: [
+            // Ancient
+            'cure-trepanning', 'cure-imhotep', 'cure-ayurveda', 'cure-hippocrates',
+            'cure-galen',
+            // Medieval
+            'cure-avicenna', 'p7-31', // Black Death
+            // Renaissance
+            'cure-vesalius', 'cure-harvey', 'cure-leeuwenhoek',
+            // Enlightenment
+            'cure-lind', 'p9-7', // Smallpox
+            // 19th Century
+            'cure-stethoscope', 'cure-anesthesia', 'cure-semmelweis',
+            'cure-nightingale', 'cure-pasteur', 'cure-lister', 'cure-koch', 'cure-xray',
+            // 20th Century
+            'cure-flu', 'cure-insulin', 'cure-penicillin',
+            'cure-dna', 'cure-polio', 'cure-transplant',
+            'cure-smallpox-end', 'cure-hiv',
+            // 21st Century
+            'cure-genome', 'cure-crispr', 'p12-26', // COVID
+            'cure-mrna'
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('cure-')),
         overrides: {}
     }
 ];
