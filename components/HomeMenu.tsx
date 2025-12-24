@@ -35,7 +35,7 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
 
                         {/* Content */}
                         <div className="relative z-10">
-                            <div className="absolute top-[-260px] right-0 w-14 h-14 bg-amber-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 active:scale-95 transition-all opacity-100 hover:bg-amber-300 transform translate-y-0 text-black">
+                            <div className="absolute top-[-260px] right-0 w-14 h-14 bg-amber-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 active:scale-95 transition-all opacity-0 group-hover:opacity-100 hover:bg-amber-300 transform translate-y-0 text-black">
                                 <Play fill="currentColor" size={24} className="ml-1" />
                             </div>
 
