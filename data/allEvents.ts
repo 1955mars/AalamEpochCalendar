@@ -4774,5 +4774,310 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-crisis.jpg',
     phase: 'Phase 12',
     category: 'Economy'
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // POWER TRIP JOURNEY - Energy history from fire to fusion
+  // ═══════════════════════════════════════════════════════════════
+
+  {
+    id: 'power-fire',
+    year: '400,000 BCE',
+    yearNumeric: -400000,
+    title: 'Control of Fire',
+    description: 'The First Energy Revolution. Homo erectus masters fire—cooking food, warding off predators, and unlocking calories that would fuel bigger brains.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-fire.jpg',
+    phase: 'Phase 4',
+    category: 'Technology'
+  },
+  {
+    id: 'power-hearth',
+    year: '12,000 BCE',
+    yearNumeric: -12000,
+    title: 'The Permanent Hearth',
+    description: 'Home Base. As humans settle, fire pits become permanent. The hearth becomes the center of social life—cooking, warmth, and storytelling.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-hearth.jpg',
+    phase: 'Phase 5',
+    category: 'Technology'
+  },
+  {
+    id: 'power-waterwheel',
+    year: '300 BCE',
+    yearNumeric: -300,
+    title: 'The Water Wheel',
+    description: 'Outsourcing Muscle. Greeks and Romans harness flowing water to grind grain—the first machine to replace human labor with natural force.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-waterwheel.jpg',
+    phase: 'Phase 6',
+    category: 'Technology'
+  },
+  {
+    id: 'power-windmill',
+    year: '900 CE',
+    yearNumeric: 900,
+    title: 'The Windmill',
+    description: 'Catching the Breeze. Persian engineers build vertical-axis windmills to pump water and grind grain, harvesting energy from thin air.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-windmill.jpg',
+    phase: 'Phase 7',
+    category: 'Technology'
+  },
+  {
+    id: 'power-coal',
+    year: '1600 CE',
+    yearNumeric: 1600,
+    title: 'The Coal Age Begins',
+    description: 'Black Gold. England\'s forests are depleted. Coal mines open, and humanity discovers the concentrated solar energy stored in ancient swamps.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-coal.jpg',
+    phase: 'Phase 8',
+    category: 'Technology'
+  },
+  {
+    id: 'power-newcomen',
+    year: '1712 CE',
+    yearNumeric: 1712,
+    title: 'Newcomen\'s Steam Engine',
+    description: 'The First Hot Breath. Thomas Newcomen builds the first practical steam engine to pump water from coal mines—inefficient, but revolutionary.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-newcomen.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-watt',
+    year: '1765 CE',
+    yearNumeric: 1765,
+    title: 'Watt\'s Improved Steam Engine',
+    description: 'The Engine That Changed Everything. James Watt\'s separate condenser triples efficiency, making steam power practical for factories.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-watt.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-railway',
+    year: '1830 CE',
+    yearNumeric: 1830,
+    title: 'The Railway Age',
+    description: 'Steam on Wheels. The Liverpool-Manchester Railway opens, proving steam can move people and goods faster than horses ever could.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-railway.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-oil',
+    year: '1859 CE',
+    yearNumeric: 1859,
+    title: 'Drake Strikes Oil',
+    description: 'The Black Geyser. Edwin Drake drills the first commercial oil well in Pennsylvania. A lamp fuel at first, petroleum will reshape the 20th century.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-oil.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-dynamo',
+    year: '1866 CE',
+    yearNumeric: 1866,
+    title: 'The Dynamo',
+    description: 'Magnetism Becomes Power. Werner von Siemens invents the self-exciting dynamo—electricity can now be generated at industrial scale.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-dynamo.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-edison',
+    year: '1882 CE',
+    yearNumeric: 1882,
+    title: 'Edison\'s Pearl Street Station',
+    description: 'The Grid Is Born. Edison opens the first central power station in Manhattan, lighting 400 lamps and inventing the electric utility industry.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-edison.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-tesla',
+    year: '1888 CE',
+    yearNumeric: 1888,
+    title: 'Tesla\'s AC Motor',
+    description: 'The Current War. Nikola Tesla patents the alternating current motor. AC can travel hundreds of miles; Edison\'s DC cannot. Tesla wins.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-tesla.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-modelt',
+    year: '1908 CE',
+    yearNumeric: 1908,
+    title: 'The Model T',
+    description: 'Oil\'s Addiction Begins. Ford\'s assembly line makes cars affordable. By 1920, America is hooked on gasoline—and so is the world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-modelt.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'power-hoover',
+    year: '1936 CE',
+    yearNumeric: 1936,
+    title: 'Hoover Dam',
+    description: 'Taming the River. The largest dam in the world is completed, generating enough hydroelectric power for 1.3 million homes.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-hoover.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'power-fermi',
+    year: '1942 CE',
+    yearNumeric: 1942,
+    title: 'Fermi\'s Nuclear Pile',
+    description: 'Splitting the Atom. Under a Chicago stadium, Enrico Fermi achieves the first controlled nuclear chain reaction. A new era begins.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-fermi.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'power-hiroshima',
+    year: '1945 CE',
+    yearNumeric: 1945,
+    title: 'Atomic Fire',
+    description: 'The Destroyer of Worlds. Hiroshima and Nagasaki reveal nuclear energy\'s terrible power—enough to end civilization or power it forever.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-hiroshima.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'power-solar',
+    year: '1954 CE',
+    yearNumeric: 1954,
+    title: 'First Solar Cell',
+    description: 'Bottling Sunlight. Bell Labs creates the first practical silicon solar cell—6% efficient, but proof that sunlight can become electricity.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-solar.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'power-obninsk',
+    year: '1954 CE',
+    yearNumeric: 1954,
+    title: 'First Nuclear Power Plant',
+    description: 'Atoms for Peace. The Obninsk reactor in the Soviet Union becomes the first nuclear plant to generate electricity for a power grid.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-obninsk.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'power-opec',
+    year: '1973 CE',
+    yearNumeric: 1973,
+    title: 'OPEC Oil Embargo',
+    description: 'The Wake-Up Call. Arab nations embargo oil to the West. Gas lines form, prices quadruple, and the world learns how dependent it is on petroleum.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-opec.jpg',
+    phase: 'Phase 11',
+    category: 'Economy'
+  },
+  {
+    id: 'power-tmi',
+    year: '1979 CE',
+    yearNumeric: 1979,
+    title: 'Three Mile Island',
+    description: 'Nuclear Fear. A partial meltdown in Pennsylvania releases no significant radiation—but public trust in nuclear power never recovers.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-tmi.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'power-chernobyl',
+    year: '1986 CE',
+    yearNumeric: 1986,
+    title: 'Chernobyl Disaster',
+    description: 'The Worst Case. Reactor 4 explodes, spreading radiation across Europe. The disaster haunts nuclear power for a generation.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-chernobyl.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'power-windfarm',
+    year: '1991 CE',
+    yearNumeric: 1991,
+    title: 'Offshore Wind Era',
+    description: 'Harvesting the Sea Breeze. Denmark builds the world\'s first offshore wind farm at Vindeby—11 turbines proving wind can scale.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-windfarm.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'power-tesla-ev',
+    year: '2008 CE',
+    yearNumeric: 2008,
+    title: 'Tesla Roadster',
+    description: 'Electric Renaissance. Tesla proves electric cars can be fast and desirable. Silicon Valley disrupts Detroit.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-tesla-ev.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'power-fukushima',
+    year: '2011 CE',
+    yearNumeric: 2011,
+    title: 'Fukushima Disaster',
+    description: 'Nature\'s Revenge. An earthquake and tsunami overwhelm three reactors in Japan. Germany decides to phase out nuclear entirely.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-fukushima.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'power-paris',
+    year: '2015 CE',
+    yearNumeric: 2015,
+    title: 'Paris Climate Agreement',
+    description: 'The World Agrees. 196 nations commit to limiting warming to 1.5°C, acknowledging that our energy choices are changing the planet.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-paris.jpg',
+    phase: 'Phase 12',
+    category: 'Economy'
+  },
+  {
+    id: 'power-iter',
+    year: '2020 CE',
+    yearNumeric: 2020,
+    title: 'ITER Construction',
+    description: 'Chasing the Stars. The world\'s largest fusion experiment begins assembly in France—humanity\'s attempt to bottle the power of the sun.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-iter.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'power-fusion',
+    year: '2022 CE',
+    yearNumeric: 2022,
+    title: 'Fusion Ignition',
+    description: 'Energy Gain Achieved. For the first time, a fusion reaction produces more energy than was put in. The dream moves closer to reality.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-fusion.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'power-lamp',
+    year: '3000 BCE',
+    yearNumeric: -3000,
+    title: 'The Oil Lamp',
+    description: 'Portable Light. Humans learn to burn olive oil in clay vessels—extending the productive day beyond sunset for the first time.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-lamp.jpg',
+    phase: 'Phase 5',
+    category: 'Technology'
+  },
+  {
+    id: 'power-internal',
+    year: '1876 CE',
+    yearNumeric: 1876,
+    title: 'Internal Combustion Engine',
+    description: 'The Engine Inside. Otto perfects the four-stroke engine—compact enough to fit in a carriage and powerful enough to change the world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-internal.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'power-grid',
+    year: '2003 CE',
+    yearNumeric: 2003,
+    title: 'The Blackout',
+    description: 'The Grid Fails. A software bug cascades through the Northeast, leaving 55 million people in darkness and revealing the fragility of our electric civilization.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-grid.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
   }
 ];

@@ -709,7 +709,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'trade-24', fromEventId: 'trade-container', toEventId: 'trade-amazon', type: 'preceded' },
     { id: 'trade-25', fromEventId: 'trade-amazon', toEventId: 'trade-wto', type: 'preceded' },
     { id: 'trade-26', fromEventId: 'trade-wto', toEventId: 'trade-alibaba', type: 'preceded' },
-    { id: 'trade-27', fromEventId: 'trade-alibaba', toEventId: 'trade-crisis', type: 'preceded' }
+    { id: 'trade-27', fromEventId: 'trade-alibaba', toEventId: 'trade-crisis', type: 'preceded' },
+
+    // --- Power Trip: Energy History ---
+    { id: 'power-1', fromEventId: 'power-fire', toEventId: 'power-hearth', type: 'preceded' },
+    { id: 'power-2', fromEventId: 'power-hearth', toEventId: 'power-lamp', type: 'preceded' },
+    { id: 'power-3', fromEventId: 'power-lamp', toEventId: 'power-waterwheel', type: 'preceded' },
+    { id: 'power-4', fromEventId: 'power-waterwheel', toEventId: 'power-windmill', type: 'preceded' },
+    { id: 'power-5', fromEventId: 'power-windmill', toEventId: 'power-coal', type: 'preceded' },
+    { id: 'power-6', fromEventId: 'power-coal', toEventId: 'power-newcomen', type: 'caused' },
+    { id: 'power-7', fromEventId: 'power-newcomen', toEventId: 'power-watt', type: 'caused' },
+    { id: 'power-8', fromEventId: 'power-watt', toEventId: 'power-railway', type: 'caused' },
+    { id: 'power-9', fromEventId: 'power-railway', toEventId: 'power-oil', type: 'preceded' },
+    { id: 'power-10', fromEventId: 'power-oil', toEventId: 'power-dynamo', type: 'preceded' },
+    { id: 'power-11', fromEventId: 'power-dynamo', toEventId: 'power-internal', type: 'preceded' },
+    { id: 'power-12', fromEventId: 'power-internal', toEventId: 'power-edison', type: 'preceded' },
+    { id: 'power-13', fromEventId: 'power-edison', toEventId: 'power-tesla', type: 'related' },
+    { id: 'power-14', fromEventId: 'power-tesla', toEventId: 'power-modelt', type: 'caused' },
+    { id: 'power-15', fromEventId: 'power-modelt', toEventId: 'power-hoover', type: 'preceded' },
+    { id: 'power-16', fromEventId: 'power-hoover', toEventId: 'power-fermi', type: 'preceded' },
+    { id: 'power-17', fromEventId: 'power-fermi', toEventId: 'power-hiroshima', type: 'caused' },
+    { id: 'power-18', fromEventId: 'power-hiroshima', toEventId: 'power-solar', type: 'preceded' },
+    { id: 'power-19', fromEventId: 'power-solar', toEventId: 'power-obninsk', type: 'related' },
+    { id: 'power-20', fromEventId: 'power-obninsk', toEventId: 'power-opec', type: 'preceded' },
+    { id: 'power-21', fromEventId: 'power-opec', toEventId: 'power-tmi', type: 'preceded' },
+    { id: 'power-22', fromEventId: 'power-tmi', toEventId: 'power-chernobyl', type: 'related' },
+    { id: 'power-23', fromEventId: 'power-chernobyl', toEventId: 'power-windfarm', type: 'caused' },
+    { id: 'power-24', fromEventId: 'power-windfarm', toEventId: 'power-grid', type: 'preceded' },
+    { id: 'power-25', fromEventId: 'power-grid', toEventId: 'power-tesla-ev', type: 'preceded' },
+    { id: 'power-26', fromEventId: 'power-tesla-ev', toEventId: 'power-fukushima', type: 'preceded' },
+    { id: 'power-27', fromEventId: 'power-fukushima', toEventId: 'power-paris', type: 'caused' },
+    { id: 'power-28', fromEventId: 'power-paris', toEventId: 'power-iter', type: 'related' },
+    { id: 'power-29', fromEventId: 'power-iter', toEventId: 'power-fusion', type: 'caused' }
 ];
 
 
@@ -1346,6 +1377,51 @@ export const JOURNEYS: Journey[] = [
             'p8-10': { title: 'Da Gama Reaches India', description: 'The Spice Route Conquered. Portugal reaches India by sea, making the Silk Road obsolete and beginning the age of European colonialism.' },
             'p9-4': { title: 'Industrial Revolution', description: 'Factory World. Steam, iron, and cotton transform England, then the world—production explodes and trade becomes global.' }
         }
+    },
+    {
+        id: 'power-trip',
+        title: 'Power Trip',
+        description: 'Fire, Oil, Atom, Fusion: The energy cravings that built (and burn) the world.',
+        thumbnailUrl: 'images/power-trip-thumb.jpg',
+        eventIds: [
+            // Fire & Muscle Era
+            'power-fire',         // 400,000 BCE - Control of fire
+            'power-hearth',       // 12,000 BCE - Permanent hearth
+            'power-lamp',         // 3000 BCE - Oil lamp
+            'power-waterwheel',   // 300 BCE - Water wheel
+            'power-windmill',     // 900 CE - Persian windmill
+            // Coal & Steam
+            'power-coal',         // 1600 CE - Coal age begins
+            'power-newcomen',     // 1712 CE - First steam engine
+            'power-watt',         // 1765 CE - Improved steam engine
+            'power-railway',      // 1830 CE - Railway age
+            // Oil & Electricity
+            'power-oil',          // 1859 CE - First oil well
+            'power-dynamo',       // 1866 CE - Dynamo
+            'power-internal',     // 1876 CE - Internal combustion
+            'power-edison',       // 1882 CE - Pearl Street Station
+            'power-tesla',        // 1888 CE - AC motor
+            'power-modelt',       // 1908 CE - Model T
+            'power-hoover',       // 1936 CE - Hoover Dam
+            // Nuclear Age
+            'power-fermi',        // 1942 CE - First nuclear reaction
+            'power-hiroshima',    // 1945 CE - Atomic bombs
+            'power-solar',        // 1954 CE - First solar cell
+            'power-obninsk',      // 1954 CE - First nuclear plant
+            'power-opec',         // 1973 CE - Oil embargo
+            'power-tmi',          // 1979 CE - Three Mile Island
+            'power-chernobyl',    // 1986 CE - Chernobyl
+            // Renewable Dawn
+            'power-windfarm',     // 1991 CE - Offshore wind
+            'power-grid',         // 2003 CE - Blackout
+            'power-tesla-ev',     // 2008 CE - Tesla Roadster
+            'power-fukushima',    // 2011 CE - Fukushima
+            'power-paris',        // 2015 CE - Paris Agreement
+            'power-iter',         // 2020 CE - ITER construction
+            'power-fusion'        // 2022 CE - Fusion ignition
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('power-')),
+        overrides: {}
     }
 ];
 

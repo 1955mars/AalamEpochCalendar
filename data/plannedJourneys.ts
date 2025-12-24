@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 14 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade)
-// Need to Build: 11 (below)
+// Currently Live: 15 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power)
+// Need to Build: 10 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -22,13 +22,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 2: Moderate new content (Est. 15-20 new events each)
+    // COMPLETED: Power Trip
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'Power Trip',
-        description: 'Fire, Oil, Atom, Fusion: The energy cravings that built (and burn) the world.',
-        category: 'Innovation',
-        icon: Lightbulb
-    },
     {
         title: 'Rights & Revolutions',
         description: 'Magna Carta to UN Declaration: How humanity invented freedom.',
