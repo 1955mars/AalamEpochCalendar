@@ -307,3 +307,86 @@ Good descriptions follow this pattern:
 
 *Last updated: December 24, 2025*
 
+---
+
+## 9. Agentic Workflow Tips (Dec 2025)
+
+Learnings from building journeys in an agentic workflow:
+
+### 🔢 Minimum Event Requirements
+
+Tests enforce a **30-event minimum** per journey:
+```bash
+# This test will fail if journey has < 30 events:
+# FAIL: Journey "Power Trip" has only 27 events
+```
+
+**Solution:** If you're short, add transitional events that strengthen the narrative (e.g., Oil Lamp between Fire and Water Wheel).
+
+### 🔄 Image Generation Retry Strategy
+
+The Pollinations API can return 502 errors. The `regenerate_images.ts` script has built-in retry (3 attempts per image), but some may still fail.
+
+**Workflow:**
+```bash
+# Initial generation (may have failures)
+npx tsx scripts/regenerate_images.ts power-trip
+
+# Retry only failed/missing images
+npx tsx scripts/regenerate_images.ts power-trip --missing
+```
+
+### 🔗 Connection ID Convention
+
+Use a consistent prefix and sequential numbering:
+
+```typescript
+// Journey prefix: power-
+{ id: 'power-1', fromEventId: 'power-fire', toEventId: 'power-hearth', type: 'preceded' },
+{ id: 'power-2', fromEventId: 'power-hearth', toEventId: 'power-lamp', type: 'preceded' },
+// ... continue numbering
+```
+
+**Tip:** When adding events mid-journey, you may need to renumber connections. It's easier to keep a gap (e.g., `power-1` through `power-30`) than to insert between existing IDs.
+
+### 📋 Agentic Checklist Pattern
+
+For consistent execution, follow this checklist structure:
+
+```
+## Planning
+- [ ] Research existing events to reuse
+- [ ] Create implementation plan
+- [ ] Get user approval
+
+## Execution  
+- [ ] Add new events to allEvents.ts
+- [ ] Add connections to journeys.ts
+- [ ] Add journey definition
+- [ ] Generate images (event + thumbnail)
+
+## Verification
+- [ ] npm run verify (all tests pass)
+- [ ] Two-pass narrative review
+- [ ] Update plannedJourneys.ts
+
+## Deployment
+- [ ] Commit changes
+- [ ] Deploy to production
+- [ ] Verify live site
+```
+
+### 📝 Event ID Naming
+
+Use descriptive, prefixed IDs for easy filtering:
+
+| Journey | Prefix | Example |
+|---------|--------|---------|
+| Power Trip | `power-` | `power-fire`, `power-watt` |
+| Trade | `trade-` | `trade-obsidian`, `trade-voc` |
+| Money | `money-` | `money-lydia`, `money-fed` |
+
+This makes connection filtering trivial:
+```typescript
+connections: CONNECTIONS.filter(c => c.id.startsWith('power-'))
+```
