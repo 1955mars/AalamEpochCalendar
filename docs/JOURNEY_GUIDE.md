@@ -214,15 +214,81 @@ When reusing existing events in a new journey, their descriptions may not fit th
 - Description lacks the "Big History Narrator" voice
 
 ### 🔍 Narrative Review Workflow (Added Dec 23, 2025)
-After implementing a journey, always run a narrative review:
+After implementing a journey, **always** run a narrative quality review before considering it complete.
 
-1. **Print narrative**: `npx tsx scripts/print_journey_narrative.ts <journey-id>`
-2. **Look for**:
-   - Weak descriptions (< 20 words, no "So What?")
-   - Events with generic titles
-   - Off-topic events that break thematic flow
-3. **Fix using**: Journey `overrides` for reused events, or edit `allEvents.ts` for new events
-4. **Commit separately**: Use `fix(journey): Improve narrative quality` commit message
+#### Step 1: Print the Narrative
+```bash
+npx tsx scripts/print_journey_narrative.ts <journey-id>
+```
+This outputs every event in order with year, title, and description.
+
+#### Step 2: Read Through and Identify Issues
+Scan the output for these **red flags**:
+
+| Issue Type | Example | Fix |
+|:-----------|:--------|:----|
+| **Too terse** | "Foundational event of Christianity" | Rewrite with narrative voice |
+| **No "So What?"** | "Siddhartha Gautama is born" | Add why it matters |
+| **Generic title** | "Birth of Buddha" | Use expressive title: "The Buddha Awakens" |
+| **Off-topic event** | Copernicus in a medical journey | Remove from `eventIds` |
+| **Missing era context** | Description assumes knowledge | Add historical framing |
+
+#### Step 3: Categorize Events by Fix Type
+
+- **Reused events with weak descriptions** → Use `overrides` in journey definition
+- **New events with weak descriptions** → Edit directly in `allEvents.ts`
+- **Off-topic events** → Remove from journey's `eventIds` array
+
+#### Step 4: Write Fixes Using the "Big History Narrator" Voice
+
+Good descriptions follow this pattern:
+```
+[Hook/Tagline]. [The story]. [Why it matters].
+```
+
+**Examples:**
+```
+❌ "Constantine legalizes Christianity in the Roman Empire."
+✅ "In Hoc Signo Vinces. An emperor sees a vision before battle and legalizes Christianity, transforming a persecuted cult into the state religion of the world's greatest empire."
+
+❌ "Siddhartha Gautama is born, founder of Buddhism."
+✅ "The Middle Way. A prince abandons his palace, sits under a tree, and discovers that desire is the root of suffering—launching a philosophy that will reshape Asia."
+```
+
+#### Step 5: Apply Fixes
+
+For reused events (preserves original for other journeys):
+```typescript
+// In journeys.ts
+overrides: {
+    'p6-16': { 
+        title: 'The Buddha Awakens',
+        description: 'The Middle Way. A prince abandons...' 
+    }
+}
+```
+
+For new events (permanent fix):
+```typescript
+// In allEvents.ts - edit the event directly
+description: 'The Middle Way. A prince abandons...'
+```
+
+#### Step 6: Verify and Commit
+
+```bash
+# Verify tests still pass
+npm run verify
+
+# Re-print narrative to confirm fix
+npx tsx scripts/print_journey_narrative.ts <journey-id>
+
+# Commit with descriptive message
+git commit -m "fix(<journey>): Improve narrative quality
+
+- Rewrite <N> weak descriptions  
+- Add journey overrides for reused events"
+```
 
 ---
 
