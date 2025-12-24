@@ -9,21 +9,15 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 12 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics)
-// Need to Build: 13 (below)
+// Currently Live: 13 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women)
+// Need to Build: 12 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 1: Can leverage many existing events (Est. 5-10 new events each)
-    // COMPLETED: The Art of War, Pandemics & Plagues
+    // COMPLETED: The Art of War, Pandemics & Plagues, Women Who Changed History
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'Women Who Changed History',
-        description: 'From Cleopatra to Curie: The hidden half of human achievement.',
-        category: 'Power',
-        icon: Users
-    },
     {
         title: 'Empires of Trade',
         description: 'Silk Road to Amazon: How commerce connected and conquered the world.',
