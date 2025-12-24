@@ -2189,7 +2189,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'p12-26', year: '2020',
-    yearNumeric: 2020, title: 'COVID-19 Pandemic', description: 'Global lockdowns and vaccines.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-26.jpg', phase: 'Phase 12'
+    yearNumeric: 2020, title: 'COVID-19 Pandemic', description: 'The Invisible Siege. A novel coronavirus circles the globe in weeks, locking billions indoors and triggering the fastest vaccine development in history.', imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/p12-26.jpg', phase: 'Phase 12'
   },
   {
     id: 'p12-27', year: '2022',
@@ -3602,6 +3602,16 @@ export const ALL_EVENTS: TimelineEvent[] = [
     title: 'Hand Washing',
     description: 'The Savior of Mothers. Ignaz Semmelweis discovers that hand washing saves lives, but is mocked by doctors who refuse to believe they are carriers of death.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-semmelweis.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'cure-nightingale',
+    year: '1854 CE',
+    yearNumeric: 1854,
+    title: 'The Lady with the Lamp',
+    description: 'Data Saves Lives. Florence Nightingale revolutionizes military hospitals with sanitation and statistics, proving that most soldiers die from preventable disease, not battle wounds.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/cure-nightingale.jpg',
     phase: 'Phase 9',
     category: 'Science'
   },

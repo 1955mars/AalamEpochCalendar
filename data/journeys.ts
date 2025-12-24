@@ -560,14 +560,13 @@ export const JOURNEYS: Journey[] = [
             'cure-galen',
             // Medieval
             'cure-avicenna', 'p7-31', // Black Death
-            'p8-20', // Copernicus (context)
             // Renaissance
             'cure-vesalius', 'cure-harvey', 'cure-leeuwenhoek',
             // Enlightenment
             'cure-lind', 'p9-7', // Smallpox
             // 19th Century
             'cure-stethoscope', 'cure-anesthesia', 'cure-semmelweis',
-            'cure-pasteur', 'cure-lister', 'cure-koch', 'cure-xray',
+            'cure-nightingale', 'cure-pasteur', 'cure-lister', 'cure-koch', 'cure-xray',
             // 20th Century
             'cure-flu', 'cure-insulin', 'cure-penicillin',
             'cure-dna', 'cure-polio', 'cure-transplant',
