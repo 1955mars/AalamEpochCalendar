@@ -9,21 +9,15 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 11 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War)
-// Need to Build: 14 (below)
+// Currently Live: 12 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics)
+// Need to Build: 13 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 1: Can leverage many existing events (Est. 5-10 new events each)
-    // COMPLETED: The Art of War
+    // COMPLETED: The Art of War, Pandemics & Plagues
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'Pandemics & Plagues',
-        description: 'Black Death to COVID: The invisible enemies that shaped humanity.',
-        category: 'Life',
-        icon: Zap
-    },
     {
         title: 'Women Who Changed History',
         description: 'From Cleopatra to Curie: The hidden half of human achievement.',
