@@ -103,7 +103,50 @@ npm test
 
 ---
 
-## 5. Maintenance Cheatsheet
+## 6. Deployment to Production
+
+The site is deployed to [aalam.xyz](https://aalam.xyz) via GitHub Pages.
+
+### Quick Deploy
+```bash
+npm run deploy
+```
+
+This builds the production bundle and pushes to the `gh-pages` branch.
+
+### Robust Deployment with Verification
+
+For critical deployments, use the workflow `/deploy` which includes verification:
+
+1. **Build & Deploy**: Run `npm run deploy`
+2. **Wait**: Allow 45-60 seconds for GitHub Pages to update
+3. **Verify deployment registered**:
+   ```bash
+   gh api repos/1955mars/AalamEpochCalendar/deployments --jq '.[0] | {created_at, sha: .sha[0:7]}'
+   ```
+4. **Verify live site responds**:
+   ```bash
+   curl -s -o /dev/null -w "%{http_code}" https://aalam.xyz/
+   ```
+   Should return `200`.
+
+### Common Deployment Issues
+
+| Issue | Solution |
+| :--- | :--- |
+| Old deployment timestamp in API | `gh-pages` pushes directly to branch; GitHub Pages picks it up within 1-2 minutes |
+| Site returns old content | Hard refresh (Cmd+Shift+R) or clear CDN cache; wait 2-3 minutes |
+| Deployment not triggering | Check `gh-pages` branch: `git log origin/gh-pages -1` |
+| Build fails | Run `npm run build` first to catch errors before deploying |
+
+### All-in-One Verification Command
+```bash
+npm run deploy && sleep 45 && curl -s -o /dev/null -w "Site: %{http_code}\n" https://aalam.xyz/ && gh api repos/1955mars/AalamEpochCalendar/deployments --jq '"Deploy: " + .[0].created_at'
+```
+
+---
+
+## 7. Maintenance Cheatsheet
 
 | I want to... | Do this... |
 | :--- | :--- |
@@ -111,7 +154,7 @@ npm test
 | **Fix a Typos** | Edit `data/allEvents.ts` directly (Ctrl+F is your friend). |
 | **Change the Era Colors** | properties are in `constants.ts` (PHASES array). |
 | **Debug Scrolling** | Look at `utils/TimeScaleEngine.ts` (getPosition). |
-| **Deploy** | Push to `main`. GitHub Actions handles the rest. |
+| **Deploy** | Run `npm run deploy` or use `/deploy` workflow for verification. |
 
 ---
 
