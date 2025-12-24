@@ -213,33 +213,81 @@ When reusing existing events in a new journey, their descriptions may not fit th
 - Event title doesn't fit the journey's narrative angle  
 - Description lacks the "Big History Narrator" voice
 
-### 🔍 Narrative Review Workflow (Added Dec 23, 2025)
-After implementing a journey, **always** run a narrative quality review before considering it complete.
+### 🔍 Two-Pass Narrative Review (Required Before Deployment)
 
-#### Step 1: Print the Narrative
+> ⚠️ **MANDATORY**: Every new journey MUST go through a two-pass narrative review before being considered complete. Do NOT deploy after only one pass.
+
+#### The Two-Pass Review Process
+
+```
+Pass 1: Review → Fix weak descriptions
+Pass 2: Review again → Fix remaining issues (chronology, flow, etc.)
+Deploy only after Pass 2 is clean
+```
+
+---
+
+#### Pass 1: Initial Narrative Review
+
+**Step 1.1: Print the Narrative**
 ```bash
 npx tsx scripts/print_journey_narrative.ts <journey-id>
 ```
-This outputs every event in order with year, title, and description.
 
-#### Step 2: Read Through and Identify Issues
-Scan the output for these **red flags**:
+**Step 1.2: Identify Issues**
 
 | Issue Type | Example | Fix |
 |:-----------|:--------|:----|
-| **Too terse** | "Foundational event of Christianity" | Rewrite with narrative voice |
-| **No "So What?"** | "Siddhartha Gautama is born" | Add why it matters |
-| **Generic title** | "Birth of Buddha" | Use expressive title: "The Buddha Awakens" |
-| **Off-topic event** | Copernicus in a medical journey | Remove from `eventIds` |
-| **Missing era context** | Description assumes knowledge | Add historical framing |
+| **Too terse** | "Bloody trench warfare battle" | Rewrite with narrative voice |
+| **No "So What?"** | "Allies land in Normandy" | Add historical significance |
+| **Generic title** | "First Crusade Called" | Use expressive title: "Holy War Begins" |
+| **Chronological error** | 1847 event after 1854 event | Reorder in eventIds |
 
-#### Step 3: Categorize Events by Fix Type
+**Step 1.3: Apply Fixes**
+- Reused events → Use `overrides` in journey definition
+- New events → Edit directly in `allEvents.ts`
+- Commit with message: `fix(<journey>): Improve narrative quality`
 
-- **Reused events with weak descriptions** → Use `overrides` in journey definition
-- **New events with weak descriptions** → Edit directly in `allEvents.ts`
-- **Off-topic events** → Remove from journey's `eventIds` array
+---
 
-#### Step 4: Write Fixes Using the "Big History Narrator" Voice
+#### Pass 2: Verification Review
+
+**Step 2.1: Print Narrative Again**
+```bash
+npx tsx scripts/print_journey_narrative.ts <journey-id>
+```
+
+**Step 2.2: Check for Remaining Issues**
+- Confirm all weak descriptions are fixed
+- Verify chronological order is correct
+- Ensure no orphan events or missing connections
+
+**Step 2.3: Final Verification**
+```bash
+npm run verify  # All 13 tests must pass
+```
+
+---
+
+#### Deploy Only After Clean Pass 2
+
+```bash
+git push && npx gh-pages -d dist --no-history
+```
+
+**Example from Art of War journey:**
+- Pass 1: Fixed 18 weak descriptions (Somme, D-Day, Pearl Harbor, etc.)
+- Pass 2: Confirmed all fixes applied correctly
+- Deployed after both passes clean
+
+**Example from Pandemics & Plagues journey:**
+- Pass 1: All descriptions already strong (good)
+- Pass 2: Found chronological error (Semmelweis 1847 after Cholera 1854)
+- Fixed and deployed after both passes
+
+---
+
+#### Writing Good Descriptions
 
 Good descriptions follow this pattern:
 ```
@@ -248,49 +296,14 @@ Good descriptions follow this pattern:
 
 **Examples:**
 ```
-❌ "Constantine legalizes Christianity in the Roman Empire."
-✅ "In Hoc Signo Vinces. An emperor sees a vision before battle and legalizes Christianity, transforming a persecuted cult into the state religion of the world's greatest empire."
+❌ "Allies land in Normandy"
+✅ "The Longest Day. 150,000 Allied troops storm Normandy's beaches—the largest amphibious invasion in history begins the liberation of Europe."
 
-❌ "Siddhartha Gautama is born, founder of Buddhism."
-✅ "The Middle Way. A prince abandons his palace, sits under a tree, and discovers that desire is the root of suffering—launching a philosophy that will reshape Asia."
-```
-
-#### Step 5: Apply Fixes
-
-For reused events (preserves original for other journeys):
-```typescript
-// In journeys.ts
-overrides: {
-    'p6-16': { 
-        title: 'The Buddha Awakens',
-        description: 'The Middle Way. A prince abandons...' 
-    }
-}
-```
-
-For new events (permanent fix):
-```typescript
-// In allEvents.ts - edit the event directly
-description: 'The Middle Way. A prince abandons...'
-```
-
-#### Step 6: Verify and Commit
-
-```bash
-# Verify tests still pass
-npm run verify
-
-# Re-print narrative to confirm fix
-npx tsx scripts/print_journey_narrative.ts <journey-id>
-
-# Commit with descriptive message
-git commit -m "fix(<journey>): Improve narrative quality
-
-- Rewrite <N> weak descriptions  
-- Add journey overrides for reused events"
+❌ "Bloody trench warfare battle"
+✅ "The Somme: Industrialized Death. 60,000 casualties in one day. British soldiers walk into machine gun fire, proving that courage is no match for technology."
 ```
 
 ---
 
-*Last updated: December 23, 2025*
+*Last updated: December 24, 2025*
 
