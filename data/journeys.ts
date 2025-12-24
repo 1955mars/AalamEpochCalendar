@@ -585,7 +585,49 @@ export const CONNECTIONS: Connection[] = [
     { id: 'gm-35', fromEventId: 'gm-enlightenment', toEventId: 'gm-darwin', type: 'influenced' },
     { id: 'gm-36', fromEventId: 'gm-darwin', toEventId: 'gm-secularism', type: 'influenced' },
     { id: 'gm-37', fromEventId: 'gm-secularism', toEventId: 'gm-new-age', type: 'preceded' },
-    { id: 'gm-38', fromEventId: 'gm-new-age', toEventId: 'gm-interfaith', type: 'preceded' }
+    { id: 'gm-38', fromEventId: 'gm-new-age', toEventId: 'gm-interfaith', type: 'preceded' },
+
+    // --- The Art of War: Military History ---
+    { id: 'war-1', fromEventId: 'p4-30', toEventId: 'war-sargon', type: 'caused' }, // Bronze -> First Empire
+    { id: 'war-2', fromEventId: 'war-sargon', toEventId: 'p5-18', type: 'preceded' }, // Sargon -> Hyksos
+    { id: 'war-3', fromEventId: 'p5-18', toEventId: 'p5-20', type: 'related' }, // Hyksos -> Hittites
+    { id: 'war-4', fromEventId: 'p5-20', toEventId: 'p5-30', type: 'caused' }, // Hittites -> Kadesh
+    { id: 'war-5', fromEventId: 'p5-30', toEventId: 'p6-1', type: 'preceded' }, // Kadesh -> Iron
+    { id: 'war-6', fromEventId: 'p6-1', toEventId: 'p6-6', type: 'caused' }, // Iron -> Assyria
+    { id: 'war-7', fromEventId: 'p6-6', toEventId: 'war-phalanx', type: 'preceded' }, // Assyria -> Phalanx
+    { id: 'war-8', fromEventId: 'war-phalanx', toEventId: 'p6-22', type: 'caused' }, // Phalanx -> Marathon
+    { id: 'war-9', fromEventId: 'p6-22', toEventId: 'p6-23', type: 'caused' }, // Marathon -> Salamis
+    { id: 'war-10', fromEventId: 'p6-23', toEventId: 'p6-26', type: 'preceded' }, // Salamis -> Peloponnesian
+    { id: 'war-11', fromEventId: 'p6-26', toEventId: 'war-legion', type: 'preceded' }, // Peloponnesian -> Legion
+    { id: 'war-12', fromEventId: 'war-legion', toEventId: 'p6-28', type: 'caused' }, // Legion -> Alexander
+    { id: 'war-13', fromEventId: 'p6-28', toEventId: 'war-stirrup', type: 'preceded' }, // Alexander -> Stirrup
+    { id: 'war-14', fromEventId: 'war-stirrup', toEventId: 'p7-23', type: 'caused' }, // Stirrup -> Norman
+    { id: 'war-15', fromEventId: 'p7-23', toEventId: 'p7-24', type: 'preceded' }, // Norman -> Crusade
+    { id: 'war-16', fromEventId: 'p7-24', toEventId: 'war-trebuchet', type: 'related' }, // Crusade -> Trebuchet
+    { id: 'war-17', fromEventId: 'war-trebuchet', toEventId: 'p7-26', type: 'preceded' }, // Trebuchet -> Mongols
+    { id: 'war-18', fromEventId: 'p7-26', toEventId: 'war-longbow', type: 'preceded' }, // Mongols -> Longbow
+    { id: 'war-19', fromEventId: 'war-longbow', toEventId: 'war-gunpowder', type: 'preceded' }, // Longbow -> Gunpowder
+    { id: 'war-20', fromEventId: 'war-gunpowder', toEventId: 'war-pike', type: 'caused' }, // Gunpowder -> Pike
+    { id: 'war-21', fromEventId: 'war-pike', toEventId: 'p8-15', type: 'related' }, // Pike -> Aztecs
+    { id: 'war-22', fromEventId: 'p8-15', toEventId: 'war-armada', type: 'preceded' }, // Aztecs -> Armada
+    { id: 'war-23', fromEventId: 'war-armada', toEventId: 'p8-27', type: 'preceded' }, // Armada -> 30 Years
+    { id: 'war-24', fromEventId: 'p8-27', toEventId: 'war-napoleon', type: 'preceded' }, // 30 Years -> Napoleon
+    { id: 'war-25', fromEventId: 'war-napoleon', toEventId: 'p9-14', type: 'caused' }, // Napoleon -> Waterloo
+    { id: 'war-26', fromEventId: 'p9-14', toEventId: 'p9-25', type: 'preceded' }, // Waterloo -> Civil War
+    { id: 'war-27', fromEventId: 'p9-25', toEventId: 'war-machine-gun', type: 'influenced' }, // Civil War -> Machine Gun
+    { id: 'war-28', fromEventId: 'war-machine-gun', toEventId: 'p10-1', type: 'caused' }, // Machine Gun -> WWI
+    { id: 'war-29', fromEventId: 'p10-1', toEventId: 'p10-3', type: 'caused' }, // WWI -> Somme
+    { id: 'war-30', fromEventId: 'p10-3', toEventId: 'war-tank', type: 'caused' }, // Somme -> Tank
+    { id: 'war-31', fromEventId: 'war-tank', toEventId: 'war-blitzkrieg', type: 'influenced' }, // Tank -> Blitzkrieg
+    { id: 'war-32', fromEventId: 'war-blitzkrieg', toEventId: 'p10-21', type: 'caused' }, // Blitzkrieg -> Britain
+    { id: 'war-33', fromEventId: 'p10-21', toEventId: 'p10-23', type: 'preceded' }, // Britain -> Pearl Harbor
+    { id: 'war-34', fromEventId: 'p10-23', toEventId: 'p10-25', type: 'caused' }, // Pearl Harbor -> Midway
+    { id: 'war-35', fromEventId: 'p10-25', toEventId: 'p10-27', type: 'preceded' }, // Midway -> D-Day
+    { id: 'war-36', fromEventId: 'p10-27', toEventId: 'p10-31', type: 'preceded' }, // D-Day -> Atomic
+    { id: 'war-37', fromEventId: 'p10-31', toEventId: 'war-guerrilla', type: 'influenced' }, // Atomic -> Guerrilla
+    { id: 'war-38', fromEventId: 'war-guerrilla', toEventId: 'war-precision', type: 'preceded' }, // Guerrilla -> Precision
+    { id: 'war-39', fromEventId: 'war-precision', toEventId: 'war-drone', type: 'caused' }, // Precision -> Drone
+    { id: 'war-40', fromEventId: 'war-drone', toEventId: 'p12-27', type: 'preceded' } // Drone -> Ukraine
 ];
 
 export const JOURNEYS: Journey[] = [
@@ -978,6 +1020,71 @@ export const JOURNEYS: Journey[] = [
                 title: 'The King\'s Church',
                 description: 'Divorce as Theology. Henry VIII breaks with Rome not over doctrine but a wife, creating a national church and proving that religion and politics are inseparable.'
             }
+        }
+    },
+    {
+        id: 'art-of-war',
+        title: 'The Art of War: Conflict Through the Ages',
+        description: 'How conflict drove innovation, from the first chariot to the nuclear triad.',
+        thumbnailUrl: 'images/art-of-war-thumb.jpg',
+        eventIds: [
+            // Ancient Warfare
+            'p4-30',        // Bronze Age
+            'war-sargon',   // First Empire
+            'p5-18',        // Hyksos (chariots)
+            'p5-20',        // Hittites
+            'p5-30',        // Battle of Kadesh
+            // Iron Age
+            'p6-1',         // Iron Technology
+            'p6-6',         // Neo-Assyrian Empire
+            'war-phalanx',  // The Phalanx
+            'p6-22',        // Marathon
+            'p6-23',        // Salamis
+            'p6-24',        // Warring States
+            'p6-26',        // Peloponnesian War
+            'war-legion',   // Roman Legion
+            'p6-28',        // Alexander
+            // Medieval
+            'war-stirrup',  // The Stirrup
+            'p7-23',        // Norman Conquest
+            'p7-24',        // Crusades
+            'war-trebuchet',// Trebuchet
+            'p7-26',        // Mongol Empire
+            'war-longbow',  // Longbow at Crécy
+            // Gunpowder Era
+            'war-gunpowder',// Constantinople falls
+            'war-pike',     // Pike and Shot
+            'p8-15',        // Conquest of Aztecs
+            'war-armada',   // Spanish Armada
+            'p8-27',        // Thirty Years War
+            // Industrial Warfare
+            'war-napoleon', // Napoleonic Warfare
+            'p9-14',        // Waterloo
+            'p9-25',        // US Civil War
+            'war-machine-gun', // Machine Gun
+            // World Wars
+            'p10-1',        // WWI Begins
+            'p10-3',        // Somme
+            'war-tank',     // The Tank
+            'war-blitzkrieg', // Blitzkrieg
+            'p10-21',       // Battle of Britain  
+            'p10-23',       // Pearl Harbor
+            'p10-25',       // Midway
+            'p10-27',       // D-Day
+            'p10-31',       // Atomic Bomb
+            // Modern Era
+            'war-guerrilla',// Guerrilla Warfare
+            'war-precision',// Precision Warfare
+            'war-drone',    // The Drone Age
+            'p12-27'        // Ukraine
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('war-')),
+        overrides: {
+            'p4-30': { description: 'Arms Race Begins. By alloying copper with tin, humans create a metal hard enough for killing. New weapons spark the first arms races and state-level warfare.' },
+            'p6-22': { title: 'Marathon: Democracy Stands', description: 'The Odds Defied. Athenian hoplites charge a Persian army twice their size—and win. The phalanx proves that discipline beats numbers.' },
+            'p6-28': { title: 'Alexander\'s Blitzkrieg', description: 'The Hammer of Macedon. In 13 years, Alexander conquers from Greece to India, creating the largest empire the world has seen—military genius at unprecedented scale.' },
+            'p7-26': { title: 'The Mongol Storm', description: 'Terror Without Limits. Genghis Khan\'s horsemen conquer more territory than any army in history, using psychological warfare and ruthless efficiency.' },
+            'p10-31': { title: 'The Bomb', description: 'The Final Weapon. Hiroshima and Nagasaki end WWII and begin a new era where humanity can destroy itself—war\'s ultimate evolution.' }
         }
     }
 ];

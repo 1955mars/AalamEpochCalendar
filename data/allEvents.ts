@@ -4016,5 +4016,167 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/gm-interfaith.jpg',
     phase: 'Phase 12',
     category: 'Philosophy'
+  },
+
+  // --- THE ART OF WAR: Military History Events ---
+  {
+    id: 'war-sargon',
+    year: '2334 BCE',
+    yearNumeric: -2334,
+    title: 'The First Empire',
+    description: 'The Conqueror King. Sargon of Akkad creates history\'s first empire with a revolutionary concept: a professional standing army loyal to the king, not the city.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-sargon.jpg',
+    phase: 'Phase 5',
+    category: 'Civilization'
+  },
+  {
+    id: 'war-phalanx',
+    year: '700 BCE',
+    yearNumeric: -700,
+    title: 'The Phalanx',
+    description: 'The Wall of Shields. Greek hoplites discover that men standing shoulder-to-shoulder, shields interlocked, become an unstoppable human tank.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-phalanx.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'war-legion',
+    year: '300 BCE',
+    yearNumeric: -300,
+    title: 'The Roman Legion',
+    description: 'Flexibility Over Rigidity. Rome replaces the rigid phalanx with flexible cohorts of legionaries—soldiers who can fight in any terrain, in any formation.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-legion.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'war-stirrup',
+    year: '500 CE',
+    yearNumeric: 500,
+    title: 'The Stirrup',
+    description: 'A Revolution in a Loop. A simple metal ring transforms cavalry—now riders can brace for impact, turning mounted warriors into armored shock troops.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-stirrup.jpg',
+    phase: 'Phase 7',
+    category: 'Technology'
+  },
+  {
+    id: 'war-trebuchet',
+    year: '1100 CE',
+    yearNumeric: 1100,
+    title: 'The Trebuchet',
+    description: 'The Castle Killer. Counterweight siege engines hurl 300-pound stones at castle walls, making "impregnable" fortresses suddenly vulnerable.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-trebuchet.jpg',
+    phase: 'Phase 7',
+    category: 'Technology'
+  },
+  {
+    id: 'war-longbow',
+    year: '1346 CE',
+    yearNumeric: 1346,
+    title: 'The Longbow at Crécy',
+    description: 'Death of Chivalry. English yeomen with simple wooden bows slaughter French knights from 200 yards, proving that technology beats aristocracy.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-longbow.jpg',
+    phase: 'Phase 7',
+    category: 'Technology'
+  },
+  {
+    id: 'war-gunpowder',
+    year: '1453 CE',
+    yearNumeric: 1453,
+    title: 'Gunpowder Shatters Walls',
+    description: 'The End of Castles. Ottoman cannons breach the thousand-year-old walls of Constantinople in weeks, ending the medieval world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-gunpowder.jpg',
+    phase: 'Phase 8',
+    category: 'Technology'
+  },
+  {
+    id: 'war-pike',
+    year: '1476 CE',
+    yearNumeric: 1476,
+    title: 'Pike and Shot',
+    description: 'The Swiss Solution. Peasants with 18-foot pikes and arquebuses destroy armored cavalry, revolutionizing European warfare forever.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-pike.jpg',
+    phase: 'Phase 8',
+    category: 'Technology'
+  },
+  {
+    id: 'war-armada',
+    year: '1588 CE',
+    yearNumeric: 1588,
+    title: 'The Spanish Armada',
+    description: 'Command of the Seas. England defeats the world\'s mightiest fleet, proving that naval supremacy—not land armies—controls global destiny.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-armada.jpg',
+    phase: 'Phase 8',
+    category: 'Technology'
+  },
+  {
+    id: 'war-napoleon',
+    year: '1805 CE',
+    yearNumeric: 1805,
+    title: 'Napoleonic Warfare',
+    description: 'The Art of the Campaign. At Austerlitz, Napoleon demonstrates that war is about speed, logistics, and destroying enemy armies—not capturing cities.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-napoleon.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'war-machine-gun',
+    year: '1884 CE',
+    yearNumeric: 1884,
+    title: 'The Machine Gun',
+    description: 'The Reaper. Hiram Maxim\'s automatic gun fires 600 rounds per minute, making frontal infantry assault suicidal—but generals don\'t listen.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-machine-gun.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'war-tank',
+    year: '1916 CE',
+    yearNumeric: 1916,
+    title: 'The Tank',
+    description: 'Breaking the Deadlock. Armored vehicles crawl across trenches and barbed wire, offering a way out of the bloody stalemate of WWI.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-tank.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'war-blitzkrieg',
+    year: '1940 CE',
+    yearNumeric: 1940,
+    title: 'Blitzkrieg',
+    description: 'Lightning War. Germany combines tanks, planes, and radio into an unstoppable force, conquering France in six weeks where WWI took four years.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-blitzkrieg.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'war-guerrilla',
+    year: '1965 CE',
+    yearNumeric: 1965,
+    title: 'Guerrilla Warfare',
+    description: 'The People\'s War. In Vietnam, irregular forces prove that superior firepower cannot defeat an enemy who controls the population.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-guerrilla.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'war-precision',
+    year: '1991 CE',
+    yearNumeric: 1991,
+    title: 'Precision Warfare',
+    description: 'The CNN War. Smart bombs hit within meters, destroying Iraq\'s military while the world watches live—war becomes surgical theater.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-precision.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'war-drone',
+    year: '2010 CE',
+    yearNumeric: 2010,
+    title: 'The Drone Age',
+    description: 'War Without Warriors. Operators in Nevada kill targets in Yemen—remote warfare raises profound questions about the future of conflict.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/war-drone.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
   }
 ];
