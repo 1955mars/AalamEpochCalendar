@@ -9,20 +9,15 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 10 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods)
-// Need to Build: 15 (below)
+// Currently Live: 11 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War)
+// Need to Build: 14 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 1: Can leverage many existing events (Est. 5-10 new events each)
+    // COMPLETED: The Art of War
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'The Art of War',
-        description: 'How conflict drove innovation, from the first chariot to the nuclear triad.',
-        category: 'Power',
-        icon: Anchor // Sword fallback
-    },
     {
         title: 'Pandemics & Plagues',
         description: 'Black Death to COVID: The invisible enemies that shaped humanity.',
