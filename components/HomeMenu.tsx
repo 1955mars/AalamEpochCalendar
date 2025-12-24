@@ -45,22 +45,24 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
                     </button>
                 ))}
 
-                {/* Explore Full Timeline Card */}
-                <button
-                    onClick={onExploreFullTimeline}
-                    className="group relative overflow-hidden bg-slate-100 text-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 text-left border border-slate-200 border-dashed h-96 flex flex-col justify-end"
-                >
-                    <div className="relative z-10">
-                        <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform">
-                            <Globe size={24} className="text-slate-600" />
+                {/* Explore Full Timeline Card - Dev Only */}
+                {import.meta.env.DEV && (
+                    <button
+                        onClick={onExploreFullTimeline}
+                        className="group relative overflow-hidden bg-slate-100 text-slate-900 p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 text-left border border-slate-200 border-dashed h-96 flex flex-col justify-end"
+                    >
+                        <div className="relative z-10">
+                            <div className="w-12 h-12 bg-slate-200 rounded-full flex items-center justify-center mb-6 shadow-inner group-hover:scale-110 transition-transform">
+                                <Globe size={24} className="text-slate-600" />
+                            </div>
+                            <h3 className="text-2xl font-bold mb-2 group-hover:text-indigo-600 transition-colors">Master Timeline</h3>
+                            <p className="text-slate-600 text-sm leading-relaxed mb-6">Explore the complete dataset with no narrative restrictions.</p>
+                            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-indigo-600">
+                                Explore All <ArrowRight size={14} />
+                            </div>
                         </div>
-                        <h3 className="text-2xl font-bold mb-2 group-hover:text-indigo-600 transition-colors">Master Timeline</h3>
-                        <p className="text-slate-600 text-sm leading-relaxed mb-6">Explore the complete dataset with no narrative restrictions.</p>
-                        <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-500 group-hover:text-indigo-600">
-                            Explore All <ArrowRight size={14} />
-                        </div>
-                    </div>
-                </button>
+                    </button>
+                )}
 
             </div>
 
