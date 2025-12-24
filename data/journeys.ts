@@ -680,7 +680,36 @@ export const CONNECTIONS: Connection[] = [
     { id: 'women-26', fromEventId: 'women-valentina', toEventId: 'women-thatcher', type: 'preceded' },
     { id: 'women-27', fromEventId: 'women-thatcher', toEventId: 'women-bhutto', type: 'preceded' },
     { id: 'women-28', fromEventId: 'women-bhutto', toEventId: 'women-merkel', type: 'preceded' },
-    { id: 'women-29', fromEventId: 'women-merkel', toEventId: 'women-malala', type: 'preceded' }
+    { id: 'women-29', fromEventId: 'women-merkel', toEventId: 'women-malala', type: 'preceded' },
+
+    // --- Empires of Trade ---
+    { id: 'trade-1', fromEventId: 'trade-obsidian', toEventId: 'trade-bronze', type: 'preceded' },
+    { id: 'trade-2', fromEventId: 'trade-bronze', toEventId: 'trade-phoenicia', type: 'preceded' },
+    { id: 'trade-3', fromEventId: 'trade-phoenicia', toEventId: 'money-lydia', type: 'preceded' },
+    { id: 'trade-4', fromEventId: 'money-lydia', toEventId: 'p7-4', type: 'preceded' }, // -> Silk Roads
+    { id: 'trade-5', fromEventId: 'p7-4', toEventId: 'trade-rome-china', type: 'caused' },
+    { id: 'trade-6', fromEventId: 'trade-rome-china', toEventId: 'trade-vikings', type: 'preceded' },
+    { id: 'trade-7', fromEventId: 'trade-vikings', toEventId: 'trade-venice', type: 'preceded' },
+    { id: 'trade-8', fromEventId: 'trade-venice', toEventId: 'p7-28', type: 'preceded' }, // -> Marco Polo
+    { id: 'trade-9', fromEventId: 'p7-28', toEventId: 'trade-hanseatic', type: 'preceded' },
+    { id: 'trade-10', fromEventId: 'trade-hanseatic', toEventId: 'money-medici', type: 'preceded' },
+    { id: 'trade-11', fromEventId: 'money-medici', toEventId: 'p8-10', type: 'preceded' }, // -> Da Gama
+    { id: 'trade-12', fromEventId: 'p8-10', toEventId: 'trade-eic', type: 'caused' },
+    { id: 'trade-13', fromEventId: 'trade-eic', toEventId: 'trade-voc', type: 'preceded' },
+    { id: 'trade-14', fromEventId: 'trade-voc', toEventId: 'trade-slave', type: 'preceded' },
+    { id: 'trade-15', fromEventId: 'trade-slave', toEventId: 'money-tulip', type: 'preceded' },
+    { id: 'trade-16', fromEventId: 'money-tulip', toEventId: 'trade-tea', type: 'preceded' },
+    { id: 'trade-17', fromEventId: 'trade-tea', toEventId: 'money-boe', type: 'preceded' },
+    { id: 'trade-18', fromEventId: 'money-boe', toEventId: 'p9-4', type: 'preceded' }, // -> Industrial Revolution
+    { id: 'trade-19', fromEventId: 'p9-4', toEventId: 'trade-suez', type: 'preceded' },
+    { id: 'trade-20', fromEventId: 'trade-suez', toEventId: 'trade-standard', type: 'preceded' },
+    { id: 'trade-21', fromEventId: 'trade-standard', toEventId: 'trade-panama', type: 'preceded' },
+    { id: 'trade-22', fromEventId: 'trade-panama', toEventId: 'trade-gatt', type: 'preceded' },
+    { id: 'trade-23', fromEventId: 'trade-gatt', toEventId: 'trade-container', type: 'preceded' },
+    { id: 'trade-24', fromEventId: 'trade-container', toEventId: 'trade-amazon', type: 'preceded' },
+    { id: 'trade-25', fromEventId: 'trade-amazon', toEventId: 'trade-wto', type: 'preceded' },
+    { id: 'trade-26', fromEventId: 'trade-wto', toEventId: 'trade-alibaba', type: 'preceded' },
+    { id: 'trade-27', fromEventId: 'trade-alibaba', toEventId: 'trade-crisis', type: 'preceded' }
 ];
 
 
@@ -1265,6 +1294,57 @@ export const JOURNEYS: Journey[] = [
             'p8-22': { title: 'The Virgin Queen', description: 'Gloriana. She refused marriage, defeated the Armada, and ruled for 45 years—making England a global power through sheer force of will.' },
             'cure-nightingale': { title: 'The Lady with the Lamp', description: 'Data Saves Lives. She didn\'t just nurse soldiers—she proved with statistics that sanitation, not medicine, was the cure.' },
             'ai-lovelace': { title: 'The Prophet of Code', description: 'The First Programmer. While men saw a calculator, Ada Lovelace saw a universal machine that could compose music and manipulate symbols—a century ahead of her time.' }
+        }
+    },
+    {
+        id: 'trade-empires',
+        title: 'Empires of Trade',
+        description: 'Silk Road to Amazon: How commerce connected and conquered the world.',
+        thumbnailUrl: 'images/trade-empires-thumb.jpg',
+        eventIds: [
+            // Ancient Trade
+            'trade-obsidian',     // 7000 BCE - First long-distance trade
+            'trade-bronze',       // 3000 BCE - Bronze age routes
+            'trade-phoenicia',    // 1200 BCE - Phoenician merchants
+            'money-lydia',        // 630 BCE - First coins
+            // Classical Era
+            'p7-4',               // 100 CE - Silk Roads
+            'trade-rome-china',   // 166 CE - Rome meets China
+            // Medieval Networks
+            'trade-vikings',      // 800 CE - Viking trade
+            'trade-venice',       // 1200 CE - Rise of Venice
+            'p7-28',              // 1271 CE - Marco Polo
+            'trade-hanseatic',    // 1350 CE - Hanseatic League
+            'money-medici',       // 1397 CE - Medici banking
+            // Age of Exploration
+            'p8-8',               // 1492 CE - Columbian Exchange
+            'p8-10',              // 1498 CE - Da Gama reaches India
+            'trade-eic',          // 1600 CE - English East India Co
+            'trade-voc',          // 1602 CE - Dutch East India Co
+            'trade-slave',        // 1619 CE - Atlantic Slave Trade
+            'money-tulip',        // 1637 CE - Tulip Mania
+            'trade-tea',          // 1662 CE - Tea Trade
+            'money-boe',          // 1694 CE - Bank of England
+            // Industrial Era
+            'p9-4',               // 1760 CE - Industrial Revolution
+            'trade-suez',         // 1869 CE - Suez Canal
+            'trade-standard',     // 1870 CE - Standard Oil
+            'money-gold',         // 1870 CE - Gold Standard
+            'trade-panama',       // 1914 CE - Panama Canal
+            // Modern Era
+            'trade-gatt',         // 1947 CE - GATT
+            'trade-container',    // 1956 CE - Shipping container
+            'trade-amazon',       // 1994 CE - Amazon
+            'trade-wto',          // 1995 CE - WTO
+            'trade-alibaba',      // 1999 CE - Alibaba
+            'trade-crisis'        // 2021 CE - Supply chain crisis
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('trade-')),
+        overrides: {
+            'p7-4': { title: 'The Silk Roads', description: 'Trade Routes to Everywhere. From Rome to China, goods and ideas flow along 4,000 miles of desert and mountain—the internet of the ancient world.' },
+            'p7-28': { title: 'Marco Polo\'s Journey', description: 'The Merchant Who Opened the East. A Venetian teenager spends 24 years in China, then writes a book that makes Europeans dream of Asia\'s riches.' },
+            'p8-10': { title: 'Da Gama Reaches India', description: 'The Spice Route Conquered. Portugal reaches India by sea, making the Silk Road obsolete and beginning the age of European colonialism.' },
+            'p9-4': { title: 'Industrial Revolution', description: 'Factory World. Steam, iron, and cotton transform England, then the world—production explodes and trade becomes global.' }
         }
     }
 ];

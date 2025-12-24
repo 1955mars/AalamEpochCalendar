@@ -4572,5 +4572,207 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/women-beauvoir.jpg',
     phase: 'Phase 11',
     category: 'Philosophy'
+  },
+
+  // --- EMPIRES OF TRADE ---
+  {
+    id: 'trade-obsidian',
+    year: '7000 BCE',
+    yearNumeric: -7000,
+    title: 'Obsidian Trade Networks',
+    description: 'The First Global Trade. Volcanic glass from Anatolia travels 500 miles to villages that need sharp blades—the earliest evidence of long-distance commerce.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-obsidian.jpg',
+    phase: 'Phase 4',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-bronze',
+    year: '3000 BCE',
+    yearNumeric: -3000,
+    title: 'Bronze Age Trade Routes',
+    description: 'The Alloy That Required Trade. Bronze needs tin from Afghanistan and copper from Cyprus—no single region can make it alone. Trade becomes essential.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-bronze.jpg',
+    phase: 'Phase 5',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-phoenicia',
+    year: '1200 BCE',
+    yearNumeric: -1200,
+    title: 'Phoenician Merchants',
+    description: 'The Purple Traders. From Tyre and Sidon they sail the Mediterranean, trading purple dye and spreading the alphabet that will become yours.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-phoenicia.jpg',
+    phase: 'Phase 6',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-rome-china',
+    year: '166 CE',
+    yearNumeric: 166,
+    title: 'Rome Meets China',
+    description: 'The Extremes Connect. Roman merchants reach the Han court—the first recorded direct contact between the two great empires at either end of the world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-rome-china.jpg',
+    phase: 'Phase 7',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-vikings',
+    year: '800 CE',
+    yearNumeric: 800,
+    title: 'Viking Trade Routes',
+    description: 'Traders and Raiders. Norse longships carry goods from Baghdad to Greenland—Arab silver found in Swedish graves proves the reach of their networks.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-vikings.jpg',
+    phase: 'Phase 7',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-venice',
+    year: '1200 CE',
+    yearNumeric: 1200,
+    title: 'Rise of Venice',
+    description: 'The Merchant Republic. A city built on water becomes the richest in Europe by controlling trade between East and West—buying low, selling high.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-venice.jpg',
+    phase: 'Phase 7',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-hanseatic',
+    year: '1350 CE',
+    yearNumeric: 1350,
+    title: 'Hanseatic League',
+    description: 'Commerce Without Borders. German merchants form a trading alliance that spans from London to Novgorod—the first multinational corporation.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-hanseatic.jpg',
+    phase: 'Phase 7',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-eic',
+    year: '1600 CE',
+    yearNumeric: 1600,
+    title: 'English East India Company',
+    description: 'Company Becomes Empire. A trading company gets its own army, conquers a subcontinent, and rules 200 million people—profit above all.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-eic.jpg',
+    phase: 'Phase 8',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-voc',
+    year: '1602 CE',
+    yearNumeric: 1602,
+    title: 'Dutch East India Company',
+    description: 'The First Corporation. The VOC invents the stock market, the dividend, and the hostile takeover—and controls half the world\'s trade.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-voc.jpg',
+    phase: 'Phase 8',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-slave',
+    year: '1619 CE',
+    yearNumeric: 1619,
+    title: 'Atlantic Slave Trade',
+    description: 'Commerce in Human Beings. Twelve million Africans are shipped across the Atlantic—the darkest chapter in the history of trade.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-slave.jpg',
+    phase: 'Phase 8',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-tea',
+    year: '1662 CE',
+    yearNumeric: 1662,
+    title: 'Tea Trade Begins',
+    description: 'The Leaf That Built an Empire. Catherine of Braganza brings tea to England. The British addiction will reshape China, India, and the world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-tea.jpg',
+    phase: 'Phase 8',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-suez',
+    year: '1869 CE',
+    yearNumeric: 1869,
+    title: 'Suez Canal Opens',
+    description: 'Shortcut to Empire. A 120-mile ditch cuts travel from Europe to Asia by 4,000 miles—whoever controls it controls world trade.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-suez.jpg',
+    phase: 'Phase 9',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-standard',
+    year: '1870 CE',
+    yearNumeric: 1870,
+    title: 'Standard Oil',
+    description: 'The First Monopoly. Rockefeller controls 90% of American oil, inventing vertical integration—and making antitrust law necessary.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-standard.jpg',
+    phase: 'Phase 9',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-panama',
+    year: '1914 CE',
+    yearNumeric: 1914,
+    title: 'Panama Canal Opens',
+    description: 'America\'s Gateway. A 50-mile canal links two oceans, reshaping global shipping and making the U.S. a superpower.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-panama.jpg',
+    phase: 'Phase 10',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-gatt',
+    year: '1947 CE',
+    yearNumeric: 1947,
+    title: 'GATT Created',
+    description: 'Rules for the World. Twenty-three nations agree to reduce tariffs—the first step toward globalization as policy.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-gatt.jpg',
+    phase: 'Phase 11',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-container',
+    year: '1956 CE',
+    yearNumeric: 1956,
+    title: 'Shipping Container',
+    description: 'The Box That Changed Everything. Malcolm McLean\'s standardized container makes global trade cheap enough to ship anything anywhere.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-container.jpg',
+    phase: 'Phase 11',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-amazon',
+    year: '1994 CE',
+    yearNumeric: 1994,
+    title: 'Amazon Founded',
+    description: 'Everything Store. Jeff Bezos starts selling books online. Thirty years later, Amazon moves $500 billion in goods and employs 1.5 million people.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-amazon.jpg',
+    phase: 'Phase 12',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-wto',
+    year: '1995 CE',
+    yearNumeric: 1995,
+    title: 'WTO Founded',
+    description: 'Globalization\'s Referee. The World Trade Organization replaces GATT, creating enforceable rules for 164 nations and $19 trillion in trade.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-wto.jpg',
+    phase: 'Phase 12',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-alibaba',
+    year: '1999 CE',
+    yearNumeric: 1999,
+    title: 'Alibaba Founded',
+    description: 'The Eastern Giant. Jack Ma creates a platform connecting Chinese factories to the world—enabling millions of small businesses to trade globally.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-alibaba.jpg',
+    phase: 'Phase 12',
+    category: 'Economy'
+  },
+  {
+    id: 'trade-crisis',
+    year: '2021 CE',
+    yearNumeric: 2021,
+    title: 'Supply Chain Crisis',
+    description: 'The World Discovers Dependencies. A ship blocks Suez, chips run out, shelves go empty—globalization\'s fragility is revealed.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/trade-crisis.jpg',
+    phase: 'Phase 12',
+    category: 'Economy'
   }
 ];
