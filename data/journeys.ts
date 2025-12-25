@@ -838,7 +838,39 @@ export const CONNECTIONS: Connection[] = [
     { id: 'shadow-26', fromEventId: 'shadow-tor', toEventId: 'shadow-wikileaks', type: 'preceded' },
     { id: 'shadow-27', fromEventId: 'shadow-wikileaks', toEventId: 'shadow-prism', type: 'preceded' },
     { id: 'shadow-28', fromEventId: 'shadow-prism', toEventId: 'p12-19', type: 'related' },
-    { id: 'shadow-29', fromEventId: 'p12-19', toEventId: 'shadow-apple-fbi', type: 'preceded' }
+    { id: 'shadow-29', fromEventId: 'p12-19', toEventId: 'shadow-apple-fbi', type: 'preceded' },
+
+    // --- The Rhythm of Life: A History of Music ---
+    { id: 'music-1', fromEventId: 'music-flute', toEventId: 'music-drums', type: 'preceded' },
+    { id: 'music-2', fromEventId: 'music-drums', toEventId: 'music-lyre', type: 'preceded' },
+    { id: 'music-3', fromEventId: 'music-lyre', toEventId: 'music-greek-modes', type: 'preceded' },
+    { id: 'music-4', fromEventId: 'music-greek-modes', toEventId: 'music-roman', type: 'preceded' },
+    { id: 'music-5', fromEventId: 'music-roman', toEventId: 'music-gregorian', type: 'preceded' },
+    { id: 'music-6', fromEventId: 'music-gregorian', toEventId: 'music-notation', type: 'caused' },
+    { id: 'music-7', fromEventId: 'music-notation', toEventId: 'music-troubadours', type: 'preceded' },
+    { id: 'music-8', fromEventId: 'music-troubadours', toEventId: 'music-polyphony', type: 'preceded' },
+    { id: 'music-9', fromEventId: 'music-polyphony', toEventId: 'music-printing', type: 'preceded' },
+    { id: 'music-10', fromEventId: 'music-printing', toEventId: 'music-opera', type: 'preceded' },
+    { id: 'music-11', fromEventId: 'music-opera', toEventId: 'music-violin', type: 'preceded' },
+    { id: 'music-12', fromEventId: 'music-violin', toEventId: 'music-bach', type: 'preceded' },
+    { id: 'music-13', fromEventId: 'music-bach', toEventId: 'music-symphony', type: 'caused' },
+    { id: 'music-14', fromEventId: 'music-symphony', toEventId: 'music-mozart', type: 'preceded' },
+    { id: 'music-15', fromEventId: 'music-mozart', toEventId: 'music-beethoven', type: 'preceded' },
+    { id: 'music-16', fromEventId: 'music-beethoven', toEventId: 'music-piano', type: 'preceded' },
+    { id: 'music-17', fromEventId: 'music-piano', toEventId: 'music-phonograph', type: 'preceded' },
+    { id: 'music-18', fromEventId: 'music-phonograph', toEventId: 'music-blues', type: 'preceded' },
+    { id: 'music-19', fromEventId: 'music-blues', toEventId: 'music-jazz', type: 'caused' },
+    { id: 'music-20', fromEventId: 'music-jazz', toEventId: 'music-electric-guitar', type: 'preceded' },
+    { id: 'music-21', fromEventId: 'music-electric-guitar', toEventId: 'music-vinyl', type: 'preceded' },
+    { id: 'music-22', fromEventId: 'music-vinyl', toEventId: 'music-rock', type: 'preceded' },
+    { id: 'music-23', fromEventId: 'music-rock', toEventId: 'music-beatles', type: 'caused' },
+    { id: 'music-24', fromEventId: 'music-beatles', toEventId: 'music-synthesizer', type: 'preceded' },
+    { id: 'music-25', fromEventId: 'music-synthesizer', toEventId: 'music-mtv', type: 'preceded' },
+    { id: 'music-26', fromEventId: 'music-mtv', toEventId: 'music-mp3', type: 'preceded' },
+    { id: 'music-27', fromEventId: 'music-mp3', toEventId: 'music-napster', type: 'caused' },
+    { id: 'music-28', fromEventId: 'music-napster', toEventId: 'music-ipod', type: 'preceded' },
+    { id: 'music-29', fromEventId: 'music-ipod', toEventId: 'music-spotify', type: 'preceded' },
+    { id: 'music-30', fromEventId: 'music-spotify', toEventId: 'music-ai', type: 'preceded' }
 ];
 
 
@@ -1697,6 +1729,53 @@ export const JOURNEYS: Journey[] = [
             'p11-30': { title: 'Cold War Ends', description: 'The Spy War Ends. Soviet intelligence collapses. Moles are exposed. The greatest espionage battle in history concludes.' },
             'p12-19': { title: 'Snowden Revelations', description: 'The Whistleblower. Edward Snowden reveals the NSA\'s mass surveillance programs. The world learns that everyone is watched.' }
         }
+    },
+    {
+        id: 'rhythm-of-life',
+        title: 'The Rhythm of Life',
+        description: 'A history of music: Bone flutes, Bach, The Beatles, and the algorithm.',
+        thumbnailUrl: 'images/rhythm-of-life-thumb.jpg',
+        eventIds: [
+            // Primal Rhythms
+            'music-flute',         // 40,000 BCE - First instrument
+            'music-drums',         // 10,000 BCE - Ritual drums
+            'music-lyre',          // 2,500 BCE - Mesopotamian strings
+            'music-greek-modes',   // 500 BCE - Musical theory
+            'music-roman',         // 100 CE - Roman spectacle
+            // Medieval & Sacred
+            'music-gregorian',     // 600 CE - Church music
+            'music-notation',      // 1000 CE - Writing sound
+            'music-troubadours',   // 1100 CE - Love songs
+            'music-polyphony',     // 1300 CE - Multiple voices
+            // Renaissance & Baroque
+            'music-printing',      // 1501 - Sheet music
+            'music-opera',         // 1600 - Drama in song
+            'music-violin',        // 1700 - Stradivari
+            'music-bach',          // 1722 - The foundation
+            // Classical & Romantic
+            'music-symphony',      // 1750 - Orchestra speaks
+            'music-mozart',        // 1785 - Child prodigy
+            'music-beethoven',     // 1808 - Fate knocking
+            'music-piano',         // 1850 - Parlor instrument
+            'music-phonograph',    // 1877 - Sound captured
+            // Modern Era
+            'music-blues',         // 1912 - American roots
+            'music-jazz',          // 1920 - Improvisation
+            'music-electric-guitar', // 1931 - Amplified
+            'music-vinyl',         // 1948 - LP revolution
+            'music-rock',          // 1954 - Teenagers take over
+            'music-beatles',       // 1964 - British invasion
+            'music-synthesizer',   // 1970 - Electronic dreams
+            // Digital Age
+            'music-mtv',           // 1981 - Visual music
+            'music-mp3',           // 1993 - Compressed sound
+            'music-napster',       // 1999 - Free music
+            'music-ipod',          // 2001 - 1000 songs
+            'music-spotify',       // 2008 - Streaming
+            'music-ai'             // 2023 - Machine composition
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('music-')),
+        overrides: {}
     }
 ];
 

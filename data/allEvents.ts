@@ -5711,5 +5711,317 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-apple-fbi.jpg',
     phase: 'Phase 12',
     category: 'Communications'
+  },
+
+  // --- THE RHYTHM OF LIFE: A History of Music ---
+  {
+    id: 'music-flute',
+    year: '40,000 BCE',
+    yearNumeric: -40000,
+    title: 'The First Flute',
+    description: 'The Oldest Song. A cave bear femur with carved holes—humanity\'s first known instrument. Even in the Ice Age, we needed music.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-flute.jpg',
+    phase: 'Phase 3',
+    category: 'Art'
+  },
+  {
+    id: 'music-drums',
+    year: '10,000 BCE',
+    yearNumeric: -10000,
+    title: 'Ritual Drums',
+    description: 'The Heartbeat of the Tribe. Stretched animal skins over hollow logs—drums become the backbone of ceremony, war, and celebration.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-drums.jpg',
+    phase: 'Phase 4',
+    category: 'Art'
+  },
+  {
+    id: 'music-lyre',
+    year: '2500 BCE',
+    yearNumeric: -2500,
+    title: 'The Mesopotamian Lyre',
+    description: 'Strings of the Gods. Found in the Royal Tombs of Ur, the lyre accompanies kings to the afterlife—music becomes art.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-lyre.jpg',
+    phase: 'Phase 5',
+    category: 'Art'
+  },
+  {
+    id: 'music-greek-modes',
+    year: '500 BCE',
+    yearNumeric: -500,
+    title: 'Greek Musical Theory',
+    description: 'The Math of Sound. Pythagoras discovers that harmony is mathematics—ratios of vibrating strings. Music becomes science.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-greek-modes.jpg',
+    phase: 'Phase 6',
+    category: 'Art'
+  },
+  {
+    id: 'music-roman',
+    year: '100 CE',
+    yearNumeric: 100,
+    title: 'Roman Spectacle',
+    description: 'Music of Empire. Horns, organs, and drums fill the Colosseum. Music becomes entertainment for the masses.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-roman.jpg',
+    phase: 'Phase 6',
+    category: 'Art'
+  },
+  {
+    id: 'music-gregorian',
+    year: '600 CE',
+    yearNumeric: 600,
+    title: 'Gregorian Chant',
+    description: 'The Voice of God. Pope Gregory standardizes church music—single melodic lines that will echo through cathedrals for a millennium.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-gregorian.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'music-notation',
+    year: '1000 CE',
+    yearNumeric: 1000,
+    title: 'Musical Notation Born',
+    description: 'Writing Sound. Guido d\'Arezzo invents the staff and solfège (do-re-mi). Music can finally be written down and taught.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-notation.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'music-troubadours',
+    year: '1100 CE',
+    yearNumeric: 1100,
+    title: 'The Troubadours',
+    description: 'Songs of Love. Wandering poet-musicians invent romantic love songs in Provence—the ancestors of every pop ballad.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-troubadours.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'music-polyphony',
+    year: '1300 CE',
+    yearNumeric: 1300,
+    title: 'Polyphony Emerges',
+    description: 'Voices Intertwined. Multiple independent melodies woven together—the Notre-Dame school creates complexity that still awes.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-polyphony.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'music-printing',
+    year: '1501 CE',
+    yearNumeric: 1501,
+    title: 'Printed Sheet Music',
+    description: 'Music for the Masses. Ottaviano Petrucci prints the first collection of sheet music. Compositions spread across Europe.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-printing.jpg',
+    phase: 'Phase 8',
+    category: 'Art'
+  },
+  {
+    id: 'music-opera',
+    year: '1600 CE',
+    yearNumeric: 1600,
+    title: 'Birth of Opera',
+    description: 'Drama in Song. Florentine nobles recreate Greek tragedy with music—opera is born, combining all the arts.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-opera.jpg',
+    phase: 'Phase 8',
+    category: 'Art'
+  },
+  {
+    id: 'music-violin',
+    year: '1700 CE',
+    yearNumeric: 1700,
+    title: 'Stradivari\'s Violins',
+    description: 'The Perfect Instrument. Antonio Stradivari crafts violins so perfect that 300 years later, no one can surpass them.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-violin.jpg',
+    phase: 'Phase 8',
+    category: 'Art'
+  },
+  {
+    id: 'music-bach',
+    year: '1722 CE',
+    yearNumeric: 1722,
+    title: 'Bach\'s Well-Tempered Clavier',
+    description: 'The Foundation. Johann Sebastian Bach proves that all 24 keys can work—the mathematical and emotional foundation of Western music.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-bach.jpg',
+    phase: 'Phase 8',
+    category: 'Art'
+  },
+  {
+    id: 'music-symphony',
+    year: '1750 CE',
+    yearNumeric: 1750,
+    title: 'The Symphony Form',
+    description: 'The Orchestra Speaks. Haydn perfects the four-movement symphony—a structure for the full power of the orchestra.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-symphony.jpg',
+    phase: 'Phase 9',
+    category: 'Art'
+  },
+  {
+    id: 'music-mozart',
+    year: '1785 CE',
+    yearNumeric: 1785,
+    title: 'Mozart\'s Genius',
+    description: 'The Child Prodigy. Wolfgang Amadeus Mozart writes 41 symphonies, 27 piano concertos, and 22 operas—dying at 35.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-mozart.jpg',
+    phase: 'Phase 9',
+    category: 'Art'
+  },
+  {
+    id: 'music-beethoven',
+    year: '1808 CE',
+    yearNumeric: 1808,
+    title: 'Beethoven\'s Fifth',
+    description: 'Fate Knocking. Four notes change music forever. Beethoven proves that deaf, he can still hear the universe.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-beethoven.jpg',
+    phase: 'Phase 9',
+    category: 'Art'
+  },
+  {
+    id: 'music-piano',
+    year: '1850 CE',
+    yearNumeric: 1850,
+    title: 'The Piano Age',
+    description: 'The Parlor Instrument. Pianos fill middle-class homes. Chopin, Liszt, and Brahms write for the instrument everyone wants to play.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-piano.jpg',
+    phase: 'Phase 9',
+    category: 'Art'
+  },
+  {
+    id: 'music-phonograph',
+    year: '1877 CE',
+    yearNumeric: 1877,
+    title: 'Edison\'s Phonograph',
+    description: 'Sound Captured. For the first time in history, a voice can outlive its owner. Music detaches from the moment.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-phonograph.jpg',
+    phase: 'Phase 9',
+    category: 'Art'
+  },
+  {
+    id: 'music-blues',
+    year: '1912 CE',
+    yearNumeric: 1912,
+    title: 'Birth of the Blues',
+    description: 'The American Sound. W.C. Handy publishes "Memphis Blues"—the sorrow and hope of African Americans becomes the root of modern music.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-blues.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'music-jazz',
+    year: '1920 CE',
+    yearNumeric: 1920,
+    title: 'The Jazz Age',
+    description: 'Improvisation Rules. New Orleans musicians invent a new freedom—jazz becomes the soundtrack of the Roaring Twenties.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-jazz.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'music-electric-guitar',
+    year: '1931 CE',
+    yearNumeric: 1931,
+    title: 'The Electric Guitar',
+    description: 'Amplified Rebellion. Rickenbacker electrifies the guitar—quietly laying the foundation for rock and roll.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-electric-guitar.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'music-vinyl',
+    year: '1948 CE',
+    yearNumeric: 1948,
+    title: 'The Vinyl Era',
+    description: 'The LP Revolution. Columbia introduces the 33⅓ RPM long-playing record—albums become art forms, not just collections.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-vinyl.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'music-rock',
+    year: '1954 CE',
+    yearNumeric: 1954,
+    title: 'Rock and Roll',
+    description: 'The Revolution Begins. Elvis, Little Richard, Chuck Berry—Black and white music collides, and teenagers take control.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-rock.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'music-beatles',
+    year: '1964 CE',
+    yearNumeric: 1964,
+    title: 'Beatlemania',
+    description: 'The British Invasion. Four lads from Liverpool conquer America. The album becomes a unified artistic statement.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-beatles.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'music-synthesizer',
+    year: '1970 CE',
+    yearNumeric: 1970,
+    title: 'The Synthesizer',
+    description: 'Electronic Dreams. Robert Moog\'s invention lets musicians create sounds that never existed in nature.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-synthesizer.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'music-mtv',
+    year: '1981 CE',
+    yearNumeric: 1981,
+    title: 'MTV Launches',
+    description: 'Video Killed the Radio Star. Music becomes visual. Madonna, Michael Jackson—you have to see the song to hear it.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-mtv.jpg',
+    phase: 'Phase 12',
+    category: 'Art'
+  },
+  {
+    id: 'music-mp3',
+    year: '1993 CE',
+    yearNumeric: 1993,
+    title: 'The MP3 Format',
+    description: 'Music Compressed. A German algorithm shrinks songs to 1/10th their size—setting the stage for digital revolution.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-mp3.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'music-napster',
+    year: '1999 CE',
+    yearNumeric: 1999,
+    title: 'Napster Revolution',
+    description: 'Free Music Everywhere. College kid Shawn Fanning lets 80 million people share MP3s—the record industry will never recover.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-napster.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'music-ipod',
+    year: '2001 CE',
+    yearNumeric: 2001,
+    title: 'iPod + iTunes',
+    description: '1,000 Songs in Your Pocket. Steve Jobs saves the music industry by making people pay for downloads again.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-ipod.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'music-spotify',
+    year: '2008 CE',
+    yearNumeric: 2008,
+    title: 'The Streaming Era',
+    description: 'Access Over Ownership. Spotify offers unlimited music for a monthly fee—you never own a song again.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-spotify.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'music-ai',
+    year: '2023 CE',
+    yearNumeric: 2023,
+    title: 'AI Composition',
+    description: 'The Machine Sings. AI generates music indistinguishable from human composers—who owns a song no one wrote?',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-ai.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
   }
 ];

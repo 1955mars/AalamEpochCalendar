@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 18 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow)
-// Need to Build: 7 (below)
+// Currently Live: 19 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music)
+// Need to Build: 6 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -27,13 +27,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 3: Heavy new content (Est. 25+ new events each)
+    // COMPLETED: The Rhythm of Life
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'The Rhythm of Life',
-        description: 'A history of music: Bone flutes, Bach, The Beatles, and the algorithm.',
-        category: 'Culture',
-        icon: Music
-    },
     {
         title: 'The Examined Life',
         description: 'From Socrates to Existentialism: The quest to understand existence.',
