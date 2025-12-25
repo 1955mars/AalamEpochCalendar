@@ -906,7 +906,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'phil-31', fromEventId: 'phil-derrida', toEventId: 'phil-rawls', type: 'preceded' },
     { id: 'phil-32', fromEventId: 'phil-rawls', toEventId: 'phil-foucault', type: 'preceded' },
     { id: 'phil-33', fromEventId: 'phil-foucault', toEventId: 'phil-singer', type: 'related' },
-    { id: 'phil-34', fromEventId: 'phil-singer', toEventId: 'phil-consciousness', type: 'preceded' }
+    { id: 'phil-34', fromEventId: 'phil-singer', toEventId: 'phil-consciousness', type: 'preceded' },
+
+    // --- The Silver Screen: A History of Cinema ---
+    { id: 'film-1', fromEventId: 'film-lumiere', toEventId: 'film-melies', type: 'caused' },
+    { id: 'film-2', fromEventId: 'film-melies', toEventId: 'film-great-train', type: 'preceded' },
+    { id: 'film-3', fromEventId: 'film-great-train', toEventId: 'film-birth-nation', type: 'preceded' },
+    { id: 'film-4', fromEventId: 'film-birth-nation', toEventId: 'film-chaplin', type: 'related' },
+    { id: 'film-5', fromEventId: 'film-chaplin', toEventId: 'film-nosferatu', type: 'preceded' },
+    { id: 'film-6', fromEventId: 'film-nosferatu', toEventId: 'film-battleship', type: 'preceded' },
+    { id: 'film-7', fromEventId: 'film-battleship', toEventId: 'film-jazz-singer', type: 'preceded' },
+    { id: 'film-8', fromEventId: 'film-jazz-singer', toEventId: 'film-disney', type: 'preceded' },
+    { id: 'film-9', fromEventId: 'film-disney', toEventId: 'film-kane', type: 'preceded' },
+    { id: 'film-10', fromEventId: 'film-kane', toEventId: 'film-casablanca', type: 'preceded' },
+    { id: 'film-11', fromEventId: 'film-casablanca', toEventId: 'film-neorealism', type: 'preceded' },
+    { id: 'film-12', fromEventId: 'film-neorealism', toEventId: 'film-kurosawa', type: 'preceded' },
+    { id: 'film-13', fromEventId: 'film-kurosawa', toEventId: 'film-cinemascope', type: 'preceded' },
+    { id: 'film-14', fromEventId: 'film-cinemascope', toEventId: 'film-nouvelle-vague', type: 'preceded' },
+    { id: 'film-15', fromEventId: 'film-nouvelle-vague', toEventId: 'film-psycho', type: 'preceded' },
+    { id: 'film-16', fromEventId: 'film-psycho', toEventId: 'film-2001', type: 'preceded' },
+    { id: 'film-17', fromEventId: 'film-2001', toEventId: 'film-godfather', type: 'preceded' },
+    { id: 'film-18', fromEventId: 'film-godfather', toEventId: 'film-jaws', type: 'preceded' },
+    { id: 'film-19', fromEventId: 'film-jaws', toEventId: 'film-star-wars', type: 'caused' },
+    { id: 'film-20', fromEventId: 'film-star-wars', toEventId: 'film-vhs', type: 'related' },
+    { id: 'film-21', fromEventId: 'film-vhs', toEventId: 'film-jurassic', type: 'preceded' },
+    { id: 'film-22', fromEventId: 'film-jurassic', toEventId: 'film-toy-story', type: 'caused' },
+    { id: 'film-23', fromEventId: 'film-toy-story', toEventId: 'film-dvd', type: 'preceded' },
+    { id: 'film-24', fromEventId: 'film-dvd', toEventId: 'film-matrix', type: 'preceded' },
+    { id: 'film-25', fromEventId: 'film-matrix', toEventId: 'film-lotr', type: 'preceded' },
+    { id: 'film-26', fromEventId: 'film-lotr', toEventId: 'film-avatar', type: 'preceded' },
+    { id: 'film-27', fromEventId: 'film-avatar', toEventId: 'film-netflix', type: 'preceded' },
+    { id: 'film-28', fromEventId: 'film-netflix', toEventId: 'film-mcu', type: 'preceded' },
+    { id: 'film-29', fromEventId: 'film-mcu', toEventId: 'film-ai', type: 'preceded' }
 ];
 
 
@@ -1877,6 +1908,52 @@ export const JOURNEYS: Journey[] = [
             'gm-secularism': { title: 'The Secular Age', description: 'God\'s Retreat. France separates church and state. Philosophy must now find meaning without transcendence.' },
             'rights-stoics': { title: 'Stoic Philosophy', description: 'The Inner Citadel. The Stoics teach that we control only our reactions—making philosophy a practice for living.' }
         }
+    },
+    {
+        id: 'silver-screen',
+        title: 'The Silver Screen',
+        description: 'From silent shadows to streaming: The evolution of cinema.',
+        thumbnailUrl: 'images/silver-screen-thumb.jpg',
+        eventIds: [
+            // Birth of Cinema
+            'film-lumiere',        // 1895 - First projection
+            'film-melies',         // 1902 - Trip to the Moon
+            'film-great-train',    // 1903 - First action film
+            // Silent Era
+            'film-birth-nation',   // 1915 - Film grammar
+            'film-chaplin',        // 1915 - The Tramp
+            'film-nosferatu',      // 1922 - Expressionism
+            'film-battleship',     // 1925 - Soviet montage
+            // Golden Age
+            'film-jazz-singer',    // 1927 - Talkies
+            'film-disney',         // 1937 - Snow White
+            'film-kane',           // 1941 - Citizen Kane
+            'film-casablanca',     // 1942 - Hollywood peak
+            'film-neorealism',     // 1945 - Italian streets
+            'film-kurosawa',       // 1950 - Rashomon
+            'film-cinemascope',    // 1953 - Wide screen
+            // New Hollywood
+            'film-nouvelle-vague', // 1959 - French New Wave
+            'film-psycho',         // 1960 - Hitchcock
+            'film-2001',           // 1968 - Kubrick
+            'film-godfather',      // 1972 - Coppola
+            'film-jaws',           // 1975 - Blockbuster
+            'film-star-wars',      // 1977 - Franchise
+            'film-vhs',            // 1977 - Home video
+            // Digital Revolution
+            'film-jurassic',       // 1993 - CGI
+            'film-toy-story',      // 1995 - Pixar
+            'film-dvd',            // 1997 - Digital discs
+            'film-matrix',         // 1999 - Bullet time
+            'film-lotr',           // 2001 - Fantasy epic
+            'film-avatar',         // 2009 - 3D
+            // Streaming Era
+            'film-netflix',        // 2013 - Binge-watching
+            'film-mcu',            // 2019 - Endgame
+            'film-ai'              // 2023 - AI filmmaking
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('film-')),
+        overrides: {}
     }
 ];
 

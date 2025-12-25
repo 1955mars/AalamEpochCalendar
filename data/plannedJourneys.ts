@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 20 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music, Philosophy)
-// Need to Build: 5 (below)
+// Currently Live: 21 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music, Philosophy, Cinema)
+// Need to Build: 4 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -27,14 +27,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 3: Heavy new content (Est. 25+ new events each)
-    // COMPLETED: The Rhythm of Life, The Examined Life
+    // COMPLETED: The Rhythm of Life, The Examined Life, The Silver Screen
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'The Silver Screen',
-        description: 'From silent shadows to streaming: The evolution of cinema.',
-        category: 'Culture',
-        icon: Videotape
-    },
     {
         title: 'Level Up',
         description: 'How video games grew from Pong to the Metaverse.',

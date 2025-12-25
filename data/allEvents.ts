@@ -6255,5 +6255,307 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-consciousness.jpg',
     phase: 'Phase 12',
     category: 'Philosophy'
+  },
+
+  // --- THE SILVER SCREEN: A History of Cinema ---
+  {
+    id: 'film-lumiere',
+    year: '1895 CE',
+    yearNumeric: 1895,
+    title: 'The Lumière Brothers',
+    description: 'Birth of Cinema. Workers leaving a factory, a train arriving—the Lumière brothers project moving images for the first time. Reality becomes reproducible.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-lumiere.jpg',
+    phase: 'Phase 9',
+    category: 'Art'
+  },
+  {
+    id: 'film-melies',
+    year: '1902 CE',
+    yearNumeric: 1902,
+    title: 'A Trip to the Moon',
+    description: 'The First Blockbuster. Georges Méliès rockets cinema from documentary to fantasy—a bullet in the Moon\'s eye becomes the icon of movie magic.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-melies.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-great-train',
+    year: '1903 CE',
+    yearNumeric: 1903,
+    title: 'The Great Train Robbery',
+    description: 'The First Action Movie. Edwin Porter invents cross-cutting, close-ups, and on-location shooting. A bandit fires at the audience—cinema becomes thrilling.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-great-train.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-birth-nation',
+    year: '1915 CE',
+    yearNumeric: 1915,
+    title: 'Birth of a Nation',
+    description: 'Art and Atrocity. D.W. Griffith invents modern film grammar—close-ups, parallel editing—but to tell a viciously racist story. Cinema\'s power revealed.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-birth-nation.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-chaplin',
+    year: '1915 CE',
+    yearNumeric: 1915,
+    title: 'Chaplin\'s Tramp',
+    description: 'The Little Fellow. Charlie Chaplin creates cinema\'s first global icon—the Tramp, a bowler hat and cane making humanity laugh and cry silently.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-chaplin.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-nosferatu',
+    year: '1922 CE',
+    yearNumeric: 1922,
+    title: 'German Expressionism',
+    description: 'Shadows Have Meaning. Nosferatu, The Cabinet of Dr. Caligari—German cinema uses distorted sets and shadows to express inner terror.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-nosferatu.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-battleship',
+    year: '1925 CE',
+    yearNumeric: 1925,
+    title: 'Battleship Potemkin',
+    description: 'The Odessa Steps. Eisenstein invents montage—meaning emerges from collision. A baby carriage bounces down stairs into cinema history.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-battleship.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-jazz-singer',
+    year: '1927 CE',
+    yearNumeric: 1927,
+    title: 'The Jazz Singer',
+    description: 'The Talkies Arrive. "Wait a minute, you ain\'t heard nothin\' yet!" Al Jolson speaks, and the silent era dies. Sound changes everything.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-jazz-singer.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-disney',
+    year: '1937 CE',
+    yearNumeric: 1937,
+    title: 'Disney\'s Snow White',
+    description: 'Animated Dreams. Walt Disney gambles everything on the first feature-length animated film. Critics call it "Disney\'s Folly"—until audiences weep.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-disney.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-kane',
+    year: '1941 CE',
+    yearNumeric: 1941,
+    title: 'Citizen Kane',
+    description: 'Rosebud. Orson Welles, age 25, reinvents cinema—deep focus, non-linear narrative, ceilinged sets. The greatest film ever made arrives unnoticed.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-kane.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-casablanca',
+    year: '1942 CE',
+    yearNumeric: 1942,
+    title: 'Casablanca',
+    description: 'Here\'s Looking at You, Kid. A studio production becomes a perfect film—romance, war, sacrifice. Hollywood\'s dream factory at its peak.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-casablanca.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-neorealism',
+    year: '1945 CE',
+    yearNumeric: 1945,
+    title: 'Italian Neorealism',
+    description: 'The Streets Are Real. Rome Open City, Bicycle Thieves—Italian directors abandon studios for real locations, non-actors, and raw truth.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-neorealism.jpg',
+    phase: 'Phase 10',
+    category: 'Art'
+  },
+  {
+    id: 'film-kurosawa',
+    year: '1950 CE',
+    yearNumeric: 1950,
+    title: 'Kurosawa\'s Rashomon',
+    description: 'Truth Is Subjective. Akira Kurosawa shows the same event from four perspectives—cinema becomes philosophy. The "Rashomon effect" enters language.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-kurosawa.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'film-cinemascope',
+    year: '1953 CE',
+    yearNumeric: 1953,
+    title: 'CinemaScope',
+    description: 'The Wide Screen. Television threatens cinema. Hollywood responds with epics too vast for living rooms—CinemaScope makes screens panoramic.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-cinemascope.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'film-nouvelle-vague',
+    year: '1959 CE',
+    yearNumeric: 1959,
+    title: 'French New Wave',
+    description: 'Breathless Revolution. Godard, Truffaut—young critics become filmmakers, breaking every rule. Hand-held cameras, jump cuts, cinema as personal essay.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-nouvelle-vague.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'film-psycho',
+    year: '1960 CE',
+    yearNumeric: 1960,
+    title: 'Hitchcock\'s Psycho',
+    description: 'The Shower Scene. Alfred Hitchcock kills his star 47 minutes in. 78 cuts, 7 days to film, eternal terror. The slasher genre is born.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-psycho.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'film-2001',
+    year: '1968 CE',
+    yearNumeric: 1968,
+    title: '2001: A Space Odyssey',
+    description: 'The Monolith. Stanley Kubrick creates science fiction as art—a bone becomes a spaceship, HAL says "I can\'t do that, Dave," and cinema reaches the infinite.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-2001.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'film-godfather',
+    year: '1972 CE',
+    yearNumeric: 1972,
+    title: 'The Godfather',
+    description: 'An Offer You Can\'t Refuse. Francis Ford Coppola turns pulp into Shakespeare. The American Dream becomes an American nightmare—in the family business.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-godfather.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'film-jaws',
+    year: '1975 CE',
+    yearNumeric: 1975,
+    title: 'Jaws',
+    description: 'The Summer Blockbuster. Steven Spielberg\'s mechanical shark kept breaking—so he showed less. Fear became imagination. Cinema became an event.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-jaws.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'film-star-wars',
+    year: '1977 CE',
+    yearNumeric: 1977,
+    title: 'Star Wars',
+    description: 'A New Hope. George Lucas revives myth, old serials, and hero\'s journeys. Hollywood discovers franchises, merchandising, and fandoms.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-star-wars.jpg',
+    phase: 'Phase 11',
+    category: 'Art'
+  },
+  {
+    id: 'film-vhs',
+    year: '1977 CE',
+    yearNumeric: 1977,
+    title: 'VHS Revolution',
+    description: 'Movies at Home. The videocassette brings Hollywood to living rooms—and creates a new market. Rental stores become temples of taste.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-vhs.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'film-dvd',
+    year: '1997 CE',
+    yearNumeric: 1997,
+    title: 'The DVD Era',
+    description: 'Crystal Clear. Digital discs replace magnetic tape—movies look pristine, extras are included, and film buffs become collectors again.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-dvd.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'film-jurassic',
+    year: '1993 CE',
+    yearNumeric: 1993,
+    title: 'Jurassic Park CGI',
+    description: 'Welcome to Jurassic Park. Spielberg\'s dinosaurs walk, breathe, and terrify—CGI proves the impossible is now filmable. Reality is optional.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-jurassic.jpg',
+    phase: 'Phase 12',
+    category: 'Art'
+  },
+  {
+    id: 'film-toy-story',
+    year: '1995 CE',
+    yearNumeric: 1995,
+    title: 'Toy Story',
+    description: 'To Infinity and Beyond. Pixar\'s first film proves computers can have heart. The pixel replaces the brushstroke, but emotion remains hand-crafted.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-toy-story.jpg',
+    phase: 'Phase 12',
+    category: 'Art'
+  },
+  {
+    id: 'film-matrix',
+    year: '1999 CE',
+    yearNumeric: 1999,
+    title: 'The Matrix',
+    description: 'Red Pill or Blue? The Wachowskis blend Hong Kong action, anime, and philosophy. "Bullet time" stops time. Reality is a simulation.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-matrix.jpg',
+    phase: 'Phase 12',
+    category: 'Art'
+  },
+  {
+    id: 'film-lotr',
+    year: '2001 CE',
+    yearNumeric: 2001,
+    title: 'Lord of the Rings',
+    description: 'One Film to Rule Them All. Peter Jackson films all three at once—17 Oscars later, fantasy cinema is legitimized forever.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-lotr.jpg',
+    phase: 'Phase 12',
+    category: 'Art'
+  },
+  {
+    id: 'film-avatar',
+    year: '2009 CE',
+    yearNumeric: 2009,
+    title: 'Avatar',
+    description: 'The 3D Renaissance. James Cameron waits 12 years for technology to catch up. Avatar becomes the highest-grossing film ever—twice.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-avatar.jpg',
+    phase: 'Phase 12',
+    category: 'Art'
+  },
+  {
+    id: 'film-netflix',
+    year: '2013 CE',
+    yearNumeric: 2013,
+    title: 'Netflix Streaming',
+    description: 'House of Cards. Netflix releases an entire season at once—binge-watching is born. Theaters, cable, and schedules become optional.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-netflix.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'film-mcu',
+    year: '2019 CE',
+    yearNumeric: 2019,
+    title: 'Avengers: Endgame',
+    description: 'The Franchise Finale. 22 films, 11 years, $2.8 billion opening weekend. Cinema becomes serialized television. Theaters become event spaces.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-mcu.jpg',
+    phase: 'Phase 12',
+    category: 'Art'
+  },
+  {
+    id: 'film-ai',
+    year: '2023 CE',
+    yearNumeric: 2023,
+    title: 'AI in Filmmaking',
+    description: 'The Machine Directs. AI generates scripts, deepfakes resurrect actors, and algorithms predict hits. Who is the author when the machine creates?',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-ai.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
   }
 ];
