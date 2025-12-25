@@ -5079,5 +5079,220 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/power-grid.jpg',
     phase: 'Phase 12',
     category: 'Technology'
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // RIGHTS & REVOLUTIONS JOURNEY - How humanity invented freedom
+  // ═══════════════════════════════════════════════════════════════
+
+  {
+    id: 'rights-hammurabi',
+    year: '1754 BCE',
+    yearNumeric: -1754,
+    title: 'Code of Hammurabi',
+    description: 'The First Written Law. A Babylonian king carves 282 laws into stone, establishing that even rulers are bound by rules—and that justice should be public, not secret.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-hammurabi.jpg',
+    phase: 'Phase 5',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-cyrus',
+    year: '539 BCE',
+    yearNumeric: -539,
+    title: 'Cyrus Cylinder',
+    description: 'The First Declaration. After conquering Babylon, Cyrus the Great proclaims religious tolerance and freedom—history\'s first charter of human rights.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-cyrus.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-roman-law',
+    year: '450 BCE',
+    yearNumeric: -450,
+    title: 'Twelve Tables of Rome',
+    description: 'Law for the People. Rome\'s plebeians demand written laws, ending aristocratic monopoly on justice. The foundation of Western legal tradition is carved in bronze.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-roman-law.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-stoics',
+    year: '300 BCE',
+    yearNumeric: -300,
+    title: 'Stoic Natural Law',
+    description: 'Rights Beyond Nations. The Stoics propose that all humans share a universal reason, and therefore universal rights—an idea that will echo through millennia.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-stoics.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'rights-habeas',
+    year: '1679 CE',
+    yearNumeric: 1679,
+    title: 'Habeas Corpus Act',
+    description: 'The Body Belongs to You. England declares that no one can be imprisoned without being brought before a judge—the foundation of personal liberty.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-habeas.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-locke',
+    year: '1689 CE',
+    yearNumeric: 1689,
+    title: 'Locke\'s Two Treatises',
+    description: 'The Social Contract. John Locke argues that governments exist to protect life, liberty, and property—and can be overthrown when they fail.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-locke.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'rights-bill-1689',
+    year: '1689 CE',
+    yearNumeric: 1689,
+    title: 'English Bill of Rights',
+    description: 'Parliament Wins. After the Glorious Revolution, Parliament limits royal power—establishing free elections, free speech, and freedom from cruel punishment.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-bill-1689.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-montesquieu',
+    year: '1748 CE',
+    yearNumeric: 1748,
+    title: 'Spirit of the Laws',
+    description: 'Power Checked. Montesquieu proposes separating government into three branches—executive, legislative, judicial—so no one can become a tyrant.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-montesquieu.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'rights-rousseau',
+    year: '1762 CE',
+    yearNumeric: 1762,
+    title: 'The Social Contract',
+    description: 'The General Will. Rousseau imagines government as a contract between equals—"Man is born free, and everywhere he is in chains."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-rousseau.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'rights-us-const',
+    year: '1787 CE',
+    yearNumeric: 1787,
+    title: 'US Constitution',
+    description: 'We the People. Fifty-five men in Philadelphia create a government designed to limit itself—the oldest written constitution still in use.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-us-const.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-us-bill',
+    year: '1791 CE',
+    yearNumeric: 1791,
+    title: 'US Bill of Rights',
+    description: 'Ten Amendments. Freedom of speech, religion, assembly, and the press. The right to bear arms. Protection from unreasonable search. The price of ratification.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-us-bill.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-wollstonecraft',
+    year: '1792 CE',
+    yearNumeric: 1792,
+    title: 'Vindication of Rights of Woman',
+    description: 'Half of Humanity Speaks. Mary Wollstonecraft demands that the rights of man include women—a radical idea that will take 150 years to realize.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-wollstonecraft.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'rights-abolition-uk',
+    year: '1833 CE',
+    yearNumeric: 1833,
+    title: 'British Abolition Act',
+    description: 'Empire Without Slavery. Britain abolishes slavery throughout its empire, paying £20 million to compensate owners—not the enslaved.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-abolition-uk.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-emancipation',
+    year: '1863 CE',
+    yearNumeric: 1863,
+    title: 'Emancipation Proclamation',
+    description: 'Freedom as War Strategy. Lincoln declares slaves in rebel states "forever free"—turning the Civil War into a crusade for human liberty.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-emancipation.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-13th',
+    year: '1865 CE',
+    yearNumeric: 1865,
+    title: '13th Amendment',
+    description: 'Neither Slavery Nor Involuntary Servitude. The Constitution is amended to abolish slavery—four million people are free, at least on paper.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-13th.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-labor',
+    year: '1886 CE',
+    yearNumeric: 1886,
+    title: 'Haymarket Affair',
+    description: 'The Eight-Hour Day. Chicago workers strike for shorter hours. A bomb kills police, leading to executions—but the labor movement cannot be stopped.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-labor.jpg',
+    phase: 'Phase 9',
+    category: 'Economy'
+  },
+  {
+    id: 'rights-naacp',
+    year: '1909 CE',
+    yearNumeric: 1909,
+    title: 'NAACP Founded',
+    description: 'Organizing for Equality. W.E.B. Du Bois and allies create an organization to fight for African American rights through legal action and public pressure.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-naacp.jpg',
+    phase: 'Phase 10',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-gandhi',
+    year: '1930 CE',
+    yearNumeric: 1930,
+    title: 'Salt March',
+    description: 'Walking to Freedom. Gandhi leads 60,000 Indians on a 240-mile march to make salt from the sea—defying British law with radical nonviolence.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-gandhi.jpg',
+    phase: 'Phase 10',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-un-decl',
+    year: '1948 CE',
+    yearNumeric: 1948,
+    title: 'Universal Declaration of Human Rights',
+    description: 'Rights for All Humanity. After the Holocaust, the world agrees: every person has dignity. Thirty articles define the minimum we owe each other.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-un-decl.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-civil64',
+    year: '1964 CE',
+    yearNumeric: 1964,
+    title: 'Civil Rights Act',
+    description: 'The Second Reconstruction. After Years of marches and murders, the US outlaws discrimination based on race, color, religion, sex, or national origin.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-civil64.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'rights-mandela',
+    year: '1994 CE',
+    yearNumeric: 1994,
+    title: 'Mandela Elected President',
+    description: 'The Long Walk Ends. After 27 years in prison, Nelson Mandela becomes South Africa\'s first Black president—choosing reconciliation over revenge.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-mandela.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
   }
 ];

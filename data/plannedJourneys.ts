@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 15 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power)
-// Need to Build: 10 (below)
+// Currently Live: 16 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights)
+// Need to Build: 9 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -22,14 +22,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 2: Moderate new content (Est. 15-20 new events each)
-    // COMPLETED: Power Trip
+    // COMPLETED: Power Trip, Rights & Revolutions
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'Rights & Revolutions',
-        description: 'Magna Carta to UN Declaration: How humanity invented freedom.',
-        category: 'Power',
-        icon: Scale
-    },
     {
         title: 'The Climate Chronicle',
         description: 'Ice ages to global warming: The planet\'s story and humanity\'s impact.',

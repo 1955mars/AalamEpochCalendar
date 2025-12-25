@@ -740,7 +740,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'power-26', fromEventId: 'power-tesla-ev', toEventId: 'power-fukushima', type: 'preceded' },
     { id: 'power-27', fromEventId: 'power-fukushima', toEventId: 'power-paris', type: 'caused' },
     { id: 'power-28', fromEventId: 'power-paris', toEventId: 'power-iter', type: 'related' },
-    { id: 'power-29', fromEventId: 'power-iter', toEventId: 'power-fusion', type: 'caused' }
+    { id: 'power-29', fromEventId: 'power-iter', toEventId: 'power-fusion', type: 'caused' },
+
+    // --- Rights & Revolutions: How Humanity Invented Freedom ---
+    { id: 'rights-1', fromEventId: 'rights-hammurabi', toEventId: 'rights-cyrus', type: 'preceded' },
+    { id: 'rights-2', fromEventId: 'rights-cyrus', toEventId: 'p6-21', type: 'preceded' },
+    { id: 'rights-3', fromEventId: 'p6-21', toEventId: 'rights-roman-law', type: 'related' },
+    { id: 'rights-4', fromEventId: 'rights-roman-law', toEventId: 'rights-stoics', type: 'preceded' },
+    { id: 'rights-5', fromEventId: 'rights-stoics', toEventId: 'p7-27', type: 'preceded' },
+    { id: 'rights-6', fromEventId: 'p7-27', toEventId: 'rights-habeas', type: 'preceded' },
+    { id: 'rights-7', fromEventId: 'rights-habeas', toEventId: 'rights-locke', type: 'caused' },
+    { id: 'rights-8', fromEventId: 'rights-locke', toEventId: 'rights-bill-1689', type: 'caused' },
+    { id: 'rights-9', fromEventId: 'rights-bill-1689', toEventId: 'rights-montesquieu', type: 'influenced' },
+    { id: 'rights-10', fromEventId: 'rights-montesquieu', toEventId: 'rights-rousseau', type: 'influenced' },
+    { id: 'rights-11', fromEventId: 'rights-rousseau', toEventId: 'p9-2', type: 'influenced' },
+    { id: 'rights-12', fromEventId: 'p9-2', toEventId: 'rights-us-const', type: 'caused' },
+    { id: 'rights-13', fromEventId: 'rights-us-const', toEventId: 'p9-4', type: 'influenced' },
+    { id: 'rights-14', fromEventId: 'p9-4', toEventId: 'p9-5', type: 'caused' },
+    { id: 'rights-15', fromEventId: 'p9-5', toEventId: 'rights-us-bill', type: 'related' },
+    { id: 'rights-16', fromEventId: 'rights-us-bill', toEventId: 'rights-wollstonecraft', type: 'preceded' },
+    { id: 'rights-17', fromEventId: 'rights-wollstonecraft', toEventId: 'p9-10', type: 'preceded' },
+    { id: 'rights-18', fromEventId: 'p9-10', toEventId: 'p9-13', type: 'influenced' },
+    { id: 'rights-19', fromEventId: 'p9-13', toEventId: 'rights-abolition-uk', type: 'preceded' },
+    { id: 'rights-20', fromEventId: 'rights-abolition-uk', toEventId: 'p9-20', type: 'preceded' },
+    { id: 'rights-21', fromEventId: 'p9-20', toEventId: 'rights-emancipation', type: 'preceded' },
+    { id: 'rights-22', fromEventId: 'rights-emancipation', toEventId: 'rights-13th', type: 'caused' },
+    { id: 'rights-23', fromEventId: 'rights-13th', toEventId: 'rights-labor', type: 'preceded' },
+    { id: 'rights-24', fromEventId: 'rights-labor', toEventId: 'women-suffrage', type: 'preceded' },
+    { id: 'rights-25', fromEventId: 'women-suffrage', toEventId: 'rights-naacp', type: 'preceded' },
+    { id: 'rights-26', fromEventId: 'rights-naacp', toEventId: 'rights-gandhi', type: 'preceded' },
+    { id: 'rights-27', fromEventId: 'rights-gandhi', toEventId: 'rights-un-decl', type: 'preceded' },
+    { id: 'rights-28', fromEventId: 'rights-un-decl', toEventId: 'rights-civil64', type: 'preceded' },
+    { id: 'rights-29', fromEventId: 'rights-civil64', toEventId: 'rights-mandela', type: 'preceded' }
 ];
 
 
@@ -1422,6 +1453,61 @@ export const JOURNEYS: Journey[] = [
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('power-')),
         overrides: {}
+    },
+    {
+        id: 'rights-revolutions',
+        title: 'Rights & Revolutions',
+        description: 'Magna Carta to UN Declaration: How humanity invented freedom.',
+        thumbnailUrl: 'images/rights-revolutions-thumb.jpg',
+        eventIds: [
+            // Ancient Seeds
+            'rights-hammurabi',   // 1754 BCE - First written law
+            'rights-cyrus',       // 539 BCE - Cyrus Cylinder
+            'p6-21',              // 508 BCE - Athenian Democracy
+            'rights-roman-law',   // 450 BCE - Twelve Tables
+            'rights-stoics',      // 300 BCE - Natural Law
+            // Medieval Constraints
+            'p7-27',              // 1215 CE - Magna Carta
+            // Enlightenment Ideas
+            'rights-habeas',      // 1679 - Habeas Corpus
+            'rights-locke',       // 1689 - Locke's Treatises
+            'rights-bill-1689',   // 1689 - English Bill of Rights
+            'rights-montesquieu', // 1748 - Spirit of Laws
+            'rights-rousseau',    // 1762 - Social Contract
+            // Age of Revolutions
+            'p9-2',               // 1776 - Declaration of Independence
+            'rights-us-const',    // 1787 - US Constitution
+            'p9-4',               // 1789 - French Revolution
+            'p9-5',               // 1789 - Rights of Man
+            'rights-us-bill',     // 1791 - US Bill of Rights
+            'rights-wollstonecraft', // 1792 - Rights of Woman
+            'p9-10',              // 1804 - Haitian Independence
+            'p9-13',              // 1810 - Latin American Revolts
+            // Expansion of Rights
+            'rights-abolition-uk', // 1833 - British Abolition
+            'p9-20',              // 1848 - Spring of Nations
+            'rights-emancipation', // 1863 - Emancipation
+            'rights-13th',        // 1865 - 13th Amendment
+            'rights-labor',       // 1886 - Haymarket
+            'women-suffrage',     // 1893 - Women's Suffrage
+            'rights-naacp',       // 1909 - NAACP
+            'rights-gandhi',      // 1930 - Salt March
+            // Universal Rights
+            'rights-un-decl',     // 1948 - UN Declaration
+            'rights-civil64',     // 1964 - Civil Rights Act
+            'rights-mandela'      // 1994 - Mandela elected
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('rights-')),
+        overrides: {
+            'p6-21': { title: 'Birth of Democracy', description: 'Thinking Power. Cleisthenes flips the pyramid of governance, suggesting that authority derives from the consensus of citizens, not the decree of gods or kings.' },
+            'p7-27': { title: 'Magna Carta', description: 'The King Bows to Law. English barons force King John to accept limits on royal power—the first crack in absolute monarchy.' },
+            'p9-2': { title: 'Declaration of Independence', description: 'We Hold These Truths. Jefferson\'s pen transforms Enlightenment philosophy into revolutionary action—all men are created equal.' },
+            'p9-4': { title: 'The Bastille Falls', description: 'The People\'s Earthquake. Paris erupts, the prison falls, and the divine right of kings dies in the streets.' },
+            'p9-5': { title: 'Declaration of the Rights of Man', description: 'Liberty, Equality, Fraternity. The French Assembly proclaims that rights are universal—not privileges granted by kings.' },
+            'p9-10': { title: 'Haiti Rises', description: 'Slaves Become Citizens. The only successful slave revolution in history—Toussaint L\'Ouverture\'s army defeats Napoleon and creates the first free Black republic.' },
+            'p9-13': { title: 'Latin America Awakens', description: 'Bolívar\'s Dream. From Mexico to Argentina, colonial subjects become citizens as revolution sweeps an entire hemisphere.' },
+            'p9-20': { title: 'Spring of Nations', description: 'The Year of Revolution. From Paris to Budapest, ordinary people demand constitutions, parliaments, and freedom—most fail, but the seeds are planted.' }
+        }
     }
 ];
 
