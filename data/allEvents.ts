@@ -6205,5 +6205,55 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-beauvoir.jpg',
     phase: 'Phase 11',
     category: 'Philosophy'
+  },
+  {
+    id: 'phil-derrida',
+    year: '1967 CE',
+    yearNumeric: 1967,
+    title: 'Derrida\'s Deconstruction',
+    description: 'Nothing Outside the Text. Jacques Derrida shows that meaning is never stable—every text deconstructs itself. Postmodernism arrives.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-derrida.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-rawls',
+    year: '1971 CE',
+    yearNumeric: 1971,
+    title: 'Rawls\'s Veil of Ignorance',
+    description: 'The Fair Society. John Rawls asks: What rules would you choose if you didn\'t know your place in society? Justice as fairness is born.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-rawls.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-foucault',
+    year: '1975 CE',
+    yearNumeric: 1975,
+    title: 'Foucault\'s Power',
+    description: 'Power Is Everywhere. Michel Foucault reveals how prisons, hospitals, and schools discipline our bodies and minds. Power has no center.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-foucault.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-singer',
+    year: '1975 CE',
+    yearNumeric: 1975,
+    title: 'Singer\'s Animal Liberation',
+    description: 'Speciesism Exposed. Peter Singer argues that suffering matters regardless of species—launching the animal rights movement and effective altruism.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-singer.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-consciousness',
+    year: '2020 CE',
+    yearNumeric: 2020,
+    title: 'The Hard Problem',
+    description: 'Why Is There Experience? As AI advances, philosophy confronts the "hard problem" of consciousness—why does it feel like something to be you?',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-consciousness.jpg',
+    phase: 'Phase 12',
+    category: 'Philosophy'
   }
 ];

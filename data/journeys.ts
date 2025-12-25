@@ -901,7 +901,12 @@ export const CONNECTIONS: Connection[] = [
     { id: 'phil-26', fromEventId: 'gm-secularism', toEventId: 'phil-wittgenstein', type: 'preceded' },
     { id: 'phil-27', fromEventId: 'phil-wittgenstein', toEventId: 'phil-heidegger', type: 'preceded' },
     { id: 'phil-28', fromEventId: 'phil-heidegger', toEventId: 'phil-sartre', type: 'caused' },
-    { id: 'phil-29', fromEventId: 'phil-sartre', toEventId: 'phil-beauvoir', type: 'caused' }
+    { id: 'phil-29', fromEventId: 'phil-sartre', toEventId: 'phil-beauvoir', type: 'caused' },
+    { id: 'phil-30', fromEventId: 'phil-beauvoir', toEventId: 'phil-derrida', type: 'preceded' },
+    { id: 'phil-31', fromEventId: 'phil-derrida', toEventId: 'phil-rawls', type: 'preceded' },
+    { id: 'phil-32', fromEventId: 'phil-rawls', toEventId: 'phil-foucault', type: 'preceded' },
+    { id: 'phil-33', fromEventId: 'phil-foucault', toEventId: 'phil-singer', type: 'related' },
+    { id: 'phil-34', fromEventId: 'phil-singer', toEventId: 'phil-consciousness', type: 'preceded' }
 ];
 
 
@@ -1849,7 +1854,13 @@ export const JOURNEYS: Journey[] = [
             'phil-wittgenstein',   // 1921 - Tractatus
             'phil-heidegger',      // 1927 - Being
             'phil-sartre',         // 1943 - Existentialism
-            'phil-beauvoir'        // 1949 - Second Sex
+            'phil-beauvoir',       // 1949 - Second Sex
+            // Late 20th Century & Contemporary
+            'phil-derrida',        // 1967 - Deconstruction
+            'phil-rawls',          // 1971 - Justice
+            'phil-foucault',       // 1975 - Power
+            'phil-singer',         // 1975 - Animal Liberation
+            'phil-consciousness'   // 2020 - Hard Problem
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('phil-')),
         overrides: {
