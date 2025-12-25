@@ -5697,7 +5697,7 @@ export const ALL_EVENTS: TimelineEvent[] = [
     year: '2013 CE',
     yearNumeric: 2013,
     title: 'PRISM Revealed',
-    description: 'Mass Surveillance Exposed. Snowden reveals the NSA collects data directly from tech giants—the government reads your email.',
+    description: 'The Secret Program. The NSA\'s tool for direct access to servers at Google, Facebook, Microsoft, and Apple—collecting emails, chats, and files of millions worldwide.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-prism.jpg',
     phase: 'Phase 12',
     category: 'Communications'
