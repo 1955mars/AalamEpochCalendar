@@ -968,7 +968,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'game-26', fromEventId: 'game-vr', toEventId: 'game-fortnite', type: 'preceded' },
     { id: 'game-27', fromEventId: 'game-fortnite', toEventId: 'game-switch', type: 'related' },
     { id: 'game-28', fromEventId: 'game-switch', toEventId: 'game-gpus', type: 'preceded' },
-    { id: 'game-29', fromEventId: 'game-gpus', toEventId: 'game-ai-gaming', type: 'preceded' }
+    { id: 'game-29', fromEventId: 'game-gpus', toEventId: 'game-ai-gaming', type: 'preceded' },
+
+    // --- The Food on Your Plate ---
+    { id: 'food-1', fromEventId: 'p4-2', toEventId: 'p4-7', type: 'caused' },
+    { id: 'food-2', fromEventId: 'p4-7', toEventId: 'p4-9', type: 'related' },
+    { id: 'food-3', fromEventId: 'p4-9', toEventId: 'p4-10', type: 'related' },
+    { id: 'food-4', fromEventId: 'p4-10', toEventId: 'p4-11', type: 'preceded' },
+    { id: 'food-5', fromEventId: 'p4-11', toEventId: 'food-irrigation', type: 'caused' },
+    { id: 'food-6', fromEventId: 'food-irrigation', toEventId: 'p4-16', type: 'caused' },
+    { id: 'food-7', fromEventId: 'p4-16', toEventId: 'p4-18', type: 'related' },
+    { id: 'food-8', fromEventId: 'p4-18', toEventId: 'food-beer', type: 'preceded' },
+    { id: 'food-9', fromEventId: 'food-beer', toEventId: 'food-grain-currency', type: 'preceded' },
+    { id: 'food-10', fromEventId: 'food-grain-currency', toEventId: 'p6-1', type: 'preceded' },
+    { id: 'food-11', fromEventId: 'p6-1', toEventId: 'food-silk-road', type: 'preceded' },
+    { id: 'food-12', fromEventId: 'food-silk-road', toEventId: 'food-rotation', type: 'preceded' },
+    { id: 'food-13', fromEventId: 'food-rotation', toEventId: 'p8-8', type: 'preceded' },
+    { id: 'food-14', fromEventId: 'p8-8', toEventId: 'food-spice', type: 'preceded' },
+    { id: 'food-15', fromEventId: 'food-spice', toEventId: 'food-coffee', type: 'preceded' },
+    { id: 'food-16', fromEventId: 'food-coffee', toEventId: 'food-sugar', type: 'preceded' },
+    { id: 'food-17', fromEventId: 'food-sugar', toEventId: 'food-potato', type: 'preceded' },
+    { id: 'food-18', fromEventId: 'food-potato', toEventId: 'food-famine', type: 'caused' },
+    { id: 'food-19', fromEventId: 'food-famine', toEventId: 'food-canning', type: 'preceded' },
+    { id: 'food-20', fromEventId: 'food-canning', toEventId: 'food-pasteur', type: 'preceded' },
+    { id: 'food-21', fromEventId: 'food-pasteur', toEventId: 'food-refrigeration', type: 'preceded' },
+    { id: 'food-22', fromEventId: 'food-refrigeration', toEventId: 'food-haber', type: 'preceded' },
+    { id: 'food-23', fromEventId: 'food-haber', toEventId: 'food-mcdonalds', type: 'preceded' },
+    { id: 'food-24', fromEventId: 'food-mcdonalds', toEventId: 'food-green-rev', type: 'preceded' },
+    { id: 'food-25', fromEventId: 'food-green-rev', toEventId: 'food-organic', type: 'preceded' },
+    { id: 'food-26', fromEventId: 'food-organic', toEventId: 'food-gmo', type: 'preceded' },
+    { id: 'food-27', fromEventId: 'food-gmo', toEventId: 'food-vertical', type: 'preceded' },
+    { id: 'food-28', fromEventId: 'food-vertical', toEventId: 'food-lab-meat', type: 'related' },
+    { id: 'food-29', fromEventId: 'food-lab-meat', toEventId: 'food-ai', type: 'preceded' }
 ];
 
 
@@ -2032,6 +2063,62 @@ export const JOURNEYS: Journey[] = [
         connections: CONNECTIONS.filter(c => c.id.startsWith('game-')),
         overrides: {
             'ai-alphago': { title: 'AlphaGo Beats Humanity', description: 'Move 37. Google\'s AI defeats Lee Sedol at Go—a game of intuition. Machines can now master games no algorithm could solve.' }
+        }
+    },
+    {
+        id: 'food-on-your-plate',
+        title: 'The Food on Your Plate',
+        description: 'Neolithic farming to lab-grown meat: The history of what we eat.',
+        thumbnailUrl: 'images/food-on-your-plate-thumb.jpg',
+        eventIds: [
+            // Neolithic Revolution
+            'p4-2',                // 9600 BCE - First cereals
+            'p4-7',                // 8500 BCE - Goat domestication
+            'p4-9',                // 8000 BCE - Rice domestication
+            'p4-10',               // 7700 BCE - Wheat domestication
+            'p4-11',               // 7500 BCE - Cattle & pig
+            // Ancient Agriculture
+            'food-irrigation',     // 6000 BCE - Mesopotamian canals
+            'p4-16',               // 6500 BCE - Farming spreads Europe
+            'p4-18',               // 6000 BCE - Maize in Mesoamerica
+            'food-beer',           // 5000 BCE - Beer invention
+            'food-grain-currency', // 3000 BCE - Grain as currency
+            'p6-1',                // 1200 BCE - Iron plows
+            'food-silk-road',      // 100 BCE - Food exchange
+            // Medieval & Colonial
+            'food-rotation',       // 700 CE - Crop rotation
+            'p8-8',                // 1492 - Columbian Exchange
+            'food-spice',          // 1498 - Spice trade
+            'food-coffee',         // 1550 - Coffee spreads
+            'food-sugar',          // 1600 - Sugar plantations
+            'food-potato',         // 1700 - Potato transforms Europe
+            // Industrial Food
+            'food-famine',         // 1845 - Irish Potato Famine
+            'food-canning',        // 1810 - Canning invented
+            'food-pasteur',        // 1864 - Pasteurization
+            'food-refrigeration',  // 1876 - Refrigerated shipping
+            'food-haber',          // 1913 - Synthetic fertilizer
+            // Modern Food System
+            'food-mcdonalds',      // 1955 - Fast food
+            'food-green-rev',      // 1960 - Green Revolution
+            'food-organic',        // 1990 - Organic movement
+            'food-gmo',            // 1994 - First GMO
+            // Future of Food
+            'food-vertical',       // 2012 - Vertical farming
+            'food-lab-meat',       // 2013 - Lab-grown meat
+            'food-ai'              // 2023 - AI agriculture
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('food-')),
+        overrides: {
+            'p4-2': { title: 'First Cereal Cultivation', description: 'Seeds of Civilization. Humans plant wheat in the Fertile Crescent—trading nomadic freedom for permanent fields. Agriculture begins.' },
+            'p4-7': { title: 'Goat Domestication', description: 'First Livestock. Wild goats become walking larders—providing milk, meat, and leather on demand. Herding begins.' },
+            'p4-9': { title: 'Rice Domestication', description: 'Asia\'s Foundation. The Yangtze valley tames rice—a grain that will feed billions and shape civilizations.' },
+            'p4-10': { title: 'Wheat Domestication', description: 'The Staff of Life. Farmers breed wheat that doesn\'t shatter—making harvest possible. Bread becomes humanity\'s staple.' },
+            'p4-11': { title: 'Cattle & Pig Domestication', description: 'Big Animals Join. Aurochs become cattle, boars become pigs. Humanity gains draft power and protein.' },
+            'p4-16': { title: 'Farming Spreads to Europe', description: 'The Frontier Moves. Agricultural knowledge migrates from Anatolia, transforming European hunter-gatherers into farmers.' },
+            'p4-18': { title: 'Maize Cultivation', description: 'America\'s Grain. Mesoamerican farmers transform teosinte into corn—the foundation of New World civilizations.' },
+            'p6-1': { title: 'Iron Plows', description: 'Breaking Hard Earth. Iron tools replace bronze—letting farmers cultivate heavier soils and expand harvests.' },
+            'p8-8': { title: 'The Columbian Exchange', description: 'Worlds Collide. Potatoes, tomatoes, and corn flow to Europe; wheat, cattle, and diseases flow to America. Diets transform globally.' }
         }
     }
 ];

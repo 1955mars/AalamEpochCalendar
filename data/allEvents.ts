@@ -6849,5 +6849,217 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-ai-gaming.jpg',
     phase: 'Phase 12',
     category: 'Technology'
+  },
+
+  // --- THE FOOD ON YOUR PLATE: A History of What We Eat ---
+  {
+    id: 'food-irrigation',
+    year: '6000 BCE',
+    yearNumeric: -6000,
+    title: 'Mesopotamian Irrigation',
+    description: 'Taming the Rivers. Farmers dig canals to control the Tigris and Euphrates, turning desert into farmland. Civilization becomes possible.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-irrigation.jpg',
+    phase: 'Phase 4',
+    category: 'Technology'
+  },
+  {
+    id: 'food-beer',
+    year: '5000 BCE',
+    yearNumeric: -5000,
+    title: 'Beer Invention',
+    description: 'Liquid Bread. Fermented grain becomes humanity\'s first preserved, nutritious drink. Some argue beer—not bread—drove the agricultural revolution.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-beer.jpg',
+    phase: 'Phase 4',
+    category: 'Civilization'
+  },
+  {
+    id: 'food-silk-road',
+    year: '100 BCE',
+    yearNumeric: -100,
+    title: 'Silk Road Food Exchange',
+    description: 'Flavors Travel. Grapes reach China, noodles head west, and spices become worth more than gold. The first global food system emerges.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-silk-road.jpg',
+    phase: 'Phase 6',
+    category: 'Economy'
+  },
+  {
+    id: 'food-grain-currency',
+    year: '3000 BCE',
+    yearNumeric: -3000,
+    title: 'Grain as Currency',
+    description: 'You Can Eat Your Savings. Sumerian barley becomes a standardized unit of weight and value—the shekel. Food transforms into money.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-grain-currency.jpg',
+    phase: 'Phase 5',
+    category: 'Economy'
+  },
+  {
+    id: 'food-spice',
+    year: '1498 CE',
+    yearNumeric: 1498,
+    title: 'The Spice Trade',
+    description: 'Worth More Than Gold. Vasco da Gama reaches India—pepper, cinnamon, and nutmeg drive empires to circle the globe.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-spice.jpg',
+    phase: 'Phase 8',
+    category: 'Economy'
+  },
+  {
+    id: 'food-rotation',
+    year: '700 CE',
+    yearNumeric: 700,
+    title: 'Crop Rotation',
+    description: 'The Three-Field System. Medieval farmers discover that rotating crops restores soil fertility. Yields increase, populations grow.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-rotation.jpg',
+    phase: 'Phase 7',
+    category: 'Technology'
+  },
+  {
+    id: 'food-coffee',
+    year: '1550 CE',
+    yearNumeric: 1550,
+    title: 'Coffee Houses',
+    description: 'The Sober Drink. Coffee spreads from Ethiopia to Arabia to Europe—replacing beer breakfasts with caffeinated mornings. Ideas accelerate.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-coffee.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'food-sugar',
+    year: '1600 CE',
+    yearNumeric: 1600,
+    title: 'Sugar Plantations',
+    description: 'Sweet Poison. Caribbean sugar plantations create the first industrial food system—powered by enslaved labor. Calories meet capitalism.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-sugar.jpg',
+    phase: 'Phase 8',
+    category: 'Economy'
+  },
+  {
+    id: 'food-potato',
+    year: '1700 CE',
+    yearNumeric: 1700,
+    title: 'Potato Transforms Europe',
+    description: 'The Underground Revolution. The Andean tuber conquers Europe—feeding armies, preventing famines, and fueling population growth.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-potato.jpg',
+    phase: 'Phase 8',
+    category: 'Life'
+  },
+  {
+    id: 'food-famine',
+    year: '1845 CE',
+    yearNumeric: 1845,
+    title: 'Irish Potato Famine',
+    description: 'When Monoculture Fails. A fungus destroys Ireland\'s potato crop—one million die, two million emigrate. Diversity becomes survival.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-famine.jpg',
+    phase: 'Phase 9',
+    category: 'Life'
+  },
+  {
+    id: 'food-canning',
+    year: '1810 CE',
+    yearNumeric: 1810,
+    title: 'Canning Invented',
+    description: 'Napoleon\'s Prize. Nicolas Appert wins a contest to preserve food for armies. Tin cans conquer distance—and eventually kitchens.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-canning.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'food-pasteur',
+    year: '1864 CE',
+    yearNumeric: 1864,
+    title: 'Pasteurization',
+    description: 'Killing the Invisible. Louis Pasteur proves that heating milk kills dangerous microbes. Food becomes safer; shelf life extends.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-pasteur.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'food-refrigeration',
+    year: '1876 CE',
+    yearNumeric: 1876,
+    title: 'Refrigerated Shipping',
+    description: 'Cold Chains. The first refrigerated ship carries mutton from Argentina to France. Fresh food now crosses oceans.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-refrigeration.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'food-haber',
+    year: '1913 CE',
+    yearNumeric: 1913,
+    title: 'Haber-Bosch Process',
+    description: 'Bread from Air. Fritz Haber synthesizes ammonia from nitrogen—creating artificial fertilizer. Half of humanity now eats food grown with it.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-haber.jpg',
+    phase: 'Phase 10',
+    category: 'Science'
+  },
+  {
+    id: 'food-mcdonalds',
+    year: '1955 CE',
+    yearNumeric: 1955,
+    title: 'Fast Food Revolution',
+    description: 'The Speedee System. Ray Kroc franchises McDonald\'s—applying assembly-line efficiency to food. The American diet goes global.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-mcdonalds.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'food-green-rev',
+    year: '1960 CE',
+    yearNumeric: 1960,
+    title: 'Green Revolution',
+    description: 'Miracle Seeds. Norman Borlaug\'s dwarf wheat triples yields in India and Mexico. Famines retreat—but at environmental cost.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-green-rev.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'food-organic',
+    year: '1990 CE',
+    yearNumeric: 1990,
+    title: 'Organic Movement',
+    description: 'Back to Nature. As industrial farming peaks, consumers seek pesticide-free food. Organic becomes a $100 billion industry.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-organic.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'food-gmo',
+    year: '1994 CE',
+    yearNumeric: 1994,
+    title: 'First GMO Crop',
+    description: 'The Flavr Savr Tomato. Scientists insert genes to slow ripening—marking the first genetically modified food sold to consumers.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-gmo.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'food-vertical',
+    year: '2012 CE',
+    yearNumeric: 2012,
+    title: 'Vertical Farming',
+    description: 'Stacking Crops. Indoor farms grow lettuce in LED-lit towers—using 95% less water, zero pesticides, and fitting in cities.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-vertical.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'food-lab-meat',
+    year: '2013 CE',
+    yearNumeric: 2013,
+    title: 'Lab-Grown Meat',
+    description: 'The $330,000 Burger. Mark Post serves the first hamburger grown from cultured cells. Meat without slaughter becomes possible.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-lab-meat.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'food-ai',
+    year: '2023 CE',
+    yearNumeric: 2023,
+    title: 'AI in Agriculture',
+    description: 'The Smart Farm. Drones spot disease, robots harvest crops, and AI predicts yields. Precision farming feeds more with less.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-ai.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
   }
 ];
