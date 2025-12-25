@@ -6557,5 +6557,297 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/film-ai.jpg',
     phase: 'Phase 12',
     category: 'Technology'
+  },
+
+  // --- LEVEL UP: A History of Video Games ---
+  {
+    id: 'game-tennis-two',
+    year: '1958 CE',
+    yearNumeric: 1958,
+    title: 'Tennis for Two',
+    description: 'The First Video Game. Physicist William Higinbotham creates a tennis simulation on an oscilloscope—to entertain visitors at Brookhaven National Lab.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-tennis-two.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-spacewar',
+    year: '1962 CE',
+    yearNumeric: 1962,
+    title: 'Spacewar!',
+    description: 'Hackers Play. MIT students create the first influential video game—two spaceships duel around a gravity well. Gaming culture begins in the lab.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-spacewar.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-pong',
+    year: '1972 CE',
+    yearNumeric: 1972,
+    title: 'Pong',
+    description: 'Quarters In. Atari installs Pong in a bar—it breaks the next day when the coin box overflows. The arcade industry is born.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-pong.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-space-invaders',
+    year: '1978 CE',
+    yearNumeric: 1978,
+    title: 'Space Invaders',
+    description: 'Alien Invasion. Taito\'s descending aliens cause a coin shortage in Japan. The game proves that pixels can tell stories and create tension.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-space-invaders.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-atari-2600',
+    year: '1977 CE',
+    yearNumeric: 1977,
+    title: 'Atari 2600',
+    description: 'Console at Home. Swappable cartridges bring arcade games to the living room. Video games become a home entertainment medium.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-atari-2600.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-pacman',
+    year: '1980 CE',
+    yearNumeric: 1980,
+    title: 'Pac-Man',
+    description: 'The First Character. A pizza with a slice missing becomes gaming\'s first mascot. Pac-Man attracts everyone—arcades aren\'t just for boys anymore.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-pacman.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-donkey-kong',
+    year: '1981 CE',
+    yearNumeric: 1981,
+    title: 'Donkey Kong',
+    description: 'Jump Man. Shigeru Miyamoto creates Mario, a plumber who climbs scaffolding to save a princess. Nintendo\'s golden era begins.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-donkey-kong.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-crash',
+    year: '1983 CE',
+    yearNumeric: 1983,
+    title: 'Video Game Crash',
+    description: 'E.T. in the Landfill. Atari buries millions of unsold cartridges. The American game industry collapses—but Japan is just getting started.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-crash.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-nes',
+    year: '1985 CE',
+    yearNumeric: 1985,
+    title: 'Nintendo NES',
+    description: 'Now You\'re Playing with Power. Nintendo\'s "Entertainment System" revives American gaming—sold as a toy with a robot to sneak past retailers.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-nes.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-zelda',
+    year: '1986 CE',
+    yearNumeric: 1986,
+    title: 'Legend of Zelda',
+    description: 'Save Your Progress. Zelda introduces battery backup, open worlds, and the sense of adventure. Games can now be journeys, not just challenges.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-zelda.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-gameboy',
+    year: '1989 CE',
+    yearNumeric: 1989,
+    title: 'Game Boy',
+    description: 'Gaming Goes Portable. Nintendo\'s chunky gray brick outsells flashier rivals—because Tetris is that addictive. Gaming escapes the living room.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-gameboy.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-sonic',
+    year: '1991 CE',
+    yearNumeric: 1991,
+    title: 'Sonic the Hedgehog',
+    description: 'Blast Processing. Sega\'s blue mascot is fast, cool, and everything Mario isn\'t. The first true console war begins. "Genesis does what Nintendon\'t."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-sonic.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'game-doom',
+    year: '1993 CE',
+    yearNumeric: 1993,
+    title: 'DOOM',
+    description: 'Hell on Earth. id Software creates the first-person shooter—and pioneers shareware, modding, and online deathmatches. The FPS genre is born.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-doom.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-playstation',
+    year: '1994 CE',
+    yearNumeric: 1994,
+    title: 'PlayStation',
+    description: 'Sony Enters. CDs replace cartridges, 3D graphics become standard, and gaming goes mainstream. PlayStation becomes a lifestyle brand.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-playstation.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-n64',
+    year: '1996 CE',
+    yearNumeric: 1996,
+    title: 'Nintendo 64',
+    description: 'Super Mario 64. True 3D gameplay arrives—Mario runs in all directions, and level design becomes architecture. Gaming\'s language changes forever.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-n64.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-pokemon',
+    year: '1996 CE',
+    yearNumeric: 1996,
+    title: 'Pokémon',
+    description: 'Gotta Catch \'Em All. Pocket monsters become a global obsession—cards, shows, and trades. Nintendo\'s handheld strategy pays off for decades.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-pokemon.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-gta3',
+    year: '2001 CE',
+    yearNumeric: 2001,
+    title: 'Grand Theft Auto III',
+    description: 'Liberty City. An open world where you can do anything—including crimes. GTA III invents the sandbox genre and sparks moral panics.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-gta3.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-xbox-live',
+    year: '2002 CE',
+    yearNumeric: 2002,
+    title: 'Xbox Live',
+    description: 'Always Connected. Microsoft brings online gaming to consoles—voice chat, matchmaking, and gamertags. Couch co-op becomes global multiplayer.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-xbox-live.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-wow',
+    year: '2004 CE',
+    yearNumeric: 2004,
+    title: 'World of Warcraft',
+    description: 'A Second Life. 12 million people pay monthly to live in Azeroth. MMOs prove games can be communities, economies, and identities.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-wow.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-wii',
+    year: '2006 CE',
+    yearNumeric: 2006,
+    title: 'Nintendo Wii',
+    description: 'Grandma Plays. Motion controls make gaming accessible to everyone—families bowl together, and "non-gamers" become gamers.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-wii.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-iphone-games',
+    year: '2008 CE',
+    yearNumeric: 2008,
+    title: 'iPhone Gaming',
+    description: 'One More Level. The App Store creates a new platform—Angry Birds, Candy Crush, and microtransactions. Everyone has a game console in their pocket.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-iphone-games.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-minecraft',
+    year: '2011 CE',
+    yearNumeric: 2011,
+    title: 'Minecraft',
+    description: 'Block by Block. A Swedish indie game about building becomes the best-selling game in history. Creativity beats graphics; community beats marketing.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-minecraft.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-twitch',
+    year: '2011 CE',
+    yearNumeric: 2011,
+    title: 'Twitch Streaming',
+    description: 'Watching Is Playing. Millions watch others play games—creating careers, communities, and a new form of entertainment. Gaming becomes spectator sport.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-twitch.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-esports',
+    year: '2013 CE',
+    yearNumeric: 2013,
+    title: 'Esports Rise',
+    description: 'The Stadium Fills. League of Legends sells out the Staples Center. Prize pools reach millions. Pro gaming becomes a legitimate career.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-esports.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-vr',
+    year: '2016 CE',
+    yearNumeric: 2016,
+    title: 'VR Gaming',
+    description: 'Inside the Game. Oculus, Vive, and PSVR make virtual reality consumer-ready. Presence replaces screens—you don\'t play the game, you\'re in it.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-vr.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-fortnite',
+    year: '2017 CE',
+    yearNumeric: 2017,
+    title: 'Fortnite',
+    description: 'Drop In. 350 million players, Marshmello concerts, and crossovers with everything. Fortnite isn\'t just a game—it\'s a platform, a hangout, a culture.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-fortnite.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-switch',
+    year: '2017 CE',
+    yearNumeric: 2017,
+    title: 'Nintendo Switch',
+    description: 'Home and Away. Nintendo fuses console and portable—Breath of the Wild proves innovation beats specs. Hardware can still surprise.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-switch.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-gpus',
+    year: '2020 CE',
+    yearNumeric: 2020,
+    title: 'GPU Shortage',
+    description: 'Can\'t Buy a Graphics Card. Crypto miners and pandemic demand drain supply. Next-gen consoles sell out instantly. Gaming becomes a waiting list.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-gpus.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'game-ai-gaming',
+    year: '2023 CE',
+    yearNumeric: 2023,
+    title: 'AI in Gaming',
+    description: 'NPCs That Think. AI generates dialogue, adapts difficulty, and creates infinite content. The line between scripted and emergent gameplay blurs.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/game-ai-gaming.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
   }
 ];

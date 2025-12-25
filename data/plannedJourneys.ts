@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 21 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music, Philosophy, Cinema)
-// Need to Build: 4 (below)
+// Currently Live: 22 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music, Philosophy, Cinema, Gaming)
+// Need to Build: 3 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -27,14 +27,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 3: Heavy new content (Est. 25+ new events each)
-    // COMPLETED: The Rhythm of Life, The Examined Life, The Silver Screen
+    // COMPLETED: The Rhythm of Life, The Examined Life, The Silver Screen, Level Up
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'Level Up',
-        description: 'How video games grew from Pong to the Metaverse.',
-        category: 'Culture',
-        icon: Gamepad
-    },
     {
         title: 'The Food on Your Plate',
         description: 'Neolithic farming to lab-grown meat: The history of what we eat.',

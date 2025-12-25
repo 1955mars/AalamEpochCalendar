@@ -937,7 +937,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'film-26', fromEventId: 'film-lotr', toEventId: 'film-avatar', type: 'preceded' },
     { id: 'film-27', fromEventId: 'film-avatar', toEventId: 'film-netflix', type: 'preceded' },
     { id: 'film-28', fromEventId: 'film-netflix', toEventId: 'film-mcu', type: 'preceded' },
-    { id: 'film-29', fromEventId: 'film-mcu', toEventId: 'film-ai', type: 'preceded' }
+    { id: 'film-29', fromEventId: 'film-mcu', toEventId: 'film-ai', type: 'preceded' },
+
+    // --- Level Up: A History of Video Games ---
+    { id: 'game-1', fromEventId: 'game-tennis-two', toEventId: 'game-spacewar', type: 'caused' },
+    { id: 'game-2', fromEventId: 'game-spacewar', toEventId: 'game-pong', type: 'caused' },
+    { id: 'game-3', fromEventId: 'game-pong', toEventId: 'game-atari-2600', type: 'caused' },
+    { id: 'game-4', fromEventId: 'game-atari-2600', toEventId: 'game-space-invaders', type: 'preceded' },
+    { id: 'game-5', fromEventId: 'game-space-invaders', toEventId: 'game-pacman', type: 'preceded' },
+    { id: 'game-6', fromEventId: 'game-pacman', toEventId: 'game-donkey-kong', type: 'preceded' },
+    { id: 'game-7', fromEventId: 'game-donkey-kong', toEventId: 'game-crash', type: 'preceded' },
+    { id: 'game-8', fromEventId: 'game-crash', toEventId: 'game-nes', type: 'caused' },
+    { id: 'game-9', fromEventId: 'game-nes', toEventId: 'game-zelda', type: 'caused' },
+    { id: 'game-10', fromEventId: 'game-zelda', toEventId: 'game-gameboy', type: 'preceded' },
+    { id: 'game-11', fromEventId: 'game-gameboy', toEventId: 'game-sonic', type: 'preceded' },
+    { id: 'game-12', fromEventId: 'game-sonic', toEventId: 'game-doom', type: 'preceded' },
+    { id: 'game-13', fromEventId: 'game-doom', toEventId: 'game-playstation', type: 'preceded' },
+    { id: 'game-14', fromEventId: 'game-playstation', toEventId: 'game-n64', type: 'preceded' },
+    { id: 'game-15', fromEventId: 'game-n64', toEventId: 'game-pokemon', type: 'related' },
+    { id: 'game-16', fromEventId: 'game-pokemon', toEventId: 'game-gta3', type: 'preceded' },
+    { id: 'game-17', fromEventId: 'game-gta3', toEventId: 'game-xbox-live', type: 'preceded' },
+    { id: 'game-18', fromEventId: 'game-xbox-live', toEventId: 'game-wow', type: 'preceded' },
+    { id: 'game-19', fromEventId: 'game-wow', toEventId: 'game-wii', type: 'preceded' },
+    { id: 'game-20', fromEventId: 'game-wii', toEventId: 'game-iphone-games', type: 'preceded' },
+    { id: 'game-21', fromEventId: 'game-iphone-games', toEventId: 'game-minecraft', type: 'preceded' },
+    { id: 'game-22', fromEventId: 'game-minecraft', toEventId: 'game-twitch', type: 'related' },
+    { id: 'game-23', fromEventId: 'game-twitch', toEventId: 'game-esports', type: 'caused' },
+    { id: 'game-24', fromEventId: 'game-esports', toEventId: 'ai-alphago', type: 'preceded' },
+    { id: 'game-25', fromEventId: 'ai-alphago', toEventId: 'game-vr', type: 'related' },
+    { id: 'game-26', fromEventId: 'game-vr', toEventId: 'game-fortnite', type: 'preceded' },
+    { id: 'game-27', fromEventId: 'game-fortnite', toEventId: 'game-switch', type: 'related' },
+    { id: 'game-28', fromEventId: 'game-switch', toEventId: 'game-gpus', type: 'preceded' },
+    { id: 'game-29', fromEventId: 'game-gpus', toEventId: 'game-ai-gaming', type: 'preceded' }
 ];
 
 
@@ -1954,6 +1985,54 @@ export const JOURNEYS: Journey[] = [
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('film-')),
         overrides: {}
+    },
+    {
+        id: 'level-up',
+        title: 'Level Up',
+        description: 'How video games grew from Pong to the Metaverse.',
+        thumbnailUrl: 'images/level-up-thumb.jpg',
+        eventIds: [
+            // Dawn of Gaming
+            'game-tennis-two',     // 1958 - First video game
+            'game-spacewar',       // 1962 - MIT hackers
+            'game-pong',           // 1972 - Arcade birth
+            'game-atari-2600',     // 1977 - Home console
+            // Arcade Golden Age
+            'game-space-invaders', // 1978 - Coin shortage
+            'game-pacman',         // 1980 - First mascot
+            'game-donkey-kong',    // 1981 - Mario appears
+            'game-crash',          // 1983 - Industry collapse
+            // Console Wars
+            'game-nes',            // 1985 - Nintendo revives
+            'game-zelda',          // 1986 - Save games
+            'game-gameboy',        // 1989 - Portable gaming
+            'game-sonic',          // 1991 - Console war
+            'game-doom',           // 1993 - FPS begins
+            'game-playstation',    // 1994 - Sony enters
+            // 3D Revolution
+            'game-n64',            // 1996 - 3D gameplay
+            'game-pokemon',        // 1996 - Cultural phenomenon
+            'game-gta3',           // 2001 - Sandbox genre
+            'game-xbox-live',      // 2002 - Online gaming
+            'game-wow',            // 2004 - MMO peak
+            // Casual & Social
+            'game-wii',            // 2006 - Motion controls
+            'game-iphone-games',   // 2008 - Mobile gaming
+            'game-minecraft',      // 2011 - Indie triumph
+            'game-twitch',         // 2011 - Streaming
+            'game-esports',        // 2013 - Pro gaming
+            // Metaverse Era
+            'ai-alphago',          // 2016 - AI beats humans
+            'game-vr',             // 2016 - Virtual reality
+            'game-fortnite',       // 2017 - Platform culture
+            'game-switch',         // 2017 - Hybrid console
+            'game-gpus',           // 2020 - Shortage
+            'game-ai-gaming'       // 2023 - AI NPCs
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('game-')),
+        overrides: {
+            'ai-alphago': { title: 'AlphaGo Beats Humanity', description: 'Move 37. Google\'s AI defeats Lee Sedol at Go—a game of intuition. Machines can now master games no algorithm could solve.' }
+        }
     }
 ];
 
