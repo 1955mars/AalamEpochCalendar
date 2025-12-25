@@ -5796,10 +5796,10 @@ export const ALL_EVENTS: TimelineEvent[] = [
   },
   {
     id: 'music-polyphony',
-    year: '1300 CE',
-    yearNumeric: 1300,
+    year: '1200 CE',
+    yearNumeric: 1200,
     title: 'Polyphony Emerges',
-    description: 'Voices Intertwined. Multiple independent melodies woven together—the Notre-Dame school creates complexity that still awes.',
+    description: 'Voices Intertwined. Multiple independent melodies woven together—the Notre-Dame school of Léonin and Pérotin creates complexity that still awes.',
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-polyphony.jpg',
     phase: 'Phase 7',
     category: 'Art'
