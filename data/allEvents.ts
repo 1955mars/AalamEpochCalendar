@@ -5489,5 +5489,227 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-1.5c.jpg',
     phase: 'Phase 12',
     category: 'Science'
+  },
+
+  // --- THE SHADOW WORLD: Spies, Codes, and Secrets ---
+  {
+    id: 'shadow-sunzi',
+    year: '500 BCE',
+    yearNumeric: -500,
+    title: 'Sun Tzu\'s Art of War',
+    description: 'The Spy\'s Bible. "All warfare is based on deception." The first treatise on espionage establishes spies as essential to military victory.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-sunzi.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'shadow-scytale',
+    year: '400 BCE',
+    yearNumeric: -400,
+    title: 'The Spartan Scytale',
+    description: 'First Encryption Device. Spartans wrap leather strips around a rod to scramble messages—history\'s first documented cryptographic tool.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-scytale.jpg',
+    phase: 'Phase 6',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-caesar',
+    year: '50 BCE',
+    yearNumeric: -50,
+    title: 'Caesar Cipher',
+    description: 'The Emperor\'s Code. Julius Caesar shifts each letter by three positions—a simple substitution cipher that will inspire cryptography for millennia.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-caesar.jpg',
+    phase: 'Phase 6',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-ninja',
+    year: '1400 CE',
+    yearNumeric: 1400,
+    title: 'Rise of the Shinobi',
+    description: 'The Shadow Warriors. Japanese ninja clans perfect the art of espionage, assassination, and unconventional warfare—spies elevated to legend.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-ninja.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'shadow-walsingham',
+    year: '1570 CE',
+    yearNumeric: 1570,
+    title: 'Walsingham\'s Spy Network',
+    description: 'The Spymaster. Sir Francis Walsingham creates England\'s first professional intelligence service, foiling Catholic plots against Elizabeth I.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-walsingham.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'shadow-blackchamber',
+    year: '1700 CE',
+    yearNumeric: 1700,
+    title: 'The Black Chambers',
+    description: 'Diplomatic Espionage. European powers establish "black chambers" to intercept and decode enemy mail—state-sponsored cryptanalysis becomes routine.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-blackchamber.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'shadow-roomforty',
+    year: '1914 CE',
+    yearNumeric: 1914,
+    title: 'Room 40',
+    description: 'Britain\'s Secret Weapon. The Royal Navy\'s codebreakers intercept German communications, turning cryptanalysis into a decisive war asset.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-roomforty.jpg',
+    phase: 'Phase 10',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-zimmermann',
+    year: '1917 CE',
+    yearNumeric: 1917,
+    title: 'Zimmermann Telegram',
+    description: 'The Code That Changed History. Britain decrypts Germany\'s secret offer of Texas to Mexico—drawing America into WWI.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-zimmermann.jpg',
+    phase: 'Phase 10',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-enigma',
+    year: '1918 CE',
+    yearNumeric: 1918,
+    title: 'Enigma Machine Invented',
+    description: 'The Unbreakable Code. German engineer Arthur Scherbius patents a rotor cipher machine. The Wehrmacht will bet their war on it.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-enigma.jpg',
+    phase: 'Phase 10',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-bletchley',
+    year: '1939 CE',
+    yearNumeric: 1939,
+    title: 'Bletchley Park Opens',
+    description: 'The Secret War. Britain\'s codebreakers—mathematicians, linguists, crossword champions—gather at a Victorian mansion to break Enigma.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-bletchley.jpg',
+    phase: 'Phase 10',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-ultra',
+    year: '1941 CE',
+    yearNumeric: 1941,
+    title: 'Operation Ultra',
+    description: 'The Secret That Won the War. Allied codebreakers crack Enigma, reading German communications throughout WWII—a secret kept for 30 years.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-ultra.jpg',
+    phase: 'Phase 10',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-cia',
+    year: '1947 CE',
+    yearNumeric: 1947,
+    title: 'CIA Founded',
+    description: 'The Company. America creates a permanent peacetime intelligence agency, transforming wartime espionage into Cold War statecraft.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-cia.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'shadow-nsa',
+    year: '1952 CE',
+    yearNumeric: 1952,
+    title: 'NSA Established',
+    description: 'The Puzzle Palace. America creates the world\'s largest signals intelligence agency—so secret its existence isn\'t acknowledged for years.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-nsa.jpg',
+    phase: 'Phase 11',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-u2',
+    year: '1960 CE',
+    yearNumeric: 1960,
+    title: 'U-2 Incident',
+    description: 'Shot Down. Gary Powers\'s spy plane is downed over the USSR. Eisenhower\'s cover story collapses. The Cold War turns colder.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-u2.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'shadow-philby',
+    year: '1963 CE',
+    yearNumeric: 1963,
+    title: 'Kim Philby Defects',
+    description: 'The Third Man. Britain\'s most trusted spy flees to Moscow, revealed as a Soviet mole for 30 years—the greatest betrayal in intelligence history.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-philby.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'shadow-pkc',
+    year: '1976 CE',
+    yearNumeric: 1976,
+    title: 'Public-Key Cryptography',
+    description: 'The Key Exchange Revolution. Diffie and Hellman solve the key distribution problem—strangers can now communicate securely without ever meeting.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-pkc.jpg',
+    phase: 'Phase 11',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-pgp',
+    year: '1991 CE',
+    yearNumeric: 1991,
+    title: 'PGP Released',
+    description: 'Pretty Good Privacy. Phil Zimmermann gives military-grade encryption to everyone—the US government calls it "munitions" and investigates him.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-pgp.jpg',
+    phase: 'Phase 11',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-echelon',
+    year: '1999 CE',
+    yearNumeric: 1999,
+    title: 'ECHELON Exposed',
+    description: 'The Global Ear. The EU reveals the Five Eyes\' worldwide signals intelligence network—monitoring phones, faxes, and emails across the globe.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-echelon.jpg',
+    phase: 'Phase 12',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-tor',
+    year: '2002 CE',
+    yearNumeric: 2002,
+    title: 'Tor Network Launched',
+    description: 'The Onion Router. Originally a US Navy project, Tor enables anonymous communication—used by dissidents, journalists, and criminals alike.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-tor.jpg',
+    phase: 'Phase 12',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-wikileaks',
+    year: '2006 CE',
+    yearNumeric: 2006,
+    title: 'WikiLeaks Founded',
+    description: 'Radical Transparency. Julian Assange creates a platform for anonymous leaks—governments can no longer assume their secrets are safe.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-wikileaks.jpg',
+    phase: 'Phase 12',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-prism',
+    year: '2013 CE',
+    yearNumeric: 2013,
+    title: 'PRISM Revealed',
+    description: 'Mass Surveillance Exposed. Snowden reveals the NSA collects data directly from tech giants—the government reads your email.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-prism.jpg',
+    phase: 'Phase 12',
+    category: 'Communications'
+  },
+  {
+    id: 'shadow-apple-fbi',
+    year: '2016 CE',
+    yearNumeric: 2016,
+    title: 'Apple vs FBI',
+    description: 'The Encryption War. Apple refuses to unlock a terrorist\'s iPhone. The battle lines are drawn: security versus privacy.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/shadow-apple-fbi.jpg',
+    phase: 'Phase 12',
+    category: 'Communications'
   }
 ];

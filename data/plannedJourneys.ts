@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 17 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate)
-// Need to Build: 8 (below)
+// Currently Live: 18 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow)
+// Need to Build: 7 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -22,14 +22,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 2: Moderate new content (Est. 15-20 new events each)
-    // COMPLETED: Power Trip, Rights & Revolutions, The Climate Chronicle
+    // COMPLETED: Power Trip, Rights & Revolutions, The Climate Chronicle, The Shadow World
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'The Shadow World',
-        description: 'Spies, codes, and secrets: From the Enigma machine to Snowden.',
-        category: 'Power',
-        icon: Feather
-    },
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 3: Heavy new content (Est. 25+ new events each)

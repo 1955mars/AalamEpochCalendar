@@ -807,7 +807,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'climate-31', fromEventId: 'climate-ipcc', toEventId: 'p12-6', type: 'preceded' },
     { id: 'climate-32', fromEventId: 'p12-6', toEventId: 'p12-21', type: 'preceded' },
     { id: 'climate-33', fromEventId: 'p12-21', toEventId: 'climate-cop21', type: 'related' },
-    { id: 'climate-34', fromEventId: 'climate-cop21', toEventId: 'climate-1.5c', type: 'preceded' }
+    { id: 'climate-34', fromEventId: 'climate-cop21', toEventId: 'climate-1.5c', type: 'preceded' },
+
+    // --- The Shadow World: Spies, Codes, and Secrets ---
+    { id: 'shadow-1', fromEventId: 'shadow-sunzi', toEventId: 'shadow-scytale', type: 'preceded' },
+    { id: 'shadow-2', fromEventId: 'shadow-scytale', toEventId: 'shadow-caesar', type: 'preceded' },
+    { id: 'shadow-3', fromEventId: 'shadow-caesar', toEventId: 'shadow-ninja', type: 'preceded' },
+    { id: 'shadow-4', fromEventId: 'shadow-ninja', toEventId: 'shadow-walsingham', type: 'preceded' },
+    { id: 'shadow-5', fromEventId: 'shadow-walsingham', toEventId: 'shadow-blackchamber', type: 'preceded' },
+    { id: 'shadow-6', fromEventId: 'shadow-blackchamber', toEventId: 'p9-18', type: 'preceded' },
+    { id: 'shadow-7', fromEventId: 'p9-18', toEventId: 'pilot-2', type: 'preceded' },
+    { id: 'shadow-8', fromEventId: 'pilot-2', toEventId: 'shadow-roomforty', type: 'preceded' },
+    { id: 'shadow-9', fromEventId: 'shadow-roomforty', toEventId: 'shadow-zimmermann', type: 'caused' },
+    { id: 'shadow-10', fromEventId: 'shadow-zimmermann', toEventId: 'shadow-enigma', type: 'preceded' },
+    { id: 'shadow-11', fromEventId: 'shadow-enigma', toEventId: 'ai-turing-machine', type: 'preceded' },
+    { id: 'shadow-12', fromEventId: 'ai-turing-machine', toEventId: 'shadow-bletchley', type: 'caused' },
+    { id: 'shadow-13', fromEventId: 'shadow-bletchley', toEventId: 'shadow-ultra', type: 'caused' },
+    { id: 'shadow-14', fromEventId: 'shadow-ultra', toEventId: 'p10-31', type: 'related' },
+    { id: 'shadow-15', fromEventId: 'p10-31', toEventId: 'shadow-cia', type: 'caused' },
+    { id: 'shadow-16', fromEventId: 'shadow-cia', toEventId: 'shadow-nsa', type: 'preceded' },
+    { id: 'shadow-17', fromEventId: 'shadow-nsa', toEventId: 'shadow-u2', type: 'preceded' },
+    { id: 'shadow-18', fromEventId: 'shadow-u2', toEventId: 'p11-18', type: 'preceded' },
+    { id: 'shadow-19', fromEventId: 'p11-18', toEventId: 'shadow-philby', type: 'preceded' },
+    { id: 'shadow-20', fromEventId: 'shadow-philby', toEventId: 'shadow-pkc', type: 'preceded' },
+    { id: 'shadow-21', fromEventId: 'shadow-pkc', toEventId: 'p11-29', type: 'preceded' },
+    { id: 'shadow-22', fromEventId: 'p11-29', toEventId: 'shadow-pgp', type: 'preceded' },
+    { id: 'shadow-23', fromEventId: 'shadow-pgp', toEventId: 'p11-30', type: 'related' },
+    { id: 'shadow-24', fromEventId: 'p11-30', toEventId: 'shadow-echelon', type: 'preceded' },
+    { id: 'shadow-25', fromEventId: 'shadow-echelon', toEventId: 'shadow-tor', type: 'preceded' },
+    { id: 'shadow-26', fromEventId: 'shadow-tor', toEventId: 'shadow-wikileaks', type: 'preceded' },
+    { id: 'shadow-27', fromEventId: 'shadow-wikileaks', toEventId: 'shadow-prism', type: 'preceded' },
+    { id: 'shadow-28', fromEventId: 'shadow-prism', toEventId: 'p12-19', type: 'related' },
+    { id: 'shadow-29', fromEventId: 'p12-19', toEventId: 'shadow-apple-fbi', type: 'preceded' }
 ];
 
 
@@ -1611,6 +1642,60 @@ export const JOURNEYS: Journey[] = [
             'power-coal': { title: 'The Coal Age Dawns', description: 'Burning Ancient Sunshine. Humans begin mining coal on industrial scales, releasing carbon buried 300 million years ago. The Anthropocene begins.' },
             'p12-6': { title: 'Kyoto Protocol', description: 'First Global Climate Treaty. Industrial nations commit to cut emissions. The US never ratifies. Canada withdraws. But a precedent is set.' },
             'p12-21': { title: 'Paris Agreement', description: 'The World Commits. 196 nations agree to limit warming to 2°C, aiming for 1.5°C. Whether actions match words remains to be seen.' }
+        }
+    },
+    {
+        id: 'shadow-world',
+        title: 'The Shadow World',
+        description: 'Spies, codes, and secrets: From the Enigma machine to Snowden.',
+        thumbnailUrl: 'images/shadow-world-thumb.jpg',
+        eventIds: [
+            // Ancient Shadows
+            'shadow-sunzi',        // 500 BCE - Art of War
+            'shadow-scytale',      // 400 BCE - Spartan cipher
+            'shadow-caesar',       // 50 BCE - Caesar cipher
+            'shadow-ninja',        // 1400 CE - Shinobi
+            // The Black Chambers
+            'shadow-walsingham',   // 1570 - Elizabethan spymaster
+            'shadow-blackchamber', // 1700 - Diplomatic espionage
+            'p9-18',               // 1837 - Telegraph (tappable!)
+            'pilot-2',             // 1901 - Radio (interceptable!)
+            // World Wars
+            'shadow-roomforty',    // 1914 - British codebreakers
+            'shadow-zimmermann',   // 1917 - The telegram
+            'shadow-enigma',       // 1918 - The machine
+            'ai-turing-machine',   // 1936 - Turing's theory
+            'shadow-bletchley',    // 1939 - The secret war
+            'shadow-ultra',        // 1941 - Cracking Enigma
+            'p10-31',              // 1945 - Atomic secret
+            // Cold War
+            'shadow-cia',          // 1947 - The Company
+            'shadow-nsa',          // 1952 - Puzzle Palace
+            'shadow-u2',           // 1960 - Shot down
+            'p11-18',              // 1962 - Cuban Missile Crisis
+            'shadow-philby',       // 1963 - The mole
+            'shadow-pkc',          // 1976 - Public-key crypto
+            'p11-29',              // 1989 - Berlin Wall
+            'shadow-pgp',          // 1991 - Encryption for all
+            'p11-30',              // 1991 - USSR dissolves
+            // Digital Age & Surveillance
+            'shadow-echelon',      // 1999 - Global surveillance
+            'shadow-tor',          // 2002 - Anonymous network
+            'shadow-wikileaks',    // 2006 - Radical transparency
+            'shadow-prism',        // 2013 - NSA revealed
+            'p12-19',              // 2013 - Snowden leaks
+            'shadow-apple-fbi'     // 2016 - Encryption war
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('shadow-')),
+        overrides: {
+            'p9-18': { title: 'The Telegraph', description: 'Wires That Speak. The first tappable communication—and so began the race between encryption and interception.' },
+            'pilot-2': { title: 'Radio Signals', description: 'Voices in the Air. Wireless communication means anyone with a receiver can listen. Signal intelligence is born.' },
+            'ai-turing-machine': { title: 'Turing\'s Universal Machine', description: 'The Codebreaker\'s Dream. Alan Turing proves any computation can be mechanized—then applies it to break the "unbreakable" Enigma.' },
+            'p10-31': { title: 'The Manhattan Secret', description: 'The Best-Kept Secret. 130,000 people build the atomic bomb without knowing what they\'re building—the greatest security operation in history.' },
+            'p11-18': { title: 'Cuban Missile Crisis', description: 'Intelligence Triumph. U-2 photographs reveal Soviet missiles in Cuba. For 13 days, intelligence determines whether the world survives.' },
+            'p11-29': { title: 'Berlin Wall Falls', description: 'The Stasi\'s End. East Germany\'s secret police kept files on 6 million citizens. The Wall falls, and the surveillance state is exposed.' },
+            'p11-30': { title: 'Cold War Ends', description: 'The Spy War Ends. Soviet intelligence collapses. Moles are exposed. The greatest espionage battle in history concludes.' },
+            'p12-19': { title: 'Snowden Revelations', description: 'The Whistleblower. Edward Snowden reveals the NSA\'s mass surveillance programs. The world learns that everyone is watched.' }
         }
     }
 ];
