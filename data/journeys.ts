@@ -1177,40 +1177,6 @@ export const JOURNEYS: Journey[] = [
         overrides: {}
     },
     {
-        id: 'rise-of-civilizations',
-        title: 'The Human Story: Rise of Civilizations',
-        description: 'From the first mud bricks of Jericho to the digital age—witness 11,500 years of human society, empires, revolutions, and transformation.',
-        thumbnailUrl: 'images/p6-25.jpg',
-        eventIds: [
-            // Phase 4-7: Ancient Origins (9500 BCE - 570 CE)
-            'p4-3', 'p4-9', 'p4-14', 'p4-25', 'p4-29', 'p4-30',
-            'p5-1', 'p5-2', 'p5-8', 'p5-9', 'p5-11', 'p5-15',
-            'p5-16', 'p5-17', 'p5-21', 'p5-24', 'p5-31',
-            'p6-1', 'p6-4', 'p6-9', 'p6-11', 'p6-18', 'p6-20',
-            'p6-21', 'p6-22', 'p6-28', 'p6-29', 'p6-30',
-            'p7-4', 'p7-6', 'p7-10', 'p7-12',
-            // Phase 7 continued: Medieval Period (622-1347 CE)
-            'p7-14', 'p7-15', 'p7-17', 'p7-19', 'p7-24', 'p7-26', 'p7-27', 'p7-31',
-            // Phase 8: Age of Exploration & Renaissance (1450-1750)
-            'p8-4', 'p8-5', 'p8-8', 'p8-13', 'p8-14', 'p8-16',
-            'p8-20', 'p8-24', 'p8-25', 'p8-29', 'p8-30', 'p8-31',
-            // Phase 9: Age of Revolutions (1765-1914)
-            'p9-1', 'p9-2', 'p9-4', 'p9-18', 'p9-21', 'p9-23',
-            'p9-26', 'p9-27', 'p9-28', 'p9-29', 'p9-30',
-            // Phase 10: World Wars (1914-1945)
-            'p10-1', 'p10-5', 'p10-7', 'p10-12', 'p10-14',
-            'p10-20', 'p10-23', 'p10-27', 'p10-31',
-            // Phase 11: Cold War (1945-1991)
-            'p11-1', 'p11-4', 'p11-8', 'p11-14', 'p11-16',
-            'p11-17', 'p11-18', 'p11-24', 'p11-29', 'p11-30',
-            // Phase 12: Digital Age (1991-2025)
-            'p12-3', 'p12-4', 'p12-7', 'p12-9', 'p12-11',
-            'p12-13', 'p12-21', 'p12-26', 'p12-29', 'p12-31'
-        ],
-        connections: CONNECTIONS.filter(c => c.id.startsWith('roc-')),
-        overrides: {}
-    },
-    {
         id: 'ancestry-of-ai',
         title: 'The Ancestry of AI: From Logic to Lightning',
         description: 'Trace the genealogy of Artificial Intelligence not from 1950, but from the ancient roots of logic and weaving.',
