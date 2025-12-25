@@ -870,7 +870,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'music-27', fromEventId: 'music-mp3', toEventId: 'music-napster', type: 'caused' },
     { id: 'music-28', fromEventId: 'music-napster', toEventId: 'music-ipod', type: 'preceded' },
     { id: 'music-29', fromEventId: 'music-ipod', toEventId: 'music-spotify', type: 'preceded' },
-    { id: 'music-30', fromEventId: 'music-spotify', toEventId: 'music-ai', type: 'preceded' }
+    { id: 'music-30', fromEventId: 'music-spotify', toEventId: 'music-ai', type: 'preceded' },
+
+    // --- The Examined Life: Philosophy Through the Ages ---
+    { id: 'phil-1', fromEventId: 'phil-thales', toEventId: 'gm-zoroaster', type: 'related' },
+    { id: 'phil-2', fromEventId: 'gm-zoroaster', toEventId: 'p6-16', type: 'preceded' },
+    { id: 'phil-3', fromEventId: 'p6-16', toEventId: 'p6-17', type: 'related' },
+    { id: 'phil-4', fromEventId: 'p6-17', toEventId: 'gm-taoism', type: 'related' },
+    { id: 'phil-5', fromEventId: 'gm-taoism', toEventId: 'p6-27', type: 'preceded' },
+    { id: 'phil-6', fromEventId: 'p6-27', toEventId: 'phil-plato', type: 'caused' },
+    { id: 'phil-7', fromEventId: 'phil-plato', toEventId: 'ai-aristotle', type: 'caused' },
+    { id: 'phil-8', fromEventId: 'ai-aristotle', toEventId: 'rights-stoics', type: 'preceded' },
+    { id: 'phil-9', fromEventId: 'rights-stoics', toEventId: 'phil-epicurus', type: 'related' },
+    { id: 'phil-10', fromEventId: 'phil-epicurus', toEventId: 'phil-augustine', type: 'preceded' },
+    { id: 'phil-11', fromEventId: 'phil-augustine', toEventId: 'gm-golden-age', type: 'preceded' },
+    { id: 'phil-12', fromEventId: 'gm-golden-age', toEventId: 'phil-aquinas', type: 'preceded' },
+    { id: 'phil-13', fromEventId: 'phil-aquinas', toEventId: 'phil-descartes', type: 'preceded' },
+    { id: 'phil-14', fromEventId: 'phil-descartes', toEventId: 'phil-spinoza', type: 'preceded' },
+    { id: 'phil-15', fromEventId: 'phil-spinoza', toEventId: 'gm-scientific', type: 'related' },
+    { id: 'phil-16', fromEventId: 'gm-scientific', toEventId: 'phil-locke', type: 'preceded' },
+    { id: 'phil-17', fromEventId: 'phil-locke', toEventId: 'phil-hume', type: 'caused' },
+    { id: 'phil-18', fromEventId: 'phil-hume', toEventId: 'gm-enlightenment', type: 'preceded' },
+    { id: 'phil-19', fromEventId: 'gm-enlightenment', toEventId: 'phil-kant', type: 'caused' },
+    { id: 'phil-20', fromEventId: 'phil-kant', toEventId: 'phil-hegel', type: 'caused' },
+    { id: 'phil-21', fromEventId: 'phil-hegel', toEventId: 'phil-kierkegaard', type: 'caused' },
+    { id: 'phil-22', fromEventId: 'phil-kierkegaard', toEventId: 'phil-marx', type: 'related' },
+    { id: 'phil-23', fromEventId: 'phil-marx', toEventId: 'gm-darwin', type: 'related' },
+    { id: 'phil-24', fromEventId: 'gm-darwin', toEventId: 'phil-nietzsche', type: 'preceded' },
+    { id: 'phil-25', fromEventId: 'phil-nietzsche', toEventId: 'gm-secularism', type: 'preceded' },
+    { id: 'phil-26', fromEventId: 'gm-secularism', toEventId: 'phil-wittgenstein', type: 'preceded' },
+    { id: 'phil-27', fromEventId: 'phil-wittgenstein', toEventId: 'phil-heidegger', type: 'preceded' },
+    { id: 'phil-28', fromEventId: 'phil-heidegger', toEventId: 'phil-sartre', type: 'caused' },
+    { id: 'phil-29', fromEventId: 'phil-sartre', toEventId: 'phil-beauvoir', type: 'caused' }
 ];
 
 
@@ -1776,6 +1807,65 @@ export const JOURNEYS: Journey[] = [
         ],
         connections: CONNECTIONS.filter(c => c.id.startsWith('music-')),
         overrides: {}
+    },
+    {
+        id: 'examined-life',
+        title: 'The Examined Life',
+        description: 'From Socrates to Existentialism: The quest to understand existence.',
+        thumbnailUrl: 'images/examined-life-thumb.jpg',
+        eventIds: [
+            // Ancient Wisdom (Axial Age)
+            'phil-thales',         // 600 BCE - First philosopher
+            'gm-zoroaster',        // 600 BCE - Persian dualism
+            'p6-16',               // 563 BCE - Buddha
+            'p6-17',               // 551 BCE - Confucius
+            'gm-taoism',           // 500 BCE - Lao Tzu
+            'p6-27',               // 399 BCE - Death of Socrates
+            'phil-plato',          // 387 BCE - The Academy
+            'ai-aristotle',        // 350 BCE - Logic
+            // Hellenistic & Roman
+            'rights-stoics',       // 300 BCE - Natural Law
+            'phil-epicurus',       // 300 BCE - The Garden
+            // Medieval
+            'phil-augustine',      // 400 CE - Confessions
+            'gm-golden-age',       // 800 CE - Islamic philosophy
+            'phil-aquinas',        // 1274 - Scholasticism
+            // Early Modern
+            'phil-descartes',      // 1637 - Cogito
+            'phil-spinoza',        // 1677 - Ethics
+            'gm-scientific',       // 1687 - Newton
+            'phil-locke',          // 1690 - Empiricism
+            'phil-hume',           // 1748 - Skepticism
+            'gm-enlightenment',    // 1762 - Rousseau
+            'phil-kant',           // 1781 - Critique
+            // 19th Century
+            'phil-hegel',          // 1807 - Dialectic
+            'phil-kierkegaard',    // 1843 - Existentialism
+            'phil-marx',           // 1848 - Manifesto
+            'gm-darwin',           // 1859 - Evolution
+            'phil-nietzsche',      // 1882 - God is Dead
+            // 20th Century
+            'gm-secularism',       // 1905 - Secular age
+            'phil-wittgenstein',   // 1921 - Tractatus
+            'phil-heidegger',      // 1927 - Being
+            'phil-sartre',         // 1943 - Existentialism
+            'phil-beauvoir'        // 1949 - Second Sex
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('phil-')),
+        overrides: {
+            'p6-16': { title: 'The Buddha', description: 'The Awakened One. Siddhartha Gautama renounces his kingdom, sits beneath a tree, and discovers that suffering ends when desire ends.' },
+            'p6-17': { title: 'Confucius', description: 'The Master. Kong Fuzi teaches that society is perfected through ritual, respect, and cultivated virtue—shaping East Asian civilization.' },
+            'p6-27': { title: 'Death of Socrates', description: 'The Gadfly. Socrates drinks hemlock rather than stop questioning. "The unexamined life is not worth living."' },
+            'ai-aristotle': { title: 'Aristotle\'s Logic', description: 'The First Code. Aristotle invents formal logic—syllogisms that reduce reasoning to rules. The seed of all computer science.' },
+            'gm-zoroaster': { title: 'Zoroaster\'s Dualism', description: 'Good vs Evil. The Persian prophet teaches that the universe is a cosmic battle—influencing Judaism, Christianity, and Islam.' },
+            'gm-taoism': { title: 'Lao Tzu\'s Tao', description: 'The Way That Cannot Be Named. Lao Tzu teaches that wisdom is yielding, that the Tao flows like water around obstacles.' },
+            'gm-golden-age': { title: 'Islamic Golden Age', description: 'The House of Wisdom. Baghdad becomes the intellectual center of the world, preserving Greek philosophy and advancing it.' },
+            'gm-scientific': { title: 'Newton\'s Synthesis', description: 'The Clockwork Universe. Newton proves that the same laws govern heaven and earth—nature becomes mathematics.' },
+            'gm-enlightenment': { title: 'Rousseau\'s Social Contract', description: 'Man Is Born Free. Rousseau argues that civilization corrupts—but a social contract can create legitimate authority.' },
+            'gm-darwin': { title: 'Darwin\'s Bombshell', description: 'No Designer Required. Evolution proves species change through natural selection—shaking every philosophy built on divine purpose.' },
+            'gm-secularism': { title: 'The Secular Age', description: 'God\'s Retreat. France separates church and state. Philosophy must now find meaning without transcendence.' },
+            'rights-stoics': { title: 'Stoic Philosophy', description: 'The Inner Citadel. The Stoics teach that we control only our reactions—making philosophy a practice for living.' }
+        }
     }
 ];
 

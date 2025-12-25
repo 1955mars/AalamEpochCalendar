@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 19 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music)
-// Need to Build: 6 (below)
+// Currently Live: 20 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music, Philosophy)
+// Need to Build: 5 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -27,14 +27,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 3: Heavy new content (Est. 25+ new events each)
-    // COMPLETED: The Rhythm of Life
+    // COMPLETED: The Rhythm of Life, The Examined Life
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'The Examined Life',
-        description: 'From Socrates to Existentialism: The quest to understand existence.',
-        category: 'Culture',
-        icon: BookOpen
-    },
     {
         title: 'The Silver Screen',
         description: 'From silent shadows to streaming: The evolution of cinema.',

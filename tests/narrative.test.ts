@@ -22,8 +22,14 @@ describe('Narrative Quality Checks', () => {
     describe('Cinematic Quality', () => {
         it('should have rich descriptions for the first 3 events of every journey', () => {
             JOURNEYS.forEach(journey => {
-                // Get the first 3 events
-                const openingEvents = journey.eventIds.slice(0, 3).map(id => ALL_EVENTS.find(e => e?.id === id)).filter(Boolean);
+                // Get the first 3 events with overrides applied
+                const openingEvents = journey.eventIds.slice(0, 3).map(id => {
+                    const rawEvent = ALL_EVENTS.find(e => e?.id === id);
+                    if (!rawEvent) return null;
+                    // Apply override if exists
+                    const override = journey.overrides?.[id];
+                    return override ? { ...rawEvent, ...override } : rawEvent;
+                }).filter(Boolean);
 
                 openingEvents.forEach(event => {
                     if (!event) return;

@@ -6023,5 +6023,187 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/music-ai.jpg',
     phase: 'Phase 12',
     category: 'Technology'
+  },
+
+  // --- THE EXAMINED LIFE: Philosophy Through the Ages ---
+  {
+    id: 'phil-thales',
+    year: '600 BCE',
+    yearNumeric: -600,
+    title: 'Thales of Miletus',
+    description: 'The First Philosopher. Instead of myths, Thales asks: "What is everything made of?" Philosophy is born.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-thales.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-plato',
+    year: '387 BCE',
+    yearNumeric: -387,
+    title: 'Plato\'s Academy',
+    description: 'The Eternal Forms. Plato founds the first university, teaching that reality is just shadows of perfect Ideas.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-plato.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-epicurus',
+    year: '300 BCE',
+    yearNumeric: -300,
+    title: 'Epicurus\'s Garden',
+    description: 'Atoms and Pleasure. Epicurus teaches that happiness is freedom from fear—of death, of gods, of pain.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-epicurus.jpg',
+    phase: 'Phase 6',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-augustine',
+    year: '400 CE',
+    yearNumeric: 400,
+    title: 'Augustine\'s Confessions',
+    description: 'Faith and Reason. Augustine fuses Plato with Christianity, creating the intellectual foundation of the medieval world.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-augustine.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-aquinas',
+    year: '1274 CE',
+    yearNumeric: 1274,
+    title: 'Thomas Aquinas',
+    description: 'Aristotle Baptized. Aquinas proves God\'s existence with reason, reconciling faith and philosophy for 700 years.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-aquinas.jpg',
+    phase: 'Phase 7',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-descartes',
+    year: '1637 CE',
+    yearNumeric: 1637,
+    title: 'Descartes\' Cogito',
+    description: 'I Think, Therefore I Am. Doubting everything, Descartes finds one certainty—his own thinking mind. Modern philosophy begins.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-descartes.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-spinoza',
+    year: '1677 CE',
+    yearNumeric: 1677,
+    title: 'Spinoza\'s Ethics',
+    description: 'God or Nature. Spinoza argues that God and the universe are identical—earning excommunication and Einstein\'s admiration.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-spinoza.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-locke',
+    year: '1690 CE',
+    yearNumeric: 1690,
+    title: 'Locke\'s Tabula Rasa',
+    description: 'The Blank Slate. Locke argues we\'re born knowing nothing—all ideas come from experience. Empiricism challenges rationalism.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-locke.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-hume',
+    year: '1748 CE',
+    yearNumeric: 1748,
+    title: 'Hume\'s Skepticism',
+    description: 'The Problem of Induction. Hume proves we can\'t know the sun will rise tomorrow—waking Kant from his "dogmatic slumber."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-hume.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-kant',
+    year: '1781 CE',
+    yearNumeric: 1781,
+    title: 'Kant\'s Critique',
+    description: 'The Copernican Revolution in Philosophy. Kant shows that the mind shapes experience—we can never know things-in-themselves.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-kant.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-hegel',
+    year: '1807 CE',
+    yearNumeric: 1807,
+    title: 'Hegel\'s Dialectic',
+    description: 'Thesis, Antithesis, Synthesis. Hegel sees all of history as Spirit becoming conscious of itself—reality is process.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-hegel.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-kierkegaard',
+    year: '1843 CE',
+    yearNumeric: 1843,
+    title: 'Kierkegaard\'s Leap',
+    description: 'The Father of Existentialism. Against Hegel\'s systems, Kierkegaard insists: truth is subjective, choice is everything.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-kierkegaard.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-marx',
+    year: '1848 CE',
+    yearNumeric: 1848,
+    title: 'Marx\'s Manifesto',
+    description: 'Workers of the World. Marx turns Hegel upside down—it\'s not ideas but economics that drives history. Revolution follows.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-marx.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-nietzsche',
+    year: '1882 CE',
+    yearNumeric: 1882,
+    title: 'Nietzsche\'s Proclamation',
+    description: 'God Is Dead. Nietzsche declares the death of absolute values—now we must create our own meaning.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-nietzsche.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-wittgenstein',
+    year: '1921 CE',
+    yearNumeric: 1921,
+    title: 'Wittgenstein\'s Tractatus',
+    description: 'The Limits of Language. "Whereof one cannot speak, thereof one must be silent." Philosophy becomes the study of language.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-wittgenstein.jpg',
+    phase: 'Phase 10',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-heidegger',
+    year: '1927 CE',
+    yearNumeric: 1927,
+    title: 'Heidegger\'s Being',
+    description: 'Being-Toward-Death. Heidegger asks what it means to Be—and argues we flee from our mortality into inauthenticity.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-heidegger.jpg',
+    phase: 'Phase 10',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-sartre',
+    year: '1943 CE',
+    yearNumeric: 1943,
+    title: 'Sartre\'s Existentialism',
+    description: 'Existence Precedes Essence. Sartre declares we\'re "condemned to be free"—there\'s no human nature, only choices.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-sartre.jpg',
+    phase: 'Phase 10',
+    category: 'Philosophy'
+  },
+  {
+    id: 'phil-beauvoir',
+    year: '1949 CE',
+    yearNumeric: 1949,
+    title: 'Beauvoir\'s Second Sex',
+    description: 'One Is Not Born a Woman. Simone de Beauvoir applies existentialism to gender—feminism gets its philosophical foundation.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/phil-beauvoir.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
   }
 ];
