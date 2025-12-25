@@ -999,7 +999,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'food-26', fromEventId: 'food-organic', toEventId: 'food-gmo', type: 'preceded' },
     { id: 'food-27', fromEventId: 'food-gmo', toEventId: 'food-vertical', type: 'preceded' },
     { id: 'food-28', fromEventId: 'food-vertical', toEventId: 'food-lab-meat', type: 'related' },
-    { id: 'food-29', fromEventId: 'food-lab-meat', toEventId: 'food-ai', type: 'preceded' }
+    { id: 'food-29', fromEventId: 'food-lab-meat', toEventId: 'food-ai', type: 'preceded' },
+
+    // --- Crime & Punishment ---
+    { id: 'crime-1', fromEventId: 'rights-hammurabi', toEventId: 'crime-twelve-tables', type: 'preceded' },
+    { id: 'crime-2', fromEventId: 'crime-twelve-tables', toEventId: 'p6-27', type: 'preceded' },
+    { id: 'crime-3', fromEventId: 'p6-27', toEventId: 'p7-11', type: 'preceded' },
+    { id: 'crime-4', fromEventId: 'p7-11', toEventId: 'crime-ordeal', type: 'preceded' },
+    { id: 'crime-5', fromEventId: 'crime-ordeal', toEventId: 'crime-tower', type: 'preceded' },
+    { id: 'crime-6', fromEventId: 'crime-tower', toEventId: 'crime-jury', type: 'preceded' },
+    { id: 'crime-7', fromEventId: 'crime-jury', toEventId: 'p7-27', type: 'preceded' },
+    { id: 'crime-8', fromEventId: 'p7-27', toEventId: 'gm-inquisition', type: 'preceded' },
+    { id: 'crime-9', fromEventId: 'gm-inquisition', toEventId: 'p8-6', type: 'preceded' },
+    { id: 'crime-10', fromEventId: 'p8-6', toEventId: 'crime-habeas-corpus', type: 'preceded' },
+    { id: 'crime-11', fromEventId: 'crime-habeas-corpus', toEventId: 'crime-witch-trials', type: 'preceded' },
+    { id: 'crime-12', fromEventId: 'crime-witch-trials', toEventId: 'crime-abolish-torture', type: 'preceded' },
+    { id: 'crime-13', fromEventId: 'crime-abolish-torture', toEventId: 'crime-beccaria', type: 'preceded' },
+    { id: 'crime-14', fromEventId: 'crime-beccaria', toEventId: 'crime-guillotine', type: 'preceded' },
+    { id: 'crime-15', fromEventId: 'crime-guillotine', toEventId: 'crime-penitentiary', type: 'preceded' },
+    { id: 'crime-16', fromEventId: 'crime-penitentiary', toEventId: 'crime-scotland-yard', type: 'related' },
+    { id: 'crime-17', fromEventId: 'crime-scotland-yard', toEventId: 'crime-electric-chair', type: 'preceded' },
+    { id: 'crime-18', fromEventId: 'crime-electric-chair', toEventId: 'crime-fingerprint', type: 'related' },
+    { id: 'crime-19', fromEventId: 'crime-fingerprint', toEventId: 'crime-fbi', type: 'preceded' },
+    { id: 'crime-20', fromEventId: 'crime-fbi', toEventId: 'crime-alcatraz', type: 'preceded' },
+    { id: 'crime-21', fromEventId: 'crime-alcatraz', toEventId: 'p11-2', type: 'preceded' },
+    { id: 'crime-22', fromEventId: 'p11-2', toEventId: 'crime-public-defender', type: 'preceded' },
+    { id: 'crime-23', fromEventId: 'crime-public-defender', toEventId: 'crime-miranda', type: 'preceded' },
+    { id: 'crime-24', fromEventId: 'crime-miranda', toEventId: 'crime-war-on-drugs', type: 'preceded' },
+    { id: 'crime-25', fromEventId: 'crime-war-on-drugs', toEventId: 'crime-dna-forensics', type: 'preceded' },
+    { id: 'crime-26', fromEventId: 'crime-dna-forensics', toEventId: 'crime-innocence', type: 'caused' },
+    { id: 'crime-27', fromEventId: 'crime-innocence', toEventId: 'crime-body-cams', type: 'preceded' },
+    { id: 'crime-28', fromEventId: 'crime-body-cams', toEventId: 'crime-blm', type: 'preceded' },
+    { id: 'crime-29', fromEventId: 'crime-blm', toEventId: 'crime-ai-judge', type: 'preceded' }
 ];
 
 
@@ -2119,6 +2150,60 @@ export const JOURNEYS: Journey[] = [
             'p4-18': { title: 'Maize Cultivation', description: 'America\'s Grain. Mesoamerican farmers transform teosinte into corn—the foundation of New World civilizations.' },
             'p6-1': { title: 'Iron Plows', description: 'Breaking Hard Earth. Iron tools replace bronze—letting farmers cultivate heavier soils and expand harvests.' },
             'p8-8': { title: 'The Columbian Exchange', description: 'Worlds Collide. Potatoes, tomatoes, and corn flow to Europe; wheat, cattle, and diseases flow to America. Diets transform globally.' }
+        }
+    },
+    {
+        id: 'crime-and-punishment',
+        title: 'Crime & Punishment',
+        description: 'From the dungeon to DNA evidence: The evolution of justice and law.',
+        thumbnailUrl: 'images/crime-and-punishment-thumb.jpg',
+        eventIds: [
+            // Ancient Justice
+            'rights-hammurabi',    // 1754 BCE - First laws
+            'crime-twelve-tables', // 450 BCE - Roman law
+            'p6-27',               // 399 BCE - Death of Socrates
+            'p7-11',               // 529 CE - Justinian's Code
+            // Medieval Punishment
+            'crime-ordeal',        // 800 CE - Trial by ordeal
+            'crime-tower',         // 1100 CE - Tower of London
+            'crime-jury',          // 1166 - Trial by jury
+            'p7-27',               // 1215 - Magna Carta
+            'gm-inquisition',      // 1231 - The Inquisition
+            'p8-6',                // 1478 - Spanish Inquisition
+            'crime-habeas-corpus', // 1679 - Right to challenge detention
+            'crime-witch-trials',  // 1692 - Salem
+            // Enlightenment Reform
+            'crime-abolish-torture', // 1740 - Prussia bans torture
+            'crime-beccaria',      // 1764 - Reform
+            'crime-guillotine',    // 1792 - Equal death
+            // Modern System
+            'crime-penitentiary',  // 1829 - Prisons
+            'crime-scotland-yard', // 1829 - Police
+            'crime-electric-chair', // 1890 - Execution
+            'crime-fingerprint',   // 1892 - Forensics
+            'crime-fbi',           // 1908 - Federal
+            'crime-alcatraz',      // 1934 - Max security
+            // DNA Era
+            'p11-2',               // 1946 - Nuremberg
+            'crime-public-defender', // 1963 - Right to lawyer
+            'crime-miranda',       // 1966 - Rights
+            'crime-war-on-drugs',  // 1971 - Mass incarceration
+            'crime-dna-forensics', // 1987 - DNA
+            'crime-innocence',     // 1992 - Exonerations
+            // Digital Justice
+            'crime-body-cams',     // 2014 - Accountability
+            'crime-blm',           // 2020 - Reform movement
+            'crime-ai-judge'       // 2023 - AI sentencing
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('crime-')),
+        overrides: {
+            'rights-hammurabi': { title: 'Code of Hammurabi', description: 'Eye for an Eye. The first written laws—282 rules carved in stone. Justice becomes public, predictable, and brutal.' },
+            'p6-27': { title: 'Trial of Socrates', description: 'Democracy Kills. Athens condemns its wisest citizen for corrupting youth. Even democracies can murder justice.' },
+            'p7-11': { title: 'Justinian\'s Code', description: 'Roman Law Lives. The Byzantine emperor codifies 1,000 years of Roman legal thought—the foundation of modern civil law.' },
+            'p7-27': { title: 'Magna Carta', description: 'The King Is Not Above the Law. English barons force King John to sign—no one, not even a monarch, can act without legal limits.' },
+            'gm-inquisition': { title: 'The Inquisition Begins', description: 'Heresy Hunting. The Church creates courts to root out wrong belief—torture is legal, confessions are coerced, and fear spreads.' },
+            'p8-6': { title: 'Spanish Inquisition', description: 'No One Expects It. Ferdinand and Isabella expand inquisitorial power—Jews, Muslims, and conversos are questioned, tortured, expelled.' },
+            'p11-2': { title: 'Nuremberg Trials', description: 'Crimes Against Humanity. Nazi leaders are prosecuted for genocide—establishing that "following orders" is no defense.' }
         }
     }
 ];

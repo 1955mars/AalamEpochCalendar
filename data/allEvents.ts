@@ -7061,5 +7061,237 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/food-ai.jpg',
     phase: 'Phase 12',
     category: 'Technology'
+  },
+
+  // --- CRIME & PUNISHMENT: The Evolution of Justice ---
+  {
+    id: 'crime-twelve-tables',
+    year: '450 BCE',
+    yearNumeric: -450,
+    title: 'Twelve Tables of Rome',
+    description: 'Law for the People. Rome\'s first written code is displayed publicly—the plebeians can finally know their rights. Written law beats whispered tradition.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-twelve-tables.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-ordeal',
+    year: '800 CE',
+    yearNumeric: 800,
+    title: 'Trial by Ordeal',
+    description: 'Let God Decide. The accused plunges a hand into boiling water—if it heals cleanly, they\'re innocent. Divine judgment replaces evidence.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-ordeal.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-tower',
+    year: '1100 CE',
+    yearNumeric: 1100,
+    title: 'Tower of London',
+    description: 'The Royal Prison. For centuries, traitors, queens, and princes enter the Tower—few leave. Power announces itself through dungeons.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-tower.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-witch-trials',
+    year: '1692 CE',
+    yearNumeric: 1692,
+    title: 'Salem Witch Trials',
+    description: 'Mass Hysteria. Spectral evidence and accusations without proof execute 20 people. A warning: fear corrupts justice.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-witch-trials.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-beccaria',
+    year: '1764 CE',
+    yearNumeric: 1764,
+    title: 'On Crimes and Punishments',
+    description: 'The Reformer. Cesare Beccaria argues that torture doesn\'t work, punishment should fit the crime, and prevention beats retribution. Modern penology begins.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-beccaria.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'crime-guillotine',
+    year: '1792 CE',
+    yearNumeric: 1792,
+    title: 'The Guillotine',
+    description: 'Humane Execution? Invented to make death painless and equal—king and commoner die the same way. 17,000 heads roll during the Terror.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-guillotine.jpg',
+    phase: 'Phase 9',
+    category: 'Technology'
+  },
+  {
+    id: 'crime-penitentiary',
+    year: '1829 CE',
+    yearNumeric: 1829,
+    title: 'Eastern State Penitentiary',
+    description: 'The Silent System. Prisoners live in total isolation—meant to inspire penitence, not punishment. The modern prison is born.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-penitentiary.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-scotland-yard',
+    year: '1829 CE',
+    yearNumeric: 1829,
+    title: 'Scotland Yard',
+    description: 'The First Detectives. London creates a professional police force—crime fighting becomes a career, not a hobby for magistrates.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-scotland-yard.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-electric-chair',
+    year: '1890 CE',
+    yearNumeric: 1890,
+    title: 'Electric Chair',
+    description: 'Death by Science. New York executes William Kemmler—marketed as instant and painless. The state industrializes killing.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-electric-chair.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'crime-fingerprint',
+    year: '1892 CE',
+    yearNumeric: 1892,
+    title: 'Fingerprint Evidence',
+    description: 'Your Unique Mark. Argentina solves a murder using fingerprints—the first forensic conviction. Every criminal leaves a signature.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-fingerprint.jpg',
+    phase: 'Phase 10',
+    category: 'Science'
+  },
+  {
+    id: 'crime-fbi',
+    year: '1908 CE',
+    yearNumeric: 1908,
+    title: 'FBI Founded',
+    description: 'Federal Crime Fighters. The Bureau of Investigation tackles crimes that cross state lines—from bootleggers to bank robbers.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-fbi.jpg',
+    phase: 'Phase 10',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-alcatraz',
+    year: '1934 CE',
+    yearNumeric: 1934,
+    title: 'Alcatraz Prison',
+    description: 'The Rock. America\'s most dangerous criminals are sent to an escape-proof island—Al Capone, Machine Gun Kelly, the birdman.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-alcatraz.jpg',
+    phase: 'Phase 10',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-miranda',
+    year: '1966 CE',
+    yearNumeric: 1966,
+    title: 'Miranda Rights',
+    description: 'You Have the Right to Remain Silent. The Supreme Court rules that the accused must be informed of their rights—or confessions are inadmissible.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-miranda.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-dna-forensics',
+    year: '1987 CE',
+    yearNumeric: 1987,
+    title: 'First DNA Conviction',
+    description: 'Genetic Fingerprint. Colin Pitchfork becomes the first murderer convicted using DNA—and the first exonerated by it. Science redefines certainty.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-dna-forensics.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'crime-innocence',
+    year: '1992 CE',
+    yearNumeric: 1992,
+    title: 'Innocence Project',
+    description: 'Wrongfully Convicted. Barry Scheck and Peter Neufeld use DNA to free the innocent—over 375 exonerations reveal a broken system.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-innocence.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-body-cams',
+    year: '2014 CE',
+    yearNumeric: 2014,
+    title: 'Police Body Cameras',
+    description: 'Watching the Watchmen. After Ferguson, departments adopt cameras to record police encounters. Accountability meets surveillance.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-body-cams.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'crime-blm',
+    year: '2020 CE',
+    yearNumeric: 2020,
+    title: 'George Floyd Protests',
+    description: 'I Can\'t Breathe. A video of police killing sparks global protests demanding reform. Justice itself goes on trial.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-blm.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-ai-judge',
+    year: '2023 CE',
+    yearNumeric: 2023,
+    title: 'AI in Sentencing',
+    description: 'The Algorithm Decides. Courts use AI to predict recidivism and set bail—but who audits the code? Bias goes digital.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-ai-judge.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'crime-habeas-corpus',
+    year: '1679 CE',
+    yearNumeric: 1679,
+    title: 'Habeas Corpus Act',
+    description: 'Produce the Body. England codifies the right to challenge unlawful detention—the state cannot disappear its citizens.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-habeas-corpus.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-jury',
+    year: '1166 CE',
+    yearNumeric: 1166,
+    title: 'Trial by Jury',
+    description: 'Judged by Peers. Henry II establishes juries of twelve—replacing divine ordeal with human testimony.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-jury.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-abolish-torture',
+    year: '1740 CE',
+    yearNumeric: 1740,
+    title: 'Prussia Abolishes Torture',
+    description: 'The Enlightened King. Frederick the Great bans judicial torture—evidence, not pain, should determine truth.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-abolish-torture.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-public-defender',
+    year: '1963 CE',
+    yearNumeric: 1963,
+    title: 'Right to a Lawyer',
+    description: 'Gideon\'s Trumpet. The Supreme Court rules that every defendant deserves a lawyer—even if they cannot afford one.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-public-defender.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'crime-war-on-drugs',
+    year: '1971 CE',
+    yearNumeric: 1971,
+    title: 'War on Drugs',
+    description: 'The Endless War. Nixon declares drug abuse "public enemy number one." Mass incarceration follows—especially for minorities.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-war-on-drugs.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
   }
 ];

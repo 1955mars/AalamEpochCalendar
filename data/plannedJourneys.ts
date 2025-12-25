@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 23 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music, Philosophy, Cinema, Gaming, Food)
-// Need to Build: 2 (below)
+// Currently Live: 24 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate, Shadow, Music, Philosophy, Cinema, Gaming, Food, Crime)
+// Need to Build: 1 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -27,14 +27,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 3: Heavy new content (Est. 25+ new events each)
-    // COMPLETED: The Rhythm of Life, The Examined Life, The Silver Screen, Level Up, The Food on Your Plate
+    // COMPLETED: The Rhythm of Life, The Examined Life, The Silver Screen, Level Up, The Food on Your Plate, Crime & Punishment
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'Crime & Punishment',
-        description: 'From the dungeon to DNA evidence: The evolution of justice and law.',
-        category: 'Power',
-        icon: Gavel
-    },
     {
         title: 'The Mating Game',
         description: 'From arranged marriage to Tinder: The evolution of love and family.',
