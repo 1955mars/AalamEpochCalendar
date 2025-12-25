@@ -790,9 +790,9 @@ export const CONNECTIONS: Connection[] = [
     { id: 'climate-14', fromEventId: 'p2-14', toEventId: 'climate-pangaea', type: 'preceded' },
     { id: 'climate-15', fromEventId: 'climate-pangaea', toEventId: 'climate-siberian', type: 'preceded' },
     { id: 'climate-16', fromEventId: 'climate-siberian', toEventId: 'p2-19', type: 'caused' },
-    { id: 'climate-17', fromEventId: 'p2-19', toEventId: 'p2-24', type: 'preceded' },
-    { id: 'climate-18', fromEventId: 'p2-24', toEventId: 'p2-25', type: 'caused' },
-    { id: 'climate-19', fromEventId: 'p2-25', toEventId: 'climate-petm', type: 'preceded' },
+    { id: 'climate-17', fromEventId: 'p2-19', toEventId: 'p2-28', type: 'preceded' },
+    { id: 'climate-18', fromEventId: 'p2-28', toEventId: 'p2-29', type: 'caused' },
+    { id: 'climate-19', fromEventId: 'p2-29', toEventId: 'climate-petm', type: 'preceded' },
     { id: 'climate-20', fromEventId: 'climate-petm', toEventId: 'climate-antarctic', type: 'preceded' },
     { id: 'climate-21', fromEventId: 'climate-antarctic', toEventId: '45', type: 'related' },
     { id: 'climate-22', fromEventId: '45', toEventId: 'climate-milankovitch', type: 'preceded' },
@@ -1572,8 +1572,8 @@ export const JOURNEYS: Journey[] = [
             'climate-pangaea',    // 300 MY - Pangaea
             'climate-siberian',   // 252 MY - Siberian Traps
             'p2-19',              // 252 MY - Great Dying
-            'p2-24',              // 66 MY - Chicxulub
-            'p2-25',              // 66 MY - K-Pg Extinction
+            'p2-28',              // 66 MY - Chicxulub
+            'p2-29',              // 66 MY - K-Pg Extinction
             'climate-petm',       // 56 MY - PETM
             // Ice Age Cycles
             'climate-antarctic',  // 34 MY - Antarctic Ice Sheet
@@ -1603,8 +1603,8 @@ export const JOURNEYS: Journey[] = [
             'p2-13': { title: 'Devonian Extinction', description: 'Ocean Death. Massive plants may have stripped CO2 from the air, cooling the planet. Ocean oxygen plummets. Most marine life disappears.' },
             'p2-14': { title: 'Carboniferous Coal Swamps', description: 'Buried Sunshine. Giant forests grow and die, but no bacteria can digest wood yet. Dead trees pile up, burying carbon that will become coal—and climate time bombs.' },
             'p2-19': { title: 'The Great Dying', description: 'The Volcanic Apocalypse. Siberian eruptions release enough CO2 to warm Earth 10°C. Oceans acidify. 96% of marine species die. Life nearly ends.' },
-            'p2-24': { title: 'Chicxulub Impact', description: 'The Asteroid Arrives. 10km of rock hits Yucatan at 20km/sec. Megatsunamis, wildfires, then nuclear winter. The dinosaurs\' 165-million-year reign ends.' },
-            'p2-25': { title: 'K-Pg Extinction', description: 'Impact Winter. Debris blocks the sun. Temperatures plunge. Photosynthesis stops. 75% of species die, including all non-avian dinosaurs.' },
+            'p2-28': { title: 'Chicxulub Impact', description: 'The Asteroid Arrives. 10km of rock hits Yucatan at 20km/sec. Megatsunamis, wildfires, then nuclear winter. The dinosaurs\' 165-million-year reign ends.' },
+            'p2-29': { title: 'K-Pg Extinction', description: 'Impact Winter. Debris blocks the sun. Temperatures plunge. Photosynthesis stops. 75% of species die, including all non-avian dinosaurs.' },
             '45': { title: 'Global Cooling', description: 'The Long Chill. India\'s collision with Asia pushes up the Himalayas, drawing down CO2. Earth enters its current icehouse phase.' },
             '65': { title: 'Last Ice Age Begins', description: 'The Ice Returns. Orbital variations trigger glaciation. Ice sheets 3km thick cover Canada and Europe. Sea levels drop 120m.' },
             '73': { title: 'Holocene Begins', description: 'The Goldilocks Climate. Ice retreats. Stable, warm climate enables agriculture. Human civilization becomes possible—all in a 10,000-year window.' },
