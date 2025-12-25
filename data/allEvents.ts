@@ -7293,5 +7293,297 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/crime-war-on-drugs.jpg',
     phase: 'Phase 11',
     category: 'Civilization'
+  },
+
+  // --- THE MATING GAME: The Evolution of Love and Family ---
+  {
+    id: 'mate-pair-bond',
+    year: '200,000 BCE',
+    yearNumeric: -200000,
+    title: 'Pair Bonding Evolves',
+    description: 'Two By Two. Homo sapiens develops long-term partnerships—children need years of care, so parents who stay together survive.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-pair-bond.jpg',
+    phase: 'Phase 3',
+    category: 'Life'
+  },
+  {
+    id: 'mate-patriarchy',
+    year: '4000 BCE',
+    yearNumeric: -4000,
+    title: 'Rise of Patriarchy',
+    description: 'Property Needs Heirs. Agriculture creates wealth—and men want certainty their children are theirs. Women become property.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-patriarchy.jpg',
+    phase: 'Phase 4',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-dowry',
+    year: '3000 BCE',
+    yearNumeric: -3000,
+    title: 'First Dowries',
+    description: 'The Price of a Bride. Families exchange wealth with daughters—a business transaction disguised as romance.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-dowry.jpg',
+    phase: 'Phase 5',
+    category: 'Economy'
+  },
+  {
+    id: 'mate-hammurabi',
+    year: '1754 BCE',
+    yearNumeric: -1754,
+    title: 'Marriage in Hammurabi\'s Code',
+    description: 'Written in Stone. Marriage becomes a legal contract—with rules for divorce, adultery, and inheritance. Love is optional.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-hammurabi.jpg',
+    phase: 'Phase 5',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-roman-law',
+    year: '450 BCE',
+    yearNumeric: -450,
+    title: 'Roman Marriage Laws',
+    description: 'Cum Manu or Sine Manu? Rome codifies two forms of marriage—in one, wives become property; in another, they keep independence.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-roman-law.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-cleopatra',
+    year: '48 BCE',
+    yearNumeric: -48,
+    title: 'Cleopatra & Caesar',
+    description: 'Power Marries Power. The Queen of Egypt and ruler of Rome—a political alliance disguised as passion that reshapes empires.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-cleopatra.jpg',
+    phase: 'Phase 6',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-polygamy-islam',
+    year: '622 CE',
+    yearNumeric: 622,
+    title: 'Polygamy Codified',
+    description: 'Up to Four. Islam permits multiple wives with conditions—codifying a practice common across cultures and classes.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-polygamy-islam.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-courtly-love',
+    year: '1100 CE',
+    yearNumeric: 1100,
+    title: 'Courtly Love',
+    description: 'The Troubadours Sing. Medieval poets invent romantic love as noble suffering—knights worship ladies from afar. Passion becomes art.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-courtly-love.jpg',
+    phase: 'Phase 7',
+    category: 'Art'
+  },
+  {
+    id: 'mate-church-control',
+    year: '1215 CE',
+    yearNumeric: 1215,
+    title: 'Church Controls Marriage',
+    description: 'A Holy Sacrament. The Fourth Lateran Council makes marriage a Church matter—no divorce, no remarriage, God is watching.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-church-control.jpg',
+    phase: 'Phase 7',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-henry-divorce',
+    year: '1534 CE',
+    yearNumeric: 1534,
+    title: 'Henry VIII\'s Divorce',
+    description: 'Breaking with Rome. A king\'s desire for a male heir creates the Church of England—six wives, two beheaded, for love and politics.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-henry-divorce.jpg',
+    phase: 'Phase 8',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-love-match',
+    year: '1700 CE',
+    yearNumeric: 1700,
+    title: 'Marriage for Love',
+    description: 'The Radical Idea. Enlightenment thinkers argue that affection—not property—should unite couples. Romance becomes respectable.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-love-match.jpg',
+    phase: 'Phase 8',
+    category: 'Philosophy'
+  },
+  {
+    id: 'mate-austen',
+    year: '1813 CE',
+    yearNumeric: 1813,
+    title: 'Pride and Prejudice',
+    description: 'It is a truth universally acknowledged... Jane Austen captures the tension between love and money, heart and society.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-austen.jpg',
+    phase: 'Phase 9',
+    category: 'Art'
+  },
+  {
+    id: 'mate-divorce-law',
+    year: '1857 CE',
+    yearNumeric: 1857,
+    title: 'First Divorce Laws',
+    description: 'Till Death Do Us Part? England\'s Matrimonial Causes Act lets couples divorce without an act of Parliament—though men get better terms.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-divorce-law.jpg',
+    phase: 'Phase 9',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-dating',
+    year: '1890 CE',
+    yearNumeric: 1890,
+    title: 'Dating Invented',
+    description: 'Going Out. Young people escape chaperoned parlors for restaurants and dance halls—courtship moves from family control to personal choice.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-dating.jpg',
+    phase: 'Phase 10',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-condom',
+    year: '1920 CE',
+    yearNumeric: 1920,
+    title: 'Latex Condom',
+    description: 'Sex Without Consequence? Mass-produced latex separates sex from reproduction—birth rates drop, pleasure rises.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-condom.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'mate-pill',
+    year: '1960 CE',
+    yearNumeric: 1960,
+    title: 'The Birth Control Pill',
+    description: 'The Pill Changes Everything. Women control their fertility for the first time—education, careers, and sexual freedom follow.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-pill.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'mate-interracial',
+    year: '1967 CE',
+    yearNumeric: 1967,
+    title: 'Loving v. Virginia',
+    description: 'Love Across Color Lines. The Supreme Court strikes down bans on interracial marriage—"the freedom to marry belongs to all."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-interracial.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-stonewall',
+    year: '1969 CE',
+    yearNumeric: 1969,
+    title: 'Stonewall Riots',
+    description: 'The Night They Fought Back. LGBTQ+ patrons resist a police raid—sparking the modern gay rights movement.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-stonewall.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-no-fault',
+    year: '1970 CE',
+    yearNumeric: 1970,
+    title: 'No-Fault Divorce',
+    description: 'Irreconcilable Differences. California lets couples divorce without proving wrongdoing—marriage becomes dissoluble by mutual consent.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-no-fault.jpg',
+    phase: 'Phase 11',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-ivf',
+    year: '1978 CE',
+    yearNumeric: 1978,
+    title: 'First IVF Baby',
+    description: 'Louise Brown is Born. Conception happens in a lab dish—redefining who can become parents and how.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-ivf.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'mate-aids',
+    year: '1981 CE',
+    yearNumeric: 1981,
+    title: 'AIDS Crisis',
+    description: 'A Plague of Stigma. A mysterious illness devastates gay communities—love becomes dangerous, activism becomes survival.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-aids.jpg',
+    phase: 'Phase 12',
+    category: 'Life'
+  },
+  {
+    id: 'mate-online-dating',
+    year: '1995 CE',
+    yearNumeric: 1995,
+    title: 'Match.com Launches',
+    description: 'Love Goes Online. The internet expands the dating pool from neighbors to the world—algorithms replace matchmakers.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-online-dating.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'mate-tinder',
+    year: '2012 CE',
+    yearNumeric: 2012,
+    title: 'Tinder',
+    description: 'Swipe Right. Dating becomes gamified—split-second judgments on photos, infinite choice, paradox of plenty.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-tinder.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'mate-gay-marriage',
+    year: '2015 CE',
+    yearNumeric: 2015,
+    title: 'Gay Marriage Legalized',
+    description: 'Love Wins. The Supreme Court rules same-sex marriage is a constitutional right—"no union is more profound."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-gay-marriage.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-metoo',
+    year: '2017 CE',
+    yearNumeric: 2017,
+    title: '#MeToo Movement',
+    description: 'Breaking Silence. Survivors share stories of harassment and assault—power dynamics in relationships go public.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-metoo.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'mate-ai-dating',
+    year: '2023 CE',
+    yearNumeric: 2023,
+    title: 'AI Dating Apps',
+    description: 'The Algorithm Knows You. AI writes your profile, suggests your opener, predicts compatibility—is it still romance if a machine helps?',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-ai-dating.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'mate-ring',
+    year: '1840 CE',
+    yearNumeric: 1840,
+    title: 'Diamond Engagement Ring',
+    description: 'A Diamond is Forever. Queen Victoria receives an engagement ring—sparking a tradition. De Beers later manufactures the "necessity."',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-ring.jpg',
+    phase: 'Phase 9',
+    category: 'Economy'
+  },
+  {
+    id: 'mate-free-love',
+    year: '1852 CE',
+    yearNumeric: 1852,
+    title: 'Free Love Movement',
+    description: 'Marriage as Slavery. Utopian communities reject marriage—choosing partners freely without legal bonds. Radicals reimagine intimacy.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-free-love.jpg',
+    phase: 'Phase 9',
+    category: 'Philosophy'
+  },
+  {
+    id: 'mate-sexual-revolution',
+    year: '1963 CE',
+    yearNumeric: 1963,
+    title: 'The Feminine Mystique',
+    description: 'The Problem That Has No Name. Betty Friedan diagnoses suburban housewife despair—igniting second-wave feminism and redefining women\'s roles.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-sexual-revolution.jpg',
+    phase: 'Phase 11',
+    category: 'Philosophy'
   }
 ];

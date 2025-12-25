@@ -1030,7 +1030,38 @@ export const CONNECTIONS: Connection[] = [
     { id: 'crime-26', fromEventId: 'crime-dna-forensics', toEventId: 'crime-innocence', type: 'caused' },
     { id: 'crime-27', fromEventId: 'crime-innocence', toEventId: 'crime-body-cams', type: 'preceded' },
     { id: 'crime-28', fromEventId: 'crime-body-cams', toEventId: 'crime-blm', type: 'preceded' },
-    { id: 'crime-29', fromEventId: 'crime-blm', toEventId: 'crime-ai-judge', type: 'preceded' }
+    { id: 'crime-29', fromEventId: 'crime-blm', toEventId: 'crime-ai-judge', type: 'preceded' },
+
+    // --- The Mating Game ---
+    { id: 'mate-1', fromEventId: 'mate-pair-bond', toEventId: 'mate-patriarchy', type: 'preceded' },
+    { id: 'mate-2', fromEventId: 'mate-patriarchy', toEventId: 'mate-dowry', type: 'caused' },
+    { id: 'mate-3', fromEventId: 'mate-dowry', toEventId: 'mate-hammurabi', type: 'preceded' },
+    { id: 'mate-4', fromEventId: 'mate-hammurabi', toEventId: 'mate-roman-law', type: 'preceded' },
+    { id: 'mate-5', fromEventId: 'mate-roman-law', toEventId: 'mate-cleopatra', type: 'preceded' },
+    { id: 'mate-6', fromEventId: 'mate-cleopatra', toEventId: 'mate-polygamy-islam', type: 'preceded' },
+    { id: 'mate-7', fromEventId: 'mate-polygamy-islam', toEventId: 'mate-courtly-love', type: 'preceded' },
+    { id: 'mate-8', fromEventId: 'mate-courtly-love', toEventId: 'mate-church-control', type: 'preceded' },
+    { id: 'mate-9', fromEventId: 'mate-church-control', toEventId: 'mate-henry-divorce', type: 'preceded' },
+    { id: 'mate-10', fromEventId: 'mate-henry-divorce', toEventId: 'mate-love-match', type: 'preceded' },
+    { id: 'mate-11', fromEventId: 'mate-love-match', toEventId: 'mate-austen', type: 'preceded' },
+    { id: 'mate-12', fromEventId: 'mate-austen', toEventId: 'mate-ring', type: 'preceded' },
+    { id: 'mate-13', fromEventId: 'mate-ring', toEventId: 'mate-free-love', type: 'preceded' },
+    { id: 'mate-14', fromEventId: 'mate-free-love', toEventId: 'mate-divorce-law', type: 'preceded' },
+    { id: 'mate-15', fromEventId: 'mate-divorce-law', toEventId: 'mate-dating', type: 'preceded' },
+    { id: 'mate-16', fromEventId: 'mate-dating', toEventId: 'women-pankhurst', type: 'preceded' },
+    { id: 'mate-17', fromEventId: 'women-pankhurst', toEventId: 'mate-condom', type: 'preceded' },
+    { id: 'mate-18', fromEventId: 'mate-condom', toEventId: 'mate-pill', type: 'preceded' },
+    { id: 'mate-19', fromEventId: 'mate-pill', toEventId: 'mate-sexual-revolution', type: 'preceded' },
+    { id: 'mate-20', fromEventId: 'mate-sexual-revolution', toEventId: 'mate-interracial', type: 'preceded' },
+    { id: 'mate-21', fromEventId: 'mate-interracial', toEventId: 'mate-stonewall', type: 'preceded' },
+    { id: 'mate-22', fromEventId: 'mate-stonewall', toEventId: 'mate-no-fault', type: 'preceded' },
+    { id: 'mate-23', fromEventId: 'mate-no-fault', toEventId: 'mate-ivf', type: 'preceded' },
+    { id: 'mate-24', fromEventId: 'mate-ivf', toEventId: 'mate-aids', type: 'preceded' },
+    { id: 'mate-25', fromEventId: 'mate-aids', toEventId: 'mate-online-dating', type: 'preceded' },
+    { id: 'mate-26', fromEventId: 'mate-online-dating', toEventId: 'mate-tinder', type: 'preceded' },
+    { id: 'mate-27', fromEventId: 'mate-tinder', toEventId: 'mate-gay-marriage', type: 'preceded' },
+    { id: 'mate-28', fromEventId: 'mate-gay-marriage', toEventId: 'mate-metoo', type: 'preceded' },
+    { id: 'mate-29', fromEventId: 'mate-metoo', toEventId: 'mate-ai-dating', type: 'preceded' }
 ];
 
 
@@ -2204,6 +2235,55 @@ export const JOURNEYS: Journey[] = [
             'gm-inquisition': { title: 'The Inquisition Begins', description: 'Heresy Hunting. The Church creates courts to root out wrong belief—torture is legal, confessions are coerced, and fear spreads.' },
             'p8-6': { title: 'Spanish Inquisition', description: 'No One Expects It. Ferdinand and Isabella expand inquisitorial power—Jews, Muslims, and conversos are questioned, tortured, expelled.' },
             'p11-2': { title: 'Nuremberg Trials', description: 'Crimes Against Humanity. Nazi leaders are prosecuted for genocide—establishing that "following orders" is no defense.' }
+        }
+    },
+    {
+        id: 'the-mating-game',
+        title: 'The Mating Game',
+        description: 'From arranged marriage to Tinder: The evolution of love and family.',
+        thumbnailUrl: 'images/the-mating-game-thumb.jpg',
+        eventIds: [
+            // Prehistoric & Ancient
+            'mate-pair-bond',      // 200,000 BCE - Pair bonding evolves
+            'mate-patriarchy',     // 4000 BCE - Rise of patriarchy
+            'mate-dowry',          // 3000 BCE - First dowries
+            'mate-hammurabi',      // 1754 BCE - Marriage in law
+            // Classical
+            'mate-roman-law',      // 450 BCE - Roman marriage
+            'mate-cleopatra',      // 48 BCE - Power marriages
+            // Medieval
+            'mate-polygamy-islam', // 622 CE - Polygamy codified
+            'mate-courtly-love',   // 1100 CE - Romantic ideal
+            'mate-church-control', // 1215 CE - Church takes over
+            // Early Modern
+            'mate-henry-divorce',  // 1534 - Henry VIII
+            'mate-love-match',     // 1700 - Marriage for love
+            'mate-austen',         // 1813 - Pride and Prejudice
+            'mate-ring',           // 1840 - Diamond ring
+            'mate-free-love',      // 1852 - Free love movement
+            // Industrial
+            'mate-divorce-law',    // 1857 - First divorce laws
+            'mate-dating',         // 1890 - Dating invented
+            'women-pankhurst',     // 1908 - Women's suffrage
+            'mate-condom',         // 1920 - Latex condom
+            // Sexual Revolution
+            'mate-pill',           // 1960 - The Pill
+            'mate-sexual-revolution', // 1963 - Feminine Mystique
+            'mate-interracial',    // 1967 - Loving v. Virginia
+            'mate-stonewall',      // 1969 - Gay rights
+            'mate-no-fault',       // 1970 - No-fault divorce
+            'mate-ivf',            // 1978 - First IVF baby
+            // Modern
+            'mate-aids',           // 1981 - AIDS Crisis
+            'mate-online-dating',  // 1995 - Match.com
+            'mate-tinder',         // 2012 - Tinder
+            'mate-gay-marriage',   // 2015 - Marriage equality
+            'mate-metoo',          // 2017 - #MeToo
+            'mate-ai-dating'       // 2023 - AI dating apps
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('mate-')),
+        overrides: {
+            'women-pankhurst': { title: 'Women\'s Suffrage', description: 'The Right to Choose. Women fight for the vote—and the freedom to choose their own partners. Marriage becomes a contract between equals.' }
         }
     }
 ];
