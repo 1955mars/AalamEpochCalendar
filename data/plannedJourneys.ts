@@ -9,8 +9,8 @@ export interface PlannedJourney {
 
 // ═══════════════════════════════════════════════════════════════════════════
 // LAUNCH TARGET: 25 Journeys
-// Currently Live: 16 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights)
-// Need to Build: 9 (below)
+// Currently Live: 17 (Cosmic, Life, Civilizations, Art, Tech, AI, Money, Space, Cure, Gods, War, Pandemics, Women, Trade, Power, Rights, Climate)
+// Need to Build: 8 (below)
 // ═══════════════════════════════════════════════════════════════════════════
 
 export const PLANNED_JOURNEYS: PlannedJourney[] = [
@@ -22,14 +22,8 @@ export const PLANNED_JOURNEYS: PlannedJourney[] = [
 
     // ═══════════════════════════════════════════════════════════════════════
     // PHASE 2: Moderate new content (Est. 15-20 new events each)
-    // COMPLETED: Power Trip, Rights & Revolutions
+    // COMPLETED: Power Trip, Rights & Revolutions, The Climate Chronicle
     // ═══════════════════════════════════════════════════════════════════════
-    {
-        title: 'The Climate Chronicle',
-        description: 'Ice ages to global warming: The planet\'s story and humanity\'s impact.',
-        category: 'Origins',
-        icon: Leaf
-    },
     {
         title: 'The Shadow World',
         description: 'Spies, codes, and secrets: From the Enigma machine to Snowden.',

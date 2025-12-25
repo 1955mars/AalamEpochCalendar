@@ -5294,5 +5294,200 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/rights-mandela.jpg',
     phase: 'Phase 12',
     category: 'Civilization'
+  },
+
+  // ═══════════════════════════════════════════════════════════════
+  // THE CLIMATE CHRONICLE - Ice Ages to Global Warming
+  // ═══════════════════════════════════════════════════════════════
+
+  {
+    id: 'climate-hadean',
+    year: '4.5 Billion Years Ago',
+    yearNumeric: -4500000000,
+    title: 'The Hadean Hellscape',
+    description: 'Born in Fire. Earth is a molten ball of magma, bombarded by asteroids, with surface temperatures exceeding 1,000°C. No oceans, no life—just fire and rock.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-hadean.jpg',
+    phase: 'Phase 1',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-lhb',
+    year: '3.9 Billion Years Ago',
+    yearNumeric: -3900000000,
+    title: 'Late Heavy Bombardment',
+    description: 'The Last Assault. Asteroids and comets pummel Earth for 100 million years, possibly delivering water and organic molecules—and sterilizing the surface.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-lhb.jpg',
+    phase: 'Phase 1',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-methane',
+    year: '3.5 Billion Years Ago',
+    yearNumeric: -3500000000,
+    title: 'Methane Atmosphere',
+    description: 'The Purple Earth. Before oxygen, the atmosphere was thick with methane. The greenhouse effect kept Earth warm despite a fainter sun.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-methane.jpg',
+    phase: 'Phase 2',
+    category: 'Life'
+  },
+  {
+    id: 'climate-rodinia',
+    year: '1.1 Billion Years Ago',
+    yearNumeric: -1100000000,
+    title: 'Rodinia Supercontinent',
+    description: 'The First Pangaea. All land masses collide into a single supercontinent, disrupting ocean currents and setting the stage for Snowball Earth.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-rodinia.jpg',
+    phase: 'Phase 2',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-snowball1',
+    year: '720 Million Years Ago',
+    yearNumeric: -720000000,
+    title: 'Sturtian Glaciation',
+    description: 'Snowball Earth I. Ice sheets reach the equator. The entire planet freezes for 50 million years—the most extreme climate event in Earth\'s history.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-snowball1.jpg',
+    phase: 'Phase 2',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-snowball2',
+    year: '650 Million Years Ago',
+    yearNumeric: -650000000,
+    title: 'Marinoan Glaciation',
+    description: 'Snowball Earth II. It happens again. Volcanic CO2 eventually melts the ice, triggering the Cambrian explosion of complex life.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-snowball2.jpg',
+    phase: 'Phase 2',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-cambrian-warm',
+    year: '540 Million Years Ago',
+    yearNumeric: -540000000,
+    title: 'Cambrian Hothouse',
+    description: 'Tropical World. CO2 levels 20 times higher than today create a greenhouse Earth with no ice caps. Life explodes in warm shallow seas.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-cambrian-warm.jpg',
+    phase: 'Phase 2',
+    category: 'Life'
+  },
+  {
+    id: 'climate-pangaea',
+    year: '300 Million Years Ago',
+    yearNumeric: -300000000,
+    title: 'Pangaea Forms',
+    description: 'One World. All continents merge into a single supercontinent. The interior dries into vast deserts while coastal regions remain tropical.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-pangaea.jpg',
+    phase: 'Phase 2',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-siberian',
+    year: '252 Million Years Ago',
+    yearNumeric: -252000000,
+    title: 'Siberian Traps Eruption',
+    description: 'The Volcanic Apocalypse. Lava covers an area the size of Europe. CO2 and methane warm the planet 10°C, triggering the Great Dying.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-siberian.jpg',
+    phase: 'Phase 2',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-petm',
+    year: '56 Million Years Ago',
+    yearNumeric: -56000000,
+    title: 'PETM Warming Event',
+    description: 'The Ancient Warning. Global temperatures spike 5-8°C in 20,000 years. Crocodiles live in the Arctic. A preview of what rapid warming does.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-petm.jpg',
+    phase: 'Phase 3',
+    category: 'Life'
+  },
+  {
+    id: 'climate-antarctic',
+    year: '34 Million Years Ago',
+    yearNumeric: -34000000,
+    title: 'Antarctic Ice Sheet',
+    description: 'The Big Freeze. Antarctica drifts over the South Pole and glaciers grow. Earth enters its current icehouse climate that persists today.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-antarctic.jpg',
+    phase: 'Phase 3',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-milankovitch',
+    year: '2.6 Million Years Ago',
+    yearNumeric: -2600000,
+    title: 'Ice Age Cycles Begin',
+    description: 'The Rhythm of Ice. Earth\'s orbital wobbles trigger cycles of glaciation. Ice sheets advance and retreat every 100,000 years, shaping human evolution.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-milankovitch.jpg',
+    phase: 'Phase 3',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-younger-dryas',
+    year: '10,800 BCE',
+    yearNumeric: -10800,
+    title: 'The Younger Dryas',
+    description: 'The Big Freeze Returns. Just as the ice age was ending, temperatures suddenly plunge for 1,200 years. Possibly triggered by a freshwater pulse or comet impact.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-younger-dryas.jpg',
+    phase: 'Phase 4',
+    category: 'Cosmology'
+  },
+  {
+    id: 'climate-arrhenius',
+    year: '1896 CE',
+    yearNumeric: 1896,
+    title: 'CO2 Warming Theory',
+    description: 'The First Warning. Swedish chemist Svante Arrhenius calculates that doubling CO2 will warm Earth by 5°C. He considers it beneficial.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-arrhenius.jpg',
+    phase: 'Phase 9',
+    category: 'Science'
+  },
+  {
+    id: 'climate-keeling',
+    year: '1958 CE',
+    yearNumeric: 1958,
+    title: 'Keeling Curve',
+    description: 'Measuring the Rise. Charles Keeling begins measuring atmospheric CO2 at Mauna Loa. The zigzag line rises relentlessly—proof of humanity\'s impact.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-keeling.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'climate-ozone',
+    year: '1985 CE',
+    yearNumeric: 1985,
+    title: 'Ozone Hole Discovered',
+    description: 'The Layer With a Hole. Scientists find CFCs have torn a hole in Earth\'s UV shield over Antarctica. Humanity responds with the Montreal Protocol.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-ozone.jpg',
+    phase: 'Phase 11',
+    category: 'Science'
+  },
+  {
+    id: 'climate-ipcc',
+    year: '1988 CE',
+    yearNumeric: 1988,
+    title: 'IPCC Founded',
+    description: 'The Science Speaks. The UN creates the Intergovernmental Panel on Climate Change to assess the science. Their reports become increasingly alarming.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-ipcc.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
+  },
+  {
+    id: 'climate-cop21',
+    year: '2016 CE',
+    yearNumeric: 2016,
+    title: 'Paris Agreement Enters Force',
+    description: 'The World Commits. 196 nations pledge to limit warming to 1.5°C. The legal framework exists—now comes the hard part of implementation.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-cop21.jpg',
+    phase: 'Phase 12',
+    category: 'Civilization'
+  },
+  {
+    id: 'climate-1.5c',
+    year: '2023 CE',
+    yearNumeric: 2023,
+    title: '1.5°C Threshold Breached',
+    description: 'The Limit Crossed. For the first time, global temperatures exceed the Paris Agreement\'s aspirational target. The climate emergency is now.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/climate-1.5c.jpg',
+    phase: 'Phase 12',
+    category: 'Science'
   }
 ];

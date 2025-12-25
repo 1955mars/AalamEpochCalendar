@@ -771,7 +771,43 @@ export const CONNECTIONS: Connection[] = [
     { id: 'rights-26', fromEventId: 'rights-naacp', toEventId: 'rights-gandhi', type: 'preceded' },
     { id: 'rights-27', fromEventId: 'rights-gandhi', toEventId: 'rights-un-decl', type: 'preceded' },
     { id: 'rights-28', fromEventId: 'rights-un-decl', toEventId: 'rights-civil64', type: 'preceded' },
-    { id: 'rights-29', fromEventId: 'rights-civil64', toEventId: 'rights-mandela', type: 'preceded' }
+    { id: 'rights-29', fromEventId: 'rights-civil64', toEventId: 'rights-mandela', type: 'preceded' },
+
+    // --- The Climate Chronicle: Ice Ages to Global Warming ---
+    { id: 'climate-1', fromEventId: 'climate-hadean', toEventId: 'cosmic-24', type: 'preceded' },
+    { id: 'climate-2', fromEventId: 'cosmic-24', toEventId: 'cosmic-25', type: 'caused' },
+    { id: 'climate-3', fromEventId: 'cosmic-25', toEventId: 'climate-lhb', type: 'preceded' },
+    { id: 'climate-4', fromEventId: 'climate-lhb', toEventId: 'climate-methane', type: 'preceded' },
+    { id: 'climate-5', fromEventId: 'climate-methane', toEventId: '23', type: 'preceded' },
+    { id: 'climate-6', fromEventId: '23', toEventId: '24', type: 'caused' },
+    { id: 'climate-7', fromEventId: '24', toEventId: 'climate-rodinia', type: 'preceded' },
+    { id: 'climate-8', fromEventId: 'climate-rodinia', toEventId: 'climate-snowball1', type: 'caused' },
+    { id: 'climate-9', fromEventId: 'climate-snowball1', toEventId: 'climate-snowball2', type: 'preceded' },
+    { id: 'climate-10', fromEventId: 'climate-snowball2', toEventId: 'climate-cambrian-warm', type: 'caused' },
+    { id: 'climate-11', fromEventId: 'climate-cambrian-warm', toEventId: 'p2-9', type: 'preceded' },
+    { id: 'climate-12', fromEventId: 'p2-9', toEventId: 'p2-13', type: 'preceded' },
+    { id: 'climate-13', fromEventId: 'p2-13', toEventId: 'p2-14', type: 'preceded' },
+    { id: 'climate-14', fromEventId: 'p2-14', toEventId: 'climate-pangaea', type: 'preceded' },
+    { id: 'climate-15', fromEventId: 'climate-pangaea', toEventId: 'climate-siberian', type: 'preceded' },
+    { id: 'climate-16', fromEventId: 'climate-siberian', toEventId: 'p2-19', type: 'caused' },
+    { id: 'climate-17', fromEventId: 'p2-19', toEventId: 'p2-24', type: 'preceded' },
+    { id: 'climate-18', fromEventId: 'p2-24', toEventId: 'p2-25', type: 'caused' },
+    { id: 'climate-19', fromEventId: 'p2-25', toEventId: 'climate-petm', type: 'preceded' },
+    { id: 'climate-20', fromEventId: 'climate-petm', toEventId: 'climate-antarctic', type: 'preceded' },
+    { id: 'climate-21', fromEventId: 'climate-antarctic', toEventId: '45', type: 'related' },
+    { id: 'climate-22', fromEventId: '45', toEventId: 'climate-milankovitch', type: 'preceded' },
+    { id: 'climate-23', fromEventId: 'climate-milankovitch', toEventId: '65', type: 'caused' },
+    { id: 'climate-24', fromEventId: '65', toEventId: 'climate-younger-dryas', type: 'preceded' },
+    { id: 'climate-25', fromEventId: 'climate-younger-dryas', toEventId: '73', type: 'preceded' },
+    { id: 'climate-26', fromEventId: '73', toEventId: 'power-coal', type: 'preceded' },
+    { id: 'climate-27', fromEventId: 'power-coal', toEventId: 'climate-arrhenius', type: 'preceded' },
+    { id: 'climate-28', fromEventId: 'climate-arrhenius', toEventId: 'climate-keeling', type: 'preceded' },
+    { id: 'climate-29', fromEventId: 'climate-keeling', toEventId: 'climate-ozone', type: 'preceded' },
+    { id: 'climate-30', fromEventId: 'climate-ozone', toEventId: 'climate-ipcc', type: 'preceded' },
+    { id: 'climate-31', fromEventId: 'climate-ipcc', toEventId: 'p12-6', type: 'preceded' },
+    { id: 'climate-32', fromEventId: 'p12-6', toEventId: 'p12-21', type: 'preceded' },
+    { id: 'climate-33', fromEventId: 'p12-21', toEventId: 'climate-cop21', type: 'related' },
+    { id: 'climate-34', fromEventId: 'climate-cop21', toEventId: 'climate-1.5c', type: 'preceded' }
 ];
 
 
@@ -1507,6 +1543,74 @@ export const JOURNEYS: Journey[] = [
             'p9-10': { title: 'Haiti Rises', description: 'Slaves Become Citizens. The only successful slave revolution in history—Toussaint L\'Ouverture\'s army defeats Napoleon and creates the first free Black republic.' },
             'p9-13': { title: 'Latin America Awakens', description: 'Bolívar\'s Dream. From Mexico to Argentina, colonial subjects become citizens as revolution sweeps an entire hemisphere.' },
             'p9-20': { title: 'Spring of Nations', description: 'The Year of Revolution. From Paris to Budapest, ordinary people demand constitutions, parliaments, and freedom—most fail, but the seeds are planted.' }
+        }
+    },
+    {
+        id: 'climate-chronicle',
+        title: 'The Climate Chronicle',
+        description: 'Ice ages to global warming: The planet\'s story and humanity\'s impact.',
+        thumbnailUrl: 'images/climate-chronicle-thumb.jpg',
+        eventIds: [
+            // Hellfire Earth
+            'climate-hadean',     // 4.5 BY - Molten Earth
+            'cosmic-24',          // 4.4 BY - Magma Ocean Cools
+            'cosmic-25',          // 4.4 BY - First Oceans
+            'climate-lhb',        // 3.9 BY - Late Heavy Bombardment
+            'climate-methane',    // 3.5 BY - Methane Atmosphere
+            // Great Oxygenation
+            '23',                 // 2.4 BY - Great Oxygenation Event
+            '24',                 // 2.3 BY - Huronian Glaciation
+            // Snowball Earth
+            'climate-rodinia',    // 1.1 BY - Rodinia
+            'climate-snowball1',  // 720 MY - Sturtian
+            'climate-snowball2',  // 650 MY - Marinoan
+            'climate-cambrian-warm', // 540 MY - Cambrian Hothouse
+            // Extinctions & Climate
+            'p2-9',               // 444 MY - Ordovician Extinction
+            'p2-13',              // 375 MY - Devonian Extinction
+            'p2-14',              // 359 MY - Coal Swamps
+            'climate-pangaea',    // 300 MY - Pangaea
+            'climate-siberian',   // 252 MY - Siberian Traps
+            'p2-19',              // 252 MY - Great Dying
+            'p2-24',              // 66 MY - Chicxulub
+            'p2-25',              // 66 MY - K-Pg Extinction
+            'climate-petm',       // 56 MY - PETM
+            // Ice Age Cycles
+            'climate-antarctic',  // 34 MY - Antarctic Ice Sheet
+            '45',                 // 35 MY - Global Cooling
+            'climate-milankovitch', // 2.6 MY - Ice Age Cycles
+            '65',                 // 120,000 - Last Ice Age
+            'climate-younger-dryas', // 10,800 BCE - Younger Dryas
+            '73',                 // 10,000 BCE - Holocene
+            // Anthropocene
+            'power-coal',         // 1600 - Coal Age
+            'climate-arrhenius',  // 1896 - CO2 Theory
+            'climate-keeling',    // 1958 - Keeling Curve
+            'climate-ozone',      // 1985 - Ozone Hole
+            'climate-ipcc',       // 1988 - IPCC
+            'p12-6',              // 1997 - Kyoto
+            'p12-21',             // 2015 - Paris Agreement
+            'climate-cop21',      // 2016 - Paris Enters Force
+            'climate-1.5c'        // 2023 - 1.5°C Breached
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('climate-')),
+        overrides: {
+            'cosmic-24': { title: 'Magma Ocean Cools', description: 'The Crust Forms. After 100 million years of bombardment, Earth\'s surface finally cools enough for a solid crust to form—the first step toward habitability.' },
+            'cosmic-25': { title: 'First Oceans', description: 'Water World. As temperatures drop below boiling, vapor condenses into rain that falls for millennia, filling the basins with Earth\'s first oceans.' },
+            '23': { title: 'Great Oxygenation Event', description: 'The Oxygen Catastrophe. Cyanobacteria flood the atmosphere with a toxic gas: oxygen. Most life dies. The survivors evolve to breathe the poison.' },
+            '24': { title: 'Huronian Glaciation', description: 'First Ice Age. Oxygen destroys atmospheric methane, collapsing the greenhouse effect. Ice sheets spread to the equator for 300 million years.' },
+            'p2-9': { title: 'Ordovician Ice Age Extinction', description: 'The First Reset. Gondwana drifts over the South Pole, triggering glaciation. Tropical seas freeze. 85% of species vanish.' },
+            'p2-13': { title: 'Devonian Extinction', description: 'Ocean Death. Massive plants may have stripped CO2 from the air, cooling the planet. Ocean oxygen plummets. Most marine life disappears.' },
+            'p2-14': { title: 'Carboniferous Coal Swamps', description: 'Buried Sunshine. Giant forests grow and die, but no bacteria can digest wood yet. Dead trees pile up, burying carbon that will become coal—and climate time bombs.' },
+            'p2-19': { title: 'The Great Dying', description: 'The Volcanic Apocalypse. Siberian eruptions release enough CO2 to warm Earth 10°C. Oceans acidify. 96% of marine species die. Life nearly ends.' },
+            'p2-24': { title: 'Chicxulub Impact', description: 'The Asteroid Arrives. 10km of rock hits Yucatan at 20km/sec. Megatsunamis, wildfires, then nuclear winter. The dinosaurs\' 165-million-year reign ends.' },
+            'p2-25': { title: 'K-Pg Extinction', description: 'Impact Winter. Debris blocks the sun. Temperatures plunge. Photosynthesis stops. 75% of species die, including all non-avian dinosaurs.' },
+            '45': { title: 'Global Cooling', description: 'The Long Chill. India\'s collision with Asia pushes up the Himalayas, drawing down CO2. Earth enters its current icehouse phase.' },
+            '65': { title: 'Last Ice Age Begins', description: 'The Ice Returns. Orbital variations trigger glaciation. Ice sheets 3km thick cover Canada and Europe. Sea levels drop 120m.' },
+            '73': { title: 'Holocene Begins', description: 'The Goldilocks Climate. Ice retreats. Stable, warm climate enables agriculture. Human civilization becomes possible—all in a 10,000-year window.' },
+            'power-coal': { title: 'The Coal Age Dawns', description: 'Burning Ancient Sunshine. Humans begin mining coal on industrial scales, releasing carbon buried 300 million years ago. The Anthropocene begins.' },
+            'p12-6': { title: 'Kyoto Protocol', description: 'First Global Climate Treaty. Industrial nations commit to cut emissions. The US never ratifies. Canada withdraws. But a precedent is set.' },
+            'p12-21': { title: 'Paris Agreement', description: 'The World Commits. 196 nations agree to limit warming to 2°C, aiming for 1.5°C. Whether actions match words remains to be seen.' }
         }
     }
 ];
