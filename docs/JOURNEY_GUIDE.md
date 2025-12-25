@@ -321,6 +321,13 @@ Tests enforce a **30-event minimum** per journey:
 # FAIL: Journey "Power Trip" has only 27 events
 ```
 
+> [!IMPORTANT]
+> **30 is the floor, not the target.** Let the narrative dictate the scope. Some topics naturally demand more events:
+> - A cinema history journey might need 40+ events (silent era → talkies → global cinema → streaming)
+> - A music history journey could hit 50+ events (bone flutes → Bach → streaming algorithms)
+> 
+> Don't artificially constrain to exactly 30—add events where the story needs them.
+
 **Solution:** If you're short, add transitional events that strengthen the narrative (e.g., Oil Lamp between Fire and Water Wheel).
 
 ### 🔄 Image Generation Retry Strategy
