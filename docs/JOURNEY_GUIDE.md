@@ -397,3 +397,48 @@ This makes connection filtering trivial:
 ```typescript
 connections: CONNECTIONS.filter(c => c.id.startsWith('power-'))
 ```
+
+### 🔍 Two-Pass Narrative Review (CRITICAL)
+
+The `print_journey_narrative.ts` script prints **ALL journeys**, not a specific one. To review a specific journey:
+
+```bash
+# Filter to your specific journey
+npx tsx scripts/print_journey_narrative.ts 2>&1 | grep -A100 "YOUR JOURNEY TITLE" | head -120
+```
+
+> [!CAUTION]
+> **Tests passing does NOT mean the journey is correct.** Tests validate structure (30 events, connections exist, images present) but do NOT catch:
+> - Wrong event IDs (e.g., using `p2-24` instead of `p2-28`)
+> - Chronological gaps that don't make sense
+> - Events from wrong eras appearing in the narrative
+
+**What to check in Pass 1 (Narrative Quality):**
+- Each event has a catchy lead-in title
+- Each description answers "So What?"
+- Big History Narrator voice is consistent
+
+**What to check in Pass 2 (Chronological & Flow):**
+- **Actually read the dates** - do they make sense chronologically?
+- Are there any impossible gaps (e.g., 150 MY event followed by 56 MY event when it should be 66 MY)?
+- Do the overrides reference the correct event IDs?
+
+### ⚠️ Event ID Verification
+
+Before using an event ID from allEvents.ts, **verify it's the right event**:
+
+```bash
+# Check what an event ID actually refers to
+grep -A5 "id: 'p2-24'" data/allEvents.ts
+```
+
+Common pitfalls:
+- Event IDs are NOT semantic (e.g., `p2-24` could be "First Birds", not "Chicxulub Impact")
+- Similar events may have consecutive IDs (e.g., `p2-28` = Chicxulub, `p2-29` = K-Pg Extinction)
+- Always verify the `yearNumeric` matches what you expect
+
+**Example of what went wrong (Climate Chronicle):**
+- Planned to use Chicxulub Impact (66 MY) but used `p2-24` 
+- `p2-24` was actually "First Birds" (150 MY)
+- The correct ID was `p2-28`
+- This caused events to show with wrong dates in the narrative
