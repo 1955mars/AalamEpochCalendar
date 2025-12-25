@@ -39,6 +39,7 @@ A journey consists of:
 - [ ] No unexplained time gaps > 500 years (medieval era gap was 880 years—bad)
 - [ ] Events flow logically from cause to effect
 - [ ] Connection types accurately reflect relationships
+- [ ] **EXTEND TO PRESENT**: Whenever possible, extend the timeline to the present day (2020s). A journey about philosophy should end with AI consciousness, not 1949. Music should end with AI composition, not vinyl. This makes journeys more relevant and engaging.
 
 ### ✅ Image Validation
 - [ ] Every event has an existing image file (> 5KB)
