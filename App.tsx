@@ -4,7 +4,6 @@ import Timeline from './components/Timeline';
 import JourneyTimeline from './components/JourneyTimeline';
 import CinematicBackground from './components/CinematicBackground';
 import CinematicHUD from './components/CinematicHUD';
-import DeepDiveModal from './components/DeepDiveModal';
 import MobileSwipeView from './components/MobileSwipeView';
 import HomeMenu from './components/HomeMenu';
 import BrandLogo from './components/BrandLogo';
@@ -278,10 +277,17 @@ const App: React.FC = () => {
         tags={activeEvent?.semanticTags}
         onJumpToEvent={handleJumpToEvent}
         onExit={handleExitSimulation}
+        onSpinoff={(journeyId, title) => {
+          // Find the journey by ID and switch to it
+          const journey = JOURNEYS.find(j => j.id === journeyId);
+          if (journey) {
+            setActiveJourney(journey);
+            setCurrentEventIndex(0);
+          } else {
+            console.log('Spinoff requested:', title, '(journey not found)');
+          }
+        }}
       />
-
-      {/* Deep Dive Modal (Placeholder) */}
-      <DeepDiveModal isOpen={false} onClose={() => { }} event={activeEvent} />
 
       <header className={`relative z-10 px-6 py-4 flex justify-between items-center transition-opacity duration-500 ${isSimulationActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
         <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => { setActiveJourney(null); setShowHome(true); }}>

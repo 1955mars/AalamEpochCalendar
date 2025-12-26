@@ -1,12 +1,13 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { TimelineEvent, Connection, SemanticTag } from '../types';
-import { GitBranch, Fingerprint, ArrowRight, Zap, Link, List, X, Tag } from 'lucide-react';
+import { Fingerprint, ArrowRight, Zap, Link, List, X, Tag, Compass } from 'lucide-react';
+import ExploreDropup from './ExploreDropup';
 
 export interface ConnectionBadgeData {
     connection: Connection;
     targetEvent: TimelineEvent;
-    direction: 'incoming' | 'outgoing'; // Incoming = "Caused This", Outgoing = "This Caused"
+    direction: 'incoming' | 'outgoing';
 }
 
 interface CinematicHUDProps {
@@ -26,6 +27,7 @@ interface CinematicHUDProps {
     tags?: SemanticTag[];
     onJumpToEvent?: (eventId: string) => void;
     onExit?: () => void;
+    onSpinoff?: (journeyId: string, journeyTitle: string) => void;
 }
 
 const ConnectionIcon = ({ type }: { type: string }) => {
@@ -71,8 +73,9 @@ const PHASE_TITLES: Record<string, string> = {
     'Modern': 'The Future'
 };
 
-const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentIndex, totalEvents, onPause, onStop, onNext, onPrev, onSeek, isPaused, duration = 4000, connections = [], tags = [], onJumpToEvent, onExit }) => {
+const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentIndex, totalEvents, onPause, onStop, onNext, onPrev, onSeek, isPaused, duration = 4000, connections = [], tags = [], onJumpToEvent, onExit, onSpinoff }) => {
     const progressBarRef = React.useRef<HTMLDivElement>(null);
+    const [isExploreOpen, setIsExploreOpen] = useState(false);
 
     if (!isActive || !event) return null;
 
@@ -87,6 +90,14 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
         const percentage = Math.max(0, Math.min(1, x / width));
         const targetIndex = Math.round(percentage * (totalEvents - 1));
         onSeek(targetIndex);
+    };
+
+    const handleExploreClick = () => {
+        setIsExploreOpen(!isExploreOpen);
+    };
+
+    const handleExploreClose = () => {
+        setIsExploreOpen(false);
     };
 
     return (
@@ -202,7 +213,6 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                         className="absolute left-0 top-0 h-full bg-blue-500 shadow-[0_0_15px_rgba(59,130,246,0.8)] transition-all duration-300 ease-linear"
                         style={{ width: `${progressPercent}%` }}
                     />
-                    {/* Hover Interaction Indicator */}
                     <div className="absolute inset-0 bg-white/0 group-hover:bg-white/10 transition-colors" />
                 </div>
 
@@ -239,14 +249,37 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                         )}
                     </button>
 
-                    {/* View Timeline Button */}
-                    <button
-                        onClick={onStop}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-colors border border-white/5 hover:border-white/20 text-xs font-bold uppercase tracking-widest group"
-                    >
-                        <span className="hidden md:inline">Timeline</span>
-                        <List size={16} className="group-hover:scale-110 transition-transform" />
-                    </button>
+                    {/* Right side buttons container */}
+                    <div className="flex items-center gap-2 relative">
+                        {/* Explore Button (now first) */}
+                        <button
+                            onClick={handleExploreClick}
+                            className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all border text-xs font-bold uppercase tracking-widest group ${isExploreOpen
+                                    ? 'bg-purple-500/30 border-purple-500/50 text-white'
+                                    : 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 hover:from-purple-500/30 hover:to-blue-500/30 text-purple-200 hover:text-white border-purple-500/20 hover:border-purple-500/40'
+                                }`}
+                        >
+                            <Compass size={16} className={`transition-all ${isExploreOpen ? 'rotate-45' : 'group-hover:scale-110 group-hover:rotate-45'}`} />
+                            <span className="hidden md:inline">Explore</span>
+                        </button>
+
+                        {/* View Timeline Button */}
+                        <button
+                            onClick={onStop}
+                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-colors border border-white/5 hover:border-white/20 text-xs font-bold uppercase tracking-widest group"
+                        >
+                            <List size={16} className="group-hover:scale-110 transition-transform" />
+                            <span className="hidden md:inline">Timeline</span>
+                        </button>
+
+                        {/* Explore Dropup Menu */}
+                        <ExploreDropup
+                            event={event}
+                            isOpen={isExploreOpen}
+                            onClose={handleExploreClose}
+                            onSpinoff={onSpinoff}
+                        />
+                    </div>
                 </div>
             </div>
 
@@ -256,7 +289,7 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                     to { stroke-dashoffset: 238; }
                 }
             `}</style>
-        </div >
+        </div>
     );
 };
 

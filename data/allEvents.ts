@@ -7585,5 +7585,220 @@ export const ALL_EVENTS: TimelineEvent[] = [
     imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/mate-sexual-revolution.jpg',
     phase: 'Phase 11',
     category: 'Philosophy'
+  },
+
+  // --- How a Modern Computer Works: Hardware Events ---
+  {
+    id: 'computer-eniac',
+    year: '1945',
+    yearNumeric: 1945,
+    title: 'ENIAC: The Room-Sized Brain',
+    description: 'The first general-purpose electronic computer fills a room with 18,000 vacuum tubes. It can calculate artillery trajectories in 30 seconds instead of 12 hours—but it takes two days to reprogram.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/computer-eniac.jpg',
+    phase: 'Phase 10',
+    category: 'Technology'
+  },
+  {
+    id: 'computer-transistor',
+    year: '1947',
+    yearNumeric: 1947,
+    title: 'The Transistor',
+    description: 'Three scientists at Bell Labs invent the transistor—a tiny switch that does what vacuum tubes did but in a space smaller than a fingernail. This single invention makes the modern world possible.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/computer-transistor.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'computer-ic',
+    year: '1958',
+    yearNumeric: 1958,
+    title: 'The Integrated Circuit',
+    description: 'Jack Kilby and Robert Noyce independently invent the integrated circuit—multiple transistors on a single chip. This breakthrough makes computers smaller and faster exponentially.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/computer-ic.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'computer-intel4004',
+    year: '1971',
+    yearNumeric: 1971,
+    title: 'The First Microprocessor',
+    description: 'Intel packs an entire computer brain onto a single chip the size of a fingernail. The 4004 has 2,300 transistors. Your phone has 15 billion. This is the moment computing becomes personal.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/computer-intel4004.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'computer-apple2',
+    year: '1977',
+    yearNumeric: 1977,
+    title: 'The Personal Computer',
+    description: 'The Apple II brings computing to homes. For the first time, ordinary people can own a computer—not rent time on a mainframe. Spreadsheets, not missiles, become the killer app.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/computer-apple2.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'computer-gui',
+    year: '1984',
+    yearNumeric: 1984,
+    title: 'The Graphical Interface',
+    description: 'Apple\'s Macintosh introduces the mouse, windows, and icons to the masses. Computing shifts from typing commands to clicking pictures—making computers friendly for the first time.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/computer-gui.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+
+  // --- How a Modern Computer Works: Additional Events ---
+  {
+    id: 'hwcw-vonneumann',
+    year: '1945',
+    yearNumeric: 1945,
+    title: 'Von Neumann Architecture',
+    description: 'The Blueprint of Every Computer. John von Neumann describes a machine that stores both data AND instructions in the same memory. This single idea is the skeleton of every computer you\'ve ever used.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-vonneumann.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-magnetic-storage',
+    year: '1956',
+    yearNumeric: 1956,
+    title: 'The First Hard Drive',
+    description: 'IBM\'s RAMAC 305 stores 5 megabytes on 50 spinning platters the size of refrigerators. Today, that same amount fits on a grain of rice. But the principle—magnetic storage—remains.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-magnetic-storage.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-dram',
+    year: '1966',
+    yearNumeric: 1966,
+    title: 'DRAM Invented',
+    description: 'Robert Dennard invents Dynamic RAM—memory that stores data as electrical charges in capacitors. Cheap, dense, and fast, DRAM becomes the working memory of every computer.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-dram.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-arpanet',
+    year: '1969',
+    yearNumeric: 1969,
+    title: 'ARPANET: The First Internet',
+    description: 'The Pentagon connects four university computers into a network that can survive nuclear war. The message "LOGIN" crashes after two letters. But the internet is born.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-arpanet.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-unix',
+    year: '1971',
+    yearNumeric: 1971,
+    title: 'UNIX Created',
+    description: 'Ken Thompson and Dennis Ritchie write an operating system so elegant it spawns Linux, macOS, Android, and iOS. The code that runs most of the internet was born in a closet at Bell Labs.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-unix.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-ethernet',
+    year: '1973',
+    yearNumeric: 1973,
+    title: 'Ethernet',
+    description: 'Bob Metcalfe sketches a way to connect computers with coaxial cable. His "ethernetwork" becomes the plumbing of the digital age—every wired connection still speaks his protocol.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-ethernet.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-altair',
+    year: '1975',
+    yearNumeric: 1975,
+    title: 'Altair 8800',
+    description: 'A $400 kit computer appears on the cover of Popular Electronics. It has no keyboard, no screen, just blinking lights. But hobbyists go wild—including two kids named Bill Gates and Paul Allen.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-altair.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-moores-law',
+    year: '1975',
+    yearNumeric: 1975,
+    title: 'Moore\'s Law',
+    description: 'Gordon Moore predicts transistor density doubles every two years. This observation becomes a self-fulfilling prophecy—the industry roadmap that drove 50 years of exponential progress.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-moores-law.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-ibm-pc',
+    year: '1981',
+    yearNumeric: 1981,
+    title: 'The IBM PC',
+    description: 'IBM blesses the personal computer with corporate legitimacy. Their open architecture spawns an entire industry of "IBM-compatible" clones—and accidentally hands the software market to Microsoft.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-ibm-pc.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-cd-rom',
+    year: '1985',
+    yearNumeric: 1985,
+    title: 'CD-ROM',
+    description: 'A shiny disc holds 650 megabytes—equivalent to 1,500 floppy disks. Encyclopedias, games, and multimedia explode. For the first time, software is too big to pirate easily.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-cd-rom.jpg',
+    phase: 'Phase 11',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-linux',
+    year: '1991',
+    yearNumeric: 1991,
+    title: 'Linux Released',
+    description: 'A Finnish student posts "just a hobby" code online. Linus Torvalds\' kernel, combined with GNU tools, becomes the backbone of Android, servers, and supercomputers—free, forever.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-linux.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-usb',
+    year: '1996',
+    yearNumeric: 1996,
+    title: 'USB Standard',
+    description: 'Universal Serial Bus ends the chaos of serial, parallel, and proprietary ports. One connector to rule them all—even if it takes three tries to plug it in correctly.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-usb.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-wifi',
+    year: '1999',
+    yearNumeric: 1999,
+    title: 'Wi-Fi Standard',
+    description: 'IEEE 802.11b brands itself "Wi-Fi" and cuts the cord. Laptops roam free, coffee shops become offices, and the internet escapes from desks to anywhere signal reaches.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-wifi.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-ssd',
+    year: '2006',
+    yearNumeric: 2006,
+    title: 'Consumer SSDs',
+    description: 'Solid-state drives replace spinning platters with flash memory. No moving parts means instant boot times, silent operation, and laptops that survive being dropped.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-ssd.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
+  },
+  {
+    id: 'hwcw-cloud',
+    year: '2006',
+    yearNumeric: 2006,
+    title: 'Amazon AWS',
+    description: 'Amazon rents its spare computing power to startups. The "cloud" is born—your computer\'s brain is now distributed across data centers worldwide, available on demand.',
+    imageUrl: (import.meta.env?.BASE_URL || '/') + 'images/hwcw-cloud.jpg',
+    phase: 'Phase 12',
+    category: 'Technology'
   }
 ];
+

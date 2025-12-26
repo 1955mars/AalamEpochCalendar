@@ -1061,7 +1061,46 @@ export const CONNECTIONS: Connection[] = [
     { id: 'mate-26', fromEventId: 'mate-online-dating', toEventId: 'mate-tinder', type: 'preceded' },
     { id: 'mate-27', fromEventId: 'mate-tinder', toEventId: 'mate-gay-marriage', type: 'preceded' },
     { id: 'mate-28', fromEventId: 'mate-gay-marriage', toEventId: 'mate-metoo', type: 'preceded' },
-    { id: 'mate-29', fromEventId: 'mate-metoo', toEventId: 'mate-ai-dating', type: 'preceded' }
+    { id: 'mate-29', fromEventId: 'mate-metoo', toEventId: 'mate-ai-dating', type: 'preceded' },
+
+    // --- How a Modern Computer Works Connections (31 events) ---
+    // Ancient Computing
+    { id: 'hwcw-1', fromEventId: 'ai-antikythera', toEventId: 'ai-jacquard', type: 'preceded' },
+    // The Machine Age
+    { id: 'hwcw-2', fromEventId: 'ai-jacquard', toEventId: 'ai-the-difference-engine', type: 'caused' },
+    { id: 'hwcw-3', fromEventId: 'ai-the-difference-engine', toEventId: 'ai-lovelace', type: 'caused' },
+    { id: 'hwcw-4', fromEventId: 'ai-lovelace', toEventId: 'ai-boole', type: 'related' },
+    // Dawn of Digital
+    { id: 'hwcw-5', fromEventId: 'ai-boole', toEventId: 'ai-turing-machine', type: 'caused' },
+    { id: 'hwcw-6', fromEventId: 'ai-turing-machine', toEventId: 'computer-eniac', type: 'caused' },
+    { id: 'hwcw-7', fromEventId: 'computer-eniac', toEventId: 'hwcw-vonneumann', type: 'related' },
+    { id: 'hwcw-8', fromEventId: 'hwcw-vonneumann', toEventId: 'computer-transistor', type: 'caused' },
+    // Storage & Memory Era
+    { id: 'hwcw-9', fromEventId: 'computer-transistor', toEventId: 'hwcw-magnetic-storage', type: 'caused' },
+    { id: 'hwcw-10', fromEventId: 'hwcw-magnetic-storage', toEventId: 'computer-ic', type: 'preceded' },
+    { id: 'hwcw-11', fromEventId: 'computer-ic', toEventId: 'hwcw-dram', type: 'caused' },
+    // Networking Begins
+    { id: 'hwcw-12', fromEventId: 'hwcw-dram', toEventId: 'hwcw-arpanet', type: 'preceded' },
+    { id: 'hwcw-13', fromEventId: 'hwcw-arpanet', toEventId: 'computer-intel4004', type: 'related' },
+    { id: 'hwcw-14', fromEventId: 'computer-intel4004', toEventId: 'hwcw-unix', type: 'related' },
+    { id: 'hwcw-15', fromEventId: 'hwcw-unix', toEventId: 'hwcw-ethernet', type: 'caused' },
+    // Personal Computing Era
+    { id: 'hwcw-16', fromEventId: 'hwcw-ethernet', toEventId: 'hwcw-altair', type: 'preceded' },
+    { id: 'hwcw-17', fromEventId: 'hwcw-altair', toEventId: 'hwcw-moores-law', type: 'related' },
+    { id: 'hwcw-18', fromEventId: 'hwcw-moores-law', toEventId: 'computer-apple2', type: 'caused' },
+    { id: 'hwcw-19', fromEventId: 'computer-apple2', toEventId: 'hwcw-ibm-pc', type: 'caused' },
+    { id: 'hwcw-20', fromEventId: 'hwcw-ibm-pc', toEventId: 'computer-gui', type: 'caused' },
+    { id: 'hwcw-21', fromEventId: 'computer-gui', toEventId: 'hwcw-cd-rom', type: 'related' },
+    // The Network Age
+    { id: 'hwcw-22', fromEventId: 'hwcw-cd-rom', toEventId: 'hwcw-linux', type: 'preceded' },
+    { id: 'hwcw-23', fromEventId: 'hwcw-linux', toEventId: 'p12-3', type: 'related' }, // Linux -> WWW
+    { id: 'hwcw-24', fromEventId: 'p12-3', toEventId: 'hwcw-usb', type: 'preceded' },
+    { id: 'hwcw-25', fromEventId: 'hwcw-usb', toEventId: 'p12-7', type: 'preceded' }, // USB -> Google
+    { id: 'hwcw-26', fromEventId: 'p12-7', toEventId: 'hwcw-wifi', type: 'related' },
+    { id: 'hwcw-27', fromEventId: 'hwcw-wifi', toEventId: 'hwcw-ssd', type: 'preceded' },
+    { id: 'hwcw-28', fromEventId: 'hwcw-ssd', toEventId: 'hwcw-cloud', type: 'related' },
+    { id: 'hwcw-29', fromEventId: 'hwcw-cloud', toEventId: 'p12-13', type: 'caused' }, // AWS -> iPhone
+    { id: 'hwcw-30', fromEventId: 'p12-13', toEventId: 'p12-29', type: 'preceded' } // iPhone -> ChatGPT
 ];
 
 
@@ -2250,6 +2289,63 @@ export const JOURNEYS: Journey[] = [
         connections: CONNECTIONS.filter(c => c.id.startsWith('mate-')),
         overrides: {
             'women-pankhurst': { title: 'Women\'s Suffrage', description: 'The Right to Choose. Women fight for the vote—and the freedom to choose their own partners. Marriage becomes a contract between equals.' }
+        }
+    },
+    {
+        id: 'how-computers-work',
+        title: 'How a Modern Computer Works',
+        description: 'From ancient calculators to AI—trace the remarkable journey of computing, one invention at a time.',
+        thumbnailUrl: 'images/computer-intel4004.jpg',
+        eventIds: [
+            // Ancient Computing
+            'ai-antikythera',          // 100 BCE - First analog computer
+            // The Machine Age
+            'ai-jacquard',             // 1804 - Punch cards
+            'ai-the-difference-engine', // 1822 - Babbage's Engine
+            'ai-lovelace',             // 1843 - First Algorithm
+            'ai-boole',                // 1854 - Boolean Logic
+            // Dawn of Digital
+            'ai-turing-machine',       // 1936 - Theoretical Blueprint
+            'computer-eniac',          // 1945 - First Computer
+            'hwcw-vonneumann',         // 1945 - Von Neumann Architecture
+            'computer-transistor',     // 1947 - The Transistor
+            // Storage & Memory Era
+            'hwcw-magnetic-storage',   // 1956 - First Hard Drive
+            'computer-ic',             // 1958 - Integrated Circuit
+            'hwcw-dram',               // 1966 - DRAM Invented
+            // Networking Begins
+            'hwcw-arpanet',            // 1969 - ARPANET
+            'computer-intel4004',      // 1971 - First Microprocessor
+            'hwcw-unix',               // 1971 - UNIX Created
+            'hwcw-ethernet',           // 1973 - Ethernet
+            // Personal Computing Era
+            'hwcw-altair',             // 1975 - Altair 8800
+            'hwcw-moores-law',         // 1975 - Moore's Law
+            'computer-apple2',         // 1977 - Personal Computer
+            'hwcw-ibm-pc',             // 1981 - IBM PC
+            'computer-gui',            // 1984 - Graphical Interface
+            'hwcw-cd-rom',             // 1985 - CD-ROM
+            // The Network Age
+            'hwcw-linux',              // 1991 - Linux Released
+            'p12-3',                   // 1991 - World Wide Web
+            'hwcw-usb',                // 1996 - USB Standard
+            'p12-7',                   // 1998 - Google
+            'hwcw-wifi',               // 1999 - Wi-Fi Standard
+            'hwcw-ssd',                // 2006 - Consumer SSDs
+            'hwcw-cloud',              // 2006 - Amazon AWS
+            'p12-13',                  // 2007 - iPhone
+            'p12-29'                   // 2022 - ChatGPT
+        ],
+        connections: CONNECTIONS.filter(c => c.id.startsWith('hwcw-')),
+        overrides: {
+            'ai-antikythera': { title: 'The First Computer', description: 'An ancient bronze artifact predicts celestial movements with clockwork precision—proof that computing predates electricity by 2,000 years.' },
+            'ai-jacquard': { title: 'The First Program', description: 'Punch cards control a loom, separating "hardware" from "software" for the first time. Every computer since follows this principle.' },
+            'ai-boole': { title: 'The Language of Machines', description: 'Boolean logic proves that all of thought can be reduced to 1s and 0s. This becomes the literal language every computer chip speaks.' },
+            'ai-turing-machine': { title: 'The Blueprint', description: 'Turing proves that a machine can compute anything computable—the theoretical foundation for every computer ever built.' },
+            'p12-3': { title: 'The World Wide Web', description: 'Tim Berners-Lee connects computers into a web of hyperlinks. Your browser is reading the result of this invention.' },
+            'p12-7': { title: 'Google: Organizing Information', description: 'Two Stanford students index the web, making all human knowledge searchable in milliseconds.' },
+            'p12-13': { title: 'The iPhone', description: 'Apple puts a supercomputer in your pocket. More processing power than the Apollo missions, always connected, always on.' },
+            'p12-29': { title: 'ChatGPT', description: 'AI learns to speak like humans. For the first time, machines understand context, nuance, and generate novel ideas.' }
         }
     }
 ];
