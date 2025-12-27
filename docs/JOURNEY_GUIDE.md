@@ -443,3 +443,50 @@ Common pitfalls:
 - `p2-24` was actually "First Birds" (150 MY)
 - The correct ID was `p2-28`
 - This caused events to show with wrong dates in the narrative
+
+---
+
+## 10. Social Media Automation
+
+After a journey is complete and verified, generate social media content:
+
+### Generate Carousel (6 slides)
+
+```bash
+npx tsx scripts/generate-social.ts <journey-id>
+```
+
+**Output:** `public/social/<journey-id>/slide-1.png` through `slide-6.png`
+
+### Generate Caption
+
+```bash
+npx tsx scripts/generate-caption.ts <journey-id>
+```
+
+**Output:** `public/social/<journey-id>/caption.txt`
+
+### Batch Generation (All Journeys)
+
+```bash
+npx tsx scripts/generate-all-social.ts
+```
+
+### Full Pipeline Checklist
+
+```
+[ ] Journey implementation complete
+[ ] npm run verify passes
+[ ] Two-pass narrative review done
+[ ] Generate carousel: npx tsx scripts/generate-social.ts <id>
+[ ] Generate caption: npx tsx scripts/generate-caption.ts <id>
+[ ] Update QUEUE.md to mark as completed
+[ ] Post to Instagram/X
+```
+
+See `SOCIAL_AUTOMATION.md` for detailed workflow documentation.
+
+---
+
+*Last updated: December 27, 2025*
+
