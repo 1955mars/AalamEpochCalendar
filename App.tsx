@@ -27,8 +27,8 @@ const App: React.FC = () => {
   const [isSimulationActive, setIsSimulationActive] = useState(false);
   const [currentEventIndex, setCurrentEventIndex] = useState<number>(0);
   const [isPaused, setIsPaused] = useState(false);
-  const simulationIntervalRef = useRef<NodeJS.Timeout | null>(null);
-  const playbackSpeed = 4000; // 4 seconds per event
+  const simulationTimerRef = useRef<NodeJS.Timeout | null>(null);
+  const [currentDuration, setCurrentDuration] = useState(4000);
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
@@ -104,7 +104,7 @@ const App: React.FC = () => {
 
 
   const stopSimulation = () => {
-    if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
+    if (simulationTimerRef.current) clearTimeout(simulationTimerRef.current);
     // Return to home when simulation ends (same as Exit button)
     if (activeJourney) {
       setLastJourneyId(activeJourney.id);
@@ -120,71 +120,27 @@ const App: React.FC = () => {
   };
 
   const handleSimNext = () => {
+    if (simulationTimerRef.current) clearTimeout(simulationTimerRef.current);
+
     setCurrentEventIndex(prev => {
-      if (prev >= simulationEvents.length - 1) {
+      const nextIndex = prev + 1;
+      if (nextIndex >= simulationEvents.length) {
         stopSimulation();
         return prev;
       }
-      return prev + 1;
+      return nextIndex;
     });
-    // Reset timer on manual navigation
-    if (simulationIntervalRef.current) {
-      clearInterval(simulationIntervalRef.current);
-      if (!isPaused) {
-        simulationIntervalRef.current = setInterval(() => {
-          setCurrentEventIndex(prev => {
-            if (prev >= simulationEvents.length - 1) {
-              stopSimulation();
-              return prev;
-            }
-            return prev + 1;
-          });
-        }, playbackSpeed);
-      }
-    }
   };
 
   const handleSimPrev = () => {
-    setCurrentEventIndex(prev => {
-      if (prev <= 0) return 0;
-      return prev - 1;
-    });
-    // Reset timer on manual navigation
-    if (simulationIntervalRef.current) {
-      clearInterval(simulationIntervalRef.current);
-      if (!isPaused) {
-        simulationIntervalRef.current = setInterval(() => {
-          setCurrentEventIndex(prev => {
-            if (prev >= simulationEvents.length - 1) {
-              stopSimulation();
-              return prev;
-            }
-            return prev + 1;
-          });
-        }, playbackSpeed);
-      }
-    }
+    if (simulationTimerRef.current) clearTimeout(simulationTimerRef.current);
+    setCurrentEventIndex(prev => Math.max(0, prev - 1));
   };
 
   const handleSimSeek = (index: number) => {
+    if (simulationTimerRef.current) clearTimeout(simulationTimerRef.current);
     const targetIndex = Math.max(0, Math.min(index, simulationEvents.length - 1));
     setCurrentEventIndex(targetIndex);
-
-    // Reset timer on manual navigation
-    if (simulationIntervalRef.current) {
-      clearInterval(simulationIntervalRef.current);
-      if (!isPaused) {
-        simulationIntervalRef.current = setInterval(() => {
-          setCurrentEventIndex(prev => {
-            if (prev >= simulationEvents.length - 1) {
-              stopSimulation();
-              return prev;
-            }
-            return prev + 1;
-          });
-        }, playbackSpeed);
-      }
-    }
   };
 
   const handleJumpToEvent = (eventId: string) => {
@@ -196,27 +152,39 @@ const App: React.FC = () => {
 
   const togglePause = () => setIsPaused(!isPaused);
 
+  // Dynamic Animation Loop
   useEffect(() => {
-    if (!isSimulationActive || isPaused) {
-      if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
+    if (!isSimulationActive || isPaused || !activeJourney) {
+      if (simulationTimerRef.current) clearTimeout(simulationTimerRef.current);
       return;
     }
 
-    simulationIntervalRef.current = setInterval(() => {
+    const currentEvent = simulationEvents[currentEventIndex];
+    if (!currentEvent) return;
+
+    // Calculate reading time: base 3s + (words / 3.5 words/sec * 1000ms)
+    // Average reading speed is ~200-250 wpm (~3.3-4 wps). 
+    // We use 3.5 wps as a comfortable documentary pace.
+    const wordCount = currentEvent.description.split(/\s+/).length;
+    const readingTime = 3000 + Math.round((wordCount / 3.5) * 1000);
+    const cappedDuration = Math.min(Math.max(readingTime, 4000), 12000); // Min 4s, Max 12s
+
+    setCurrentDuration(cappedDuration);
+
+    simulationTimerRef.current = setTimeout(() => {
       setCurrentEventIndex(prev => {
-        // Use simulationEvents length
         if (prev >= simulationEvents.length - 1) {
           stopSimulation();
           return prev;
         }
         return prev + 1;
       });
-    }, playbackSpeed);
+    }, cappedDuration);
 
     return () => {
-      if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
+      if (simulationTimerRef.current) clearTimeout(simulationTimerRef.current);
     };
-  }, [isSimulationActive, isPaused, simulationEvents.length]); // Depend on simulationEvents
+  }, [isSimulationActive, isPaused, currentEventIndex, simulationEvents]);
 
   const currentPhaseConfig = PHASES.find(p => p.id === currentPhaseId) || PHASES[0];
   const activeEvent = simulationEvents[currentEventIndex]; // Use derived list
@@ -278,7 +246,7 @@ const App: React.FC = () => {
         onPrev={handleSimPrev}
         onSeek={handleSimSeek}
         isPaused={isPaused}
-        duration={playbackSpeed}
+        duration={currentDuration}
         connections={activeConnections}
         tags={activeEvent?.semanticTags}
         onJumpToEvent={handleJumpToEvent}

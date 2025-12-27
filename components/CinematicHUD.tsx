@@ -251,7 +251,16 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                         {isPaused ? (
                             <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 ml-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4l12 8-12 8V4z" /></svg>
                         ) : (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
+                            <div className="relative w-full h-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
+                                <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none opacity-20" viewBox="0 0 80 80">
+                                    <circle cx="40" cy="40" r="38" stroke="black" strokeWidth="4" fill="none"
+                                        strokeDasharray="238"
+                                        strokeDashoffset="0"
+                                        style={{ animation: isPaused ? 'none' : `countdown ${duration}ms linear forwards infinite` }}
+                                    />
+                                </svg>
+                            </div>
                         )}
                     </button>
 
