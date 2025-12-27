@@ -400,6 +400,12 @@ The phone in your pocket has more computing power than all of NASA had in 1969. 
     }
 };
 
+// Helper function to check if an event has deep dive content
+export const hasExploreContent = (eventId: string | undefined): boolean => {
+    if (!eventId) return false;
+    return DEMO_CONTENT[eventId] !== undefined;
+};
+
 type ViewState = 'questions' | 'answer' | 'ask';
 
 const ExploreDropup: React.FC<ExploreDropupProps> = ({ event, isOpen, onClose, onSpinoff }) => {

@@ -1,7 +1,6 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import Timeline from './components/Timeline';
-import JourneyTimeline from './components/JourneyTimeline';
 import CinematicBackground from './components/CinematicBackground';
 import CinematicHUD from './components/CinematicHUD';
 import MobileSwipeView from './components/MobileSwipeView';
@@ -106,18 +105,18 @@ const App: React.FC = () => {
 
   const stopSimulation = () => {
     if (simulationIntervalRef.current) clearInterval(simulationIntervalRef.current);
-    setIsSimulationActive(false);
-    setCurrentEventIndex(0);
-  };
-
-  const handleExitSimulation = () => {
-    // Remember the journey we're leaving
+    // Return to home when simulation ends (same as Exit button)
     if (activeJourney) {
       setLastJourneyId(activeJourney.id);
     }
-    stopSimulation();
+    setIsSimulationActive(false);
+    setCurrentEventIndex(0);
     setActiveJourney(null);
     setShowHome(true);
+  };
+
+  const handleExitSimulation = () => {
+    stopSimulation();
   };
 
   const handleSimNext = () => {
@@ -273,8 +272,8 @@ const App: React.FC = () => {
         event={activeEvent}
         currentIndex={currentEventIndex}
         totalEvents={simulationEvents.length}
+        journeyTitle={activeJourney?.title}
         onPause={togglePause}
-        onStop={stopSimulation}
         onNext={handleSimNext}
         onPrev={handleSimPrev}
         onSeek={handleSimSeek}
@@ -350,13 +349,7 @@ const App: React.FC = () => {
           />
         ) : !isSimulationActive && (
           <div className="relative z-10 w-full h-full animate-in fade-in zoom-in-95 duration-500">
-            {activeJourney ? (
-              <JourneyTimeline
-                ref={timelineRef}
-                events={simulationEvents}
-                activeJourney={activeJourney}
-              />
-            ) : isMobile ? (
+            {isMobile ? (
               <MobileSwipeView events={events} onPhaseChange={setCurrentPhaseId} />
             ) : (
               <Timeline

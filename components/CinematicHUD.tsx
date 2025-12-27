@@ -1,8 +1,8 @@
 
 import React, { useState } from 'react';
 import { TimelineEvent, Connection, SemanticTag } from '../types';
-import { Fingerprint, ArrowRight, Zap, Link, List, X, Tag, Compass } from 'lucide-react';
-import ExploreDropup from './ExploreDropup';
+import { Fingerprint, ArrowRight, Zap, Link, X, Tag, Compass } from 'lucide-react';
+import ExploreDropup, { hasExploreContent } from './ExploreDropup';
 
 export interface ConnectionBadgeData {
     connection: Connection;
@@ -15,8 +15,9 @@ interface CinematicHUDProps {
     event?: TimelineEvent;
     currentIndex: number;
     totalEvents: number;
+    journeyTitle?: string;
     onPause: () => void;
-    onStop: () => void;
+
     onNext: () => void;
     onPrev: () => void;
     onSeek: (index: number) => void;
@@ -73,9 +74,10 @@ const PHASE_TITLES: Record<string, string> = {
     'Modern': 'The Future'
 };
 
-const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentIndex, totalEvents, onPause, onStop, onNext, onPrev, onSeek, isPaused, duration = 4000, connections = [], tags = [], onJumpToEvent, onExit, onSpinoff }) => {
+const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentIndex, totalEvents, journeyTitle, onPause, onNext, onPrev, onSeek, isPaused, duration = 4000, connections = [], tags = [], onJumpToEvent, onExit, onSpinoff }) => {
     const progressBarRef = React.useRef<HTMLDivElement>(null);
     const [isExploreOpen, setIsExploreOpen] = useState(false);
+    const showExploreButton = hasExploreContent(event?.id);
 
     if (!isActive || !event) return null;
 
@@ -104,6 +106,13 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
         <div className="fixed inset-0 z-30 pointer-events-none flex flex-col justify-end">
             {/* Vignette / Gradient Overlay for Text Readability */}
             <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40 z-0" />
+
+            {/* Journey Title (Fixed Top Left) */}
+            {journeyTitle && (
+                <div className="fixed left-6 top-6 text-white/50 text-sm font-medium z-20">
+                    {journeyTitle}
+                </div>
+            )}
 
             {/* Navigation Click Zones (Left/Right Halves) */}
             <div className="absolute inset-0 z-10 flex w-full h-full">
@@ -218,74 +227,58 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                 </div>
 
                 {/* Controls Row */}
-                <div className="w-full max-w-3xl flex items-center justify-between">
+                <div className="w-full max-w-3xl flex items-center justify-center relative">
 
-                    {/* Exit Button */}
+                    {/* Exit Button (Left) */}
                     <button
                         onClick={onExit}
-                        className="flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 hover:bg-red-500/20 text-red-200/50 hover:text-red-200 transition-colors border border-red-500/5 hover:border-red-500/20 text-xs font-bold uppercase tracking-widest group"
+                        className="absolute left-0 flex items-center gap-2 px-4 py-2 rounded-full bg-red-500/10 hover:bg-red-500/20 text-red-200/50 hover:text-red-200 transition-colors border border-red-500/5 hover:border-red-500/20 text-xs font-bold uppercase tracking-widest group"
                     >
                         <X size={16} className="group-hover:scale-110 transition-transform" />
                         <span className="hidden md:inline">Exit</span>
                     </button>
 
-                    {/* Event Counter (Bottom Right) */}
-                    <div className="fixed right-6 bottom-6 text-white/50 text-sm font-mono">
+                    {/* Event Counter (Fixed Top Right) */}
+                    <div className="fixed right-6 top-6 text-white/50 text-sm font-mono">
                         {currentIndex + 1}/{totalEvents}
                     </div>
 
-                    {/* Play/Pause (Central) */}
+                    {/* Play/Pause (Centered) */}
                     <button
                         onClick={onPause}
-                        className="w-14 h-14 md:w-20 md:h-20 rounded-full bg-white text-black flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,255,255,0.3)] group relative overflow-hidden"
+                        className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/90 hover:bg-white text-black flex items-center justify-center hover:scale-105 active:scale-95 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] group"
                     >
                         {isPaused ? (
-                            <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4l12 8-12 8V4z" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6 ml-0.5" viewBox="0 0 24 24" fill="currentColor"><path d="M5 4l12 8-12 8V4z" /></svg>
                         ) : (
-                            <div className="relative w-full h-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 md:w-8 md:h-8" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
-                                <svg className="absolute inset-0 w-full h-full -rotate-90 pointer-events-none opacity-20" viewBox="0 0 80 80">
-                                    <circle cx="40" cy="40" r="38" stroke="black" strokeWidth="4" fill="none"
-                                        strokeDasharray="238"
-                                        strokeDashoffset="0"
-                                        style={{ animation: isPaused ? 'none' : `countdown ${duration}ms linear forwards infinite` }}
-                                    />
-                                </svg>
-                            </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 md:w-6 md:h-6" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" /><rect x="14" y="4" width="4" height="16" /></svg>
                         )}
                     </button>
 
-                    {/* Right side buttons container */}
-                    <div className="flex items-center gap-2 relative">
-                        {/* Explore Button (now first) */}
-                        <button
-                            onClick={handleExploreClick}
-                            className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all border text-xs font-bold uppercase tracking-widest group ${isExploreOpen
-                                ? 'bg-purple-500/30 border-purple-500/50 text-white'
-                                : 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 hover:from-purple-500/30 hover:to-blue-500/30 text-purple-200 hover:text-white border-purple-500/20 hover:border-purple-500/40'
-                                }`}
-                        >
-                            <Compass size={16} className={`transition-all ${isExploreOpen ? 'rotate-45' : 'group-hover:scale-110 group-hover:rotate-45'}`} />
-                            <span className="hidden md:inline">Explore</span>
-                        </button>
+                    {/* Right side buttons container - only show if there's content to explore */}
+                    {showExploreButton && (
+                        <div className="absolute right-0 flex items-center gap-2">
+                            {/* Explore Button */}
+                            <button
+                                onClick={handleExploreClick}
+                                className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all border text-xs font-bold uppercase tracking-widest group ${isExploreOpen
+                                    ? 'bg-purple-500/30 border-purple-500/50 text-white'
+                                    : 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 hover:from-purple-500/30 hover:to-blue-500/30 text-purple-200 hover:text-white border-purple-500/20 hover:border-purple-500/40'
+                                    }`}
+                            >
+                                <Compass size={16} className={`transition-all ${isExploreOpen ? 'rotate-45' : 'group-hover:scale-110 group-hover:rotate-45'}`} />
+                                <span className="hidden md:inline">Explore</span>
+                            </button>
 
-                        {/* View Timeline Button */}
-                        <button
-                            onClick={onStop}
-                            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 text-white/50 hover:text-white transition-colors border border-white/5 hover:border-white/20 text-xs font-bold uppercase tracking-widest group"
-                        >
-                            <List size={16} className="group-hover:scale-110 transition-transform" />
-                            <span className="hidden md:inline">Timeline</span>
-                        </button>
-
-                        {/* Explore Dropup Menu */}
-                        <ExploreDropup
-                            event={event}
-                            isOpen={isExploreOpen}
-                            onClose={handleExploreClose}
-                            onSpinoff={onSpinoff}
-                        />
-                    </div>
+                            {/* Explore Dropup Menu */}
+                            <ExploreDropup
+                                event={event}
+                                isOpen={isExploreOpen}
+                                onClose={handleExploreClose}
+                                onSpinoff={onSpinoff}
+                            />
+                        </div>
+                    )}
                 </div>
             </div>
 
