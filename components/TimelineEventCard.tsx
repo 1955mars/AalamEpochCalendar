@@ -10,9 +10,11 @@ interface TimelineEventCardProps {
   onClick?: () => void;
   isExpanded?: boolean;
   isGhost?: boolean;
+  eventIndex?: number;
+  totalEvents?: number;
 }
 
-const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, onClick, isExpanded, isGhost }) => {
+const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, onClick, isExpanded, isGhost, eventIndex, totalEvents }) => {
   const isTop = position === 'top';
   const isCenter = position === 'center';
   const isPhaseMarker = event.type === 'phase_marker';
@@ -65,10 +67,10 @@ const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, 
 
   // Render Standard Event Card
   return (
-    <div className={`relative w-[85vw] max-w-sm md:w-96 flex-shrink-0 flex flex-col items-center h-full justify-center snap-center pointer-events-none animate-fade-in transition-opacity duration-700 ${isGhost ? 'opacity-10 blur-sm' : 'opacity-100'}`}>
+    <div className={`relative w-[90vw] md:w-[500px] lg:w-[600px] flex-shrink-0 flex flex-col items-center h-full justify-center snap-center pointer-events-none animate-fade-in transition-opacity duration-700 ${isGhost ? 'opacity-10 blur-sm' : 'opacity-100'}`}>
 
       {/* Wrapper to position card relative to the center line */}
-      <div className={`${isCenter ? 'relative w-full max-w-sm transform transition-all duration-300 hover:-translate-y-2' : `absolute w-full flex flex-col items-center px-4 ${isTop ? 'bottom-1/2 pb-12' : 'top-1/2 pt-12'}`}`}>
+      <div className={`${isCenter ? 'relative w-full transform transition-all duration-300 hover:-translate-y-2' : `absolute w-full flex flex-col items-center px-4 ${isTop ? 'bottom-1/2 pb-12' : 'top-1/2 pt-12'}`}`}>
 
         {/* Connector Lines (Only for Top/Bottom) */}
         {!isCenter && (
@@ -80,28 +82,37 @@ const TimelineEventCard: React.FC<TimelineEventCardProps> = ({ event, position, 
         )}
 
         {/* Card */}
-        <div className={`pointer-events-auto bg-white border border-slate-200 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-300 w-full group ${isCenter ? 'shadow-md border-slate-300/50' : ''}`}>
+        <div className={`pointer-events-auto bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl hover:border-blue-300 transition-all duration-300 w-full group ${isCenter ? 'shadow-lg border-slate-300/50' : ''}`}>
 
           {/* Image Section with Cache */}
-          <div className="h-40 overflow-hidden relative bg-slate-100">
+          <div className="h-56 md:h-72 overflow-hidden relative bg-slate-100">
             <CachedImage
               src={event.imageUrl}
               alt={event.title}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              fallbackSrc={`https://picsum.photos/seed/${event.id}/600/400`}
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              fallbackSrc={`https://picsum.photos/seed/${event.id}/800/600`}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none"></div>
-            <div className="absolute bottom-3 left-4 z-10">
-              <span className="px-2 py-1 bg-black/50 backdrop-blur-sm text-white text-xs font-bold rounded border border-white/20">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none"></div>
+            {/* Event Counter Badge */}
+            {eventIndex !== undefined && totalEvents !== undefined && (
+              <div className="absolute top-4 right-5 z-10">
+                <span className="px-2.5 py-1 bg-black/50 backdrop-blur-sm text-white/80 text-xs font-mono rounded-lg border border-white/20">
+                  {eventIndex + 1}/{totalEvents}
+                </span>
+              </div>
+            )}
+            {/* Year Badge */}
+            <div className="absolute bottom-4 left-5 z-10">
+              <span className="px-3 py-1.5 bg-black/50 backdrop-blur-sm text-white text-sm font-bold rounded-lg border border-white/20">
                 {event.year}
               </span>
             </div>
           </div>
 
           {/* Content Section */}
-          <div className="p-5 text-left">
-            <h3 className="text-lg font-bold text-slate-900 mb-2 leading-tight">{event.title}</h3>
-            <p className="text-slate-600 text-sm leading-relaxed line-clamp-4">
+          <div className="p-6 md:p-8 text-left">
+            <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-3 leading-tight">{event.title}</h3>
+            <p className="text-slate-600 text-base md:text-lg leading-relaxed line-clamp-4">
               {event.description}
             </p>
           </div>

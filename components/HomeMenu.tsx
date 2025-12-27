@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Globe, Zap, Cpu, Palette, Dna, ArrowRight, Component } from 'lucide-react';
 import { JOURNEYS } from '../data/journeys';
 import { Journey } from '../types';
@@ -9,9 +9,22 @@ import { PLANNED_JOURNEYS } from '../data/plannedJourneys';
 interface HomeMenuProps {
     onSelectJourney: (journey: Journey | null) => void;
     onExploreFullTimeline: () => void;
+    scrollToJourneyId?: string | null;
 }
 
-const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimeline }) => {
+const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimeline, scrollToJourneyId }) => {
+    const journeyRefs = useRef<Record<string, HTMLButtonElement | null>>({});
+
+    useEffect(() => {
+        if (scrollToJourneyId && journeyRefs.current[scrollToJourneyId]) {
+            // Instant scroll - no animation
+            journeyRefs.current[scrollToJourneyId]?.scrollIntoView({
+                behavior: 'instant',
+                block: 'center'
+            });
+        }
+    }, [scrollToJourneyId]);
+
     return (
         <div className="w-full max-w-6xl mx-auto px-6 py-12 flex flex-col items-center justify-center min-h-[80vh] font-sans">
 
@@ -22,8 +35,9 @@ const HomeMenu: React.FC<HomeMenuProps> = ({ onSelectJourney, onExploreFullTimel
                 {JOURNEYS.map((journey) => (
                     <button
                         key={journey.id}
+                        ref={el => journeyRefs.current[journey.id] = el}
                         onClick={() => onSelectJourney(journey)}
-                        className="group relative overflow-hidden bg-slate-900 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 text-left border border-slate-800 h-96 flex flex-col justify-end"
+                        className={`group relative overflow-hidden bg-slate-900 text-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 text-left border h-96 flex flex-col justify-end ${scrollToJourneyId === journey.id ? 'border-amber-400 ring-2 ring-amber-400/50' : 'border-slate-800'}`}
                         style={journey.thumbnailUrl ? {
                             backgroundImage: `url(${import.meta.env.BASE_URL}${journey.thumbnailUrl})`,
                             backgroundSize: 'cover',

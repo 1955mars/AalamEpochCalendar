@@ -68,7 +68,7 @@ const JourneyTimeline = forwardRef<TimelineHandle, JourneyTimelineProps>(({ even
                 {/* Scroll Container */}
                 <div
                     ref={scrollContainerRef}
-                    className="no-scrollbar flex overflow-x-auto gap-0 px-[20vw] py-4 snap-x snap-mandatory relative z-10 w-full items-stretch h-[600px] md:h-[700px]"
+                    className="no-scrollbar flex overflow-x-auto gap-4 md:gap-8 px-[10vw] py-8 snap-x snap-mandatory relative z-10 w-full items-stretch h-[80vh] md:h-[85vh]"
                 >
                     {/* ConnectionLayer removed as per user request for cleaner view */}
 
@@ -77,7 +77,7 @@ const JourneyTimeline = forwardRef<TimelineHandle, JourneyTimelineProps>(({ even
                         <div
                             key={event.id}
                             ref={el => eventRefs.current[event.id] = el}
-                            className="flex-shrink-0 snap-center px-12 md:px-24 flex items-center justify-center relative" // Added padding for equidistant spacing
+                            className="flex-shrink-0 snap-center px-4 md:px-8 flex items-center justify-center relative"
                         >
                             <TimelineEventCardComponent
                                 event={event}
@@ -85,6 +85,8 @@ const JourneyTimeline = forwardRef<TimelineHandle, JourneyTimelineProps>(({ even
                                 onClick={() => { }} // No phase collapsing action needed
                                 isExpanded={true} // Always show full card
                                 isGhost={false} // Always fully visible
+                                eventIndex={index}
+                                totalEvents={events.length}
                             />
                         </div>
                     ))}

@@ -123,6 +123,7 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
 
                 {/* ID Pill & Connections */}
                 <div className="flex flex-col items-center gap-3 mb-2">
+                    {/* Phase Pill */}
                     <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20 text-xs font-mono tracking-widest uppercase text-blue-200">
                         {PHASE_TITLES[event.phase] || event.phase}
                     </div>
@@ -228,6 +229,11 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                         <span className="hidden md:inline">Exit</span>
                     </button>
 
+                    {/* Event Counter (Bottom Right) */}
+                    <div className="fixed right-6 bottom-6 text-white/50 text-sm font-mono">
+                        {currentIndex + 1}/{totalEvents}
+                    </div>
+
                     {/* Play/Pause (Central) */}
                     <button
                         onClick={onPause}
@@ -255,8 +261,8 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
                         <button
                             onClick={handleExploreClick}
                             className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all border text-xs font-bold uppercase tracking-widest group ${isExploreOpen
-                                    ? 'bg-purple-500/30 border-purple-500/50 text-white'
-                                    : 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 hover:from-purple-500/30 hover:to-blue-500/30 text-purple-200 hover:text-white border-purple-500/20 hover:border-purple-500/40'
+                                ? 'bg-purple-500/30 border-purple-500/50 text-white'
+                                : 'bg-gradient-to-r from-purple-500/20 to-blue-500/20 hover:from-purple-500/30 hover:to-blue-500/30 text-purple-200 hover:text-white border-purple-500/20 hover:border-purple-500/40'
                                 }`}
                         >
                             <Compass size={16} className={`transition-all ${isExploreOpen ? 'rotate-45' : 'group-hover:scale-110 group-hover:rotate-45'}`} />

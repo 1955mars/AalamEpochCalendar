@@ -22,6 +22,7 @@ const App: React.FC = () => {
 
   // --- Journey Mode State ---
   const [activeJourney, setActiveJourney] = useState<Journey | null>(null);
+  const [lastJourneyId, setLastJourneyId] = useState<string | null>(null);
 
   // --- Simulation State ---
   const [isSimulationActive, setIsSimulationActive] = useState(false);
@@ -110,6 +111,10 @@ const App: React.FC = () => {
   };
 
   const handleExitSimulation = () => {
+    // Remember the journey we're leaving
+    if (activeJourney) {
+      setLastJourneyId(activeJourney.id);
+    }
     stopSimulation();
     setActiveJourney(null);
     setShowHome(true);
@@ -290,7 +295,7 @@ const App: React.FC = () => {
       />
 
       <header className={`relative z-10 px-6 py-4 flex justify-between items-center transition-opacity duration-500 ${isSimulationActive ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-        <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => { setActiveJourney(null); setShowHome(true); }}>
+        <div className="flex items-center gap-3 cursor-pointer hover:opacity-80 transition-opacity" onClick={() => { if (activeJourney) setLastJourneyId(activeJourney.id); setActiveJourney(null); setShowHome(true); }}>
           <BrandLogo variant="small" />
         </div>
 
@@ -299,7 +304,7 @@ const App: React.FC = () => {
           {/* Back to Home Button (Only show if NOT home) */}
           {!showHome && (
             <button
-              onClick={() => { setActiveJourney(null); setShowHome(true); }}
+              onClick={() => { if (activeJourney) setLastJourneyId(activeJourney.id); setActiveJourney(null); setShowHome(true); }}
               className={`flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition-colors ${activeJourney ? 'bg-white/10 text-white hover:bg-white/20' : 'bg-slate-200 text-slate-900 hover:bg-slate-300'}`}
             >
               <RotateCcw size={14} />
@@ -331,12 +336,15 @@ const App: React.FC = () => {
                 setIsSimulationActive(true);
                 setCurrentEventIndex(0);
                 setIsPaused(true);
+                setLastJourneyId(null); // Clear the highlight after selecting
               }
             }}
             onExploreFullTimeline={() => {
               setActiveJourney(null);
               setShowHome(false);
+              setLastJourneyId(null);
             }}
+            scrollToJourneyId={lastJourneyId}
           />
         ) : !isSimulationActive && (
           <div className="relative z-10 w-full h-full animate-in fade-in zoom-in-95 duration-500">
