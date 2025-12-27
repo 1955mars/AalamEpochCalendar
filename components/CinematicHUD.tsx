@@ -109,7 +109,7 @@ const CinematicHUD: React.FC<CinematicHUDProps> = ({ isActive, event, currentInd
 
             {/* Journey Title (Fixed Top Left) */}
             {journeyTitle && (
-                <div className="fixed left-6 top-6 text-white/50 text-sm font-medium z-20">
+                <div className="fixed left-6 top-6 text-white/50 text-xs md:text-sm font-medium z-20 max-w-[60vw] truncate">
                     {journeyTitle}
                 </div>
             )}
