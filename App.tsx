@@ -225,9 +225,11 @@ const App: React.FC = () => {
   // If in Journey Mode, use specific background or default?
   const containerClass = isSimulationActive
     ? 'bg-black text-white'
-    : activeJourney
-      ? 'bg-slate-900 text-slate-100' // Dark mode for Journey
-      : `${currentPhaseConfig.bg} text-slate-900`;
+    : showHome
+      ? 'bg-slate-950 text-slate-100' // Dark mode for Homepage
+      : activeJourney
+        ? 'bg-slate-900 text-slate-100' // Dark mode for Journey
+        : `${currentPhaseConfig.bg} text-slate-900`;
 
   /* Compute Connections for HUD */
   const activeConnections = React.useMemo(() => {
@@ -369,7 +371,7 @@ const App: React.FC = () => {
         )}
       </main>
 
-      <footer className={`relative z-10 text-center py-4 text-[10px] uppercase tracking-widest transition-opacity duration-1000 ${isSimulationActive ? 'opacity-0' : 'opacity-40 text-slate-900'}`}>
+      <footer className={`relative z-10 text-center py-4 text-[10px] uppercase tracking-widest transition-opacity duration-1000 ${isSimulationActive ? 'opacity-0' : showHome || activeJourney ? 'opacity-40 text-slate-400' : 'opacity-40 text-slate-900'}`}>
         <p>© 2024 Epoch Interactive • The Museum of Infinite Connections</p>
       </footer>
     </div>

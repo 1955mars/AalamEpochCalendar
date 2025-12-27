@@ -1,7 +1,7 @@
 
 export const DB_NAME = 'AalamDB';
 export const STORE_NAME = 'images';
-export const DB_VERSION = 1;
+export const DB_VERSION = 2;
 
 // Initialize the database
 export const openDB = (): Promise<IDBDatabase> => {
@@ -77,5 +77,50 @@ export const saveImageToDB = async (url: string, blob: Blob): Promise<void> => {
     });
   } catch (error) {
     console.error('Error saving image to DB:', error);
+  }
+};
+
+// Clear a specific image from the cache
+export const clearImageFromDB = async (url: string): Promise<void> => {
+  try {
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(STORE_NAME, 'readwrite');
+      const store = transaction.objectStore(STORE_NAME);
+      const request = store.delete(url);
+
+      request.onsuccess = () => {
+        resolve();
+      };
+
+      request.onerror = () => {
+        reject(request.error);
+      };
+    });
+  } catch (error) {
+    console.error('Error clearing image from DB:', error);
+  }
+};
+
+// Clear all cached images
+export const clearAllImages = async (): Promise<void> => {
+  try {
+    const db = await openDB();
+    return new Promise((resolve, reject) => {
+      const transaction = db.transaction(STORE_NAME, 'readwrite');
+      const store = transaction.objectStore(STORE_NAME);
+      const request = store.clear();
+
+      request.onsuccess = () => {
+        console.log('Image cache cleared');
+        resolve();
+      };
+
+      request.onerror = () => {
+        reject(request.error);
+      };
+    });
+  } catch (error) {
+    console.error('Error clearing image cache:', error);
   }
 };
